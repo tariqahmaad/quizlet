@@ -195,9 +195,9 @@ function loadCourseData() {
         console.warn(`Course code "${selectedCourseCode}" not found in courseMap. Using code as name.`);
         selectedCourseName = selectedCourseCode; // Fallback to code
     }
-    // Title text update moved to initializeWeekSelection
 
-    if (courseInfoElement) courseInfoElement.textContent = `Course: ${selectedCourseName} (${selectedCourseCode})`;
+    // Remove redundant course info display
+    if (courseInfoElement) courseInfoElement.style.display = 'none';
 
     // Check if questions.js loaded correctly
     console.log("Checking allQuestions. Type:", typeof allQuestions);
@@ -260,7 +260,7 @@ function handleWeekSelection() {
 // Initialize Week Selection UI State
 function initializeWeekSelection() {
     // Check essential elements again
-    if (!selectionArea || !quizArea || !resultsArea || !errorArea || !quizMainTitle || !courseInfoElement) {
+    if (!selectionArea || !quizArea || !resultsArea || !errorArea || !quizMainTitle) {
         console.error("Essential UI elements missing during week selection initialization!");
         showError("Interface error. Please go back and try again."); // Show user-friendly error
         return;
@@ -274,11 +274,10 @@ function initializeWeekSelection() {
     resultsArea.style.display = 'none';
     errorArea.style.display = 'none';
     quizMainTitle.style.display = 'block'; // Ensure title is visible
-    courseInfoElement.style.display = 'block'; // Ensure course info is visible
-    if (homeBtn) homeBtn.style.display = 'inline-block'; // Ensure home button is visible
 
-    // <<< MOVED FROM loadCourseData: Set the correct title text HERE >>>
-    if (quizMainTitle) quizMainTitle.textContent = `${selectedCourseName} Exam`;
+    // Set the title and course info in a compact way
+    if (quizMainTitle) quizMainTitle.textContent = selectedCourseName;
+    if (courseIndicatorElement) courseIndicatorElement.textContent = `${selectedCourseCode}`;
 
     // Reset state
     if (startBtn) startBtn.disabled = true;
@@ -357,10 +356,8 @@ function loadQuestion(index) {
     }
     const correctAnswer = currentQuestion.correctAnswer;
 
-    // Update indicators
-    if (courseIndicatorElement) courseIndicatorElement.textContent = `Course: ${selectedCourseName}`;
-    const weekDisplay = currentQuestion.week ? `Week: ${currentQuestion.week}` : (selectedWeek === 'all' ? 'Week: All' : 'Week: N/A');
-    if (weekIndicatorElement) weekIndicatorElement.textContent = weekDisplay;
+    // Update indicators in a compact way
+    if (weekIndicatorElement) weekIndicatorElement.textContent = currentQuestion.week ? `Week ${currentQuestion.week}` : (selectedWeek === 'all' ? 'All Weeks' : '');
 
     // Set question text and clear previous options/feedback
     if (questionTextElement) questionTextElement.textContent = currentQuestion.question;
@@ -555,10 +552,10 @@ function showResults() {
     resultsArea.style.display = 'flex'; // Show results
     if (homeBtn) homeBtn.style.display = 'inline-block';
 
-    // Display info
+    // Display info in a compact way
     const weekText = selectedWeek === 'all' ? 'All Weeks' : `Week ${selectedWeek}`;
-    if (resultsTitle) resultsTitle.textContent = `Exam Complete: ${selectedCourseName}`;
-    if (resultsCourseWeekInfo) resultsCourseWeekInfo.textContent = `(${weekText} - ${currentFilteredQuestions.length} Questions)`;
+    if (resultsTitle) resultsTitle.textContent = `${selectedCourseName} - ${weekText}`;
+    if (resultsCourseWeekInfo) resultsCourseWeekInfo.style.display = 'none'; // Hide redundant info
 
     // Calculate and display score/percentage
     if (scoreElement) scoreElement.textContent = score;

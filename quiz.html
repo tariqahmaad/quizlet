@@ -13,17 +13,18 @@
 
         <!-- Header Section with Title and Home Button -->
         <div class="header-controls">
-            <h1 id="quiz-main-title">Loading Exam...</h1>
-            <!-- Added Home Button -->
+            <div class="title-container">
+                <h1 id="quiz-main-title">Loading Exam...</h1>
+                <div id="quiz-indicators">
+                    <span id="course-indicator"></span> | <span id="week-indicator"></span>
+                </div>
+            </div>
             <button id="home-btn" class="nav-btn home-button" title="Back to Course Selection">Home</button>
         </div>
 
-        <!-- Course Info Display -->
-        <div id="course-info" style="text-align: center; margin-bottom: 15px; font-style: italic; color: #555;"></div>
-
         <!-- Week Selection Area -->
         <div id="selection-area" style="display: none;">
-            <label for="week-select">Choose a Week:</label>
+            <label for="week-select">Select Week:</label>
             <select id="week-select">
                 <option value="">-- Select a Week --</option>
                 <!-- Options will be populated by JS based on course -->
@@ -33,16 +34,10 @@
 
         <!-- Quiz Area -->
         <div id="quiz-area" style="display: none;">
-            <div id="quiz-indicators" style="font-size: 0.9em; color: #7f8c8d; margin-bottom: 15px; text-align: left;">
-                <span id="course-indicator">Course: ...</span> |
-                <span id="week-indicator">Week: ...</span>
-            </div>
             <div id="progress">Question 1 of X</div>
             <div id="question-card">
-                <!-- Question text changed to p tag to match previous script logic better -->
                 <p id="question-text">Question text will load here...</p>
                 <div id="options-container"></div>
-                <!-- Feedback changed to p tag -->
                 <p id="feedback" class="feedback"></p>
             </div>
             <div class="navigation-buttons">
@@ -54,9 +49,10 @@
         <!-- Results Area -->
         <div id="results-area" style="display: none;">
             <h2 id="results-title">Exam Complete!</h2>
-            <p id="results-course-week-info" style="color: #555; font-size: 0.9em;"></p>
-            <p>Your Score: <span id="score">0</span> / <span id="total-questions">0</span></p>
-            <p>Percentage: <span id="percentage-score">0</span>%</p>
+            <div class="score-display">
+                <p>Score: <span id="score">0</span>/<span id="total-questions">0</span> (<span
+                        id="percentage-score">0</span>%)</p>
+            </div>
 
             <!-- == LEADERBOARD SECTION - START == -->
             <div class="leaderboard-save-section"

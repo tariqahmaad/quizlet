@@ -23,7 +23,8 @@
     --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
     --border-radius: 12px;
     --border-radius-sm: 8px;
-    --transition: all 0.3s ease;
+    --transition: transform 0.2s ease, background-color 0.2s ease;
+    --transition-fast: background-color 0.15s ease;
 }
 
 /* General Body and Container Styles */
@@ -138,6 +139,8 @@ h1::after {
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
+    will-change: transform;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .course-item h2 {
@@ -178,7 +181,7 @@ h1::after {
     background: linear-gradient(135deg, rgba(56, 176, 0, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
     z-index: 0;
     opacity: 0;
-    transition: var(--transition);
+    transition: opacity 0.2s ease;
 }
 
 .course-item.available span {
@@ -192,7 +195,7 @@ h1::after {
     width: 100%;
     display: inline-block;
     position: relative;
-    transition: var(--transition);
+    transition: background-color 0.2s ease, color 0.2s ease;
     z-index: 1;
 }
 
@@ -267,11 +270,14 @@ h1::after {
     box-shadow: var(--shadow-lg);
     position: relative;
     text-align: center;
-    animation: fadeInModal 0.4s ease-out;
+    animation: fadeInModal 0.3s ease-out;
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 @keyframes fadeInModal {
-    from { opacity: 0; transform: translateY(-30px); }
+    from { opacity: 0; transform: translateY(-20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
@@ -314,9 +320,10 @@ h1::after {
     border: 2px solid var(--border-color);
     border-radius: var(--border-radius-sm);
     font-size: 1rem;
-    transition: var(--transition);
+    transition: border-color 0.2s ease;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    -webkit-tap-highlight-color: transparent;
 }
 
 #modal-player-name:focus {
@@ -345,12 +352,18 @@ h1::after {
     width: 100%;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
+    will-change: transform;
+    -webkit-tap-highlight-color: transparent;
 }
 
 #modal-start-btn:hover {
     background-color: var(--primary-hover);
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+#modal-start-btn:active {
+    transform: translateY(0);
+    transition: transform 0.1s ease;
 }
 
 #modal-target-url {
@@ -389,6 +402,12 @@ h1::after {
 }
 
 @media (max-width: 480px) {
+    /* Optimize animations for mobile */
+    :root {
+        --transition: background-color 0.2s ease;
+        --transition-fast: background-color 0.15s ease;
+    }
+    
     body {
         padding: 20px 10px;
     }
@@ -397,11 +416,54 @@ h1::after {
         font-size: 1.8rem;
     }
     
+    .container {
+        padding: 20px 15px;
+    }
+    
     .modal-content {
         padding: 25px 20px;
+        animation: fadeInModal 0.2s ease-out;
     }
     
     .course-item {
         padding: 20px 15px;
     }
+    
+    /* Disable hover animations on touch devices */
+    .course-item.available:hover {
+        transform: none;
+        box-shadow: var(--shadow-sm);
+    }
+    
+    .course-item.available:active {
+        background-color: rgba(56, 176, 0, 0.05);
+        border-color: rgba(56, 176, 0, 0.3);
+    }
+    
+    .course-item.available:active span {
+        background-color: var(--success-color);
+        color: white;
+    }
+    
+    #modal-start-btn:hover {
+        transform: none;
+    }
+    
+    #modal-start-btn:active {
+        background-color: var(--primary-hover);
+        transform: none;
+    }
+    
+    @keyframes fadeInModal {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+}
+
+/* Add hardware acceleration for smoother animations */
+.course-item,
+.modal-content,
+#modal-start-btn {
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
