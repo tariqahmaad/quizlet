@@ -2,57 +2,24 @@
 // Handles fetching and displaying the leaderboard on index.html
 
 // --- Configuration (MUST MATCH scripts.js values) ---
-const JSONBIN_BIN_ID = '67f8354d8a456b796686d6db'; // <--- PASTE YOUR BIN ID HERE
-const JSONBIN_API_KEY = '$2a$10$XAQ4xZF7ujo6.aSwAx/Kl.8GJeJMEOBZhW3x7Mc9LIO7gUSfYjjb.'; // <--- PASTE YOUR ACCESS KEY HERE
-const LEADERBOARD_SIZE = 10;
+// const JSONBIN_BIN_ID = '67f8354d8a456b796686d6db'; // <--- MOVED TO leaderboard_api.js
+// const JSONBIN_API_KEY = '$2a$10$XAQ4xZF7ujo6.aSwAx/Kl.8GJeJMEOBZhW3x7Mc9LIO7gUSfYjjb.'; // <--- MOVED TO leaderboard_api.js
+// const LEADERBOARD_SIZE = 10; // <--- MOVED TO leaderboard_api.js
 
 // --- Utility (Copied from scripts.js) ---
-const escapeHTML = (str) => {
-    if (typeof str !== 'string') return '';
-    return str.replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#39;"); // Correct entity for single quote
-};
+// const escapeHTML = (str) => { // <--- MOVED TO leaderboard_api.js
+//     if (typeof str !== 'string') return '';
+//     return str.replace(/&/g, "&amp;")
+//         .replace(/</g, "&lt;")
+//         .replace(/>/g, "&gt;")
+//         .replace(/"/g, "&quot;")
+//         .replace(/'/g, "&#39;"); // Correct entity for single quote
+// };
 
 
 // --- Leaderboard Fetching (Copied and adapted from scripts.js) ---
-async function fetchLeaderboard() {
-    if (!JSONBIN_BIN_ID || !JSONBIN_API_KEY || JSONBIN_BIN_ID === 'YOUR_BIN_ID' || JSONBIN_API_KEY === 'YOUR_ACCESS_KEY') {
-        console.warn("JSONBin Bin ID or API Key not configured properly in leaderboard.js. Leaderboard disabled.");
-        const listElement = document.getElementById('index-leaderboard-list'); // Target index list
-        if (listElement) listElement.innerHTML = '<li>Leaderboard not configured.</li>';
-        return [];
-    }
-    try {
-        const response = await fetch(`https://api.jsonbin.io/v3/b/${JSONBIN_BIN_ID}/latest`, {
-            method: 'GET',
-            headers: {
-                'X-Access-Key': JSONBIN_API_KEY
-            }
-        });
-        if (!response.ok) {
-            if (response.status === 404) {
-                console.log("Leaderboard bin empty or not found on fetch. Returning empty array.");
-                return [];
-            }
-            const errorText = await response.text();
-            console.error(`HTTP error fetching leaderboard! Status: ${response.status}`, errorText);
-            throw new Error(`HTTP error fetching leaderboard! Status: ${response.status}`);
-        }
-        const data = await response.json();
-        // IMPORTANT: Adjust based on how data is SAVED in scripts.js
-        // If saved as { leaderboard: [...] }, use data.record?.leaderboard
-        // If saved as [...], use data.record
-        return data.record?.leaderboard || data.record || []; // Handles {leaderboard: []} or just []
-    } catch (error) {
-        console.error("Error fetching leaderboard:", error);
-        const listElement = document.getElementById('index-leaderboard-list'); // Target index list
-        if (listElement) listElement.innerHTML = '<li>Error loading leaderboard data.</li>';
-        return [];
-    }
-}
+// MOVED to leaderboard_api.js as leaderboardAPI.fetchLeaderboard
+// async function fetchLeaderboard() { ... }
 
 // --- Leaderboard Display Function for the Index Page ---
 async function displayIndexLeaderboard() {
@@ -64,7 +31,8 @@ async function displayIndexLeaderboard() {
 
     listElement.innerHTML = '<li><span class="loading-dots">Loading<span>.</span><span>.</span><span>.</span></span></li>';
 
-    const leaderboardData = await fetchLeaderboard();
+    // Use the centralized API function, passing the status element
+    const leaderboardData = await leaderboardAPI.fetchLeaderboard(listElement);
 
     listElement.innerHTML = ''; // Clear loading/previous list
 
@@ -85,8 +53,8 @@ async function displayIndexLeaderboard() {
         return new Date(b.timestamp) - new Date(a.timestamp);
     });
 
-    // Slice again just in case (should match LEADERBOARD_SIZE)
-    const topScores = leaderboardData.slice(0, LEADERBOARD_SIZE);
+    // Slice using the constant from the API module
+    const topScores = leaderboardData.slice(0, leaderboardAPI.LEADERBOARD_SIZE);
 
     topScores.forEach((entry, index) => { // Get the index (rank) here
         const listItem = document.createElement('li');
@@ -109,11 +77,11 @@ async function displayIndexLeaderboard() {
         const courseVal = entry.course || 'N/A';
         const weekVal = entry.week || 'N/A';
 
-        // Corrected innerHTML - NO rank span needed here
+        // Use the centralized escapeHTML function
         listItem.innerHTML = `
-            <span class="name">${escapeHTML(name)}</span> -
+            <span class="name">${leaderboardAPI.escapeHTML(name)}</span> -
             <span class="score">${scoreVal}/${totalVal} (${percentVal}%)</span>
-            <span class="details">(Course: ${escapeHTML(courseVal)}, ${escapeHTML(weekVal)})</span>
+            <span class="details">(Course: ${leaderboardAPI.escapeHTML(courseVal)}, ${leaderboardAPI.escapeHTML(weekVal)})</span>
         `;
         listElement.appendChild(listItem);
     });

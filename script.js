@@ -42,9 +42,9 @@ const backToIndexBtn = document.getElementById('back-to-index-btn');
 
 // --- JSONBin.io Configuration (MUST MATCH leaderboard.js values) ---
 // !!! IMPORTANT: Replace these placeholders with your actual Bin ID and Access Key !!!
-const JSONBIN_BIN_ID = '67f8354d8a456b796686d6db'; // <--- PASTE YOUR BIN ID HERE
-const JSONBIN_API_KEY = '$2a$10$XAQ4xZF7ujo6.aSwAx/Kl.8GJeJMEOBZhW3x7Mc9LIO7gUSfYjjb.'; // <--- PASTE YOUR ACCESS KEY HERE
-const LEADERBOARD_SIZE = 10; // How many scores to keep
+// const JSONBIN_BIN_ID = '67f8354d8a456b796686d6db'; // <--- MOVED TO leaderboard_api.js
+// const JSONBIN_API_KEY = '$2a$10$XAQ4xZF7ujo6.aSwAx/Kl.8GJeJMEOBZhW3x7Mc9LIO7gUSfYjjb.'; // <--- MOVED TO leaderboard_api.js
+// const LEADERBOARD_SIZE = 10; // <--- MOVED TO leaderboard_api.js
 
 // --- State Variables ---
 let currentQuestionIndex = 0;
@@ -94,123 +94,26 @@ function showError(message) {
     if (errorMessageElement) errorMessageElement.textContent = message;
 }
 
-const escapeHTML = (str) => {
-    if (typeof str !== 'string') return '';
-    return str.replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#39;"); // Correct entity for single quote
-};
+// const escapeHTML = (str) => { // <--- MOVED TO leaderboard_api.js
+//     if (typeof str !== 'string') return '';
+//     return str.replace(/&/g, "&amp;")
+//         .replace(/</g, "&lt;")
+//         .replace(/>/g, "&gt;")
+//         .replace(/"/g, "&quot;")
+//         .replace(/'/g, "&#39;"); // Correct entity for single quote
+// };
 
 
 // --- Leaderboard Functions (for quiz.html results page) ---
+// Uses functions from leaderboard_api.js
 
 // Fetches the current leaderboard data from JSONBin
-async function fetchLeaderboard() {
-    // Use the specific list element ID from quiz.html for status messages
-    const listElementForStatus = document.getElementById('leaderboard-list');
-
-    if (!JSONBIN_BIN_ID || !JSONBIN_API_KEY || JSONBIN_BIN_ID === 'YOUR_BIN_ID' || JSONBIN_API_KEY === 'YOUR_ACCESS_KEY') {
-        console.warn("JSONBin Bin ID or API Key not configured properly in scripts.js. Leaderboard disabled.");
-        if (listElementForStatus) listElementForStatus.innerHTML = '<li>Leaderboard not configured.</li>';
-        return [];
-    }
-    try {
-        const response = await fetch(`https://api.jsonbin.io/v3/b/${JSONBIN_BIN_ID}/latest`, {
-            method: 'GET',
-            headers: { 'X-Access-Key': JSONBIN_API_KEY }
-        });
-        if (!response.ok) {
-            if (response.status === 404) {
-                console.log("Leaderboard bin empty or not found. Returning empty array.");
-                return [];
-            }
-            const errorText = await response.text();
-            console.error(`HTTP error fetching leaderboard! Status: ${response.status}`, errorText);
-            throw new Error(`HTTP error fetching leaderboard! Status: ${response.status}`);
-        }
-        const data = await response.json();
-        // Should match structure used in save function
-        return data.record?.leaderboard || data.record || [];
-    } catch (error) {
-        console.error("Error fetching leaderboard:", error);
-        if (listElementForStatus) listElementForStatus.innerHTML = '<li>Error loading leaderboard data.</li>';
-        return [];
-    }
-}
+// MOVED to leaderboard_api.js as leaderboardAPI.fetchLeaderboard
+// async function fetchLeaderboard() { ... }
 
 // Saves a new score to the leaderboard on JSONBin
-async function saveScoreToLeaderboard(name, score, total, percentage, course, week) {
-    if (!JSONBIN_BIN_ID || !JSONBIN_API_KEY || JSONBIN_BIN_ID === 'YOUR_BIN_ID' || JSONBIN_API_KEY === 'YOUR_ACCESS_KEY') {
-        console.error("JSONBin Bin ID or API Key not configured. Cannot save score.");
-        if (saveStatusElement) saveStatusElement.textContent = "Save disabled (config).";
-        return false;
-    }
-    if (!name || name.trim() === '') {
-        if (saveStatusElement) saveStatusElement.textContent = "Please enter your name.";
-        else alert("Please enter your name to save the score.");
-        if (playerNameInput) playerNameInput.focus();
-        return false;
-    }
-
-    if (saveStatusElement) saveStatusElement.textContent = "Saving...";
-    if (saveScoreBtn) saveScoreBtn.disabled = true;
-
-    try {
-        let leaderboard = await fetchLeaderboard();
-        if (!Array.isArray(leaderboard)) {
-            console.warn("Fetched leaderboard data is not an array. Resetting to empty array.");
-            leaderboard = [];
-        }
-
-        const newEntry = {
-            name: name.trim(), score, total, percentage, course,
-            week: week === 'all' ? 'All Weeks' : `Week ${week}`,
-            timestamp: new Date().toISOString()
-        };
-        leaderboard.push(newEntry);
-
-        // Sort (same logic as leaderboard.js)
-        leaderboard.sort((a, b) => {
-            if (b.percentage !== a.percentage) return b.percentage - a.percentage;
-            if (b.score !== a.score) return b.score - a.score;
-            return new Date(b.timestamp) - new Date(a.timestamp);
-        });
-
-        // Limit size
-        leaderboard = leaderboard.slice(0, LEADERBOARD_SIZE);
-
-        // Save wrapped data: { leaderboard: [...] }
-        const saveData = { leaderboard: leaderboard };
-
-        const response = await fetch(`https://api.jsonbin.io/v3/b/${JSONBIN_BIN_ID}`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-Access-Key': JSONBIN_API_KEY
-            },
-            body: JSON.stringify(saveData) // Save the wrapped structure
-        });
-
-        if (!response.ok) {
-            const errorText = await response.text();
-            console.error(`HTTP error saving score! Status: ${response.status}`, errorText);
-            throw new Error(`HTTP error saving score! Status: ${response.status}`);
-        }
-
-        console.log("Score saved successfully!");
-        if (saveStatusElement) saveStatusElement.textContent = "Score Saved!";
-        await displayLeaderboard(); // Refresh display on results page
-        return true;
-
-    } catch (error) {
-        console.error("Error saving score:", error);
-        if (saveStatusElement) saveStatusElement.textContent = "Error saving score.";
-        if (saveScoreBtn) saveScoreBtn.disabled = false; // Re-enable on error
-        return false;
-    }
-}
+// MOVED to leaderboard_api.js as leaderboardAPI.saveScoreToLeaderboard
+// async function saveScoreToLeaderboard(name, score, total, percentage, course, week) { ... }
 
 // Displays the leaderboard data on the quiz.html results page
 async function displayLeaderboard() {
@@ -220,7 +123,8 @@ async function displayLeaderboard() {
 
     listElementOnQuizPage.innerHTML = '<li><span class="loading-dots">Loading<span>.</span><span>.</span><span>.</span></span></li>';
 
-    const leaderboardData = await fetchLeaderboard();
+    // Use the centralized API function
+    const leaderboardData = await leaderboardAPI.fetchLeaderboard(listElementOnQuizPage);
 
     listElementOnQuizPage.innerHTML = '';
 
@@ -236,8 +140,8 @@ async function displayLeaderboard() {
         return new Date(b.timestamp) - new Date(a.timestamp);
     });
 
-    // Slice again (consistent)
-    const topScores = leaderboardData.slice(0, LEADERBOARD_SIZE);
+    // Slice using the constant from the API module
+    const topScores = leaderboardData.slice(0, leaderboardAPI.LEADERBOARD_SIZE);
 
     topScores.forEach((entry, index) => { // Get the index (rank) here
         const listItem = document.createElement('li');
@@ -259,11 +163,11 @@ async function displayLeaderboard() {
         const courseVal = entry.course || 'N/A';
         const weekVal = entry.week || 'N/A';
 
-        // Corrected innerHTML - NO rank span needed here either
+        // Use the centralized escapeHTML function
         listItem.innerHTML = `
-            <span class="name">${escapeHTML(name)}</span> -
+            <span class="name">${leaderboardAPI.escapeHTML(name)}</span> -
             <span class="score">${scoreVal}/${totalVal} (${percentVal}%)</span>
-            <span class="details">(Course: ${escapeHTML(courseVal)}, ${escapeHTML(weekVal)})</span>
+            <span class="details">(Course: ${leaderboardAPI.escapeHTML(courseVal)}, ${leaderboardAPI.escapeHTML(weekVal)})</span>
         `;
         listElementOnQuizPage.appendChild(listItem);
     });
@@ -519,7 +423,7 @@ function handleAnswerClick(event) {
 
     // Visual feedback
     if (feedbackElement) {
-        feedbackElement.textContent = isCorrect ? "Correct!" : `Incorrect. Correct Answer: ${escapeHTML(correctAnswer)}`; // Escape correct answer display
+        feedbackElement.textContent = isCorrect ? "Correct!" : `Incorrect. Correct Answer: ${leaderboardAPI.escapeHTML(correctAnswer)}`; // Escape correct answer display
         feedbackElement.className = `feedback ${isCorrect ? 'correct' : 'incorrect'}`;
     }
 
@@ -536,7 +440,7 @@ function handleAnswerClick(event) {
 function highlightPreviousAnswer(selectedAnswer, isCorrect) {
     const correctAnswer = currentFilteredQuestions[currentQuestionIndex].correctAnswer;
     if (feedbackElement) {
-        feedbackElement.textContent = isCorrect ? "Correct!" : `Incorrect. Correct Answer: ${escapeHTML(correctAnswer)}`; // Escape correct answer display
+        feedbackElement.textContent = isCorrect ? "Correct!" : `Incorrect. Correct Answer: ${leaderboardAPI.escapeHTML(correctAnswer)}`; // Escape correct answer display
         feedbackElement.className = `feedback ${isCorrect ? 'correct' : 'incorrect'}`;
     }
     Array.from(optionsContainer.children).forEach(btn => {
@@ -651,10 +555,10 @@ function showResults() {
 
                 const listItem = document.createElement('li');
                 // Ensure userAnswerData exists before accessing its 'answer' property
-                const yourAnswerText = userAnswerData ? escapeHTML(userAnswerData.answer) : '<i>Skipped</i>';
+                const yourAnswerText = userAnswerData ? leaderboardAPI.escapeHTML(userAnswerData.answer) : '<i>Skipped</i>';
                 // Check questionData exists before accessing properties
-                const correctAnswerText = questionData ? escapeHTML(questionData.correctAnswer) : 'N/A';
-                const questionText = questionData ? escapeHTML(questionData.question) : 'Question data missing';
+                const correctAnswerText = questionData ? leaderboardAPI.escapeHTML(questionData.correctAnswer) : 'N/A';
+                const questionText = questionData ? leaderboardAPI.escapeHTML(questionData.question) : 'Question data missing';
                 const questionWeek = questionData?.week !== undefined ? `Week ${questionData.week}` : 'N/A'; // Handle missing week
 
                 listItem.innerHTML = `
@@ -691,8 +595,34 @@ function showResults() {
     if (saveScoreBtn) saveScoreBtn.disabled = false; // Re-enable save button
     if (saveStatusElement) saveStatusElement.textContent = ''; // Clear any previous save status
 
-    // Fetch and display the leaderboard on the results page
-    displayLeaderboard();
+    // Display the leaderboard after showing results
+    displayLeaderboard().catch(err => console.error("Error displaying leaderboard on results page:", err));
+
+    // Add event listener for saving score
+    if (saveScoreBtn) {
+        saveScoreBtn.onclick = async () => {
+            const playerName = playerNameInput.value;
+            // Use the centralized API function
+            const success = await leaderboardAPI.saveScoreToLeaderboard(
+                playerName,
+                score,
+                currentFilteredQuestions.length,
+                currentPercentage,
+                selectedCourseName, // Use the full name
+                selectedWeek,
+                saveStatusElement, // Pass status element
+                saveScoreBtn // Pass button element
+            );
+            if (success) {
+                // Optionally disable input/button after successful save
+                playerNameInput.disabled = true;
+                saveScoreBtn.disabled = true;
+                saveScoreBtn.textContent = "Saved";
+            }
+        };
+    } else {
+        console.warn("Save score button not found.");
+    }
 }
 
 // --- Event Listeners Setup ---
@@ -712,31 +642,6 @@ function setupEventListeners() {
     if (changeCourseBtn) changeCourseBtn.addEventListener('click', () => { window.location.href = 'index.html'; });
     if (homeBtn) homeBtn.addEventListener('click', () => { window.location.href = 'index.html'; });
     if (backToIndexBtn) backToIndexBtn.addEventListener('click', () => { window.location.href = 'index.html'; });
-
-    // Save score button listener
-    if (saveScoreBtn) {
-        saveScoreBtn.addEventListener('click', () => {
-            const nameToSave = playerNameInput ? playerNameInput.value.trim() : 'Anonymous';
-            if (!nameToSave) {
-                if (saveStatusElement) saveStatusElement.textContent = "Please enter your name.";
-                else alert("Please enter your name.");
-                if (playerNameInput) playerNameInput.focus();
-                return;
-            }
-            if (currentFilteredQuestions.length > 0) {
-                // Use the current state variables which were set when the results were calculated
-                saveScoreToLeaderboard(
-                    nameToSave, score, currentFilteredQuestions.length,
-                    currentPercentage, selectedCourseName, selectedWeek
-                );
-            } else {
-                if (saveStatusElement) saveStatusElement.textContent = "Cannot save score (no questions?).";
-                console.warn("Save score attempt failed - no questions loaded?");
-            }
-        });
-    } else {
-        console.warn("Save Score button not found.");
-    }
 }
 
 // --- Initialize Event Listeners ---
