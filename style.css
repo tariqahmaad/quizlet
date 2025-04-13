@@ -126,12 +126,13 @@ h1#quiz-main-title {
     white-space: nowrap;
 }
 
-/* Add a small house icon using a pseudo-element */
+/* Add a small house icon using a pseudo-element
 #home-btn.home-button::before {
     content: "⌂";
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     line-height: 0;
-}
+    margin-right: 5px;
+} */
 
 #home-btn.home-button:hover {
     background-color: var(--dark-color);
@@ -878,47 +879,182 @@ h1#quiz-main-title {
 
 @media (max-width: 480px) {
     body {
-        padding: 15px 10px;
+        padding: 8px 6px;
     }
     
     .quiz-container {
-        padding: 20px 15px;
+        padding: 12px 10px;
     }
     
     h1#quiz-main-title {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
+        margin-bottom: 6px;
     }
     
     .header-controls {
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 6px;
+        padding-bottom: 8px;
+        margin-bottom: 12px;
     }
     
     #home-btn.home-button {
         margin-left: 0;
-        padding: 8px 12px;
+        padding: 5px 8px;
+    }
+    
+    #selection-area {
+        padding: 15px;
+        margin-bottom: 15px;
+        gap: 12px;
+    }
+    
+    #week-select {
+        padding: 8px 10px;
+        min-width: 180px;
+    }
+    
+    #start-btn.nav-btn {
+        padding: 8px 20px;
+        font-size: 0.95rem;
+    }
+    
+    #quiz-indicators {
+        padding: 6px 8px;
+        margin-bottom: 10px;
+        font-size: 0.8rem;
+    }
+    
+    #progress {
+        margin-bottom: 8px;
+        font-size: 0.8rem;
+    }
+    
+    #question-card {
+        padding: 15px 12px;
+        margin-bottom: 15px;
+    }
+    
+    #question-text {
+        font-size: 1.0rem;
+        margin-bottom: 15px;
+    }
+    
+    #options-container {
+        gap: 8px;
     }
     
     .option-btn {
-        padding: 12px 15px;
+        padding: 8px 10px;
+        font-size: 0.95rem;
+    }
+    
+    .feedback {
+        margin-top: 15px;
+        padding: 10px;
+        font-size: 0.85rem;
     }
     
     .navigation-buttons {
         flex-direction: column;
-        gap: 10px;
+        gap: 6px;
+        margin-top: 15px;
     }
     
     .nav-btn {
         width: 100%;
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    
+    #results-area {
+        padding: 15px;
+        gap: 12px;
+    }
+    
+    #results-area h2 {
+        font-size: 1.4rem;
+    }
+    
+    #results-course-week-info {
+        font-size: 0.85rem;
+        margin-bottom: 8px;
+    }
+    
+    #results-area > p {
+        font-size: 0.95rem;
+        margin-bottom: 6px;
+    }
+    
+    #percentage-score {
+        font-size: 1.05rem;
+    }
+    
+    .leaderboard-save-section {
+        padding: 15px 12px;
+        margin: 12px auto;
+    }
+    
+    #player-name {
+        padding: 8px 10px;
+        margin-bottom: 8px;
+    }
+    
+    .save-button {
+        padding: 8px 15px;
+    }
+    
+    .leaderboard-display-section {
+        margin-top: 15px;
+        padding-top: 12px;
+    }
+    
+    .leaderboard-display-section h3 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+    
+    #leaderboard-list li {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+    
+    #incorrect-answers-container {
+        padding: 15px 12px;
+        margin: 15px auto;
+        padding-top: 15px;
+    }
+    
+    #incorrect-answers-container h3 {
+        font-size: 1.05rem;
+        margin-bottom: 12px;
+    }
+    
+    #incorrect-answers-container li {
+        padding: 12px;
+        margin-bottom: 10px;
+        font-size: 0.85rem;
     }
     
     .results-buttons {
         flex-direction: column;
+        gap: 8px;
+        margin-top: 15px;
     }
     
     #restart-btn,
     #change-course-btn,
     #another-week-btn {
         max-width: 100%;
+    }
+    
+    #error-area {
+        margin-top: 15px;
+        padding: 15px;
+    }
+    
+    #error-message {
+        margin-bottom: 12px;
+        font-size: 0.95rem;
     }
 }

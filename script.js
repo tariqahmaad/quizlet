@@ -475,27 +475,60 @@ function updateProgress(index) {
 function updateNavigationButtons(index) {
     if (prevBtn) prevBtn.disabled = index === 0;
     if (nextBtn) {
-        if (index === currentFilteredQuestions.length - 1) {
-            nextBtn.textContent = "Finish";
-            nextBtn.disabled = userAnswers[index] === null; // Disable Finish until last Q answered
-        } else {
-            nextBtn.textContent = "Next";
-            nextBtn.disabled = false; // Always enable Next (allows skipping)
-        }
+        // Keep the button as "Next" and always enabled (unless explicitly disabled elsewhere)
+        // The showNextQuestion function will handle the transition to results.
+        nextBtn.textContent = "Next";
+        nextBtn.disabled = false;
+
+        // Maybe disable if *all* questions are answered? Let's handle that in showNextQuestion for now.
+        // const allAnswered = userAnswers.every(ans => ans !== null);
+        // nextBtn.disabled = allAnswered;
     }
 }
 
 // Show Next Question or Finish
 function showNextQuestion() {
-    if (currentQuestionIndex < currentFilteredQuestions.length - 1) {
-        currentQuestionIndex++;
+    const totalQuestions = currentFilteredQuestions.length;
+    let nextUnansweredIndex = -1;
+
+    // 1. Search from current + 1 to end
+    for (let i = currentQuestionIndex + 1; i < totalQuestions; i++) {
+        if (userAnswers[i] === null) {
+            nextUnansweredIndex = i;
+            break;
+        }
+    }
+
+    // 2. If not found, search from 0 to current
+    if (nextUnansweredIndex === -1) {
+        for (let i = 0; i < currentQuestionIndex; i++) {
+            if (userAnswers[i] === null) {
+                nextUnansweredIndex = i;
+                break;
+            }
+        }
+    }
+
+    // 3. Handle outcome
+    if (nextUnansweredIndex !== -1) {
+        // Found an unanswered question
+        currentQuestionIndex = nextUnansweredIndex;
         loadQuestion(currentQuestionIndex);
-    } else if (nextBtn && nextBtn.textContent === "Finish" && userAnswers[currentQuestionIndex] !== null) {
-        showResults(); // Go to results if Finish clicked and last Q answered
-    } else if (nextBtn && nextBtn.textContent === "Finish") {
-        // If Finish clicked but last Q not answered (should be disabled, but safeguard)
-        alert("Please answer the final question before finishing.");
-        // Or potentially allow finishing with skipped Q: showResults();
+    } else {
+        // No unanswered questions left (including the current one if it was just answered)
+        // Check if the *current* one is actually answered before finishing
+        if (userAnswers[currentQuestionIndex] !== null) {
+            showResults();
+        } else {
+            // This case implies the user clicked Next on the last unanswered question
+            // without answering it. Let's just stay on the current question.
+            // Optionally, provide feedback:
+            // alert("This is the last unanswered question.");
+            // Or, if we want to *force* results:
+            // showResults();
+            // For now, just stay put.
+            console.log("Clicked Next on the last unanswered question.");
+        }
     }
 }
 
