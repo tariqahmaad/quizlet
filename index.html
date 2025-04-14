@@ -7,12 +7,21 @@
     <title>Course Exam Selector</title>
     <!-- Link to the index CSS -->
     <link rel="stylesheet" href="style_index.css">
+    <!-- GoatCounter analytics -->
+    <script data-goatcounter="https://tariqo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 
 <body>
     <div class="container">
         <h1>Select a Course Exam</h1>
         <p>Choose an available course below and enter your name to start.</p>
+
+        <!-- Daily Visitor Counter -->
+        <div class="visitor-counter">
+            <p>Daily Visitors: <span id="visitor-count">Loading...</span></p>
+        </div>
+
+        <div id="goatcounter-container" class="visitor-counter-display"></div>
 
         <div class="course-grid">
 
@@ -77,6 +86,41 @@
     <script src="leaderboard_api.js"></script>
     <script src="index_script.js"></script>
 
+    <!-- Visitor Counter Script -->
+    <script>
+        // Option 1: Using the built-in visit_count function
+        var t = setInterval(function () {
+            if (window.goatcounter && window.goatcounter.visit_count) {
+                clearInterval(t);
+
+                // Add visitor counter directly using GoatCounter's built-in function
+                window.goatcounter.visit_count({
+                    append: '#goatcounter-container',
+                    type: 'html',  // 'html', 'svg', or 'png'
+                    style: `
+                        div { border-color: var(--primary-color); background-color: var(--light-bg); }
+                        #gcvc-views { color: var(--primary-color); font-weight: bold; }
+                    `
+                });
+
+                // Option 2: Also update our custom counter using the JSON API
+                // Use goatcounter.get_data()['p'] as recommended in the documentation 
+                // for the exact (encoded) path as it appears in the UI
+                let path = window.goatcounter.get_data()['p'];
+                let r = new XMLHttpRequest();
+                r.addEventListener('load', function () {
+                    if (this.status === 200) {
+                        document.getElementById('visitor-count').textContent = JSON.parse(this.responseText).count;
+                    } else {
+                        document.getElementById('visitor-count').textContent = 'See counter below';
+                    }
+                });
+
+                r.open('GET', 'https://tariqo.goatcounter.com/counter/' + encodeURIComponent(path) + '.json');
+                r.send();
+            }
+        }, 100);
+    </script>
 </body>
 
 </html>

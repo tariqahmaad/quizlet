@@ -230,23 +230,30 @@ function populateWeekSelector() {
         console.warn("populateWeekSelector called before courseQuestions were ready.");
         return;
     }
-    // Use Set to get unique week numbers, filter undefined/null, sort numerically
-    const weeks = [...new Set(courseQuestions.map(q => q.week).filter(w => w !== undefined && w !== null))].sort((a, b) => a - b);
+    // Check if any question has week === 0
+    const hasWeekZero = courseQuestions.some(q => q.week === 0);
 
     weekSelect.innerHTML = '<option value="">-- Select a Week --</option>'; // Placeholder
-    weekSelect.innerHTML += '<option value="all">All Weeks</option>'; // Always add 'All Weeks'
+    weekSelect.innerHTML += '<option value="all">All Weeks</option>';
 
-    if (weeks.length > 0) {
-        weeks.forEach(week => {
-            const option = document.createElement('option');
-            option.value = week;
-            option.textContent = `Week ${week}`;
-            weekSelect.appendChild(option);
-        });
+    if (!hasWeekZero) {
+        // Use Set to get unique week numbers, filter undefined/null, sort numerically
+        const weeks = [...new Set(courseQuestions.map(q => q.week).filter(w => w !== undefined && w !== null))].sort((a, b) => a - b);
+        if (weeks.length > 0) {
+            weeks.forEach(week => {
+                const option = document.createElement('option');
+                option.value = week;
+                option.textContent = `Week ${week}`;
+                weekSelect.appendChild(option);
+            });
+        } else {
+            console.log(`No specific week numbers found for course ${selectedCourseCode}. Only 'All Weeks' available.`);
+            // If no specific weeks, maybe default to 'all' or disable selection?
+            // For now, just leaves 'All Weeks' as the only option besides placeholder.
+        }
     } else {
-        console.log(`No specific week numbers found for course ${selectedCourseCode}. Only 'All Weeks' available.`);
-        // If no specific weeks, maybe default to 'all' or disable selection?
-        // For now, just leaves 'All Weeks' as the only option besides placeholder.
+        // If week 0 is present, do not add individual weeks
+        console.log("Week 0 detected: Only 'All Weeks' will be shown in the selector.");
     }
 }
 

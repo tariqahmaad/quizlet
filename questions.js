@@ -3,943 +3,704 @@
 const allQuestions = [
     // --- Week 1: COM496 ---
     {
-        week: 1,
+        week: 1, // Definition of CIA Triad
         courseCode: "COM496",
-        question: "Cybersecurity primarily focuses on protecting which of the following?",
-        options: ["Physical infrastructure only", "Digital information, computers, mobile devices, servers, and networks", "Business processes and employee training", "Legal compliance and regulations"],
-        correctAnswer: "Digital information, computers, mobile devices, servers, and networks"
+        question: "What does the CIA Triad in information security represent?",
+        options: ["Confidentiality, Integrity, Accessibility", "Confidentiality, Integrity, Availability", "Confidentiality, Integrity, Authentication", "Control, Integrity, Availability"],
+        correctAnswer: "Confidentiality, Integrity, Availability"
     },
     {
-        week: 1,
+        week: 1, // Definition of Asset
         courseCode: "COM496",
-        question: "The notes state cybersecurity involves a combination of People, Processes, and what third component?",
-        options: ["Data", "Hardware", "Technology", "Policies"],
-        correctAnswer: "Technology"
+        question: "Which term refers to valuable information resources that need to be protected against attacks, such as a national ID number database or credit card database?",
+        options: ["Asset", "Vulnerability", "Threat", "Exploit"],
+        correctAnswer: "Asset"
     },
     {
-        week: 1,
+        week: 1, // Definition of White Hat Hacker
         courseCode: "COM496",
-        question: "The practice of protecting sensitive data from unauthorized access, alteration, or destruction defines:",
-        options: ["Network Management", "Information Security", "Data Analysis", "Software Development"],
-        correctAnswer: "Information Security"
+        question: "Which of the following refers to a professional who is authorized to identify and fix security vulnerabilities in systems to prevent malicious attacks?",
+        options: ["Black Hat Hacker", "White Hat Hacker", "Script Kiddie", "Cyber Criminal"],
+        correctAnswer: "White Hat Hacker"
     },
     {
-        week: 1,
+        week: 1, // Critical Infrastructure concept (Introductory Scope)
         courseCode: "COM496",
-        question: "Which component of the CIA triad ensures that data is not altered or tampered with?",
-        options: ["Confidentiality", "Integrity", "Availability", "Authenticity"],
-        correctAnswer: "Integrity"
+        question: "Which of the following is NOT considered critical infrastructure?",
+        options: ["Electrical power grid", "Water supply system", "Social media platform", "Communication network"],
+        correctAnswer: "Social media platform"
     },
     {
-        week: 1,
+        week: 1, // Basic definition of DDoS (Overview)
         courseCode: "COM496",
-        question: "Ensuring that systems and data are accessible to authorized users when needed relates to which component of the CIA triad?",
-        options: ["Confidentiality", "Integrity", "Availability", "Non-repudiation"],
-        correctAnswer: "Availability"
+        question: "Which of the following best describes a DDoS (Distributed Denial of Service) attack?",
+        options: ["A type of attack where a single computer sends massive traffic to overwhelm a server, causing it to crash.", "A type of attack where multiple computers send a large volume of traffic to a server, overwhelming it and making it unavailable to legitimate users.", "An attack that focuses on stealing sensitive information from a user’s device.", "A type of phishing attack where attackers impersonate a trusted entity to steal login credentials."],
+        correctAnswer: "A type of attack where multiple computers send a large volume of traffic to a server, overwhelming it and making it unavailable to legitimate users."
     },
     {
-        week: 1,
+        week: 1, // Basic definition of Ransomware (Overview)
         courseCode: "COM496",
-        question: "What term refers to a weakness in a system that can be exploited by a threat?",
-        options: ["Risk", "Threat", "Asset", "Vulnerability"],
-        correctAnswer: "Vulnerability"
+        question: "Which of the following best describes a ransomware attack?",
+        options: ["An attack where hackers steal sensitive data and demand money in exchange for not releasing it to the public.", "An attack where malicious software locks or encrypts the victim’s files, and the attacker demands a ransom to restore access.", "An attack that targets network infrastructure to cause a denial of service.", "An attack that impersonates a trusted entity to steal login credentials."],
+        correctAnswer: "An attack where malicious software locks or encrypts the victim’s files, and the attacker demands a ransom to restore access."
     },
     {
-        week: 1,
+        week: 1, // Basic definition of MitM (Overview)
         courseCode: "COM496",
-        question: "The process of verifying the identity of a user or system is known as:",
-        options: ["Authorization", "Accountability", "Authentication", "Access Control"],
+        question: "Which of the following best describes a Man-in-the-Middle (MitM) attack?",
+        options: ["An attack where a hacker intercepts and alters communication between two parties without their knowledge.", "An attack where a hacker impersonates a trusted entity to steal sensitive information.", "An attack where multiple computers overwhelm a server to make it unavailable to users.", "An attack where a hacker installs malware to monitor user activities on a device."],
+        correctAnswer: "An attack where a hacker intercepts and alters communication between two parties without their knowledge."
+    },
+    {
+        week: 1, // Definition of Digital Forensics (Career mentioned)
+        courseCode: "COM496",
+        question: "Which of the following best describes Digital Forensics?",
+        options: ["A process of gathering and analyzing physical evidence to solve crimes.", "A method used to recover deleted files from digital devices for personal use.", "A field of study that involves collecting, analyzing, and preserving digital evidence for legal investigations.", "A technique to encrypt sensitive data for secure communication."],
+        correctAnswer: "A field of study that involves collecting, analyzing, and preserving digital evidence for legal investigations."
+    },
+    {
+        week: 1, // Digital Forensics process (Relates to career)
+        courseCode: "COM496",
+        question: "Which of the following is the correct order of steps in the Digital Forensics process?",
+        options: ["Collection → Analysis → Preservation → Reporting", "Preservation → Collection → Analysis → Reporting", "Collection → Preservation → Reporting → Analysis", "Reporting → Collection → Analysis → Preservation"],
+        correctAnswer: "Preservation → Collection → Analysis → Reporting"
+    },
+    {
+        week: 1, // Definition of Personal Data
+        courseCode: "COM496",
+        question: "Which of the following best describes \"personal data\"?",
+        options: ["Data that is used only for marketing purposes.", "Any information that relates to an identified or identifiable individual.", "Information that is publicly available on social media.", "Data collected only for scientific research purposes."],
+        correctAnswer: "Any information that relates to an identified or identifiable individual."
+    },
+    {
+        week: 1, // Sensitive Personal Data concept
+        courseCode: "COM496",
+        question: "Which of the following is considered sensitive personal data under data protection laws (e.g., GDPR)?",
+        options: ["Name and address", "Email address", "Racial or ethnic origin", "Date of birth"],
+        correctAnswer: "Racial or ethnic origin"
+    },
+    {
+        week: 1, // Lawful processing of Personal Data
+        courseCode: "COM496",
+        question: "Which of the following actions is required to ensure personal data is processed lawfully?",
+        options: ["The data must always be kept in the cloud.", "The data must be processed with the consent of the data subject or based on legal grounds.", "The data must be shared with any third party without restrictions.", "The data must be deleted after one month."],
+        correctAnswer: "The data must be processed with the consent of the data subject or based on legal grounds."
+    },
+    {
+        week: 1, // Definition of Authenticity
+        courseCode: "COM496",
+        question: "Which of the following best describes authenticity in the context of information security?",
+        options: ["Ensuring that the data is not altered or tampered with during transmission.", "Verifying the identity of the sender or the origin of the data to confirm its legitimacy.", "Ensuring that only authorized users can access the data.", "Preventing the data from being destroyed or lost."],
+        correctAnswer: "Verifying the identity of the sender or the origin of the data to confirm its legitimacy."
+    },
+    {
+        week: 1, // Definition of Authentication
+        courseCode: "COM496",
+        question: "Which of the following processes is used to verify the identity of a user or system before granting access to resources?",
+        options: ["Authorization", "Encryption", "Authentication", "Integrity Verification"],
         correctAnswer: "Authentication"
     },
     {
-        week: 1,
+        week: 1, // Definition of Availability (CIA Triad)
         courseCode: "COM496",
-        question: "Ensuring that the origin of data is genuine and can be trusted refers to:",
-        options: ["Confidentiality", "Authenticity", "Availability", "Integrity"],
-        correctAnswer: "Authenticity"
+        question: "Which of the following refers to ensuring that data and services are accessible and usable when needed?",
+        options: ["Integrity", "Confidentiality", "Availability", "Authentication"],
+        correctAnswer: "Availability"
     },
     {
-        week: 1,
+        week: 1, // Definition of Vulnerability
         courseCode: "COM496",
-        question: "According to the notes, information relating to an identified or identifiable natural person (like a name or phone number) is called:",
-        options: ["Corporate Data", "Critical Data", "Personal Data", "System Data"],
-        correctAnswer: "Personal Data"
+        question: "Which of the following refers to a weakness in a system that can be exploited by attackers to gain unauthorized access or cause harm?",
+        options: ["Threat", "Risk", "Vulnerability", "Mitigation"],
+        correctAnswer: "Vulnerability"
     },
     {
-        week: 1,
+        week: 1, // Definition of Threat
         courseCode: "COM496",
-        question: "Compromise of which type of information system could lead to loss of life or major economic damage?",
-        options: ["Personal Blogs", "Social Media Networks", "Critical Infrastructure Systems (e.g., energy dams)", "Online Retail Stores"],
-        correctAnswer: "Critical Infrastructure Systems (e.g., energy dams)"
+        question: "What term describes a potential danger that can exploit vulnerabilities in a computer system or network to cause harm, such as viruses, hackers, malware, or phishing attacks?",
+        options: ["Vulnerability", "Cybersecurity Threat", "Risk Assessment", "Data Breach"],
+        correctAnswer: "Cybersecurity Threat"
     },
     {
-        week: 1,
+        week: 2, // Importance of understanding threats (Focus of Week 2)
         courseCode: "COM496",
-        question: "A person who attempts to breach computer systems is broadly termed a:",
-        options: ["Analyst", "Administrator", "Developer", "Hacker"],
-        correctAnswer: "Hacker"
+        question: "Why is it important to understand cybersecurity threats?",
+        options: ["To create more complex user interfaces", "To effectively protect systems and data from potential attacks", "To increase internet speed", "To reduce software development time"],
+        correctAnswer: "To effectively protect systems and data from potential attacks"
     },
     {
-        week: 1,
+        week: 2, // Benefit of identifying threats (Focus of Week 2)
         courseCode: "COM496",
-        question: "An ethical hacker who works to improve security is also known as a:",
-        options: ["Black Hat", "Gray Hat", "White Hat", "Script Kiddie"],
-        correctAnswer: "White Hat"
+        question: "What is one key benefit of identifying cybersecurity threats in advance?",
+        options: ["It eliminates the need for antivirus software", "It allows for proactive defense measures to prevent damage", "It guarantees that no cyberattacks will ever occur", "It speeds up software installation"],
+        correctAnswer: "It allows for proactive defense measures to prevent damage"
     },
     {
-        week: 1,
+        week: 2, // Understanding threats helps organizations (Focus of Week 2)
         courseCode: "COM496",
-        question: "Hackers motivated by political or social causes are referred to as:",
-        options: ["State-Sponsored Hackers", "Cyber Terrorists", "Script Kiddies", "Hacktivists"],
-        correctAnswer: "Hacktivists"
+        question: "Understanding cybersecurity threats helps organizations to:",
+        options: ["Build user-friendly websites", "Avoid legal responsibilities", "Develop better defense strategies and incident response plans", "Replace hardware more frequently"],
+        correctAnswer: "Develop better defense strategies and incident response plans"
     },
     {
-        week: 1,
+        week: 2, // Phishing as common threat (Detailed in Week 2)
         courseCode: "COM496",
-        question: "Attackers backed by government entities, often involved in espionage, are known as:",
-        options: ["Gray Hats", "Hacktivists", "State-Sponsored Hackers", "Cyber Terrorists"],
-        correctAnswer: "State-Sponsored Hackers"
-    },
-    {
-        week: 1,
-        courseCode: "COM496",
-        question: "What type of attacker is typically inexperienced and uses pre-made tools to launch attacks?",
-        options: ["State-Sponsored Hacker", "Hacktivist", "Script Kiddie", "Cyber Terrorist"],
-        correctAnswer: "Script Kiddie"
-    },
-    {
-        week: 1,
-        courseCode: "COM496",
-        question: "Which type of cyber attack involves overwhelming a target system with traffic from a single source to make it unavailable?",
-        options: ["Phishing", "Malware", "DoS (Denial of Service)", "MitM (Man-in-the-Middle)"],
-        correctAnswer: "DoS (Denial of Service)"
-    },
-    {
-        week: 1,
-        courseCode: "COM496",
-        question: "A DDoS attack uses what to overwhelm a target?",
-        options: ["A single powerful server", "Social engineering techniques", "A network of compromised computers (botnet)", "Encrypted malware"],
-        correctAnswer: "A network of compromised computers (botnet)"
-    },
-    {
-        week: 1,
-        courseCode: "COM496",
-        question: "Tricking users into revealing sensitive information through deceptive emails or websites is known as:",
-        options: ["Malware", "DDoS", "Phishing", "Session Hijacking"],
+        question: "Which of the following is considered a common cybersecurity threat?",
+        options: ["Cloud storage", "Firewall", "Phishing", "Software updates"],
         correctAnswer: "Phishing"
     },
     {
-        week: 1,
+        week: 2, // Encryption is defense, not threat (Covered Week 3, but identifying threats is Week 2)
         courseCode: "COM496",
-        question: "Session Hijacking, IP Spoofing, and Replay Attacks fall under which broader category of attack?",
-        options: ["DoS", "Malware", "Phishing", "Man-in-the-Middle (MitM)"],
-        correctAnswer: "Man-in-the-Middle (MitM)"
+        question: "Which of the following is NOT a common cybersecurity threat?",
+        options: ["Malware", "Ransomware", "Encryption", "Denial of Service (DoS) attacks"],
+        correctAnswer: "Encryption"
     },
     {
-        week: 1,
+        week: 2, // Lists common threats (Focus of Week 2)
         courseCode: "COM496",
-        question: "Which term ensures that a party cannot deny having sent a message or performed an action?",
-        options: ["Confidentiality", "Integrity", "Authenticity", "Non-repudiation"],
-        correctAnswer: "Non-repudiation"
+        question: "Which of the following best lists common cybersecurity threats?",
+        options: ["Firewall, antivirus, VPN", "Malware, phishing, ransomware", "Authentication, authorization, auditing", "Backup, restore, replication"],
+        correctAnswer: "Malware, phishing, ransomware"
     },
     {
-        week: 1,
+        week: 2, // Good practice - Updates, passwords (General Prevention)
         courseCode: "COM496",
-        question: "The WannaCry incident from 2017 mentioned in the examples primarily involved what type of malicious software?",
-        options: ["Virus", "Worm", "Trojan", "Ransomware"],
-        correctAnswer: "Ransomware"
+        question: "Which of the following is a good practice to protect against cyber threats?",
+        options: ["Using the same password for all accounts", "Ignoring software updates", "Regularly updating software and using strong, unique passwords", "Sharing company credentials via email"],
+        correctAnswer: "Regularly updating software and using strong, unique passwords"
     },
     {
-        week: 1,
+        week: 2, // Reducing risk - Training (General Prevention)
         courseCode: "COM496",
-        question: "Which company suffered a significant data breach in 2021 mentioned in the examples?",
-        options: ["Sony", "Epsilon", "Air India", "Yahoo"],
-        correctAnswer: "Air India"
+        question: "How can companies reduce the risk of cyber attacks?",
+        options: ["Disabling firewalls to improve internet speed", "Training employees on cybersecurity awareness and safe practices", "Allowing unrestricted access to all internal systems", "Only using antivirus software without any monitoring"],
+        correctAnswer: "Training employees on cybersecurity awareness and safe practices"
     },
     {
-        week: 1,
+        week: 2, // Org measure - MFA (General Prevention)
         courseCode: "COM496",
-        question: "Which team role focuses on defending systems against attacks?",
-        options: ["Red Team", "Blue Team", "Ethical Hacker", "Cybersecurity Guru"],
-        correctAnswer: "Blue Team"
+        question: "Which of the following is an effective organizational measure to protect against cyber threats?",
+        options: ["Storing sensitive data in plain text", "Implementing multi-factor authentication (MFA) for all users", "Allowing any device to connect to the corporate network", "Avoiding security audits to save costs"],
+        correctAnswer: "Implementing multi-factor authentication (MFA) for all users"
     },
-
-    // --- Week 2: COM496 ---
     {
-        week: 2,
+        week: 2, // Types of malware (Detailed in Week 2)
         courseCode: "COM496",
-        question: "Week 2 primarily focuses on understanding common cyber threats, their types, and what other aspect?",
-        options: ["Cryptographic algorithms", "Network configuration", "Protection methods", "Career paths"],
-        correctAnswer: "Protection methods"
+        question: "Which of the following are common types of malware?",
+        options: ["Worms, Trojans, Ransomware, Spyware", "Firewalls, Antivirus, Backups, VPN", "HTTP, HTTPS, FTP, TCP", "Authentication, Authorization, Accounting"],
+        correctAnswer: "Worms, Trojans, Ransomware, Spyware"
     },
     {
-        week: 2,
+        week: 2, // Phishing vs Spear Phishing (Defined in Week 2)
         courseCode: "COM496",
-        question: "Software specifically designed to damage systems or gain unauthorized access is called:",
-        options: ["Firmware", "Adware", "Malware", "Middleware"],
-        correctAnswer: "Malware"
+        question: "What is the main difference between phishing and spear phishing?",
+        options: ["Phishing is a targeted attack, while spear phishing is random.", "Phishing attacks are always conducted via phone, spear phishing uses websites.", "Phishing is a broad attack sent to many people, while spear phishing targets a specific individual or organization.", "There is no difference; both terms mean the same thing."],
+        correctAnswer: "Phishing is a broad attack sent to many people, while spear phishing targets a specific individual or organization."
     },
     {
-        week: 2,
+        week: 2, // Phishing example analysis (Detailed in Week 2)
         courseCode: "COM496",
-        question: "Viruses, Trojans, Worms, and Ransomware are all types of:",
-        options: ["Network protocols", "Operating systems", "Malware", "Authentication methods"],
-        correctAnswer: "Malware"
+        question: "You receive an email that looks like it’s from your bank, saying:\n“Urgent: We detected suspicious activity on your account. Please click the link below to verify your login details immediately.”\nThe sender’s email looks slightly off, like security@b4nk.com.\nWhat is the best explanation for this email?",
+        options: ["It is a legitimate security alert from the bank.", "It is a phishing attempt trying to steal your login credentials.", "It is a promotional offer from the bank.", "It is a system-generated error message."],
+        correctAnswer: "It is a phishing attempt trying to steal your login credentials."
     },
     {
-        week: 2,
+        week: 2, // Virus mechanism (Detailed in Week 2)
         courseCode: "COM496",
-        question: "What is the primary goal of Phishing attacks?",
-        options: ["To disable network services", "To encrypt user data for ransom", "To trick users into revealing sensitive information (e.g., passwords)", "To self-replicate across networks"],
-        correctAnswer: "To trick users into revealing sensitive information (e.g., passwords)"
+        question: "How does a computer virus typically work?",
+        options: ["It creates secure backups of the system.", "It improves the performance of your computer.", "It attaches itself to legitimate programs or files and spreads when they are executed.", "It protects your system from unauthorized access."],
+        correctAnswer: "It attaches itself to legitimate programs or files and spreads when they are executed."
     },
     {
-        week: 2,
+        week: 2, // ILOVEYOU virus (Fits Virus discussion)
         courseCode: "COM496",
-        question: "What is the core purpose of a DoS or DDoS attack?",
-        options: ["To steal data silently", "To install hidden backdoors", "To make a service or system unavailable by overwhelming it", "To impersonate a legitimate user"],
-        correctAnswer: "To make a service or system unavailable by overwhelming it"
+        question: "Which of the following famous computer viruses spread via email and exploited social engineering by disguising itself as a love letter?",
+        options: ["MyDoom", "ILOVEYOU", "WannaCry", "Conficker"],
+        correctAnswer: "ILOVEYOU"
     },
     {
-        week: 2,
+        week: 2, // Virus vs Worm vs Trojan comparison (Detailed in Week 2)
         courseCode: "COM496",
-        question: "According to the notes, how does a virus primarily spread?",
-        options: ["By exploiting network vulnerabilities automatically", "By attaching to files/programs and spreading upon execution by a user", "By sending emails from a central server", "By encrypting the boot sector"],
-        correctAnswer: "By attaching to files/programs and spreading upon execution by a user"
+        question: "Which of the following correctly describes the key differences between viruses, worms, and trojans?",
+        options: ["Viruses spread through email attachments, worms self-replicate and spread on their own, and trojans disguise themselves as legitimate programs to trick users.", "Viruses only affect hardware, worms do not spread, and trojans infect only mobile devices.", "Worms require human interaction to spread, viruses are self-replicating, and trojans provide security for systems.", "Trojans are harmless, viruses are always detected by antivirus software, and worms only target servers."],
+        correctAnswer: "Viruses spread through email attachments, worms self-replicate and spread on their own, and trojans disguise themselves as legitimate programs to trick users."
     },
     {
-        week: 2,
+        week: 2, // Ransomware mechanism (Detailed in Week 2)
         courseCode: "COM496",
-        question: "Which sequence represents the typical lifecycle of a virus as per the notes?",
-        options: ["Replication -> Infection -> Payload -> Execution", "Infection -> Execution -> Replication -> Payload Execution", "Execution -> Payload -> Infection -> Replication", "Payload -> Replication -> Execution -> Infection"],
-        correctAnswer: "Infection -> Execution -> Replication -> Payload Execution"
+        question: "How does ransomware typically work?",
+        options: ["It encrypts the victim's files and demands a ransom payment to decrypt them.", "It steals sensitive data and sells it to third parties without any user interaction.", "It sends spam emails to the victim's contacts.", "It installs software to increase the system's processing speed."],
+        correctAnswer: "It encrypts the victim's files and demands a ransom payment to decrypt them."
     },
     {
-        week: 2,
+        week: 2, // GitHub DDoS (Fits DDoS discussion/examples)
         courseCode: "COM496",
-        question: "What is the defining characteristic of a Trojan Horse?",
-        options: ["It self-replicates rapidly.", "It disguises itself as legitimate software to trick users into running it.", "It always encrypts files.", "It primarily targets network infrastructure."],
-        correctAnswer: "It disguises itself as legitimate software to trick users into running it."
+        question: "In 2018, GitHub experienced a massive DDoS attack that reached a peak of 1.35 terabits per second. What made this attack particularly notable?",
+        options: ["It used a new type of malware that affected GitHub's source code.", "It was the first attack to utilize the Memcached vulnerability, amplifying the traffic sent to the target.", "The attack targeted GitHub’s cloud storage service, shutting it down for several days.", "It was carried out by a group of hackers claiming political motives."],
+        correctAnswer: "It was the first attack to utilize the Memcached vulnerability, amplifying the traffic sent to the target."
     },
     {
-        week: 2,
+        week: 2, // State-sponsored attack purpose (Detailed in Week 2)
         courseCode: "COM496",
-        question: "Backdoor, Banking, and Spyware are mentioned as types of which malware?",
-        options: ["Virus", "Worm", "Trojan", "Ransomware"],
-        correctAnswer: "Trojan"
+        question: "What is the purpose of state-sponsored cyber attacks?",
+        options: ["To test new software on a global scale", "To gain political, economic, or military advantage over other nations", "To entertain hackers working for the government", "To assist companies with cybersecurity awareness"],
+        correctAnswer: "To gain political, economic, or military advantage over other nations"
     },
     {
-        week: 2,
+        week: 2, // Hacker motivations (Revisited in Week 2)
         courseCode: "COM496",
-        question: "Unlike viruses, how do worms typically propagate?",
-        options: ["They require users to manually copy them to other systems.", "They attach themselves to existing program files.", "They self-replicate and spread across networks, often exploiting vulnerabilities.", "They rely on social engineering deception."],
-        correctAnswer: "They self-replicate and spread across networks, often exploiting vulnerabilities."
+        question: "What are common motivations for hackers?",
+        options: ["Financial gain, political agendas, personal challenge, or revenge", "Always helping companies improve their systems", "Learning how to use computers", "Only spreading harmless jokes"],
+        correctAnswer: "Financial gain, political agendas, personal challenge, or revenge"
     },
     {
-        week: 2,
+        week: 2, // Stuxnet example (State-sponsored, fits Week 2)
         courseCode: "COM496",
-        question: "What are the typical steps involved in a ransomware attack, according to the notes?",
-        options: ["Deception -> Execution -> Payload Activation", "Infection -> Encryption -> Ransom Demand", "Exploitation -> Replication -> Payload Execution", "Infection -> Execution -> Replication -> Payload Execution"],
-        correctAnswer: "Infection -> Encryption -> Ransom Demand"
+        question: "Which of the following is a well-known example of a state-sponsored cyber attack?",
+        options: ["ILOVEYOU virus", "Stuxnet", "WannaCry", "Melissa virus"],
+        correctAnswer: "Stuxnet"
     },
     {
-        week: 2,
+        week: 2, // Strong password characteristic (General Prevention)
         courseCode: "COM496",
-        question: "The Phishing process described involves Impersonation, Credential Theft, and what intermediate step?",
-        options: ["Encryption", "Replication", "Call to Action", "Network Scan"],
-        correctAnswer: "Call to Action"
+        question: "Which of the following is a characteristic of a strong password?",
+        options: ["It contains your birthdate and name", "It’s short and easy to remember, like “1234”", "It includes a mix of upper- and lowercase letters, numbers, and special characters", "It is the same for all your accounts"],
+        correctAnswer: "It includes a mix of upper- and lowercase letters, numbers, and special characters"
     },
     {
-        week: 2,
+        week: 2, // MFA example (General Prevention)
         courseCode: "COM496",
-        question: "What distinguishes Spear Phishing from regular Phishing?",
-        options: ["Spear Phishing uses SMS messages instead of email.", "Spear Phishing targets specific individuals or organizations with personalized messages.", "Spear Phishing only aims to install malware, not steal credentials.", "Spear Phishing uses phone calls instead of electronic messages."],
-        correctAnswer: "Spear Phishing targets specific individuals or organizations with personalized messages."
+        question: "Which of the following is an example of multi-factor authentication (MFA)?",
+        options: ["Logging in with just a username and password", "Using a password and a fingerprint", "Typing your email address only", "Clicking \"remember me\" on a website"],
+        correctAnswer: "Using a password and a fingerprint"
     },
     {
-        week: 2,
+        week: 5, // Biometric authentication (OS Authentication Method)
         courseCode: "COM496",
-        question: "Volume-based, Protocol-based, and Application Layer attacks are categories of which threat?",
-        options: ["Phishing", "Malware", "DDoS", "Trojan"],
-        correctAnswer: "DDoS"
+        question: "Which of the following best describes biometric authentication?",
+        options: ["Using an email code to log in", "Using your face or fingerprint to verify your identity", "Logging in from a trusted device", "Choosing a strong password"],
+        correctAnswer: "Using your face or fingerprint to verify your identity"
     },
     {
-        week: 2,
+        week: 2, // Software updates importance (General Prevention)
         courseCode: "COM496",
-        question: "A hacker with malicious intent, aiming for personal gain or damage, is categorized as:",
-        options: ["White Hat", "Grey Hat", "Black Hat", "Ethical Hacker"],
-        correctAnswer: "Black Hat"
+        question: "Why are regular software updates important for cybersecurity?",
+        options: ["They slow down the computer to prevent overuse", "They fix bugs and patch security vulnerabilities that hackers could exploit", "They help you reset your password more often", "They delete old files automatically"],
+        correctAnswer: "They fix bugs and patch security vulnerabilities that hackers could exploit"
     },
     {
-        week: 2,
+        week: 2, // Firewall purpose (General Prevention)
         courseCode: "COM496",
-        question: "Stealing state secrets or disrupting national infrastructure are common motivations for which type of threat actor?",
-        options: ["Script Kiddies", "Hacktivists", "State-Sponsored Attackers", "Grey Hat Hackers"],
-        correctAnswer: "State-Sponsored Attackers"
+        question: "What is the main purpose of a firewall in cybersecurity?",
+        options: ["To store user passwords", "To scan the hard drive for viruses", "To monitor and control incoming and outgoing network traffic", "To speed up your internet connection"],
+        correctAnswer: "To monitor and control incoming and outgoing network traffic"
     },
     {
-        week: 2,
+        week: 5, // Packet-filtering firewall type (Detailed Firewall Types)
         courseCode: "COM496",
-        question: "Using strong passwords, performing regular software updates, and implementing firewalls are all examples of:",
-        options: ["Attack techniques", "Threat actors", "Prevention and mitigation strategies", "Types of malware"],
-        correctAnswer: "Prevention and mitigation strategies"
+        question: "Which type of firewall filters traffic based on predefined rules?",
+        options: ["Antivirus software", "Packet-filtering firewall", "Malware detector", "Encryption tool"],
+        correctAnswer: "Packet-filtering firewall"
     },
     {
-        week: 2,
+        week: 5, // Firewall action (Firewall Behavior)
         courseCode: "COM496",
-        question: "What authentication method is specifically recommended as a defense against phishing?",
-        options: ["Single Sign-On (SSO)", "Using the same password everywhere", "Two-Factor Authentication (2FA)", "Password complexity rules only"],
-        correctAnswer: "Two-Factor Authentication (2FA)"
+        question: "What happens when a firewall detects unauthorized access?",
+        options: ["It boosts the internet speed", "It automatically updates the operating system", "It blocks or restricts the suspicious traffic", "It sends spam to the attacker"],
+        correctAnswer: "It blocks or restricts the suspicious traffic"
     },
     {
-        week: 2,
+        week: 5, // Firewall types (Detailed Firewall Types)
         courseCode: "COM496",
-        question: "The Mafiaboy attack in 2000, targeting CNN, eBay, and Yahoo, is cited as an example of which attack type?",
-        options: ["Ransomware", "Phishing", "DoS (Denial of Service)", "Virus Outbreak"],
-        correctAnswer: "DoS (Denial of Service)"
+        question: "Which of the following are valid types of firewalls?",
+        options: ["Network-based, Host-based, and Next-Generation", "Hardware, Software, and Password firewalls", "LAN, WAN, and VPN firewalls", "Antivirus, Proxy, and Backup firewalls"],
+        correctAnswer: "Network-based, Host-based, and Next-Generation"
     },
     {
-        week: 2,
+        week: 3, // Earliest cryptography - Caesar (Classical Crypto)
         courseCode: "COM496",
-        question: "The Mirai botnet attack in 2016, which affected services like Twitter and Spotify, is a notable example of:",
-        options: ["Spear Phishing", "Ransomware", "DDoS (Distributed Denial of Service)", "Trojan Infection"],
-        correctAnswer: "DDoS (Distributed Denial of Service)"
+        question: "Which of the following is one of the earliest known examples of cryptography in history?",
+        options: ["RSA encryption", "The Caesar cipher used in ancient Rome", "Blockchain technology", "Quantum cryptography"],
+        correctAnswer: "The Caesar cipher used in ancient Rome"
     },
     {
-        week: 2,
+        week: 3, // Caesar cipher creator (Classical Crypto)
         courseCode: "COM496",
-        question: "The WannaCry attack was significant because it:",
-        options: ["Only targeted financial institutions.", "Was the first recorded computer virus.", "Spread rapidly across more than 150 countries.", "Was purely a DoS attack."],
-        correctAnswer: "Spread rapidly across more than 150 countries."
+        question: "Who is credited with creating the first known cipher, the Caesar cipher?",
+        options: ["Julius Caesar", "Leonardo da Vinci", "Alan Turing", "Augustus Caesar"],
+        correctAnswer: "Julius Caesar"
     },
     {
-        week: 2,
+        week: 3, // WWII crypto - Enigma (Crypto History Context)
         courseCode: "COM496",
-        question: "The 2016 DDoS attack on Dyn caused major disruption by targeting what type of service provider?",
-        options: ["Email provider", "Cloud storage provider", "DNS provider", "Web hosting provider"],
-        correctAnswer: "DNS provider"
+        question: "Which cryptographic method was widely used in World War II to encode military messages?",
+        options: ["RSA encryption", "Enigma machine", "Vigenère cipher", "DES encryption"],
+        correctAnswer: "Enigma machine"
     },
     {
-        week: 2,
+        week: 3, // NOT a type of crypto (Crypto Types)
         courseCode: "COM496",
-        question: "The sophisticated phishing scam against Facebook and Google involved impersonating which Taiwanese company?",
-        options: ["Acer", "Asus", "Quanta Computer", "Foxconn"],
-        correctAnswer: "Quanta Computer"
+        question: "Which of the following is NOT a type of cryptography?",
+        options: ["Symmetric cryptography", "Asymmetric cryptography", "Hash functions", "Quantum cryptography"],
+        correctAnswer: "Quantum cryptography"
     },
-
-    // --- Week 3: COM496 ---
     {
-        week: 3,
+        week: 3, // Common types of crypto (Crypto Types)
         courseCode: "COM496",
-        question: "Week 3 covers cryptographic concepts ranging from classical methods to what modern applications?",
-        options: ["Network routing protocols", "Operating system kernels", "Symmetric/asymmetric encryption and applications like TLS/Blockchain", "Intrusion detection systems"],
-        correctAnswer: "Symmetric/asymmetric encryption and applications like TLS/Blockchain"
+        question: "Which of the following are common types of cryptography used for securing data?",
+        options: ["Symmetric cryptography, Asymmetric cryptography, and Hash functions", "Data encryption and decryption", "Compression and decompression algorithms", "Key management and backup solutions"],
+        correctAnswer: "Symmetric cryptography, Asymmetric cryptography, and Hash functions"
     },
     {
-        week: 3,
+        week: 3, // Symmetric vs Asymmetric difference (Core Crypto Concepts)
         courseCode: "COM496",
-        question: "Cryptography provides techniques primarily for ensuring:",
-        options: ["Network speed and latency", "Hardware compatibility", "Information security (Confidentiality, Integrity, Authentication, Non-repudiation)", "User interface design"],
-        correctAnswer: "Information security (Confidentiality, Integrity, Authentication, Non-repudiation)"
+        question: "Which of the following best describes the difference between Symmetric and Asymmetric cryptography?",
+        options: ["Symmetric cryptography uses a single key for both encryption and decryption, while Asymmetric uses two different keys.", "Symmetric cryptography uses a private key, while Asymmetric uses a public key.", "Symmetric cryptography is used for hashing, while Asymmetric cryptography is for encryption.", "Symmetric cryptography is faster than Asymmetric cryptography because it uses two keys."],
+        correctAnswer: "Symmetric cryptography uses a single key for both encryption and decryption, while Asymmetric uses two different keys."
     },
     {
-        week: 3,
+        week: 3, // Asymmetric key feature (Asymmetric Crypto)
         courseCode: "COM496",
-        question: "The Caesar cipher is an example of what type of simple substitution technique?",
-        options: ["Polyalphabetic shift", "Transposition cipher", "Monoalphabetic shift", "Block cipher"],
-        correctAnswer: "Monoalphabetic shift"
+        question: "Which of the following is a key feature of asymmetric cryptography?",
+        options: ["It uses the same key for both encryption and decryption", "It uses a pair of keys: a public key for encryption and a private key for decryption", "It only uses a single key for encryption, but the decryption is handled by a different method", "It is used only for hash functions and digital signatures"],
+        correctAnswer: "It uses a pair of keys: a public key for encryption and a private key for decryption"
     },
     {
-        week: 3,
+        week: 3, // Public-key algorithm - RSA (Asymmetric Crypto)
         courseCode: "COM496",
-        question: "The Caesar Cipher is easily broken using which technique?",
-        options: ["Kasiski Test", "Frequency Analysis", "Brute-force attack on the key", "Dictionary attack"],
-        correctAnswer: "Frequency Analysis"
+        question: "Which cryptographic algorithm is commonly used in public-key encryption?",
+        options: ["AES (Advanced Encryption Standard)", "RSA (Rivest-Shamir-Adleman)", "SHA-256", "DES (Data Encryption Standard)"],
+        correctAnswer: "RSA (Rivest-Shamir-Adleman)"
     },
     {
-        week: 3,
+        week: 3, // Hash function purpose (Crypto Concepts)
         courseCode: "COM496",
-        question: "What makes the Vigenère cipher polyalphabetic?",
-        options: ["It uses numbers instead of letters.", "It uses multiple Caesar shifts based on a keyword.", "It encrypts blocks of data.", "It uses public-key cryptography."],
-        correctAnswer: "It uses multiple Caesar shifts based on a keyword."
+        question: "What is the main purpose of a hash function in cryptography?",
+        options: ["To encrypt and decrypt data using a secret key", "To create a fixed-size output (hash value) from input data of any size", "To generate a unique private key for encryption", "To provide the ability to transmit data securely over the internet"],
+        correctAnswer: "To create a fixed-size output (hash value) from input data of any size"
     },
     {
-        week: 3,
+        week: 3, // Real-world crypto app - PKI (Crypto Applications)
         courseCode: "COM496",
-        question: "The encryption formula for Vigenère is given as Ci = (Pi + Ki) mod 26. What does Ki represent?",
-        options: ["The plaintext letter value", "The ciphertext letter value", "The key letter value (from the keyword)", "The alphabet size (26)"],
-        correctAnswer: "The key letter value (from the keyword)"
+        question: "Which of the following is a real-world application of cryptography in securing online transactions?",
+        options: ["VPN (Virtual Private Network)", "Bitcoin mining", "Public-key infrastructure (PKI)", "HTML5 encryption"],
+        correctAnswer: "Public-key infrastructure (PKI)"
     },
     {
-        week: 3,
+        week: 3, // Real-world tech - HTTPS (Crypto Applications)
         courseCode: "COM496",
-        question: "Frequency analysis exploits the statistical frequencies of letters in a language to break which type of ciphers?",
-        options: ["Modern block ciphers like AES", "Asymmetric ciphers like RSA", "Simple substitution ciphers (like Caesar)", "Hash functions"],
-        correctAnswer: "Simple substitution ciphers (like Caesar)"
+        question: "Which real-world technology uses cryptographic algorithms to ensure secure communication over the internet?",
+        options: ["HTTP", "HTTPS", "FTP", "SMTP"],
+        correctAnswer: "HTTPS"
     },
     {
-        week: 3,
+        week: 3, // Password security - Hashing (Crypto Applications)
         courseCode: "COM496",
-        question: "Examining distances between repeated ciphertext segments is part of which cryptanalysis technique used against Vigenère?",
-        options: ["Frequency Analysis", "Brute Force Attack", "Kasiski Test", "Chosen Plaintext Attack"],
-        correctAnswer: "Kasiski Test"
+        question: "Which of the following cryptographic techniques is commonly used to secure passwords in online systems?",
+        options: ["RSA encryption", "Digital signatures", "Hashing algorithms", "Symmetric key encryption"],
+        correctAnswer: "Hashing algorithms"
     },
     {
-        week: 3,
+        week: 3, // App with E2EE - WhatsApp (Crypto Applications)
         courseCode: "COM496",
-        question: "Why is a 56-bit key (like in DES) considered weak in modern cryptography?",
-        options: ["It's too complex to implement.", "It's vulnerable to brute-force attacks with modern computers.", "It only works for text data.", "It requires a public key."],
-        correctAnswer: "It's vulnerable to brute-force attacks with modern computers."
+        question: "Which of the following apps uses end-to-end encryption to secure messages between users?",
+        options: ["Facebook Messenger", "WhatsApp", "Snapchat", "Twitter"],
+        correctAnswer: "WhatsApp"
     },
     {
-        week: 3,
+        week: 3, // SSL/TLS purpose (Crypto Applications)
         courseCode: "COM496",
-        question: "What is the defining characteristic of Symmetric Encryption?",
-        options: ["It uses two different keys: one public, one private.", "It uses the same secret key for both encryption and decryption.", "It is primarily used for digital signatures.", "It is much slower than asymmetric encryption."],
-        correctAnswer: "It uses the same secret key for both encryption and decryption."
+        question: "What is the primary purpose of SSL/TLS in cybersecurity?",
+        options: ["To encrypt and secure communications over a network", "To manage user authentication through biometric data", "To prevent unauthorized access to a database", "To detect and prevent phishing attacks"],
+        correctAnswer: "To encrypt and secure communications over a network"
     },
     {
-        week: 3,
+        week: 3, // SSL vs TLS difference (Crypto Applications)
         courseCode: "COM496",
-        question: "Which type of symmetric cipher encrypts data in fixed-size chunks and is generally considered more secure (e.g., AES)?",
-        options: ["Stream Cipher", "Block Cipher", "Caesar Cipher", "Vigenère Cipher"],
-        correctAnswer: "Block Cipher"
+        question: "Which of the following is a key difference between SSL and TLS?",
+        options: ["TLS is the newer, more secure version of SSL", "SSL is used for email encryption, while TLS is used for web traffic", "SSL requires symmetric encryption, while TLS requires asymmetric encryption", "There is no difference between SSL and TLS; they are the same"],
+        correctAnswer: "TLS is the newer, more secure version of SSL"
     },
     {
-        week: 3,
+        week: 4, // HTTPS port (Networking Protocols)
         courseCode: "COM496",
-        question: "Stream ciphers like RC4 or ChaCha20 are often faster and used in what type of applications?",
-        options: ["Disk encryption", "Database security", "Real-time communication (streaming, VoIP)", "Digital signatures"],
-        correctAnswer: "Real-time communication (streaming, VoIP)"
+        question: "Which port is commonly used for HTTPS traffic secured by SSL/TLS?",
+        options: ["Port 80", "Port 443", "Port 21", "Port 8080"],
+        correctAnswer: "Port 443"
     },
     {
-        week: 3,
+        week: 3, // Caesar cipher example (Classical Crypto)
         courseCode: "COM496",
-        question: "Why is DES (Data Encryption Standard) considered obsolete and insecure?",
-        options: ["It uses asymmetric keys.", "Its 56-bit key size is too small and vulnerable to brute-force attacks.", "It was replaced by the Vigenère cipher.", "It can only encrypt text data."],
-        correctAnswer: "Its 56-bit key size is too small and vulnerable to brute-force attacks."
+        question: "In the Caesar cipher, if the shift value is 3, what would be the ciphered version of the word \"HELLO\"?",
+        options: ["KHOOR", "EBIIL", "GDKKN", "JLNNP"],
+        correctAnswer: "KHOOR"
     },
     {
-        week: 3,
+        week: 3, // Vigenère cipher example (Classical Crypto)
         courseCode: "COM496",
-        question: "Triple DES (3DES) applies the DES algorithm three times primarily to:",
-        options: ["Increase encryption speed.", "Overcome the small key size limitation of single DES.", "Enable asymmetric encryption.", "Simplify key management."],
-        correctAnswer: "Overcome the small key size limitation of single DES."
+        question: "If the keyword for the Vigenère cipher is \"KEY\" and the plaintext is \"HELLO\", what is the resulting ciphertext?",
+        options: ["LEBBS", "KHOOR", "RIJVS", "YFYYF"],
+        correctAnswer: "RIJVS"
     },
     {
-        week: 3,
+        week: 3, // Simple substitution decryption (Classical Crypto)
         courseCode: "COM496",
-        question: "Which of the following is a modern, widely used symmetric block cipher standard?",
-        options: ["DES", "RSA", "RC4", "AES"],
-        correctAnswer: "AES"
+        question: "Given the ciphertext \"Wklv lv d whvw phvvdjh\" encrypted using a simple substitution cipher, where each letter has been replaced by another letter a fixed number of positions down the alphabet, what is the plaintext?",
+        options: ["This is a simple message", "This is a test message", "We are testing encryption", "Encryption works perfectly"],
+        correctAnswer: "This is a test message"
     },
     {
-        week: 3,
+        week: 3, // DES/3DES/AES differences (Symmetric Crypto)
         courseCode: "COM496",
-        question: "AES (Advanced Encryption Standard) supports which key sizes?",
-        options: ["56, 112, 168 bits", "64, 128, 256 bits", "128, 192, 256 bits", "1024, 2048, 4096 bits"],
-        correctAnswer: "128, 192, 256 bits"
+        question: "Which of the following correctly describes the differences between DES, 3DES, and AES encryption algorithms?",
+        options: ["DES is considered more secure than AES, while 3DES is the fastest of the three.", "AES is a block cipher with variable key lengths (128, 192, 256 bits) and is considered the most secure among the three. 3DES is a stronger version of DES, using three rounds of encryption with 56-bit keys, making it slower than AES.", "DES and 3DES use the same key size, but AES uses a longer key size and is less secure.", "3DES is no longer used due to its weakness, while AES and DES are still widely used in modern cryptography."],
+        correctAnswer: "AES is a block cipher with variable key lengths (128, 192, 256 bits) and is considered the most secure among the three. 3DES is a stronger version of DES, using three rounds of encryption with 56-bit keys, making it slower than AES."
     },
     {
-        week: 3,
+        week: 3, // Block vs Stream ciphers (Symmetric Crypto)
         courseCode: "COM496",
-        question: "What is the fundamental principle of asymmetric (public-key) cryptography?",
-        options: ["Using one shared secret key.", "Using a pair of mathematically related keys: one public, one private.", "Encrypting data bit by bit.", "Relying on substitution boxes (S-Boxes)."],
-        correctAnswer: "Using a pair of mathematically related keys: one public, one private."
+        question: "Which of the following correctly describes the differences between block ciphers and stream ciphers?",
+        options: ["Block ciphers encrypt data in fixed-size blocks, while stream ciphers encrypt data one bit or byte at a time. Block ciphers are generally faster than stream ciphers.", "Block ciphers are used for encryption of small data, whereas stream ciphers are used for larger datasets.", "Stream ciphers work with plaintext in fixed-size blocks, while block ciphers encrypt one bit at a time.", "Block ciphers require much less computational power compared to stream ciphers, making them more efficient for large-scale encryption."],
+        correctAnswer: "Block ciphers encrypt data in fixed-size blocks, while stream ciphers encrypt data one bit or byte at a time. Block ciphers are generally faster than stream ciphers."
     },
     {
-        week: 3,
+        week: 3, // RSA encryption model (Asymmetric Crypto)
         courseCode: "COM496",
-        question: "The RSA algorithm's security is based on the difficulty of factoring the product of two large what?",
-        options: ["Polynomials", "Elliptic curves", "Prime numbers", "Random numbers"],
-        correctAnswer: "Prime numbers"
+        question: "How does the RSA encryption model work?",
+        options: ["RSA uses the same key for both encryption and decryption, making it a symmetric encryption algorithm.", "In RSA, encryption is performed using the public key, and decryption is performed using the private key.", "RSA only works with large symmetric keys, and encryption and decryption are done using the same key.", "In RSA, encryption is done with the private key, and decryption is done with the public key."],
+        correctAnswer: "In RSA, encryption is performed using the public key, and decryption is performed using the private key."
     },
     {
-        week: 3,
+        week: 3, // RSA vs ECC differences (Asymmetric Crypto)
         courseCode: "COM496",
-        question: "What is the primary benefit of Elliptic Curve Cryptography (ECC) compared to RSA?",
-        options: ["It's a symmetric algorithm.", "It offers similar security with much smaller key sizes.", "It's simpler to understand mathematically.", "It's inherently resistant to quantum attacks."],
-        correctAnswer: "It offers similar security with much smaller key sizes."
+        question: "Which of the following correctly describes the differences between RSA and ECC?",
+        options: ["RSA is based on the difficulty of factoring large prime numbers, while ECC is based on the difficulty of solving problems related to elliptic curves.", "RSA requires smaller keys for the same level of security as ECC, making ECC more computationally efficient.", "RSA is faster than ECC in terms of encryption and decryption, especially for larger key sizes.", "ECC is considered less secure than RSA and is not used in modern cryptographic protocols."],
+        correctAnswer: "RSA is based on the difficulty of factoring large prime numbers, while ECC is based on the difficulty of solving problems related to elliptic curves."
     },
     {
-        week: 3,
+        week: 3, // TLS/SSL works (Crypto Applications)
         courseCode: "COM496",
-        question: "To create a digital signature, a sender hashes the message and encrypts the hash using their own:",
-        options: ["Public Key", "Private Key", "Symmetric Key", "Receiver's Public Key"],
-        correctAnswer: "Private Key"
+        question: "How does TLS/SSL (Transport Layer Security / Secure Sockets Layer) work?",
+        options: ["TLS/SSL ensures security by encrypting the entire data connection and verifying the identity of the server using a symmetric key.", "TLS/SSL uses asymmetric encryption for the initial handshake to securely exchange keys and then switches to symmetric encryption for data transfer.", "TLS/SSL only encrypts data during transmission and does not provide any server authentication.", "TLS/SSL relies on a single shared secret key to encrypt and decrypt the communication between the client and the server."],
+        correctAnswer: "TLS/SSL uses asymmetric encryption for the initial handshake to securely exchange keys and then switches to symmetric encryption for data transfer."
     },
     {
-        week: 3,
+        week: 3, // Quantum cryptography (Future Crypto)
         courseCode: "COM496",
-        question: "A recipient verifies a digital signature using the sender's:",
-        options: ["Public Key", "Private Key", "Shared Secret Key", "Session Key"],
-        correctAnswer: "Public Key"
+        question: "What is quantum cryptography?",
+        options: ["Quantum cryptography uses classical encryption algorithms enhanced by quantum mechanics to improve security.", "Quantum cryptography uses principles of quantum mechanics to secure data by leveraging the quantum key distribution (QKD) method, which ensures that any eavesdropping can be detected.", "Quantum cryptography is based on the idea that it uses the encryption keys to break encryption algorithms, allowing faster and easier data decryption.", "Quantum cryptography is only useful for secure communication over long distances and is not applicable to modern internet communication."],
+        correctAnswer: "Quantum cryptography uses principles of quantum mechanics to secure data by leveraging the quantum key distribution (QKD) method, which ensures that any eavesdropping can be detected."
     },
     {
-        week: 3,
+        week: 4, // Threats/Vulns/Attacks relationship (Network Security Intro)
         courseCode: "COM496",
-        question: "RSA and what other algorithm based on elliptic curves are common for digital signatures?",
-        options: ["AES", "SHA-256", "ECDSA", "DES"],
-        correctAnswer: "ECDSA"
+        question: "Which of the following correctly defines the relationship between threats, vulnerabilities, and attacks in cybersecurity?",
+        options: ["A threat refers to any weakness in a system, a vulnerability is an event that occurs due to the exploitation of that weakness, and an attack is the process of defending the system.", "A threat is a potential cause of harm to a system, a vulnerability is a weakness that could be exploited by a threat, and an attack is the action taken to exploit that vulnerability.", "A threat is any action or event that causes an attack, a vulnerability is a specific type of threat, and an attack is any weakness in the system.", "A vulnerability is a malicious actor attempting to break into a system, a threat is a defensive measure, and an attack is an automatic response by the system."],
+        correctAnswer: "A threat is a potential cause of harm to a system, a vulnerability is a weakness that could be exploited by a threat, and an attack is the action taken to exploit that vulnerability."
     },
     {
-        week: 3,
+        week: 4, // Types of vulnerabilities (Network Security Intro)
         courseCode: "COM496",
-        question: "In a TLS/SSL handshake, asymmetric cryptography is used to securely establish what?",
-        options: ["The identity of the client only", "A shared symmetric secret key for bulk data encryption", "The final encrypted message", "The integrity hash of the website content"],
-        correctAnswer: "A shared symmetric secret key for bulk data encryption"
+        question: "Which of the following are types of vulnerabilities in cybersecurity?",
+        options: ["Software vulnerabilities, human vulnerabilities, and hardware vulnerabilities", "SQL injection, buffer overflow, and phishing attacks", "Weak encryption, outdated software, and firewall misconfigurations", "Trojan horse, worm, and virus"],
+        correctAnswer: "Weak encryption, outdated software, and firewall misconfigurations"
     },
     {
-        week: 3,
+        week: 4, // Passive vs Active attacks difference (Network Attacks)
         courseCode: "COM496",
-        question: "Blockchains use hash functions like SHA-256 primarily for ensuring data _____?",
-        options: ["Confidentiality", "Availability", "Integrity", "Authenticity"],
-        correctAnswer: "Integrity"
+        question: "Which of the following describes the difference between passive attacks and active attacks in network security?",
+        options: ["Passive attacks involve unauthorized access to a system with the goal of stealing data without altering it, while active attacks actively alter or disrupt the system, such as by injecting malicious code.", "Passive attacks are always detected by security systems, while active attacks cannot be detected by monitoring tools.", "Active attacks only occur in wireless networks, while passive attacks happen only in wired networks.", "Active attacks involve stealing data, while passive attacks involve attacking the network physically."],
+        correctAnswer: "Passive attacks involve unauthorized access to a system with the goal of stealing data without altering it, while active attacks actively alter or disrupt the system, such as by injecting malicious code."
     },
     {
-        week: 3,
+        week: 4, // Passive attacks examples (Network Attacks)
         courseCode: "COM496",
-        question: "Which algorithm, runnable on quantum computers, threatens RSA and ECC?",
-        options: ["AES Algorithm", "Shor's Algorithm", "Kasiski's Algorithm", "Diffie-Hellman Algorithm"],
-        correctAnswer: "Shor's Algorithm"
+        question: "Which of the following is true about passive attacks in network security, and what are some examples?",
+        options: ["Passive attacks involve stealing or altering data, but they do not disrupt the operation of the network or system. Examples include eavesdropping, traffic analysis, and packet sniffing.", "Passive attacks always alter data in transit, such as by modifying packets, but they are not detected by monitoring systems. Examples include DoS attacks, man-in-the-middle attacks, and session hijacking.", "Passive attacks involve disrupting the network, causing a system to crash. Examples include DDoS, data injection, and brute-force attacks.", "Passive attacks are never detected by monitoring systems, and they typically involve physical damage to hardware. Examples include physical device theft, cable tapping, and data corruption."],
+        correctAnswer: "Passive attacks involve stealing or altering data, but they do not disrupt the operation of the network or system. Examples include eavesdropping, traffic analysis, and packet sniffing."
     },
     {
-        week: 3,
+        week: 4, // Active attacks examples (Network Attacks)
         courseCode: "COM496",
-        question: "Kyber (Lattice-based) and McEliece (Code-based) are examples of what field of research?",
-        options: ["Classical Cryptography", "Symmetric Cryptography", "Quantum Key Distribution (QKD)", "Post-Quantum Cryptography (PQC)"],
-        correctAnswer: "Post-Quantum Cryptography (PQC)"
+        question: "Which of the following describes active attacks in network security, and what are some examples?",
+        options: ["Active attacks aim to interfere with network operations, such as by modifying data, injecting malicious content, or disrupting service. Examples include man-in-the-middle attacks, Denial of Service (DoS), and data modification.", "Active attacks involve listening in on communications without altering the data, examples include packet sniffing, traffic analysis, and eavesdropping.", "Active attacks only involve physical access to network devices, examples include hardware tampering, device theft, and wire tapping.", "Active attacks are always non-destructive and do not affect the network’s performance. Examples include brute force attacks, password cracking, and keylogging."],
+        correctAnswer: "Active attacks aim to interfere with network operations, such as by modifying data, injecting malicious content, or disrupting service. Examples include man-in-the-middle attacks, Denial of Service (DoS), and data modification."
     },
-
-    // --- Week 4: COM496 ---
     {
-        week: 4,
+        week: 4, // Passive attack mechanism (Network Attacks)
         courseCode: "COM496",
-        question: "Week 4 covers networking fundamentals (TCP/IP, OSI, Wi-Fi, IP, MQTT) and what related security topics?",
-        options: ["Cryptographic algorithms", "Operating system hardening", "Network threats and defenses (Firewalls, IDS/IPS, VPNs, Zero Trust)", "Malware analysis techniques"],
-        correctAnswer: "Network threats and defenses (Firewalls, IDS/IPS, VPNs, Zero Trust)"
+        question: "How does a passive attack work in network security?",
+        options: ["A passive attack involves altering or disrupting the flow of data, usually to damage or deny service to a network.", "A passive attack involves monitoring or intercepting data without modifying it, typically to gather sensitive information without the victim's knowledge.", "A passive attack involves injecting malware into the system, which then disrupts operations.", "A passive attack involves brute-force cracking passwords and gaining unauthorized access to systems."],
+        correctAnswer: "A passive attack involves monitoring or intercepting data without modifying it, typically to gather sensitive information without the victim's knowledge."
     },
     {
-        week: 4,
+        week: 4, // Passive attack purpose (Network Attacks)
         courseCode: "COM496",
-        question: "A computer network allows interconnected devices to communicate and share what?",
-        options: ["Only physical hardware", "Resources (communication, data, security)", "Only electrical power", "Only operating system licenses"],
-        correctAnswer: "Resources (communication, data, security)"
+        question: "What is the main purpose of a passive attack in network security?",
+        options: ["To disrupt the operation of a network or system by modifying or deleting data.", "To gather sensitive information without altering or interfering with the data, often for future use in other attacks.", "To inject malicious code into a network and steal or destroy data.", "To bypass encryption and decrypt data transmitted over a network."],
+        correctAnswer: "To gather sensitive information without altering or interfering with the data, often for future use in other attacks."
     },
     {
-        week: 4,
+        week: 4, // Protect from passive attacks (Network Attack Defense)
         courseCode: "COM496",
-        question: "Which networking model is considered more practical and is the foundation for the modern internet, consisting of 4 layers?",
-        options: ["OSI Model", "TCP/IP Model", "Cisco Hierarchical Model", "Flat Network Model"],
-        correctAnswer: "TCP/IP Model"
+        question: "How can we protect ourselves from passive attacks in network security?",
+        options: ["By using strong encryption to ensure that intercepted data is unreadable.", "By allowing open communication on insecure channels without any security measures.", "By avoiding the use of firewalls to prevent any data from being filtered.", "By using physical security measures only and ignoring network-level protection."],
+        correctAnswer: "By using strong encryption to ensure that intercepted data is unreadable."
     },
     {
-        week: 4,
+        week: 4, // Active attacks mechanism (Network Attacks)
         courseCode: "COM496",
-        question: "Which model is more theoretical with 7 layers and used for teaching/standardization?",
-        options: ["TCP/IP Model", "OSI Model", "Hybrid Model", "Internet Model"],
-        correctAnswer: "OSI Model"
+        question: "How do active attacks work in network security?",
+        options: ["Active attacks involve modifying data or disrupting services to harm the target system or network, such as Denial of Service (DoS) or man-in-the-middle attacks.", "Active attacks involve monitoring data without altering it, such as packet sniffing or eavesdropping.", "Active attacks only involve physical tampering with network devices, such as device theft or hardware manipulation.", "Active attacks are primarily used for data encryption and securing network traffic, like SSL/TLS encryption."],
+        correctAnswer: "Active attacks involve modifying data or disrupting services to harm the target system or network, such as Denial of Service (DoS) or man-in-the-middle attacks."
     },
     {
-        week: 4,
+        week: 4, // ARP poisoning (Network Layer Attack)
         courseCode: "COM496",
-        question: "Which layer in the OSI model is responsible for logical addressing (IP addresses) and routing?",
-        options: ["Data Link Layer", "Transport Layer", "Network Layer", "Physical Layer"],
-        correctAnswer: "Network Layer"
+        question: "What is ARP poisoning in network security?",
+        options: ["A technique where an attacker sends fake ARP messages to associate their MAC address with the IP address of another device, allowing them to intercept, modify, or block network traffic.", "A method used to encrypt network traffic between devices to protect it from eavesdropping.", "A process where an attacker gains unauthorized access to a system by exploiting weak passwords.", "A form of denial of service (DoS) attack where an attacker floods the network with excessive traffic, causing devices to disconnect."],
+        correctAnswer: "A technique where an attacker sends fake ARP messages to associate their MAC address with the IP address of another device, allowing them to intercept, modify, or block network traffic."
     },
     {
-        week: 4,
+        week: 4, // DNS Spoofing mechanism (Network Layer Attack)
         courseCode: "COM496",
-        question: "The TCP/IP model has 4 layers. Which layer corresponds roughly to the OSI Transport layer?",
-        options: ["Network Access Layer", "Internet Layer", "Transport Layer", "Application Layer"],
-        correctAnswer: "Transport Layer"
+        question: "How does DNS Spoofing work, step by step?",
+        options: ["The attacker sends fake DNS responses with malicious IP addresses to a vulnerable DNS server, causing the server to cache incorrect records and redirect users to fake websites.", "The attacker intercepts encrypted DNS traffic between the client and server, decrypts it, and alters the DNS records to redirect users to a fake website.", "The attacker uses brute-force methods to guess DNS server credentials, gaining control of the server to modify DNS records and redirect traffic.", "The attacker uses a Distributed Denial of Service (DDoS) attack to overwhelm the DNS server, preventing legitimate requests from being processed."],
+        correctAnswer: "The attacker sends fake DNS responses with malicious IP addresses to a vulnerable DNS server, causing the server to cache incorrect records and redirect users to fake websites."
     },
     {
-        week: 4,
+        week: 5, // IDS purpose (Network Defense Tools)
         courseCode: "COM496",
-        question: "What is a key characteristic of TCP (Transmission Control Protocol)?",
-        options: ["It is connectionless and unreliable.", "It guarantees ordered delivery using a 3-way handshake.", "It has a smaller header size than UDP.", "It is primarily used for DNS lookups."],
-        correctAnswer: "It guarantees ordered delivery using a 3-way handshake."
+        question: "What is the main purpose of an Intrusion Detection System (IDS) in network security?",
+        options: ["To prevent unauthorized access by actively blocking suspicious traffic in real-time.", "To detect and alert administrators about potential threats or unauthorized activities on the network.", "To encrypt network traffic to ensure data privacy and security.", "To scan network traffic for malware and viruses."],
+        correctAnswer: "To detect and alert administrators about potential threats or unauthorized activities on the network."
     },
     {
-        week: 4,
+        week: 5, // IDS types (Network Defense Tools)
         courseCode: "COM496",
-        question: "What process does TCP use to establish a connection before data transfer?",
-        options: ["Broadcasting", "Multicasting", "3-way handshake (SYN, SYN-ACK, ACK)", "UDP flood"],
-        correctAnswer: "3-way handshake (SYN, SYN-ACK, ACK)"
+        question: "Which of the following are the two main types of Intrusion Detection Systems (IDS)?",
+        options: ["Signature-based IDS and Behavior-based IDS", "Network-based IDS and Host-based IDS", "Active IDS and Passive IDS", "Software-based IDS and Hardware-based IDS"],
+        correctAnswer: "Network-based IDS and Host-based IDS"
     },
     {
-        week: 4,
+        week: 5, // Signature-based IDS mechanism (Network Defense Tools)
         courseCode: "COM496",
-        question: "UDP (User Datagram Protocol) is preferred over TCP for applications like streaming and online gaming primarily because:",
-        options: ["It ensures every packet arrives correctly.", "It is connection-oriented.", "It is faster due to lower overhead (no handshake, no retransmissions).", "It encrypts data by default."],
-        correctAnswer: "It is faster due to lower overhead (no handshake, no retransmissions)."
+        question: "How does a Signature-based Intrusion Detection System (IDS) work?",
+        options: ["It detects threats by analyzing network traffic patterns and comparing them to known attack signatures.", "It uses machine learning algorithms to detect new and unknown threats in real-time.", "It analyzes user behavior and identifies deviations from normal activities.", "It monitors physical security devices like cameras and locks to detect unauthorized access."],
+        correctAnswer: "It detects threats by analyzing network traffic patterns and comparing them to known attack signatures."
     },
     {
-        week: 4,
+        week: 5, // Host-based IDS description (Network Defense Tools)
         courseCode: "COM496",
-        question: "Which Wi-Fi standard (also known as Wi-Fi 6) is among the latest, offering higher speeds and efficiency?",
-        options: ["802.11b", "802.11g", "802.11n (Wi-Fi 4)", "802.11ax (Wi-Fi 6)"],
-        correctAnswer: "802.11ax (Wi-Fi 6)"
+        question: "Which of the following best describes a Host-based IDS (HIDS)?",
+        options: ["An IDS that monitors traffic across an entire network.", "An IDS that is installed on a specific host or device and monitors activities on that host for signs of intrusion.", "An IDS that monitors email communications for phishing attempts.", "An IDS that specifically detects vulnerabilities in web applications."],
+        correctAnswer: "An IDS that is installed on a specific host or device and monitors activities on that host for signs of intrusion."
     },
     {
-        week: 4,
+        week: 5, // IPS vs IDS response difference (Network Defense Tools)
         courseCode: "COM496",
-        question: "Which Wi-Fi encryption standard is considered the strongest and most current?",
-        options: ["WEP", "WPA", "WPA2", "WPA3"],
-        correctAnswer: "WPA3"
+        question: "What makes Intrusion Prevention Systems (IPS) different from Intrusion Detection Systems (IDS) in terms of real-time response?",
+        options: ["IPS systems only detect and alert, while IDS systems block traffic.", "IPS actively takes action to block malicious traffic as it occurs, while IDS simply alerts administrators without blocking anything.", "Both IPS and IDS provide real-time protection, but IPS requires manual intervention to take action.", "IPS only works in the background and does not impact real-time operations."],
+        correctAnswer: "IPS actively takes action to block malicious traffic as it occurs, while IDS simply alerts administrators without blocking anything."
     },
     {
-        week: 4,
+        week: 5, // IPS primary action (Network Defense Tools)
         courseCode: "COM496",
-        question: "Which Wi-Fi encryption protocol is now considered insecure and should not be used?",
-        options: ["WPA3", "WPA2", "WPA", "WEP"],
-        correctAnswer: "WEP"
+        question: "Which of the following is a primary preventive action of an Intrusion Prevention System (IPS)?",
+        options: ["Logging suspicious activity for future analysis.", "Encrypting communication between the attacker and the target system.", "Blocking malicious traffic based on defined rules or signatures.", "Analyzing system logs for vulnerabilities."],
+        correctAnswer: "Blocking malicious traffic based on defined rules or signatures."
     },
     {
-        week: 4,
+        week: 5, // False positive IPS concept (Network Defense Tools)
         courseCode: "COM496",
-        question: "What is the primary advantage of IPv6 over IPv4?",
-        options: ["It is easier to configure manually.", "It uses 32-bit addresses.", "It offers a vastly larger address space, essential for IoT growth.", "It is connection-oriented by default."],
-        correctAnswer: "It offers a vastly larger address space, essential for IoT growth."
+        question: "What is a false positive in the context of an Intrusion Prevention System (IPS)?",
+        options: ["An instance where the IPS fails to detect a real attack.", "An instance where the IPS mistakenly identifies legitimate traffic as malicious, blocking it.", "An instance where the IPS successfully blocks an attack without raising an alert.", "An instance where the IPS encrypts network traffic for security."],
+        correctAnswer: "An instance where the IPS mistakenly identifies legitimate traffic as malicious, blocking it."
     },
     {
-        week: 4,
+        week: 5, // Signature-based IPS mechanism (Network Defense Tools)
         courseCode: "COM496",
-        question: "IPv4 uses 32-bit addresses, while IPv6 uses addresses of what size?",
-        options: ["48-bit", "64-bit", "128-bit", "256-bit"],
-        correctAnswer: "128-bit"
+        question: "How does a Signature-based Intrusion Prevention System (IPS) detect threats?",
+        options: ["By analyzing the behavior of network traffic and identifying patterns that deviate from the norm.", "By comparing incoming traffic to a database of known attack signatures to identify threats.", "By preventing attacks based on the IP addresses involved in the traffic.", "By applying machine learning techniques to detect unknown threats in real-time."],
+        correctAnswer: "By comparing incoming traffic to a database of known attack signatures to identify threats."
     },
     {
-        week: 4,
+        week: 5, // Network-based IPS role (Network Defense Tools)
         courseCode: "COM496",
-        question: "What is the purpose of subnetting in IP networking?",
-        options: ["To increase the total number of available IP addresses globally.", "To combine multiple small networks into one large network.", "To divide a larger network into smaller, manageable subnetworks for efficiency and organization.", "To automatically assign IP addresses to devices."],
-        correctAnswer: "To divide a larger network into smaller, manageable subnetworks for efficiency and organization."
+        question: "What is the role of a Network-based IPS?",
+        options: ["It is installed on individual devices to monitor and block attacks targeting that device.", "It monitors network traffic for malicious activity and blocks attacks in real-time, typically at the network perimeter.", "It only works on wireless networks to prevent unauthorized access.", "It analyzes encrypted traffic to prevent data breaches."],
+        correctAnswer: "It monitors network traffic for malicious activity and blocks attacks in real-time, typically at the network perimeter."
     },
     {
-        week: 4,
+        week: 5, // IPS main function (Network Defense Tools)
         courseCode: "COM496",
-        question: "In subnetting, how many IP addresses are typically unusable within each subnet because they are reserved for network and broadcast addresses?",
-        options: ["0", "1", "2", "4"],
-        correctAnswer: "2"
+        question: "What is the main function of an Intrusion Prevention System (IPS)?",
+        options: ["To detect and log security threats without taking any action.", "To actively block or prevent malicious activity in real-time, stopping attacks before they affect the network.", "To provide network encryption to ensure data privacy.", "To monitor traffic and detect abnormal behavior but without blocking or preventing attacks."],
+        correctAnswer: "To actively block or prevent malicious activity in real-time, stopping attacks before they affect the network."
     },
     {
-        week: 4,
+        week: 5, // IPS vs IDS difference (Network Defense Tools)
         courseCode: "COM496",
-        question: "MQTT is a lightweight protocol commonly used for:",
-        options: ["High-bandwidth video streaming.", "Secure web browsing (HTTPS).", "IoT device communication (Publish/Subscribe model).", "Transferring large files between servers."],
-        correctAnswer: "IoT device communication (Publish/Subscribe model)."
+        question: "What is the primary difference between Intrusion Prevention Systems (IPS) and Intrusion Detection Systems (IDS)?",
+        options: ["IPS detects and logs threats, while IDS actively blocks malicious traffic.", "IPS actively prevents attacks in real-time, while IDS only detects and alerts administrators about potential threats.", "IDS works on the application layer, while IPS works on the network layer.", "There is no significant difference between IPS and IDS."],
+        correctAnswer: "IPS actively prevents attacks in real-time, while IDS only detects and alerts administrators about potential threats."
     },
     {
-        week: 4,
+        week: 5, // Wireshark purpose (Network Tools)
         courseCode: "COM496",
-        question: "MQTT uses a publish-subscribe model involving Publishers, Subscribers, and what central component?",
-        options: ["Router", "Switch", "Broker", "Gateway"],
-        correctAnswer: "Broker"
+        question: "What is the main purpose of Wireshark?",
+        options: ["To detect and prevent network attacks in real-time.", "To capture and analyze network traffic in order to troubleshoot network issues.", "To encrypt network traffic for enhanced security.", "To provide network-based intrusion detection and prevention."],
+        correctAnswer: "To capture and analyze network traffic in order to troubleshoot network issues."
     },
     {
-        week: 4,
+        week: 5, // Wireshark use case (Network Tools)
         courseCode: "COM496",
-        question: "The Equifax and Yahoo breaches are cited as examples highlighting the importance of network security for what purpose?",
-        options: ["Improving network speed", "Data Protection and Business Continuity", "Reducing hardware costs", "Simplifying user access"],
-        correctAnswer: "Data Protection and Business Continuity"
+        question: "Which of the following is a typical use case for Wireshark?",
+        options: ["Encrypting network traffic to ensure data privacy.", "Monitoring network traffic to detect malicious activity.", "Capturing and analyzing packet-level data to diagnose network issues.", "Blocking unwanted network traffic based on predefined rules."],
+        correctAnswer: "Capturing and analyzing packet-level data to diagnose network issues."
     },
     {
-        week: 4,
+        week: 5, // Wireshark data capture (Network Tools)
         courseCode: "COM496",
-        question: "A potential danger or risk to a network is a _____, while a weakness that can be exploited is a _____.",
-        options: ["Threat, Vulnerability", "Vulnerability, Threat", "Attack, Risk", "Risk, Attack"],
-        correctAnswer: "Threat, Vulnerability"
+        question: "What type of data can Wireshark capture and analyze?",
+        options: ["Only HTTP and HTTPS traffic.", "Only traffic related to social media platforms.", "All types of network traffic, including HTTP, TCP, UDP, DNS, and more.", "Only encrypted traffic."],
+        correctAnswer: "All types of network traffic, including HTTP, TCP, UDP, DNS, and more."
     },
     {
-        week: 4,
+        week: 5, // Wireshark analysis capabilities (Network Tools)
         courseCode: "COM496",
-        question: "Monitoring network traffic without altering it (e.g., Eavesdropping) is classified as what type of attack?",
-        options: ["Active Attack", "Passive Attack", "Denial of Service Attack", "Malware Attack"],
-        correctAnswer: "Passive Attack"
+        question: "Which of the following can you do with Wireshark once you have captured network traffic?",
+        options: ["View detailed information about the captured packets, such as source and destination IP addresses, protocol types, and packet contents.", "Automatically block suspicious packets.", "Encrypt the captured packets to enhance network security.", "Modify packets in real-time for testing purposes."],
+        correctAnswer: "View detailed information about the captured packets, such as source and destination IP addresses, protocol types, and packet contents."
     },
     {
-        week: 4,
+        week: 5, // Wireshark capture protocol (Network Tools)
         courseCode: "COM496",
-        question: "DNS Spoofing (Cache Poisoning) is an attack designed to:",
-        options: ["Overwhelm a DNS server with requests.", "Intercept communication between two parties.", "Redirect users to malicious websites by corrupting DNS records.", "Encrypt DNS traffic."],
-        correctAnswer: "Redirect users to malicious websites by corrupting DNS records."
+        question: "Which protocol does Wireshark commonly use to capture network packets?",
+        options: ["FTP", "HTTP", "pcap (Packet Capture)", "DNS"],
+        correctAnswer: "pcap (Packet Capture)"
     },
     {
-        week: 4,
+        week: 5, // Snort purpose (Network Tools - NIDS/IPS)
         courseCode: "COM496",
-        question: "Using protocols like HTTPS and VPNs helps prevent which type of active attack?",
-        options: ["DoS", "Phishing", "Man-in-the-Middle (MitM)", "Malware infection"],
-        correctAnswer: "Man-in-the-Middle (MitM)"
+        question: "What is Snort primarily used for?",
+        options: ["A tool for encrypting network traffic.", "A network intrusion detection and prevention system (IDS/IPS).", "A malware detection system.", "A firewall configuration tool."],
+        correctAnswer: "A network intrusion detection and prevention system (IDS/IPS)."
     },
     {
-        week: 4,
+        week: 5, // Snort protocol analysis (Network Tools)
         courseCode: "COM496",
-        question: "Which type of firewall inspects the content of traffic (Deep Packet Inspection) and may include IPS capabilities?",
-        options: ["Packet Filtering Firewall", "Stateful Inspection Firewall", "Proxy Firewall", "Next-Generation Firewall (NGFW)"],
-        correctAnswer: "Next-Generation Firewall (NGFW)"
+        question: "Which network protocols can Snort analyze for potential attacks?",
+        options: ["Only HTTP and HTTPS.", "Only TCP/IP traffic.", "All network protocols, including TCP, UDP, ICMP, and more.", "Only DNS traffic."],
+        correctAnswer: "All network protocols, including TCP, UDP, ICMP, and more."
     },
     {
-        week: 4,
+        week: 5, // Snort logging (Network Tools)
         courseCode: "COM496",
-        question: "What is the main difference between an IDS (Intrusion Detection System) and an IPS (Intrusion Prevention System)?",
-        options: ["IDS operates at the host level, while IPS operates at the network level.", "IDS only detects and alerts on suspicious activity, while IPS can also block malicious traffic.", "IDS uses signature-based detection, while IPS uses anomaly-based detection.", "IDS is a hardware device, while IPS is software."],
-        correctAnswer: "IDS only detects and alerts on suspicious activity, while IPS can also block malicious traffic."
-    },
-    {
-        week: 4,
-        courseCode: "COM496",
-        question: "A VPN (Virtual Private Network) primarily provides security by:",
-        options: ["Filtering malicious websites based on a blacklist.", "Creating an encrypted tunnel for traffic over a public network.", "Detecting and blocking network intrusions in real-time.", "Assigning roles and permissions to network users."],
-        correctAnswer: "Creating an encrypted tunnel for traffic over a public network."
-    },
-    {
-        week: 4,
-        courseCode: "COM496",
-        question: "Which VPN protocol is noted as modern, fast, and generally strong?",
-        options: ["PPTP", "L2TP/IPSec", "OpenVPN", "WireGuard"],
-        correctAnswer: "WireGuard"
-    },
-    {
-        week: 4,
-        courseCode: "COM496",
-        question: "The core principle of the Zero Trust security model is:",
-        options: ["Trust all internal network traffic by default.", "Focus security efforts only on the network perimeter.", "\"Never trust, always verify\" - require strict verification for every user and device.", "Use VPNs for all network access."],
-        correctAnswer: "\"Never trust, always verify\" - require strict verification for every user and device."
-    },
-    {
-        week: 4,
-        courseCode: "COM496",
-        question: "Wireshark is a popular tool used for:",
-        options: ["Vulnerability scanning.", "Intrusion detection and prevention.", "Packet sniffing and network traffic analysis.", "Implementing firewall rules."],
-        correctAnswer: "Packet sniffing and network traffic analysis."
-    },
-    {
-        week: 4,
-        courseCode: "COM496",
-        question: "Snort is mentioned as a tool primarily used for what purpose?",
-        options: ["Packet Analysis", "Vulnerability Scanning", "Intrusion Detection/Prevention (IDS/IPS)", "Log Management"],
-        correctAnswer: "Intrusion Detection/Prevention (IDS/IPS)"
-    },
-
-    // --- Week 6: COM496 ---
-    {
-        week: 6,
-        courseCode: "COM496",
-        question: "Week 6 focuses on security aspects of Operating Systems, including user management, filesystem protection, and what other key areas?",
-        options: ["Network protocols and routing", "Cryptographic key exchange", "Kernel security, boot integrity, malware mitigations, logging", "Web application firewalls"],
-        correctAnswer: "Kernel security, boot integrity, malware mitigations, logging"
-    },
-    {
-        week: 6,
-        courseCode: "COM496",
-        question: "OS Security involves mechanisms and policies to protect the OS from threats like malware and what else?",
-        options: ["Network latency", "Hardware failures", "Unauthorized access, privilege escalation, data breaches", "Application compatibility issues"],
-        correctAnswer: "Unauthorized access, privilege escalation, data breaches"
-    },
-    {
-        week: 6,
-        courseCode: "COM496",
-        question: "Which of the following is NOT a primary goal of Operating System Security?",
-        options: ["Confidentiality", "Integrity", "Network Routing Efficiency", "Availability"],
-        correctAnswer: "Network Routing Efficiency"
-    },
-    {
-        week: 6,
-        courseCode: "COM496",
-        question: "A type of malware that hides its presence and aims to gain persistent, high-level (root/admin) access to an OS is called a:",
-        options: ["Buffer Overflow", "Worm", "Rootkit", "Phishing Kit"],
-        correctAnswer: "Rootkit"
-    },
-    {
-        week: 6,
-        courseCode: "COM496",
-        question: "Gaining higher privileges on a system by exploiting a software flaw is known as:",
-        options: ["Privilege Escalation", "Authentication Bypass", "Denial of Service", "Sandboxing"],
-        correctAnswer: "Privilege Escalation"
-    },
-    {
-        week: 6,
-        courseCode: "COM496",
-        question: "The Blaster Worm exploited what type of vulnerability to execute malicious code?",
-        options: ["Weak passwords", "Misconfigured firewall", "Buffer Overflow", "Insecure service configuration"],
-        correctAnswer: "Buffer Overflow"
-    },
-    {
-        week: 6,
-        courseCode: "COM496",
-        question: "Verifying who a user is relates to _____, while determining what they are allowed to do relates to _____.",
-        options: ["Authorization, Authentication", "Logging, Auditing", "Authentication, Authorization", "Encryption, Hashing"],
-        correctAnswer: "Authentication, Authorization"
-    },
-    {
-        week: 6,
-        courseCode: "COM496",
-        question: "Assigning permissions based on job functions (roles) rather than individual users is known as:",
-        options: ["Discretionary Access Control (DAC)", "Mandatory Access Control (MAC)", "Role-Based Access Control (RBAC)", "Access Control Lists (ACLs)"],
-        correctAnswer: "Role-Based Access Control (RBAC)"
-    },
-    {
-        week: 6,
-        courseCode: "COM496",
-        question: "Linux uses Namespaces and cgroups to enable what technology, exemplified by Docker?",
-        options: ["Kernel patching", "Filesystem encryption", "Containerization (process isolation)", "Secure Boot"],
-        correctAnswer: "Containerization (process isolation)"
-    },
-    {
-        week: 6,
-        courseCode: "COM496",
-        question: "Which Linux technology allows for fine-grained control over root privileges, granting specific permissions without giving full root access?",
-        options: ["Namespaces", "Cgroups", "Capabilities", "SELinux Policies"],
-        correctAnswer: "Capabilities"
-    },
-    {
-        week: 6,
-        courseCode: "COM496",
-        question: "In Linux, assigning permissions using the `rwx` model for user, group, and others is a form of:",
-        options: ["Mandatory Access Control (MAC)", "Discretionary Access Control (DAC)", "Role-Based Access Control (RBAC)", "Capability-Based Security"],
-        correctAnswer: "Discretionary Access Control (DAC)"
-    },
-    {
-        week: 6,
-        courseCode: "COM496",
-        question: "Besides the basic rwx permissions, Linux supports more granular permissions using POSIX _____.",
-        options: ["Capabilities", "Quotas", "ACLs (Access Control Lists)", "Namespaces"],
-        correctAnswer: "ACLs (Access Control Lists)"
-    },
-    {
-        week: 6,
-        courseCode: "COM496",
-        question: "What is the purpose of an Encrypting File System (EFS) like Windows EFS or LUKS in Linux?",
-        options: ["To protect data while it is being transmitted over the network.", "To protect data at rest by encrypting files or entire disks.", "To verify the integrity of system files during boot.", "To prevent buffer overflow attacks."],
-        correctAnswer: "To protect data at rest by encrypting files or entire disks."
-    },
-    {
-        week: 6,
-        courseCode: "COM496",
-        question: "Windows EFS (Encrypting File System) is integrated with which filesystem and provides file-level encryption based on user certificates?",
-        options: ["ext4", "FAT32", "NTFS", "HFS+"],
-        correctAnswer: "NTFS"
-    },
-    {
-        week: 6,
-        courseCode: "COM496",
-        question: "LUKS (Linux Unified Key Setup) is commonly used in Linux for what type of encryption?",
-        options: ["Network traffic encryption", "File-level encryption per user", "Full-disk encryption", "Email encryption"],
-        correctAnswer: "Full-disk encryption"
-    },
-    {
-        week: 6,
-        courseCode: "COM496",
-        question: "What is a key difference between LUKS (Linux) and EFS (Windows) as described in the notes?",
-        options: ["LUKS is file-level encryption, EFS is full-disk.", "LUKS is typically used for full-disk encryption, while EFS is integrated into NTFS for file/folder-level encryption based on user certificates.", "EFS uses symmetric keys, LUKS uses asymmetric keys.", "Only LUKS supports ACLs."],
-        correctAnswer: "LUKS is typically used for full-disk encryption, while EFS is integrated into NTFS for file/folder-level encryption based on user certificates."
-    },
-    {
-        week: 6,
-        courseCode: "COM496",
-        question: "Running applications in restricted, isolated environments using tools like AppArmor, SELinux, or Docker is known as:",
-        options: ["Auditing", "Sandboxing", "Subnetting", "Encrypting"],
-        correctAnswer: "Sandboxing"
-    },
-    {
-        week: 6,
-        courseCode: "COM496",
-        question: "Why might standard file deletion be insufficient for security, necessitating tools like `shred` or `sdelete`?",
-        options: ["Standard deletion encrypts the file.", "Standard deletion only removes the pointer, leaving data recoverable.", "Standard deletion sends the file to the OS vendor.", "Standard deletion corrupts the entire disk."],
-        correctAnswer: "Standard deletion only removes the pointer, leaving data recoverable."
-    },
-    {
-        week: 6,
-        courseCode: "COM496",
-        question: "Why is the OS kernel a prime target for attackers?",
-        options: ["It runs with low privileges.", "It manages user interface elements.", "It operates with the highest privileges, granting full control if compromised.", "It is rarely updated."],
-        correctAnswer: "It operates with the highest privileges, granting full control if compromised."
-    },
-    {
-        week: 6,
-        courseCode: "COM496",
-        question: "Linux `seccomp` is a mechanism for achieving what security measure?",
-        options: ["Encrypting system calls", "Restricting the system calls a process is allowed to make", "Logging all system calls to a remote server", "Hiding system calls from user processes"],
-        correctAnswer: "Restricting the system calls a process is allowed to make"
-    },
-    {
-        week: 6,
-        courseCode: "COM496",
-        question: "SELinux and AppArmor are examples of what type of security mechanism in Linux?",
-        options: ["Encrypting File Systems", "Syscall Filtering", "Mandatory Access Control (MAC)", "User Authentication Modules"],
-        correctAnswer: "Mandatory Access Control (MAC)"
-    },
-    {
-        week: 6,
-        courseCode: "COM496",
-        question: "KASLR (Kernel Address Space Layout Randomization) is a kernel hardening technique designed to make what more difficult?",
-        options: ["Detecting rootkits", "Exploiting memory corruption vulnerabilities", "Managing file permissions", "Authenticating users"],
-        correctAnswer: "Exploiting memory corruption vulnerabilities"
-    },
-    {
-        week: 6,
-        courseCode: "COM496",
-        question: "Which firmware interface is modern, offers more features, and supports security mechanisms like Secure Boot?",
-        options: ["BIOS", "UEFI", "CMOS", "MBR"],
-        correctAnswer: "UEFI"
-    },
-    {
-        week: 6,
-        courseCode: "COM496",
-        question: "The UEFI Secure Boot feature is designed to:",
-        options: ["Encrypt the entire hard drive.", "Prevent unauthorized users from logging into the OS.", "Ensure that only trusted, signed bootloaders and OS components are loaded during startup.", "Randomize the memory layout of the kernel."],
-        correctAnswer: "Ensure that only trusted, signed bootloaders and OS components are loaded during startup."
-    },
-    {
-        week: 6,
-        courseCode: "COM496",
-        question: "A TPM (Trusted Platform Module) is primarily a _____ component used for secure key storage and integrity measurements.",
-        options: ["Software", "Network", "Hardware", "Firmware"],
-        correctAnswer: "Hardware"
-    },
-    {
-        week: 6,
-        courseCode: "COM496",
-        question: "DEP (Data Execution Prevention) is a security feature that helps mitigate which type of attack?",
-        options: ["Phishing attacks", "Denial of Service attacks", "Attacks that attempt to execute malicious code from memory regions marked as non-executable (like the stack or heap).", "Rootkit installation."],
-        correctAnswer: "Attacks that attempt to execute malicious code from memory regions marked as non-executable (like the stack or heap)."
-    },
-    {
-        week: 6,
-        courseCode: "COM496",
-        question: "What is the function of ASLR (Address Space Layout Randomization)?",
-        options: ["To prevent code execution in data memory segments.", "To restrict the system calls a process can make.", "To randomize the memory locations of key program areas (stack, heap, libraries) to make exploits harder.", "To check the integrity of kernel modules."],
-        correctAnswer: "To randomize the memory locations of key program areas (stack, heap, libraries) to make exploits harder."
-    },
-    {
-        week: 6,
-        courseCode: "COM496",
-        question: "Why is system logging crucial for security?",
-        options: ["It prevents attacks from happening.", "It speeds up system performance.", "It provides data for forensics, troubleshooting, and compliance verification.", "It automatically removes malware."],
-        correctAnswer: "It provides data for forensics, troubleshooting, and compliance verification."
-    },
-    {
-        week: 6,
-        courseCode: "COM496",
-        question: "In Linux, system events are typically logged by which system component?",
-        options: ["auditd", "journald (part of systemd) or syslog", "AppArmor", "seccomp"],
-        correctAnswer: "journald (part of systemd) or syslog"
-    },
-    {
-        week: 6,
-        courseCode: "COM496",
-        question: "In Windows, system events related to security, applications, etc., are typically viewed using which tool?",
-        options: ["Task Manager", "Registry Editor", "Event Viewer", "System Configuration (msconfig)"],
-        correctAnswer: "Event Viewer"
-    },
-    {
-        week: 6,
-        courseCode: "COM496",
-        question: "What is the primary purpose of using auditing frameworks like `auditd` (Linux) or Windows Security Auditing?",
-        options: ["To encrypt system logs.", "To automatically fix security vulnerabilities.", "To record detailed information about security-relevant events for analysis and compliance.", "To prevent malware execution in real-time."],
-        correctAnswer: "To record detailed information about security-relevant events for analysis and compliance."
+        question: "How does Snort handle network traffic and log the results?",
+        options: ["Snort analyzes network traffic and saves the results in PCAP format.", "Snort analyzes network traffic and saves the results in alert files in ASCII format.", "Snort only collects traffic data without analyzing it.", "Snort does not log any data but merely alerts the user in real-time."],
+        correctAnswer: "Snort analyzes network traffic and saves the results in alert files in ASCII format."
     },
 
 

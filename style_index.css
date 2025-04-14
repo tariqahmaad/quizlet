@@ -115,6 +115,41 @@ h1::after {
     margin-top: 25px;
 }
 
+/* Visitor Counter Styles */
+.visitor-counter {
+    background-color: rgba(58, 134, 255, 0.08);
+    border-radius: var(--border-radius-sm);
+    padding: 10px 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+    border-left: 3px solid var(--primary-color);
+}
+
+.visitor-counter p {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+#visitor-count {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-family: 'Consolas', Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+/* GoatCounter Container Styles */
+.visitor-counter-display {
+    margin-bottom: 30px;
+}
+
+/* Style the GoatCounter elements */
+.visitor-counter-display div {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    border-radius: var(--border-radius-sm) !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
 /* Course Grid Layout */
 .course-grid {
     display: grid;
