@@ -86,38 +86,43 @@
     <script src="leaderboard_api.js"></script>
     <script src="index_script.js"></script>
 
-    <!-- Visitor Counter Script -->
+    <!-- Visitor Counter Script - Using exact code from documentation -->
     <script>
-        // Option 1: Using the built-in visit_count function
-        var t = setInterval(function () {
-            if (window.goatcounter && window.goatcounter.visit_count) {
-                clearInterval(t);
+        // JSON counter for the text display
+        var t1 = setInterval(function () {
+            if (window.goatcounter && window.goatcounter.get_data) {
+                clearInterval(t1);
 
-                // Add visitor counter directly using GoatCounter's built-in function
-                window.goatcounter.visit_count({
-                    append: '#goatcounter-container',
-                    type: 'html',  // 'html', 'svg', or 'png'
-                    style: `
-                        div { border-color: var(--primary-color); background-color: var(--light-bg); }
-                        #gcvc-views { color: var(--primary-color); font-weight: bold; }
-                    `
-                });
-
-                // Option 2: Also update our custom counter using the JSON API
-                // Use goatcounter.get_data()['p'] as recommended in the documentation 
-                // for the exact (encoded) path as it appears in the UI
+                // Should be exact (encoded) path as it appears in the UI
                 let path = window.goatcounter.get_data()['p'];
+
                 let r = new XMLHttpRequest();
                 r.addEventListener('load', function () {
                     if (this.status === 200) {
-                        document.getElementById('visitor-count').textContent = JSON.parse(this.responseText).count;
+                        document.querySelector('#visitor-count').innerText = JSON.parse(this.responseText).count;
                     } else {
-                        document.getElementById('visitor-count').textContent = 'See counter below';
+                        document.querySelector('#visitor-count').innerText = 'See below';
                     }
                 });
 
                 r.open('GET', 'https://tariqo.goatcounter.com/counter/' + encodeURIComponent(path) + '.json');
                 r.send();
+            }
+        }, 100);
+
+        // HTML widget display
+        var t2 = setInterval(function () {
+            if (window.goatcounter && window.goatcounter.visit_count) {
+                clearInterval(t2);
+                window.goatcounter.visit_count({
+                    append: '#goatcounter-container',
+                    type: 'html',
+                    style: `
+                        div { border-color: var(--primary-color); background-color: var(--light-bg); }
+                        #gcvc-for { color: var(--text-color); }
+                        #gcvc-views { color: var(--primary-color); font-weight: bold; }
+                    `
+                });
             }
         }, 100);
     </script>
