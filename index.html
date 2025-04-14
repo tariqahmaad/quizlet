@@ -87,73 +87,97 @@
     <!-- Visitor Counter Script - Using exact code from documentation -->
     <script>
         console.log('Visitor counter script started.');
+        let t1 = null; // Declare t1 outside
+        let goatcounterInitialized = false;
+
+        // Function to fetch the count
+        function fetchGoatCounterCount(path) {
+            if (!path) {
+                console.error('GoatCounter path is empty or undefined!');
+                document.querySelector('#visitor-count').innerText = 'Error (path)';
+                return; // Stop if path is invalid
+            }
+
+            let requestUrl = 'https://tariqo.goatcounter.com/counter/' + encodeURIComponent(path) + '.json';
+            console.log('Requesting URL:', requestUrl);
+
+            let r = new XMLHttpRequest();
+            r.addEventListener('load', function () {
+                console.log('XHR request finished with status:', this.status);
+                if (this.status === 200) {
+                    try {
+                        let data = JSON.parse(this.responseText);
+                        console.log('GoatCounter response data:', data);
+                        document.querySelector('#visitor-count').innerText = data.count;
+                    } catch (e) {
+                        console.error('Error parsing GoatCounter JSON response:', e);
+                        document.querySelector('#visitor-count').innerText = 'Error (parse)';
+                    }
+                } else {
+                    console.error('GoatCounter JSON request failed:', this.status, this.statusText, 'Response:', this.responseText);
+                    document.querySelector('#visitor-count').innerText = 'N/A (' + this.status + ')';
+                }
+            });
+
+            r.addEventListener('error', function () {
+                console.error('XHR request network error occurred.');
+                document.querySelector('#visitor-count').innerText = 'Error (network)';
+            });
+
+            r.open('GET', requestUrl);
+            r.send();
+        }
+
         // JSON counter for the text display
-        var t1 = setInterval(function () {
+        t1 = setInterval(function () {
             console.log('Checking for window.goatcounter...');
             if (window.goatcounter) {
                 console.log('window.goatcounter object FOUND.');
-                // Now check specifically for the get_data method
                 if (window.goatcounter.get_data) {
                     console.log('window.goatcounter.get_data method FOUND.');
-                    clearInterval(t1); // Stop checking once we find it
-
-                    let path = window.goatcounter.get_data()['p'];
-                    console.log('GoatCounter path:', path);
-                    if (!path) {
-                        console.error('GoatCounter path is empty or undefined!');
-                        document.querySelector('#visitor-count').innerText = 'Error (path)';
-                        return; // Stop if path is invalid
-                    }
-
-                    let requestUrl = 'https://tariqo.goatcounter.com/counter/' + encodeURIComponent(path) + '.json';
-                    console.log('Requesting URL:', requestUrl);
-
-                    let r = new XMLHttpRequest();
-                    r.addEventListener('load', function () {
-                        console.log('XHR request finished with status:', this.status);
-                        if (this.status === 200) {
-                            try {
-                                let data = JSON.parse(this.responseText);
-                                console.log('GoatCounter response data:', data);
-                                document.querySelector('#visitor-count').innerText = data.count;
-                            } catch (e) {
-                                console.error('Error parsing GoatCounter JSON response:', e);
-                                document.querySelector('#visitor-count').innerText = 'Error (parse)';
-                            }
-                        } else {
-                            console.error('GoatCounter JSON request failed:', this.status, this.statusText, 'Response:', this.responseText);
-                            document.querySelector('#visitor-count').innerText = 'N/A (' + this.status + ')';
-                        }
-                    });
-
-                    r.addEventListener('error', function () {
-                        console.error('XHR request network error occurred.');
-                        document.querySelector('#visitor-count').innerText = 'Error (network)';
-                    });
-
-                    r.open('GET', requestUrl);
-                    r.send();
-
+                    clearInterval(t1);
+                    goatcounterInitialized = true;
+                    fetchGoatCounterCount(window.goatcounter.get_data()['p']);
                 } else {
                     console.log('window.goatcounter object exists, but get_data method NOT YET available.');
+                    // Keep checking for a short while
                 }
             } else {
                 console.log('window.goatcounter object NOT YET available.');
             }
         }, 500); // Check every 500ms
 
-        // Set a timeout to stop checking if GoatCounter never loads or get_data never appears
+        // Set a timeout 
         setTimeout(function () {
-            // Check if the interval is still running (meaning we haven't cleared it yet)
-            if (t1) {
+            if (t1) { // If interval is still running
                 clearInterval(t1);
-                console.error('GoatCounter did not initialize fully after 10 seconds.');
-                // Check if the span still shows the initial loading text
-                if (document.querySelector('#visitor-count').innerText === 'Loading...') {
-                    document.querySelector('#visitor-count').innerText = 'Error (timeout)';
+                if (!goatcounterInitialized) { // And we never found get_data
+                    console.warn('GoatCounter get_data not found after 5 seconds. Trying manual path.');
+                    // Fallback: Try using location.pathname if goatcounter object exists
+                    if (window.goatcounter) {
+                        // Use location.pathname, remove trailing slash if it's not the root
+                        let manualPath = location.pathname;
+
+                        // *** NEW: If path is /index.html, try using / instead ***
+                        if (manualPath.toLowerCase() === '/index.html') {
+                            console.log('Path was /index.html, trying / instead.');
+                            manualPath = '/';
+                        } else if (manualPath !== '/' && manualPath.endsWith('/')) {
+                            // Remove trailing slash for other paths (unless it's the root)
+                            manualPath = manualPath.slice(0, -1);
+                        }
+
+                        console.log('Using manual path:', manualPath);
+                        fetchGoatCounterCount(manualPath);
+                    } else {
+                        console.error('GoatCounter object never found after 5 seconds.');
+                        if (document.querySelector('#visitor-count').innerText === 'Loading...') {
+                            document.querySelector('#visitor-count').innerText = 'Error (timeout)';
+                        }
+                    }
                 }
             }
-        }, 10000); // 10 seconds timeout
+        }, 5000); // Shortened timeout to 5 seconds for fallback
 
     </script>
 </body>
