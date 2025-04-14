@@ -21,8 +21,6 @@
             <p>Daily Visitors: <span id="visitor-count">Loading...</span></p>
         </div>
 
-        <div id="goatcounter-container" class="visitor-counter-display"></div>
-
         <div class="course-grid">
 
             <!-- Parallel Programming - Available -->
@@ -88,43 +86,64 @@
 
     <!-- Visitor Counter Script - Using exact code from documentation -->
     <script>
+        console.log('Visitor counter script started.');
         // JSON counter for the text display
-        var t1 = setInterval(function () {
+        var t1 = setInterval(function() {
+            console.log('Checking for window.goatcounter...');
             if (window.goatcounter && window.goatcounter.get_data) {
+                console.log('window.goatcounter.get_data found!');
                 clearInterval(t1);
-
-                // Should be exact (encoded) path as it appears in the UI
+                
                 let path = window.goatcounter.get_data()['p'];
+                console.log('GoatCounter path:', path);
+                if (!path) {
+                    console.error('GoatCounter path is empty or undefined!');
+                    document.querySelector('#visitor-count').innerText = 'Error';
+                    return; // Stop if path is invalid
+                }
+                
+                let requestUrl = 'https://tariqo.goatcounter.com/counter/' + encodeURIComponent(path) + '.json';
+                console.log('Requesting URL:', requestUrl);
 
                 let r = new XMLHttpRequest();
-                r.addEventListener('load', function () {
+                r.addEventListener('load', function() {
+                    console.log('XHR request finished with status:', this.status);
                     if (this.status === 200) {
-                        document.querySelector('#visitor-count').innerText = JSON.parse(this.responseText).count;
+                        try {
+                            let data = JSON.parse(this.responseText);
+                            console.log('GoatCounter response data:', data);
+                            document.querySelector('#visitor-count').innerText = data.count;
+                        } catch (e) {
+                            console.error('Error parsing GoatCounter JSON response:', e);
+                            document.querySelector('#visitor-count').innerText = 'Loading...'; // Fallback to loading state
+                        }
                     } else {
-                        document.querySelector('#visitor-count').innerText = 'See below';
+                        console.error('GoatCounter JSON request failed:', this.status, this.statusText, 'Response:', this.responseText);
+                        document.querySelector('#visitor-count').innerText = 'N/A'; 
                     }
                 });
 
-                r.open('GET', 'https://tariqo.goatcounter.com/counter/' + encodeURIComponent(path) + '.json');
-                r.send();
-            }
-        }, 100);
-
-        // HTML widget display
-        var t2 = setInterval(function () {
-            if (window.goatcounter && window.goatcounter.visit_count) {
-                clearInterval(t2);
-                window.goatcounter.visit_count({
-                    append: '#goatcounter-container',
-                    type: 'html',
-                    style: `
-                        div { border-color: var(--primary-color); background-color: var(--light-bg); }
-                        #gcvc-for { color: var(--text-color); }
-                        #gcvc-views { color: var(--primary-color); font-weight: bold; }
-                    `
+                r.addEventListener('error', function() {
+                    console.error('XHR request error occurred.');
+                    document.querySelector('#visitor-count').innerText = 'Error';
                 });
+                
+                r.open('GET', requestUrl);
+                r.send();
+            } else {
+                console.log('window.goatcounter.get_data not yet available.');
             }
-        }, 100);
+        }, 500); // Increased interval slightly
+
+        // Set a timeout to stop checking if GoatCounter never loads
+        setTimeout(function() {
+            if (!window.goatcounter || !window.goatcounter.get_data) {
+                clearInterval(t1);
+                console.error('GoatCounter script did not load after 10 seconds.');
+                document.querySelector('#visitor-count').innerText = 'Error';
+            }
+        }, 10000); // 10 seconds timeout
+
     </script>
 </body>
 
