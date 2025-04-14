@@ -16,7 +16,7 @@
         <h1>Select a Course Exam</h1>
         <p>Choose an available course below and enter your name to start.</p>
 
-        <!-- Daily Visitor Counter -->
+        <!-- Visitor counter card with light blue styling -->
         <div class="visitor-counter">
             <p>Daily Visitors: <span id="visitor-count">Loading...</span></p>
         </div>
@@ -84,102 +84,60 @@
     <script src="leaderboard_api.js"></script>
     <script src="index_script.js"></script>
 
-    <!-- Visitor Counter Script - Using exact code from documentation -->
+    <!-- GoatCounter Visitor Count Script (Using JSON endpoint) -->
     <script>
-        console.log('Visitor counter script started.');
-        let t1 = null; // Declare t1 outside
-        let goatcounterInitialized = false;
+        var t = setInterval(function () {
+            // Check if GoatCounter is available to get the path
+            if (window.goatcounter && window.goatcounter.get_data) {
+                clearInterval(t); // Stop checking
 
-        // Function to fetch the count
-        function fetchGoatCounterCount(path) {
-            if (!path) {
-                console.error('GoatCounter path is empty or undefined!');
-                document.querySelector('#visitor-count').innerText = 'Error (path)';
-                return; // Stop if path is invalid
-            }
-
-            let requestUrl = 'https://tariqo.goatcounter.com/counter/' + encodeURIComponent(path) + '.json';
-            console.log('Requesting URL:', requestUrl);
-
-            let r = new XMLHttpRequest();
-            r.addEventListener('load', function () {
-                console.log('XHR request finished with status:', this.status);
-                if (this.status === 200) {
-                    try {
-                        let data = JSON.parse(this.responseText);
-                        console.log('GoatCounter response data:', data);
-                        document.querySelector('#visitor-count').innerText = data.count;
-                    } catch (e) {
-                        console.error('Error parsing GoatCounter JSON response:', e);
-                        document.querySelector('#visitor-count').innerText = 'Error (parse)';
+                try {
+                    // Get the current path recognized by GoatCounter
+                    let path = window.goatcounter.get_data()['p'];
+                    if (path === undefined) {
+                        // Fallback or default path if needed, e.g., root
+                        // path = '/'; 
+                        // Or try location.pathname, but get_data is preferred
+                        path = location.pathname;
+                        console.warn('GoatCounter path not found via get_data(), falling back to location.pathname');
                     }
-                } else {
-                    console.error('GoatCounter JSON request failed:', this.status, this.statusText, 'Response:', this.responseText);
-                    document.querySelector('#visitor-count').innerText = 'N/A (' + this.status + ')';
-                }
-            });
 
-            r.addEventListener('error', function () {
-                console.error('XHR request network error occurred.');
-                document.querySelector('#visitor-count').innerText = 'Error (network)';
-            });
-
-            r.open('GET', requestUrl);
-            r.send();
-        }
-
-        // JSON counter for the text display
-        t1 = setInterval(function () {
-            console.log('Checking for window.goatcounter...');
-            if (window.goatcounter) {
-                console.log('window.goatcounter object FOUND.');
-                if (window.goatcounter.get_data) {
-                    console.log('window.goatcounter.get_data method FOUND.');
-                    clearInterval(t1);
-                    goatcounterInitialized = true;
-                    fetchGoatCounterCount(window.goatcounter.get_data()['p']);
-                } else {
-                    console.log('window.goatcounter object exists, but get_data method NOT YET available.');
-                    // Keep checking for a short while
-                }
-            } else {
-                console.log('window.goatcounter object NOT YET available.');
-            }
-        }, 500); // Check every 500ms
-
-        // Set a timeout 
-        setTimeout(function () {
-            if (t1) { // If interval is still running
-                clearInterval(t1);
-                if (!goatcounterInitialized) { // And we never found get_data
-                    console.warn('GoatCounter get_data not found after 5 seconds. Trying manual path.');
-                    // Fallback: Try using location.pathname if goatcounter object exists
-                    if (window.goatcounter) {
-                        // Use location.pathname, remove trailing slash if it's not the root
-                        let manualPath = location.pathname;
-
-                        // *** NEW: If path is /index.html, try using / instead ***
-                        if (manualPath.toLowerCase() === '/index.html') {
-                            console.log('Path was /index.html, trying / instead.');
-                            manualPath = '/';
-                        } else if (manualPath !== '/' && manualPath.endsWith('/')) {
-                            // Remove trailing slash for other paths (unless it's the root)
-                            manualPath = manualPath.slice(0, -1);
-                        }
-
-                        console.log('Using manual path:', manualPath);
-                        fetchGoatCounterCount(manualPath);
-                    } else {
-                        console.error('GoatCounter object never found after 5 seconds.');
-                        if (document.querySelector('#visitor-count').innerText === 'Loading...') {
-                            document.querySelector('#visitor-count').innerText = 'Error (timeout)';
-                        }
+                    // Fetch the count from the JSON endpoint
+                    fetch('https://tariqo.goatcounter.com/counter/' + encodeURIComponent(path) + '.json')
+                        .then(function (response) {
+                            if (!response.ok) {
+                                throw new Error('Network response was not ok: ' + response.statusText);
+                            }
+                            return response.json();
+                        })
+                        .then(function (data) {
+                            const countSpan = document.getElementById('visitor-count');
+                            if (countSpan && data && data.count !== undefined) {
+                                countSpan.textContent = data.count; // Display the count number
+                            } else {
+                                console.error('Could not find #visitor-count element or count data.');
+                                if (countSpan) countSpan.textContent = 'N/A'; // Indicate error
+                            }
+                        })
+                        .catch(function (error) {
+                            console.error('Error fetching visitor count:', error);
+                            const countSpan = document.getElementById('visitor-count');
+                            if (countSpan) {
+                                countSpan.textContent = 'Error'; // Display error in the span
+                            }
+                        });
+                } catch (e) {
+                    console.error('Error getting GoatCounter path or fetching count:', e);
+                    const countSpan = document.getElementById('visitor-count');
+                    if (countSpan) {
+                        countSpan.textContent = 'Error';
                     }
                 }
             }
-        }, 5000); // Shortened timeout to 5 seconds for fallback
-
+        }, 100); // Check every 100ms
     </script>
+    <!-- GoatCounter Analytics Script (Keep this) -->
+    <script data-goatcounter="https://tariqo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 
 </html>
