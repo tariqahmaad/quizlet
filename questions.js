@@ -3056,6 +3056,461 @@ const allQuestions = [
         ],
         correctAnswer: "Sensibility- possibility" // Sensitivity and Probability/Possibility analyses are often used in simulations.
     },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "______ is accepted as a strong expression of transforming human intelligence, ability, creativity and imagination into a product or service.",
+        "options": [
+            "all of them",
+            "projection",
+            "None of them is correct",
+            "research",
+            "creativity"
+        ],
+        "correctAnswer": "projection"
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "The features of Entrepreneurs are:",
+        "options": [
+            "Leadership",
+            "None of them is correct",
+            "determination",
+            "devotion and creativity",
+            "All of them are correct"
+        ],
+        "correctAnswer": "All of them are correct"
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "As if SUZUKI automobiles company sales are increasing continuously will consider in ______ stage of product life cycle.",
+        "options": [
+            "Decline Stage",
+            "None of them are correct",
+            "Maturity Stage",
+            "Beginning Stage",
+            "Growing Stage"
+        ],
+        "correctAnswer": "Growing Stage"
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "Creativity and inventions are carried out in ______ but not all of the inventions can be turned into innovation.",
+        "options": [
+            "human resource management",
+            "social studies",
+            "None of them is correct",
+            "marketing",
+            "research and development"
+        ],
+        "correctAnswer": "research and development"
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "Blue Ocean Strategy is implemented when innovative companies stay strong by differentiating from each other instead of ______",
+        "options": [
+            "All of them are correct",
+            "None of them are correct",
+            "resembling",
+            "fighting",
+            "bonding"
+        ],
+        "correctAnswer": "resembling"
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "Main components of entrepreneurial thinking ______",
+        "options": [
+            "Competitive Thinking",
+            "All of them are correct ",
+            "Taking Risks",
+            "Being Inventive and Creative",
+            "None of them is correct"
+        ],
+        "correctAnswer": "All of them are correct "
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "Decline stage is when research & development and promotion expenses get lower, price competitions continue and as a result sales and profit ____.",
+        "options": [
+            "Remain constant",
+            "None of them",
+            "Decrease ",
+            "Increase",
+            "All of them are correct"
+        ],
+        "correctAnswer": "Decrease "
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "______ is supportive to an entrepreneur to decide which business idea to take:",
+        "options": [
+            "business idea",
+            "Shareholders",
+            "Feasibility",
+            "None of them is correct",
+            "Family"
+        ],
+        "correctAnswer": "Feasibility"
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "The most important reward of being an entrepreneur is ______",
+        "options": [
+            "to gain fame.",
+            "None of them is correct",
+            "all of them are correct",
+            "to create value ",
+            "to buy a mansion"
+        ],
+        "correctAnswer": "to create value "
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "______ appear as entrepreneurship structures which make innovations and inventions.",
+        "options": [
+            "None of them is correct",
+            "Social Entrepreneurship",
+            "All of them are correct",
+            "Internal Entrepreneurship",
+            "Techno-entrepreneurship "
+        ],
+        "correctAnswer": "Techno-entrepreneurship "
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "Unemployment and disagreement with management are type of ______",
+        "options": [
+            "None of them",
+            "riveting factors",
+            "compeller factors ",
+            "revenge factors",
+            "all of them"
+        ],
+        "correctAnswer": "compeller factors "
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "A Floppy Disk is considered in ______ stage of product life cycle.",
+        "options": [
+            "Growing Stage",
+            "Decline Stage ",
+            "Beginning Stage",
+            "Maturity Stage",
+            "None of them is correct"
+        ],
+        "correctAnswer": "Decline Stage "
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "If the ABC company is trying to reduce their product cost and increase product quality is the example of ______",
+        "options": [
+            "All of them are correct",
+            "closed innovation",
+            "Open Innovation",
+            "Unlimited innovation",
+            "Operational innovation "
+        ],
+        "correctAnswer": "Operational innovation "
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "In______the establishments finish product development phase and are in need of trading productions and sales activities.",
+        "options": [
+            "None of them is correct",
+            "Business idea investments",
+            "First stage investment (early stage investment)",
+            "Enlargement Investments",
+            "support Investments"
+        ],
+        "correctAnswer": "First stage investment (early stage investment)"
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "Being independent and self-richness are type of ______",
+        "options": [
+            "compeller factors",
+            "Gender Factors",
+            "riveting factors",
+            "all of them",
+            "none of them"
+        ],
+        "correctAnswer": "riveting factors"
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "A______ innovation process takes place exclusively within the company.",
+        "options": [
+            "Open",
+            "None of them is correct",
+            "Operational",
+            "Limited",
+            "Closed"
+        ],
+        "correctAnswer": "Closed"
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "Which of the followings is wrong about Protection of Intellectual and Industrial Property Rights which effects entrepreneurial climate?",
+        "options": [
+            "It is an incorporeal right that provides the right of production and sale.",
+            "These rights are preserved for the right owner against third parties.",
+            "These rights can be transferred someone else.",
+            "Entrepreneur activities develop rapidly in the countries lack of patent legislation and application.",
+            "Patent legislation and application has a place in protection of these rights."
+        ],
+        "correctAnswer": "Entrepreneur activities develop rapidly in the countries lack of patent legislation and application."
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "Which of the following is not one of the sources of finance for entrepreneurs?",
+        "options": [
+            "Capital markets.",
+            "Fixed exchange rate. ",
+            "Family members.",
+            "Banks.",
+            "Acquaintances."
+        ],
+        "correctAnswer": "Fixed exchange rate. "
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "Which of the following is the most important way of support that an entrepreneur expects from design?",
+        "options": [
+            "Unsufficient product.",
+            "Innovative product. ",
+            "Too much expensive products",
+            "Unrealistic product.",
+            "Too much high investment cost."
+        ],
+        "correctAnswer": "Innovative product. "
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "Which one of the following is a feature of an entrepreneurship?",
+        "options": [
+            "Being conservative",
+            "Not undertaking a risk",
+            "Apathetic insensible",
+            "Picking out the opportunities ",
+            "Not being able to see problems"
+        ],
+        "correctAnswer": "Picking out the opportunities "
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "What is the name of ideas which provides value to the consumer, profits to the entrepreneur, benefits to the society and is able to turn product and service?",
+        "options": [
+            "Business expense",
+            "Business Control in wrong way",
+            "Uneffective distribution",
+            "Unsufficient plan",
+            "Business idea "
+        ],
+        "correctAnswer": "Business idea "
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "Which one of the following is not among the general medium components?",
+        "options": [
+            "Natural environment",
+            "Political/legal environment",
+            "Economic environment",
+            "Sociocultural environment",
+            "Labour environment"
+        ],
+        "correctAnswer": "Labour environment"
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "Which of the following is the basic structure of thought which dominated the business world along with the globalization phenomenon?",
+        "options": [
+            "Innovative manufacturing",
+            "Cost efficiency",
+            "Protectionism",
+            "Competitive market",
+            "Productivity of labor"
+        ],
+        "correctAnswer": "Competitive market"
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "Which one of the following is the stage that administrative activities that are necessary for profitability and efficiency are carried out within the process of business establishment?",
+        "options": [
+            "Business development ",
+            "Pre assessment",
+            "Feasibility research",
+            "Thought of starting a business",
+            "Business plan"
+        ],
+        "correctAnswer": "Business development "
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "Which of the following is the first step that takes part in the entrepreneurial process related to gathering of enterprise factors?",
+        "options": [
+            "Finding of the required resources in wrong way",
+            "Developing of ineffective business plan",
+            "Defining and utilizing of opportunities",
+            "Management of business in not sufficient way",
+            "Preparing of wrong management plan"
+        ],
+        "correctAnswer": "Defining and utilizing of opportunities"
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "Which reason of starting business for entrepreneurs is related to the thought of being their own boss?",
+        "options": [
+            "The desire for working independently",
+            "Lacking of opportunity",
+            "Heritage or transfer",
+            "Social prestige",
+            "The desire for earning money"
+        ],
+        "correctAnswer": "The desire for working independently"
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "Which one of the below is primary supporting program of the KOSGEB-Technology Development Centre(TEKMER). which is operating in the ground floor of G and H blocks of the university campus. In supporting the entrepreneurs that have business idea and thinking about founding a business?",
+        "options": [
+            "General Supporting Program.",
+            "R&D, Innovations and Industrial Applying Supporting Program.",
+            "SME Project Support Program.",
+            "Thematic Project Support Program.",
+            "Loan interest support."
+        ],
+        "correctAnswer": "R&D, Innovations and Industrial Applying Supporting Program."
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "Which of the following includes act and attitudes in organizational creativity?",
+        "options": [
+            "Unrealistic Difference",
+            "Not positive Thought",
+            "Forming concept in uncertain way",
+            "Mistake and risk",
+            "Challenger"
+        ],
+        "correctAnswer": "Challenger"
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "Which of the following is the innovation stage where creativity is used?",
+        "options": [
+            "Managing ideas.",
+            "Collecting ideas.",
+            "Choosing ideas that have the potential to be successful.",
+            "Budgeting.",
+            "Execution."
+        ],
+        "correctAnswer": "Collecting ideas."
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "Which of the following is not one of the projects that is supported by TTGV (Technology Development Foundation of Turkey)?",
+        "options": [
+            "Environmental projects.",
+            "Risk Sharing Supports.",
+            "Initial Capital Supports.",
+            "Business Development Support.",
+            "Commercialization Support Project."
+        ],
+        "correctAnswer": "Environmental projects."
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "Which of the following business plan sections contains information about customer markets?",
+        "options": [
+            "Management plan",
+            "Financial plan",
+            "Demand structure and market research",
+            "Introduction/Manager summary",
+            "Definition of the entrepreneur and the business"
+        ],
+        "correctAnswer": "Demand structure and market research"
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "For whom the value should be created according to the principle \"innovation should create value\"?",
+        "options": [
+            "For the closed friends",
+            "For the class fellow",
+            "For the neighbour",
+            "For the family",
+            "For the customers."
+        ],
+        "correctAnswer": "For the customers."
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "Which of the following is the name of the analysis that is done by an organization to make self-assessment systematically by using the information gathered to understand and manage the environment in which it operates?",
+        "options": [
+            "Variance analysis.",
+            "SWOT analysis.",
+            "Compatibility analysis.",
+            "Performance analysis.",
+            "Attention analysis."
+        ],
+        "correctAnswer": "SWOT analysis."
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "Which one of the following is a feature of an entrepreneurs' \"encouragement\"?",
+        "options": [
+            "Setting not rational goals",
+            "Behaving abnormal",
+            "Expressing his/her personal support in wrong way",
+            "Proving his/her self-excitement",
+            "Influencing and understanding of emotions in wrong way"
+        ],
+        "correctAnswer": "Proving his/her self-excitement"
+    },
+    {
+        "week": 5,
+        "courseCode": "GRI403",
+        "question": "Which one of the following is not a personal characteristic of an entrepreneur?",
+        "options": [
+            "Responsible",
+            "Creative",
+            "Focused on success",
+            "Unable to bear risk ",
+            "Patient"
+        ],
+        "correctAnswer": "Unable to bear risk "
+    },
 
     // Parallel Programming questions
 
