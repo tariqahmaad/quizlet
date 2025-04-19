@@ -384,7 +384,8 @@ function loadQuestion(index) {
     // Set question text and clear previous options/feedback
     if (questionTextElement) questionTextElement.textContent = currentQuestion.question;
     if (optionsContainer) optionsContainer.innerHTML = '';
-    if (feedbackElement) {
+    // Only clear feedback if not on mobile
+    if (feedbackElement && window.innerWidth > 480) {
         feedbackElement.textContent = '';
         feedbackElement.className = 'feedback'; // Reset feedback style
     }
@@ -440,8 +441,8 @@ function handleAnswerClick(event) {
     userAnswers[currentQuestionIndex] = { questionIndex: currentQuestionIndex, answer: selectedAnswer, correct: isCorrect };
     if (isCorrect) score++;
 
-    // Visual feedback
-    if (feedbackElement) {
+    // Visual feedback (skip on mobile)
+    if (feedbackElement && window.innerWidth > 480) {
         feedbackElement.textContent = isCorrect ? "Correct!" : `Incorrect. Correct Answer: ${leaderboardAPI.escapeHTML(correctAnswer)}`; // Escape correct answer display
         feedbackElement.className = `feedback ${isCorrect ? 'correct' : 'incorrect'}`;
         // Add a small delay before making feedback visible
@@ -462,7 +463,8 @@ function handleAnswerClick(event) {
 // Highlight Previous Answer (for nav)
 function highlightPreviousAnswer(selectedAnswer, isCorrect) {
     const correctAnswer = currentFilteredQuestions[currentQuestionIndex].correctAnswer;
-    if (feedbackElement) {
+    // Only show feedback if not on mobile
+    if (feedbackElement && window.innerWidth > 480) {
         feedbackElement.textContent = isCorrect ? "Correct!" : `Incorrect. Correct Answer: ${leaderboardAPI.escapeHTML(correctAnswer)}`; // Escape correct answer display
         feedbackElement.className = `feedback ${isCorrect ? 'correct' : 'incorrect'}`;
     }
