@@ -39,6 +39,7 @@ const saveStatusElement = document.getElementById('save-status');
 const errorArea = document.getElementById('error-area');
 const errorMessageElement = document.getElementById('error-message');
 const backToIndexBtn = document.getElementById('back-to-index-btn');
+const themeToggleButton = document.getElementById('theme-toggle-btn');
 
 // --- JSONBin.io Configuration (MUST MATCH leaderboard.js values) ---
 // !!! IMPORTANT: Replace these placeholders with your actual Bin ID and Access Key !!!
@@ -146,7 +147,7 @@ async function displayLeaderboard() {
     topScores.forEach((entry, index) => { // Get the index (rank) here
         const listItem = document.createElement('li');
 
-        // **** START: Add Rank Classes ****
+        // Add Rank Classes
         if (index === 0) {
             listItem.classList.add('rank-1'); // Gold
         } else if (index === 1) {
@@ -154,21 +155,31 @@ async function displayLeaderboard() {
         } else if (index === 2) {
             listItem.classList.add('rank-3'); // Bronze
         }
-        // **** END: Add Rank Classes ****
 
         const name = entry.name || 'Unknown';
         const scoreVal = typeof entry.score === 'number' ? entry.score : '?';
         const totalVal = typeof entry.total === 'number' ? entry.total : '?';
-        const percentVal = typeof entry.percentage === 'number' ? entry.percentage : '?';
+        const percentVal = typeof entry.percentage === 'number' ? Math.round(entry.percentage) : '?';
         const courseVal = entry.course || 'N/A';
         const weekVal = entry.week || 'N/A';
 
-        // Use the centralized escapeHTML function
-        listItem.innerHTML = `
-            <span class="name">${leaderboardAPI.escapeHTML(name)}</span> -
-            <span class="score">${scoreVal}/${totalVal} (${percentVal}%)</span>
-            <span class="details">(Course: ${leaderboardAPI.escapeHTML(courseVal)}, ${leaderboardAPI.escapeHTML(weekVal)})</span>
-        `;
+        // Use the centralized escapeHTML function and improved formatting
+        const nameSpan = document.createElement('span');
+        nameSpan.className = 'name';
+        nameSpan.textContent = name;
+
+        const scoreSpan = document.createElement('span');
+        scoreSpan.className = 'score';
+        scoreSpan.textContent = `${scoreVal}/${totalVal} (${percentVal}%)`;
+
+        const detailsSpan = document.createElement('span');
+        detailsSpan.className = 'details';
+        detailsSpan.textContent = `(Course: ${courseVal}, ${weekVal})`;
+
+        listItem.appendChild(nameSpan);
+        listItem.appendChild(scoreSpan);
+        listItem.appendChild(detailsSpan);
+
         listElementOnQuizPage.appendChild(listItem);
     });
 }
@@ -178,49 +189,53 @@ async function displayLeaderboard() {
 // Load Course Data and Player Name
 function loadCourseData() {
     console.log("loadCourseData started");
-    const urlParams = new URLSearchParams(window.location.search);
-    selectedCourseCode = urlParams.get('course');
-    currentPlayerName = urlParams.get('player') || 'Guest';
 
-    console.log("Course:", selectedCourseCode, "Player:", currentPlayerName);
+    // Add a small delay to ensure questions.js is loaded
+    setTimeout(() => {
+        const urlParams = new URLSearchParams(window.location.search);
+        selectedCourseCode = urlParams.get('course');
+        currentPlayerName = urlParams.get('player') || 'Guest';
 
-    if (!selectedCourseCode) {
-        console.log("Error: No course selected");
-        showError("No course selected. Please return to the course list and choose a course.");
-        return;
-    }
+        console.log("Course:", selectedCourseCode, "Player:", currentPlayerName);
 
-    selectedCourseName = courseMap[selectedCourseCode];
-    if (!selectedCourseName) {
-        console.warn(`Course code "${selectedCourseCode}" not found in courseMap. Using code as name.`);
-        selectedCourseName = selectedCourseCode; // Fallback to code
-    }
+        if (!selectedCourseCode) {
+            console.log("Error: No course selected");
+            showError("No course selected. Please return to the course list and choose a course.");
+            return;
+        }
 
-    // Remove redundant course info display
-    if (courseInfoElement) courseInfoElement.style.display = 'none';
+        selectedCourseName = courseMap[selectedCourseCode];
+        if (!selectedCourseName) {
+            console.warn(`Course code "${selectedCourseCode}" not found in courseMap. Using code as name.`);
+            selectedCourseName = selectedCourseCode; // Fallback to code
+        }
 
-    // Check if questions.js loaded correctly
-    console.log("Checking allQuestions. Type:", typeof allQuestions);
-    if (typeof allQuestions === 'undefined' || !Array.isArray(allQuestions)) {
-        console.log("Error: allQuestions not loaded or not an array");
-        showError("Fatal Error: Question data (allQuestions) could not be loaded. Ensure 'questions.js' is included correctly before 'scripts.js' in quiz.html.");
-        return;
-    }
-    console.log("allQuestions loaded, length:", allQuestions.length);
+        // Remove redundant course info display
+        if (courseInfoElement) courseInfoElement.style.display = 'none';
 
-    courseQuestions = allQuestions.filter(q => q.courseCode === selectedCourseCode);
-    console.log("Filtered questions for course, length:", courseQuestions.length);
+        // Check if questions.js loaded correctly
+        console.log("Checking allQuestions. Type:", typeof allQuestions);
+        if (typeof allQuestions === 'undefined' || !Array.isArray(allQuestions)) {
+            console.log("Error: allQuestions not loaded or not an array");
+            showError("Fatal Error: Question data (allQuestions) could not be loaded. Please refresh the page and try again.");
+            return;
+        }
+        console.log("allQuestions loaded, length:", allQuestions.length);
 
-    if (courseQuestions.length === 0) {
-        console.log("Error: No questions found for this course");
-        showError(`No questions are currently available for the selected course (${selectedCourseName} - ${selectedCourseCode}). Please add questions or select another course.`);
-        return;
-    }
+        courseQuestions = allQuestions.filter(q => q.courseCode === selectedCourseCode);
+        console.log("Filtered questions for course, length:", courseQuestions.length);
 
-    // If data loaded successfully, proceed to week selection UI
-    console.log("Data loaded successfully, initializing week selection...");
-    if (homeBtn) homeBtn.style.display = 'inline-block';
-    initializeWeekSelection();
+        if (courseQuestions.length === 0) {
+            console.log("Error: No questions found for this course");
+            showError(`No questions are currently available for the selected course (${selectedCourseName} - ${selectedCourseCode}). Please add questions or select another course.`);
+            return;
+        }
+
+        // If data loaded successfully, proceed to week selection UI
+        console.log("Data loaded successfully, initializing week selection...");
+        if (homeBtn) homeBtn.style.display = 'inline-block';
+        initializeWeekSelection();
+    }, 100); // Small delay to ensure questions.js is loaded
 }
 
 // Populate Week Selector
@@ -681,5 +696,54 @@ function setupEventListeners() {
     if (backToIndexBtn) backToIndexBtn.addEventListener('click', () => { window.location.href = 'index.html'; });
 }
 
-// --- Initialize Event Listeners ---
-setupEventListeners();
+// --- Dark Mode Logic (Copied from index_script.js) ---
+const LOCAL_STORAGE_THEME_KEY = 'themePreference';
+
+function applyTheme(theme) {
+    document.documentElement.dataset.theme = theme;
+    // Optional: Update button text/icon if needed
+    if (themeToggleButton) {
+        themeToggleButton.textContent = theme === 'dark' ? '☀️' : '🌙';
+    }
+}
+
+function getPreferredTheme() {
+    const savedTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY);
+    if (savedTheme) {
+        return savedTheme;
+    }
+    // Check system preference
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+function saveThemePreference(theme) {
+    localStorage.setItem(LOCAL_STORAGE_THEME_KEY, theme);
+}
+
+function toggleTheme() {
+    const currentTheme = document.documentElement.dataset.theme || getPreferredTheme();
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    applyTheme(newTheme);
+    saveThemePreference(newTheme);
+}
+
+// --- End Dark Mode Logic ---
+
+// --- Initialization ---
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("DOM fully loaded and parsed.");
+
+    // Apply initial theme
+    const initialTheme = getPreferredTheme();
+    applyTheme(initialTheme);
+
+    // Setup theme toggle button listener
+    if (themeToggleButton) {
+        themeToggleButton.addEventListener('click', toggleTheme);
+    } else {
+        console.warn('Theme toggle button (#theme-toggle-btn) not found.');
+    }
+
+    loadCourseData();
+    setupEventListeners();
+});

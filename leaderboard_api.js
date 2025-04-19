@@ -30,11 +30,19 @@ async function fetchLeaderboard(statusElement = null) {
         if (statusElement) statusElement.innerHTML = '<li>Leaderboard not configured.</li>';
         return [];
     }
+
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
+
     try {
         const response = await fetch(`https://api.jsonbin.io/v3/b/${JSONBIN_BIN_ID}/latest`, {
             method: 'GET',
-            headers: { 'X-Access-Key': JSONBIN_API_KEY }
+            headers: { 'X-Access-Key': JSONBIN_API_KEY },
+            signal: controller.signal
         });
+
+        clearTimeout(timeoutId);
+
         if (!response.ok) {
             if (response.status === 404) {
                 console.log("Leaderboard bin empty or not found. Returning empty array.");
@@ -44,12 +52,20 @@ async function fetchLeaderboard(statusElement = null) {
             console.error(`HTTP error fetching leaderboard! Status: ${response.status}`, errorText);
             throw new Error(`HTTP error fetching leaderboard! Status: ${response.status}`);
         }
+
         const data = await response.json();
         // Return the leaderboard array, handling both {leaderboard: [...]} and [...] structures
         return data.record?.leaderboard || data.record || [];
     } catch (error) {
+        clearTimeout(timeoutId);
         console.error("Error fetching leaderboard:", error);
-        if (statusElement) statusElement.innerHTML = '<li>Error loading leaderboard data.</li>';
+        if (statusElement) {
+            if (error.name === 'AbortError') {
+                statusElement.innerHTML = '<li>Request timed out. Please try again.</li>';
+            } else {
+                statusElement.innerHTML = '<li>Error loading leaderboard data.</li>';
+            }
+        }
         return [];
     }
 }
@@ -72,16 +88,39 @@ async function saveScoreToLeaderboard(name, score, total, percentage, course, we
         if (saveStatusElement) saveStatusElement.textContent = "Save disabled (config).";
         return false;
     }
+
+    // Input validation
     const trimmedName = name ? name.trim() : '';
     if (!trimmedName) {
         if (saveStatusElement) saveStatusElement.textContent = "Please enter your name.";
         else alert("Please enter your name to save the score.");
-        // Consider focusing the input if passed in
+        return false;
+    }
+
+    // Validate numeric inputs
+    if (typeof score !== 'number' || isNaN(score) || score < 0) {
+        console.error("Invalid score value:", score);
+        if (saveStatusElement) saveStatusElement.textContent = "Invalid score value.";
+        return false;
+    }
+
+    if (typeof total !== 'number' || isNaN(total) || total <= 0) {
+        console.error("Invalid total value:", total);
+        if (saveStatusElement) saveStatusElement.textContent = "Invalid total questions value.";
+        return false;
+    }
+
+    if (typeof percentage !== 'number' || isNaN(percentage) || percentage < 0 || percentage > 100) {
+        console.error("Invalid percentage value:", percentage);
+        if (saveStatusElement) saveStatusElement.textContent = "Invalid percentage value.";
         return false;
     }
 
     if (saveStatusElement) saveStatusElement.textContent = "Saving...";
     if (saveBtnElement) saveBtnElement.disabled = true;
+
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
 
     try {
         // Fetch current leaderboard. We don't need a status element here.
@@ -122,8 +161,11 @@ async function saveScoreToLeaderboard(name, score, total, percentage, course, we
                 'X-Access-Key': JSONBIN_API_KEY,
                 'X-Bin-Versioning': 'false' // Optional: Disable versioning if not needed
             },
-            body: JSON.stringify(saveData)
+            body: JSON.stringify(saveData),
+            signal: controller.signal
         });
+
+        clearTimeout(timeoutId);
 
         if (!response.ok) {
             const errorText = await response.text();
@@ -136,8 +178,15 @@ async function saveScoreToLeaderboard(name, score, total, percentage, course, we
         return true; // Indicate success
 
     } catch (error) {
+        clearTimeout(timeoutId);
         console.error("Error saving score:", error);
-        if (saveStatusElement) saveStatusElement.textContent = "Error saving score.";
+        if (saveStatusElement) {
+            if (error.name === 'AbortError') {
+                saveStatusElement.textContent = "Request timed out. Please try again.";
+            } else {
+                saveStatusElement.textContent = "Error saving score.";
+            }
+        }
         if (saveBtnElement) saveBtnElement.disabled = false; // Re-enable button on error
         return false; // Indicate failure
     }

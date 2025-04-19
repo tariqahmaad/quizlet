@@ -4,13 +4,13 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* CSS Variables for consistent colors */
+/* Light mode variables (default) */
 :root {
     --primary-color: #3a86ff;
     --primary-hover: #2667cc;
     --secondary-color: #ff006e;
     --success-color: #38b000;
-    --warning-color: #ffbe0b;
+    --warning-color: #ff9500a6;
     --danger-color: #ff5e5b;
     --dark-color: #2b2d42;
     --text-color: #2b2d42;
@@ -21,20 +21,70 @@
     --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
     --shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
     --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
-    --border-radius: 12px;
-    --border-radius-sm: 8px;
-    --transition: transform 0.2s ease, background-color 0.2s ease;
-    --transition-fast: background-color 0.15s ease;
+    --border-radius: 16px;
+    --border-radius-sm: 12px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --body-bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #e4efe9 100%);
+    --body-dot-pattern: rgba(0,0,0,0.05);
+    --modal-overlay-bg: rgba(0, 0, 0, 0.6);
+    --course-code-bg: linear-gradient(135deg, var(--light-bg) 0%, rgba(248, 250, 252, 0.8) 100%);
+}
+
+/* Dark mode variables */
+[data-theme="dark"] {
+    --primary-color: #3a86ff; /* Same as light mode */
+    --primary-hover: #2667cc; /* Same as light mode */
+    --secondary-color: #ff006e; /* Same as light mode */
+    --success-color: #38b000; /* Same as light mode */
+    --warning-color: #ff9500a6; /* Same as light mode */
+    --danger-color: #ff5e5b; /* Same as light mode */
+    --dark-color: #ffffff; /* Keep white for contrast */
+    --text-color: #e0e0e0; /* Light grey for body text */
+    --text-muted: #a0a0a0; /* Medium grey for muted text */
+    --light-bg: #1a1a1a; /* Very dark grey background */
+    --card-bg: #252525; /* Slightly lighter dark grey for cards */
+    --border-color: #404040; /* Darker grey border */
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.5);
+    --shadow: 0 4px 6px -1px rgba(0,0,0,0.6), 0 2px 4px -1px rgba(0,0,0,0.5);
+    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.6), 0 4px 6px -2px rgba(0,0,0,0.5);
+    --body-bg-gradient: linear-gradient(135deg, #101010 0%, #181818 100%);
+    --body-dot-pattern: rgba(255,255,255,0.05);
+    --modal-overlay-bg: rgba(0, 0, 0, 0.85);
+    --course-code-bg: linear-gradient(135deg, rgba(55, 55, 55, 0.5) 0%, rgba(55, 55, 55, 0.3) 100%);
+    /* Keep radii and transitions */
+}
+
+/* Background Pattern */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at 1px 1px, var(--body-dot-pattern) 1px, transparent 0);
+    background-size: 20px 20px;
+    pointer-events: none;
+    z-index: -2;
 }
 
 /* Visitor Counter Styles */
 .visitor-counter {
-    background-color: rgba(58, 134, 255, 0.08);
+    background: linear-gradient(135deg, rgba(58, 134, 255, 0.1) 0%, rgba(58, 134, 255, 0.05) 100%);
     border-radius: var(--border-radius-sm);
-    padding: 10px 20px;
+    padding: 12px 24px;
     display: inline-block;
-    margin-bottom: 10px;
-    border-left: 3px solid var(--primary-color);
+    margin-bottom: 15px;
+    border-left: 4px solid var(--primary-color);
+    backdrop-filter: blur(5px);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.visitor-counter:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
 }
 
 .visitor-counter p {
@@ -42,19 +92,24 @@
     color: var(--text-color);
     font-size: 0.95rem;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 #visitor-count {
     font-weight: 700;
     color: var(--primary-color);
     font-family: 'Consolas', Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    background: rgba(58, 134, 255, 0.1);
+    padding: 2px 8px;
+    border-radius: 6px;
 }
 
 /* General Body and Container Styles */
 body {
     font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--light-bg);
-    background-image: linear-gradient(135deg, #f5f7fa 0%, #e4efe9 100%);
+    background: var(--body-bg-gradient);
     color: var(--text-color);
     display: flex;
     justify-content: center;
@@ -64,11 +119,12 @@ body {
     margin: 0;
     box-sizing: border-box;
     line-height: 1.6;
+    position: relative;
 }
 
 .container {
     background-color: var(--card-bg);
-    padding: 35px 40px;
+    padding: 40px 45px;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-lg);
     width: 100%;
@@ -77,6 +133,9 @@ body {
     position: relative;
     z-index: 1;
     overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: var(--transition);
 }
 
 /* Decorative Elements */
@@ -85,12 +144,13 @@ body {
     position: absolute;
     top: -50px;
     right: -50px;
-    width: 100px;
-    height: 100px;
-    background: var(--primary-color);
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     opacity: 0.1;
     border-radius: 50%;
     z-index: -1;
+    animation: float 6s ease-in-out infinite;
 }
 
 .container::after {
@@ -98,12 +158,18 @@ body {
     position: absolute;
     bottom: -30px;
     left: -30px;
-    width: 80px;
-    height: 80px;
-    background: var(--secondary-color);
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
     opacity: 0.1;
     border-radius: 50%;
     z-index: -1;
+    animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }
 
 h1 {
@@ -114,6 +180,9 @@ h1 {
     letter-spacing: -0.5px;
     position: relative;
     display: inline-block;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 h1::after {
@@ -121,7 +190,7 @@ h1::after {
     position: absolute;
     width: 60%;
     height: 4px;
-    background: var(--primary-color);
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
@@ -136,6 +205,7 @@ h1::after {
     margin-left: auto;
     margin-right: auto;
     margin-top: 25px;
+    line-height: 1.8;
 }
 
 /* Course Grid Layout */
@@ -164,6 +234,7 @@ h1::after {
     overflow: hidden;
     will-change: transform;
     -webkit-tap-highlight-color: transparent;
+    backdrop-filter: blur(5px);
 }
 
 .course-item h2 {
@@ -180,11 +251,12 @@ h1::after {
     font-size: 0.95rem;
     color: var(--text-muted);
     font-family: 'Consolas', Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-    background-color: var(--light-bg);
-    padding: 5px 10px;
+    background: var(--course-code-bg);
+    padding: 6px 12px;
     border-radius: 20px;
     display: inline-block;
     font-weight: 500;
+    border: 1px solid var(--border-color);
 }
 
 /* Styling for AVAILABLE Course Items */
@@ -204,26 +276,27 @@ h1::after {
     background: linear-gradient(135deg, rgba(56, 176, 0, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
     z-index: 0;
     opacity: 0;
-    transition: opacity 0.2s ease;
+    transition: var(--transition);
 }
 
 .course-item.available span {
     font-weight: 600;
     color: var(--success-color);
     font-size: 1rem;
-    margin-top: auto;
-    padding: 8px 0;
-    background-color: rgba(56, 176, 0, 0.08);
-    border-radius: 4px;
+    padding: 10px 0;
+    background: linear-gradient(135deg, rgba(56, 176, 0, 0.1) 0%, rgba(56, 176, 0, 0.05) 100%);
+    border-radius: 8px;
     width: 100%;
     display: inline-block;
     position: relative;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: var(--transition);
     z-index: 1;
+    border: 1px solid rgba(56, 176, 0, 0.1);
+    box-sizing: border-box;
 }
 
 .course-item.available:hover {
-    transform: translateY(-8px);
+    transform: translateY(-8px) scale(1.02);
     box-shadow: var(--shadow-lg);
     border-color: rgba(56, 176, 0, 0.3);
 }
@@ -233,14 +306,15 @@ h1::after {
 }
 
 .course-item.available:hover span {
-    background-color: var(--success-color);
+    background: linear-gradient(135deg, var(--success-color) 0%, #2d9a00 100%);
     color: white;
+    border-color: transparent;
 }
 
 /* Styling for UNAVAILABLE Course Items */
 .course-item.unavailable {
     background-color: var(--light-bg);
-    border-left: 5px solid var(--border-color);
+    border-left: 5px solid var(--warning-color);
     cursor: not-allowed;
     opacity: 0.8;
 }
@@ -248,7 +322,9 @@ h1::after {
 .course-item.unavailable h2,
 .course-item.unavailable .course-code,
 .course-item.unavailable span {
-    color: var(--text-muted);
+    color: var(--warning-color);
+    font-weight: 500;
+    font-size: 0.9rem;
 }
 
 .course-item.unavailable .course-code { 
@@ -270,63 +346,72 @@ h1::after {
 .modal-overlay {
     display: none;
     position: fixed;
-    z-index: 1000;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(3px);
+    background-color: var(--modal-overlay-bg);
     justify-content: center;
     align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
 }
 
 .modal-content {
-    background-color: var(--card-bg);
-    margin: auto;
+    background: var(--card-bg);
     padding: 35px 40px;
-    border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
-    width: 90%;
-    max-width: 450px;
     box-shadow: var(--shadow-lg);
+    width: 90%;
+    max-width: 400px;
     position: relative;
-    text-align: center;
-    animation: fadeInModal 0.3s ease-out;
-    will-change: transform, opacity;
-    transform: translateZ(0);
-    backface-visibility: hidden;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 15px;
 }
 
-@keyframes fadeInModal {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
 }
 
 .modal-close-btn {
-    color: var(--text-muted);
     position: absolute;
-    top: 10px;
+    top: 15px;
     right: 15px;
-    font-size: 28px;
-    font-weight: bold;
-    line-height: 1;
+    font-size: 24px;
     cursor: pointer;
+    color: var(--text-muted);
     transition: var(--transition);
+    line-height: 1;
+    padding: 5px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.05);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.modal-close-btn:hover,
-.modal-close-btn:focus {
-    color: var(--dark-color);
-    text-decoration: none;
+.modal-close-btn:hover {
+    color: var(--danger-color);
+    background: rgba(255, 94, 91, 0.1);
+    transform: rotate(90deg);
 }
 
 .modal-content h2 {
     color: var(--dark-color);
     margin-top: 0;
     margin-bottom: 15px;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+    font-weight: 600;
 }
 
 .modal-content p {
@@ -338,55 +423,61 @@ h1::after {
 
 #modal-player-name {
     width: 100%;
-    padding: 12px 15px;
-    margin-bottom: 20px;
-    border: 2px solid var(--border-color);
+    padding: 14px 18px;
+    margin-bottom: 5px;
+    border: 1px solid var(--border-color);
     border-radius: var(--border-radius-sm);
     font-size: 1rem;
-    transition: border-color 0.2s ease;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    -webkit-tap-highlight-color: transparent;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    transition: var(--transition-fast);
 }
 
 #modal-player-name:focus {
-    border-color: var(--primary-color);
     outline: none;
-    box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.2);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary-color) 20%, transparent);
+}
+
+#modal-player-name.error {
+    border-color: var(--danger-color);
+    background-color: color-mix(in srgb, var(--danger-color) 5%, var(--light-bg));
 }
 
 .modal-error-message {
     color: var(--danger-color);
     font-size: 0.9rem;
-    min-height: 1.2rem;
-    margin-bottom: 20px;
-    font-weight: 500;
+    margin: 5px 0 10px;
+    min-height: 20px;
 }
 
 #modal-start-btn {
-    background-color: var(--primary-color);
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, var(--success-color) 0%, #2d9a00 100%);
     color: white;
-    padding: 14px 25px;
     border: none;
     border-radius: var(--border-radius-sm);
     font-size: 1.1rem;
+    font-weight: 600;
     cursor: pointer;
     transition: var(--transition);
-    width: 100%;
-    font-weight: 600;
-    font-family: 'Poppins', sans-serif;
-    will-change: transform;
-    -webkit-tap-highlight-color: transparent;
+    box-shadow: var(--shadow-sm);
 }
 
-#modal-start-btn:hover {
+#modal-start-btn:hover:not(:disabled) {
     background-color: var(--primary-hover);
     transform: translateY(-2px);
+    box-shadow: var(--shadow);
 }
 
-#modal-start-btn:active {
-    transform: translateY(0);
-    transition: transform 0.1s ease;
+#modal-start-btn:disabled {
+    background-color: var(--text-muted);
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
 }
 
 #modal-target-url {
@@ -394,33 +485,68 @@ h1::after {
 }
 
 /* Loading Dots Animation */
-.loading-dots span {
+.loading-dots {
     display: inline-block;
-    opacity: 0;
-    animation: loading-dot-blink 1.4s infinite;
+    position: relative;
 }
 
-.loading-dots span:nth-child(1) { animation-delay: 0s; }
-.loading-dots span:nth-child(2) { animation-delay: 0.2s; }
-.loading-dots span:nth-child(3) { animation-delay: 0.4s; }
-
-@keyframes loading-dot-blink {
-    0%, 100% { opacity: 0; }
-    50% { opacity: 1; }
+.loading-dots::after {
+    content: '...';
+    position: absolute;
+    animation: loading-dots 1.4s infinite;
 }
 
-/* Responsive adjustments */
+@keyframes loading-dots {
+    0% { content: '.'; }
+    33% { content: '..'; }
+    66% { content: '...'; }
+}
+
+/* Course Item Click Animation */
+.course-item.clicked {
+    transform: scale(0.98);
+    transition: transform 0.2s ease;
+}
+
+/* Accessibility Improvements */
+.course-link {
+    outline: none;
+}
+
+.course-link:focus-visible {
+    box-shadow: 0 0 0 3px var(--primary-color);
+    border-radius: var(--border-radius-sm);
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     .container {
-        padding: 25px 20px;
+        padding: 30px 25px;
     }
     
     h1 {
         font-size: 2rem;
     }
     
+    .container > p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+    
     .course-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 20px;
+    }
+    
+    .course-item {
+        padding: 24px 20px;
+    }
+    
+    .theme-toggle {
+        top: 15px;
+        right: 15px;
+        padding: 6px 12px;
+        font-size: 0.8rem;
     }
 }
 
@@ -439,33 +565,64 @@ h1::after {
         font-size: 1.8rem;
     }
     
+    h1::after {
+        height: 3px;
+        bottom: -8px;
+    }
+    
     .container {
-        padding: 20px 15px;
+        padding: 25px 15px;
+        border-radius: 12px;
+    }
+    
+    .container > p {
+        font-size: 0.95rem;
+        margin-bottom: 25px;
+        margin-top: 20px;
+    }
+    
+    .course-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
     
     .modal-content {
         padding: 25px 20px;
-        animation: fadeInModal 0.2s ease-out;
+        width: 90%;
+    }
+    
+    .modal-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .modal-content p {
+        font-size: 0.9rem;
     }
     
     .course-item {
         padding: 20px 15px;
     }
     
-    /* Disable hover animations on touch devices */
+    .course-item h2 {
+        font-size: 1.1rem;
+    }
+    
     .course-item.available:hover {
         transform: none;
-        box-shadow: var(--shadow-sm);
+        box-shadow: var(--shadow);
     }
     
     .course-item.available:active {
-        background-color: rgba(56, 176, 0, 0.05);
-        border-color: rgba(56, 176, 0, 0.3);
+        transform: scale(0.98);
+    }
+    
+    .course-item.available span {
+        padding: 10px 15px;
+        font-size: 0.9rem;
     }
     
     .course-item.available:active span {
-        background-color: var(--success-color);
-        color: white;
+        background: var(--primary-hover);
     }
     
     #modal-start-btn:hover {
@@ -473,13 +630,34 @@ h1::after {
     }
     
     #modal-start-btn:active {
+        transform: scale(0.98);
         background-color: var(--primary-hover);
-        transform: none;
     }
     
-    @keyframes fadeInModal {
-        from { opacity: 0; transform: translateY(-10px); }
-        to { opacity: 1; transform: translateY(0); }
+    #modal-player-name {
+        padding: 10px 12px;
+        font-size: 0.95rem;
+    }
+    
+    #modal-start-btn {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+    }
+    
+    .modal-close-btn {
+        top: 10px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+        font-size: 1.5rem;
+        line-height: 30px;
+    }
+    
+    .theme-toggle {
+        top: 10px;
+        right: 10px;
+        padding: 7px 10px;
+        font-size: 0.75rem;
     }
 }
 
@@ -489,4 +667,50 @@ h1::after {
 #modal-start-btn {
     transform: translateZ(0);
     backface-visibility: hidden;
+}
+
+/* Apply theme transition to relevant elements */
+body, .container, .course-item, .modal-content, #modal-player-name, #modal-start-btn, .visitor-counter {
+    transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+}
+
+/* Optional: Add preference for system setting */
+/* @media (prefers-color-scheme: dark) { */
+/*    Add styles here if you want automatic detection without JS toggle */
+/*    Example: */
+/*    :root { */
+        /* Apply dark mode variables directly */
+/*        --primary-color: #4a9eff; */
+        /* ... etc ... */
+/*    } */
+/* } */
+
+/* --- Theme Toggle Button Styles --- */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background-color: color-mix(in srgb, var(--card-bg) 80%, transparent);
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: var(--transition-fast);
+    backdrop-filter: blur(5px);
+    z-index: 10;
+}
+
+.theme-toggle:hover {
+    background-color: color-mix(in srgb, var(--card-bg) 100%, transparent);
+    color: var(--text-color);
+    box-shadow: var(--shadow-sm);
+    transform: translateY(-1px);
+}
+
+.theme-toggle:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary-color) 20%, transparent);
 }
