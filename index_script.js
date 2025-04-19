@@ -299,13 +299,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Window resize handler for modals
     window.addEventListener('resize', debounce(() => {
         if (isModalOpen) {
-            // Adjust modal position if needed
-            modalNameInput.blur();
-            setTimeout(() => {
-                if (isModalOpen) {
-                    modalNameInput.focus();
-                }
-            }, 300);
+            // The modal should naturally reflow with CSS,
+            // explicitly blurring/refocusing is causing issues on mobile
+            // when the keyboard triggers resize.
         }
     }, 250));
 
