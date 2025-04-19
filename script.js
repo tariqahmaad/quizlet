@@ -444,6 +444,10 @@ function handleAnswerClick(event) {
     if (feedbackElement) {
         feedbackElement.textContent = isCorrect ? "Correct!" : `Incorrect. Correct Answer: ${leaderboardAPI.escapeHTML(correctAnswer)}`; // Escape correct answer display
         feedbackElement.className = `feedback ${isCorrect ? 'correct' : 'incorrect'}`;
+        // Add a small delay before making feedback visible
+        setTimeout(() => {
+            feedbackElement.classList.add('visible');
+        }, 50); // Adjust delay as needed
     }
 
     // Highlight answers and disable options

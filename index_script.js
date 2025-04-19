@@ -125,11 +125,12 @@ function showModal(targetUrl) {
         modal.classList.add('active');
     });
 
-    // Focus input after animation
-    setTimeout(() => {
+    // Focus input after modal is active (CSS transition starts)
+    // Using requestAnimationFrame for better timing with CSS transitions
+    requestAnimationFrame(() => {
         modalNameInput.focus();
         modalNameInput.select();
-    }, CONFIG.ANIMATION_DURATION);
+    });
 }
 
 function closeModal() {
@@ -140,12 +141,16 @@ function closeModal() {
 
     // Hide modal with animation
     modal.classList.remove('active');
-    setTimeout(() => {
+    // Hide modal after animation completes
+    // Use transitionend event for smoother hiding
+    const handleTransitionEnd = () => {
         modal.style.display = 'none';
         // Reset form state when hidden
         modalNameInput.classList.remove('error');
         modalError.textContent = '';
-    }, CONFIG.ANIMATION_DURATION);
+        modal.removeEventListener('transitionend', handleTransitionEnd);
+    };
+    modal.addEventListener('transitionend', handleTransitionEnd);
 }
 
 // Course Link Handlers

@@ -23,8 +23,8 @@
     --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
     --border-radius: 16px;
     --border-radius-sm: 12px;
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    --transition-fast: transform 0.2s ease-in-out, opacity 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     --body-bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #e4efe9 100%);
     --body-dot-pattern: rgba(0,0,0,0.05);
     --modal-overlay-bg: rgba(0, 0, 0, 0.6);
@@ -168,8 +168,8 @@ body {
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(0, -10px, 0); }
 }
 
 h1 {
@@ -355,7 +355,6 @@ h1::after {
     align-items: center;
     z-index: 1000;
     opacity: 0;
-    transition: opacity 0.3s ease;
 }
 
 .modal-overlay.active {
@@ -371,7 +370,6 @@ h1::after {
     max-width: 400px;
     position: relative;
     transform: translateY(-20px);
-    transition: transform 0.3s ease;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     margin: 15px;
@@ -553,8 +551,9 @@ h1::after {
 @media (max-width: 480px) {
     /* Optimize animations for mobile */
     :root {
-        --transition: background-color 0.2s ease;
-        --transition-fast: background-color 0.15s ease;
+        /* Simplify transitions for mobile for potentially smoother performance */
+        --transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        --transition-fast: transform 0.15s ease-in-out, opacity 0.15s ease-in-out, background-color 0.15s ease-in-out, color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     }
     
     body {
@@ -659,6 +658,11 @@ h1::after {
         padding: 7px 10px;
         font-size: 0.75rem;
     }
+    
+    .container::before,
+    .container::after {
+        animation: none !important;
+    }
 }
 
 /* Add hardware acceleration for smoother animations */
@@ -670,8 +674,33 @@ h1::after {
 }
 
 /* Apply theme transition to relevant elements */
+/* Apply theme transition to relevant elements */
 body, .container, .course-item, .modal-content, #modal-player-name, #modal-start-btn, .visitor-counter {
-    transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+    /* Apply transitions for properties that change with theme */
+    transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+/* Ensure other animated properties use the defined transitions */
+.course-item, .visitor-counter, .theme-toggle {
+    transition: var(--transition); /* Use the full transition variable */
+}
+
+.modal-overlay, .modal-content {
+     /* Specific transitions for modal show/hide */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    will-change: opacity, transform; /* Add will-change for performance hint */
+}
+
+.modal-close-btn {
+    transition: var(--transition-fast), transform 0.3s ease; /* Add transform transition */
+}
+
+#modal-player-name:focus {
+    transition: var(--transition-fast), box-shadow 0.3s ease; /* Add box-shadow transition */
+}
+
+#modal-start-btn {
+    transition: var(--transition); /* Use the full transition variable */
 }
 
 /* Optional: Add preference for system setting */
