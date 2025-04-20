@@ -2480,3 +2480,25 @@ body, .quiz-container, #question-card, .option-btn, .feedback, #results-area,
     padding-bottom: 3px;
   }
 }
+
+.theme-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  transition: color 0.3s;
+}
+.theme-icon svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+.theme-icon-animate {
+  animation: theme-icon-rotate 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+@keyframes theme-icon-rotate {
+  0% { transform: rotate(-180deg); opacity: 0; }
+  60% { opacity: 1; }
+  100% { transform: rotate(0deg); opacity: 1; }
+}

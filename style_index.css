@@ -714,32 +714,104 @@ body, .container, .course-item, .modal-content, #modal-player-name, #modal-start
 /*    } */
 /* } */
 
-/* --- Theme Toggle Button Styles --- */
-.theme-toggle {
-    position: absolute;
-    top: 20px;
-    right: 25px;
+/* --- Top Buttons Row for Portfolio & Theme Toggle --- */
+.top-buttons-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 18px;
+    gap: 10px;
+}
+
+/* Remove absolute positioning for both buttons */
+.theme-toggle, .portfolio-btn {
+    position: static;
+    margin: 0;
+    top: unset;
+    left: unset;
+    right: unset;
+    z-index: 1;
+}
+
+/* Keep button look */
+.theme-toggle, .portfolio-btn {
     background-color: color-mix(in srgb, var(--card-bg) 80%, transparent);
     border: 1px solid var(--border-color);
     color: var(--text-muted);
-    padding: 8px 16px;
+    padding: 8px 20px;
     border-radius: 20px;
     cursor: pointer;
     font-size: 0.85rem;
     font-weight: 500;
     transition: var(--transition-fast);
     backdrop-filter: blur(5px);
-    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 120px;
+    height: 40px;
+    box-sizing: border-box;
 }
 
-.theme-toggle:hover {
+.theme-toggle .theme-icon {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle:hover, .portfolio-btn:hover {
     background-color: color-mix(in srgb, var(--card-bg) 100%, transparent);
     color: var(--text-color);
     box-shadow: var(--shadow-sm);
     transform: translateY(-1px);
 }
 
-.theme-toggle:focus {
+.theme-toggle:focus, .portfolio-btn:focus {
     outline: none;
     box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary-color) 20%, transparent);
+}
+
+@media (max-width: 768px) {
+    .theme-toggle, .portfolio-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    .top-buttons-row {
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .theme-toggle, .portfolio-btn {
+        padding: 7px 10px;
+        font-size: 0.75rem;
+    }
+    .top-buttons-row {
+        margin-bottom: 8px;
+    }
+}
+
+.theme-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  transition: color 0.3s;
+}
+.theme-icon svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+.theme-icon-animate {
+  animation: theme-icon-rotate 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+@keyframes theme-icon-rotate {
+  0% { transform: rotate(-180deg); opacity: 0; }
+  60% { opacity: 1; }
+  100% { transform: rotate(0deg); opacity: 1; }
 }
