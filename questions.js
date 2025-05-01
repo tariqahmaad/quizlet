@@ -343,7 +343,7 @@ const allQuestions = [
         courseCode: "COM496",
         question: "Which of the following is NOT a type of cryptography?",
         options: ["Symmetric cryptography", "Asymmetric cryptography", "Hash functions", "Quantum cryptography"],
-        correctAnswer: "Quantum cryptography"
+        correctAnswer: "Hash functions"
     },
     {
         week: 3, // Common types of crypto (Crypto Types)
