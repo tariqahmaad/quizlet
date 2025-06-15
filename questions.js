@@ -706,2811 +706,1716 @@ const allQuestions = [
 
     // --- Entrepreneurship (GRI403) ---
     // --- Week 1: GRI403 ---
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "What does competition-based pricing involve?",
-        options: [
-            "Determining price based on environmental factors",
-            "Setting prices according to production costs",
-            "Ignoring costs and following market demands",
-            "Adjusting prices based on customer demand",
-            "None of them is correct"
-        ],
-        correctAnswer: "INone of them is correct"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "What is foresight in the business context?",
-        options: [
-            "Historical analysis",
-            "Market share analysis",
-            "Current market conditions",
-            "Predicting future events",
-            "None of them is correct"
-        ],
-        correctAnswer: "Predicting future events"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "What is the purpose of dividing the market into geographic classifications in marketing plans?",
-        options: [
-            "To define target markets based on regions",
-            "To analyze cultural changes",
-            "To focus on direct distribution strategies",
-            "To evaluate demographic criteria",
-            "All of them are correct"
-        ],
-        correctAnswer: "To define target markets based on regions"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "What does situation analysis in a marketing plan focus on?",
-        options: [
-            "Product development strategies",
-            "Where are we?",
-            "All of them are correct",
-            "Future market trends",
-            "Competitor analysis"
-        ],
-        correctAnswer: "Where are we?"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "What does PEST Analysis stand for in the context of business plans and market analysis?",
-        options: [
-            "None of them is correct",
-            "Political, Environmental, Social, Technological",
-            "Public, Economic, Strategic, Technological",
-            "Political, Economical, Social, Technological",
-            "Personal, Economic, Social, Technological"
-        ],
-        correctAnswer: "Political, Economical, Social, Technological"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "How is demographical environment analyzed in marketing plans?",
-        options: [
-            "Analyzing population size, age, gender, race, etc.",
-            "By assessing global demographics",
-            "By analyzing competitors' populations",
-            "By evaluating the market's financial structure",
-            "All of them are correct"
-        ],
-        correctAnswer: "Analyzing population size, age, gender, race, etc."
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "What are the four main criteria used for market classification?",
-        options: [
-            "Sector, Region, Climate, Population",
-            "Geographic, Demographic, Psychographic, Behavioral",
-            "Political, Economic, Societal, Technological",
-            "Cultural, Economic, Social, Environmental",
-            "None of them is correct"
-        ],
-        correctAnswer: "Geographic, Demographic, Psychographic, Behavioral"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "What is the primary purpose of market research phases like gathering primary data sources?",
-        options: [
-            "Identify competitors' prices",
-            "None of them is correct",
-            "Gather information directly from the market",
-            "Evaluate environmental factors",
-            "Analyze political factors"
-        ],
-        correctAnswer: "Gather information directly from the market"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "What does the opportunity represent in marketing terms?",
-        options: [
-            "A situation where market needs are poorly served",
-            "Lower distribution costs",
-            "Lower production costs",
-            "All of them are correct",
-            "Intense effort to widen the general market"
-        ],
-        correctAnswer: "A situation where market needs are poorly served"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "Which factor is NOT part of the changeable macro environment affecting establishments?",
-        options: [
-            "Demographic environment",
-            "All of them are correct",
-            "Economical environment",
-            "Product popularity",
-            "Juridical and political environment"
-        ],
-        correctAnswer: "Product popularity"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "What does SWOT analysis help identify in the context of environmental and establishment relations?",
-        options: [
-            "Strengths, Weaknesses, Opportunities, Threats",
-            "Sector potential",
-            "Market share",
-            "Market competition",
-            "None of them is correct"
-        ],
-        correctAnswer: "Strengths, Weaknesses, Opportunities, Threats"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "What is a benefit of a well-prepared marketing plan for an entrepreneur?",
-        options: [
-            "Foresight of opportunities and threats",
-            "Increased competition",
-            "All of them are correct",
-            "Higher production costs",
-            "Reduction in marketing goals"
-        ],
-        correctAnswer: "Foresight of opportunities and threats"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "What is the primary purpose of a marketing plan?",
-        options: [
-            "All of them are correct",
-            "Analyzing competitors strategies",
-            "Outlining marketing aims and planned activities",
-            "Defining corporate aims",
-            "Documenting daily operations"
-        ],
-        correctAnswer: "Outlining marketing aims and planned activities"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "What fundamental questions does a marketing plan aim to answer?",
-        options: [
-            "Where are we? Where do we want to go? How can we reach the aims?",
-            "All of them are correct",
-            "Why do we need a marketing plan? What are the current trends? How much should we invest?",
-            "Who are our competitors? What are the market trends? When should we launch new products?",
-            "How much profit do we want to make? Who are our target customers? Where should we advertise?"
-        ],
-        correctAnswer: "Where are we? Where do we want to go? How can we reach the aims?"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "What is an example of a behavioral classification in market segmentation?",
-        options: [
-            "Climate",
-            "Age",
-            "Social class, personal properties, and consumer behaviors",
-            "All of them are correct",
-            "Population density"
-        ],
-        correctAnswer: "Social class, personal properties, and consumer behaviors"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "Which of the following is an example of a behavioral criteria in market classification?",
-        options: [
-            "Age",
-            "Population density",
-            "None of them is correct",
-            "Purchasing habits",
-            "Climate"
-        ],
-        correctAnswer: "Purchasing habits"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "According to the provided text, what is the minimum capital required to establish a joint stock company in Turkey?",
-        options: [
-            "50,000 Rupees",
-            "100,000 Turkish Lira",
-            "50,000 Turkish Lira",
-            "10,000 Euros",
-            "No minimum capital required"
-        ],
-        correctAnswer: "50,000 Turkish Lira"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "Based on the text, who is authorized to grant a business license within the 'means-quality border' in Turkey?",
-        options: [
-            "The National Ministry of Trade",
-            "The local Chamber of Commerce",
-            "The Metropolitan authority responsible for the area",
-            "The central government planning office",
-            "Any registered notary public"
-        ],
-        correctAnswer: "The Metropolitan authority responsible for the area"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "Why is work specialization considered important in a company, according to the notes?",
-        options: [
-            "To decrease the need for management",
-            "To increase organization efficiency or enhance organization performance",
-            "To ensure all employees have the same skills",
-            "To simplify the hiring process",
-            "To reduce operational costs directly"
-        ],
-        correctAnswer: "To increase organization efficiency or enhance organization performance"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "What is segmentation according to function in marketing, as described in the text?",
-        options: [
-            "Grouping customers by geographic location",
-            "Dividing the market based on product features",
-            "Division of task based on job titles",
-            "Classifying consumers by age and gender",
-            "Separating marketing activities by channel"
-        ],
-        correctAnswer: "Division of task based on job titles"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "What is the critical role of a work plan when seeking funding from investors or banks?",
-        options: [
-            "Detailing the company's history",
-            "Listing all potential employees",
-            "Demonstrating the potential of the project",
-            "Providing a five-year tax forecast",
-            "Outlining the competitor's weaknesses"
-        ],
-        correctAnswer: "Demonstrating the potential of the project"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "What is the purpose of break-even analysis in financial planning, according to the text?",
-        options: [
-            "Calculating the company's total market share",
-            "Observing the relation between cost, equity, and profit",
-            "Determining the optimal advertising budget",
-            "Forecasting long-term interest rates",
-            "Analyzing employee performance metrics"
-        ],
-        correctAnswer: "Observing the relation between cost, equity, and profit"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "What key aspect makes financial plans different from accounting?",
-        options: [
-            "Use of numerical data",
-            "Focus on historical data only",
-            "Emphasis on future outcomes",
-            "Requirement for external auditing",
-            "Reporting on liabilities"
-        ],
-        correctAnswer: "Emphasis on future outcomes"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "According to the text, why is risk management important for a company?",
-        options: [
-            "To eliminate all possible risks",
-            "To guarantee future profits",
-            "To improve perception about risk",
-            "To satisfy legal requirements only",
-            "To decrease the company's insurance premiums"
-        ],
-        correctAnswer: "To improve perception about risk"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "What is operational risk in risk management?",
-        options: [
-            "Risk related to changes in interest rates",
-            "Risk of competitors entering the market",
-            "Risk of monetary loss caused by internal and external events",
-            "Risk associated with foreign exchange fluctuations",
-            "Risk of customers defaulting on payments"
-        ],
-        correctAnswer: "Risk of monetary loss caused by internal and external events"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "How is risk defined in the context of risk management presented in the text?",
-        options: [
-            "Only negative events that have already occurred",
-            "Any uncertainty in financial markets",
-            "As possible chances or threats in the future",
-            "The probability of project failure",
-            "A situation requiring immediate management intervention"
-        ],
-        correctAnswer: "As possible chances or threats in the future"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "What is liquidity risk in risk management?",
-        options: [
-            "The risk of assets losing value",
-            "The risk of being unable to pay on time due to cash shortage",
-            "The risk associated with investing in illiquid markets",
-            "The risk of inflation eroding purchasing power",
-            "The risk of failing to meet sales targets"
-        ],
-        correctAnswer: "The risk of being unable to pay on time due to cash shortage"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "Which financial aspect does the term 'Starbucks spreadsheet' likely refer to, based on the provided answer?",
-        options: [
-            "Cost reduction strategies",
-            "Employee compensation calculations",
-            "Revenue generation",
-            "Debt management",
-            "Asset allocation"
-        ],
-        correctAnswer: "Revenue generation"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "How does Tesla's financial plan contribute to its intellectual success, according to the text?",
-        options: [
-            "Through aggressive marketing campaigns",
-            "By focusing on short-term profits",
-            "Via strategic cost management",
-            "By minimizing research and development",
-            "Through high dividend payouts"
-        ],
-        correctAnswer: "Via strategic cost management"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "What key difference distinguishes qualitative from quantitative analysis, based on the text's explanation?",
-        options: [
-            "Quantitative uses numbers, qualitative uses text",
-            "Qualitative focuses on past events, quantitative on future predictions",
-            "Qualitative involves subjective evaluation, quantitative involves numerical data and past events analysis",
-            "Quantitative is used for marketing, qualitative for finance",
-            "Qualitative is always cheaper to conduct than quantitative"
-        ],
-        correctAnswer: "Qualitative involves subjective evaluation, quantitative involves numerical data and past events analysis"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "Which of the following is NOT considered one of the basic pillars of management mentioned in the text?",
-        options: [
-            "Planning",
-            "Organizing",
-            "Leading",
-            "Controlling",
-            "Saving"
-        ],
-        correctAnswer: "Saving"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "What is risk, as defined in the provided material?",
-        options: [
-            "A certainty of loss",
-            "Only external factors affecting a business",
-            "Possible chances or threats in the future",
-            "An accounting discrepancy",
-            "A completed negative event"
-        ],
-        correctAnswer: "Possible chances or threats in the future"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "What defines liquidity risk according to the text?",
-        options: [
-            "The risk of assets becoming obsolete",
-            "The risk of being unable to pay on time due to a lack of cash",
-            "The risk of losing market share",
-            "The risk related to changes in regulations",
-            "The risk of damage to brand reputation"
-        ],
-        correctAnswer: "The risk of being unable to pay on time due to a lack of cash"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "What is a sole proprietorship?",
-        options: [
-            "A company owned by shareholders",
-            "A business structure with multiple owners sharing liability",
-            "A company type characterized by a single person who owns and operates the business",
-            "A non-profit organization",
-            "A government-owned entity"
-        ],
-        correctAnswer: "A company type characterized by a single person who owns and operates the business"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "What is a partnership?",
-        options: [
-            "A company type where a single individual holds all shares",
-            "A business owned and operated by the government",
-            "A company type where two or more individuals share ownership and operate the business together",
-            "A temporary joint venture for a single project",
-            "A large corporation listed on the stock exchange"
-        ],
-        correctAnswer: "A company type where two or more individuals share ownership and operate the business together"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "What is a stock corporation?",
-        options: [
-            "A business owned by one person",
-            "An entity where ownership is represented by shares issued to shareholders",
-            "A partnership with limited liability for some partners",
-            "A cooperative owned by its members",
-            "A company funded entirely by debt"
-        ],
-        correctAnswer: "An entity where ownership is represented by shares issued to shareholders"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "What is the primary financial aspect associated with Starbucks mentioned in the text?",
-        options: [
-            "Debt financing",
-            "Cost minimization",
-            "Revenue generation",
-            "Inventory management",
-            "Tax optimization"
-        ],
-        correctAnswer: "Revenue generation"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "According to the text, how does Tesla's financial plan primarily contribute to its intellectual success?",
-        options: [
-            "Through high profit margins",
-            "Through strategic cost management",
-            "Through extensive patent litigation",
-            "Through venture capital funding rounds",
-            "Through diversification into unrelated industries"
-        ],
-        correctAnswer: "Through strategic cost management"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "Which statement best describes the difference between quantitative and qualitative risk management based on the text?",
-        options: [
-            "Quantitative uses expert opinions, qualitative uses surveys",
-            "Qualitative focuses only on financial risks, quantitative on operational risks",
-            "Quantitative involves numerical data/past events, qualitative involves subjective evaluation",
-            "Qualitative is performed annually, quantitative monthly",
-            "There is no significant difference in the approach"
-        ],
-        correctAnswer: "Quantitative involves numerical data/past events, qualitative involves subjective evaluation"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "Which term listed is NOT considered one of the basic pillars of management according to the provided text?",
-        options: [
-            "Planning",
-            "Saving",
-            "Organizing",
-            "Leading",
-            "Controlling"
-        ],
-        correctAnswer: "Saving"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "What is the minimum capital required to establish a joint stock company in Turkey, as stated in the textbook information?",
-        options: [
-            "10,000 Turkish Lira",
-            "25,000 Turkish Lira",
-            "50,000 Turkish Lira",
-            "100,000 Turkish Lira",
-            "50,000 Euros"
-        ],
-        correctAnswer: "50,000 Turkish Lira"
-    },
-    {
-        week: 1,
-        courseCode: "GRI403",
-        question: "Who is authorized to grant a business license within the means-quality border in Turkey?",
-        options: [
-            "The President's Office",
-            "The Ministry of Finance",
-            "The relevant Metropolitan authority/municipality",
-            "The Turkish Standards Institution",
-            "The local police department"
-        ],
-        correctAnswer: "The relevant Metropolitan authority/municipality"
-    },
 
-    // Questions from Sayfa 21-23 (Week 2)
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which one below is NOT the common characteristic of a successful entrepreneur?",
-        options: [
-            "A successful entrepreneur is a person who runs the risk of acceptable ones.",
-            "A successful entrepreneur is determined.",
-            "A successful entrepreneur is creative.",
-            "A successful entrepreneur is a person who applies the decisions of the proprietor (employer), finely.",
-            "A successful entrepreneur is the one who uses his/her imagination (vision)."
-        ],
-        correctAnswer: "A successful entrepreneur is a person who applies the decisions of the proprietor (employer), finely."
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which one below is NOT a kind of entrepreneurship?",
-        options: [
-            "Intrapreneurship",
-            "Women entrepreneurship",
-            "Public entrepreneurship",
-            "Private enterprise system",
-            "Men entrepreneurship"
-        ],
-        correctAnswer: "Men entrepreneurship"
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which one below is NOT one of the basic concepts of entrepreneurship?",
-        options: [
-            "Creativity",
-            "Ordinariness/Mediocrity",
-            "Innovativeness",
-            "Risk-taking",
-            "Opportunity"
-        ],
-        correctAnswer: "Ordinariness/Mediocrity"
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "______ is defined as an occurance of an unwanted and probable damage or loss situation. Which one below complete the sentence?",
-        options: [
-            "Risk",
-            "Threat",
-            "Uncertainty",
-            "Enterpreneur",
-            "Enterprise/Attempt"
-        ],
-        correctAnswer: "Risk"
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "______ balances the needs and potentials coherently by correct detection of the society needs. Which one below complete the sentence?",
-        options: [
-            "Total quality management",
-            "Lean management",
-            "Entrepreneurship",
-            "Management",
-            "None"
-        ],
-        correctAnswer: "Entrepreneurship"
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which one below is one of the factors of production?",
-        options: [
-            "Manager",
-            "Entrepreneur",
-            "Business Administrator",
-            "Initiative",
-            "Business Firm"
-        ],
-        correctAnswer: "Entrepreneur"
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which one below is an operation of a new idea, an invention or an existing product putting on the market in a profitable way?",
-        options: [
-            "Making investment",
-            "Opportunity Entrepreneurship",
-            "Creative Entrepreneurship",
-            "Initiative Entrepreneurship",
-            "Establishing a new firm"
-        ],
-        correctAnswer: "Creative Entrepreneurship"
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which one does NOT agree with entrepreneurship?",
-        options: [
-            "Establishing a new firm",
-            "Procuring capital",
-            "Innovation and Creativity",
-            "Making Oppurtunity",
-            "Bound to the old"
-        ],
-        correctAnswer: "Bound to the old"
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which one is NOT the features of an entrepreneur?",
-        options: [
-            "Not taking risk",
-            "Being conservative",
-            "Cannot seeing problems",
-            "Being insensible",
-            "Seeing opportunities"
-        ],
-        correctAnswer: "Seeing opportunities" // Based on answer key 9.e
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which one is NOT an element of entrepreneurship?",
-        options: [
-            "Being disapproved",
-            "Giving effort",
-            "Creating value",
-            "Earning proceeds",
-            "Contribution for public."
-        ],
-        correctAnswer: "Being disapproved"
-    },
-
-    // Questions from Sayfa 64-68 (Week 2)
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which one is NOT the factors for materializing creativity?",
-        options: [
-            "Motivation",
-            "Attitude",
-            "Behaviour",
-            "Environment",
-            "Oppressiveness"
-        ],
-        correctAnswer: "Motivation" // Based on answer key 1.a
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which one is NOT the behaviours and attitudes that occur in individual creativity?",
-        options: [
-            "Creativity",
-            "Encouragement",
-            "Mistake and risk",
-            "Opinion / Thought",
-            "Making concept"
-        ],
-        correctAnswer: "Mistake and risk" // Based on answer key 2.c
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which one is the behaviours and attitudes of organisational creativity?",
-        options: [
-            "Challenge",
-            "Encouragement",
-            "Mistake and risk",
-            "Thought/opinion",
-            "Making concept"
-        ],
-        correctAnswer: "Making concept" // Based on answer key 3.e
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "What is the name of the thoughts that can turn into a product and service, provide value to the customer, profit to the entrepreneur?",
-        options: [
-            "Creativity",
-            "Work opinion",
-            "Innovation",
-            "Newness",
-            "Entrepreneurship"
-        ],
-        correctAnswer: "Work opinion" // Based on answer key 4.b
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "While brainstorming, what is the rule that does NOT put a bound to imaginations and thoughts?",
-        options: [
-            "To criticise",
-            "To make up freely",
-            "To think as much as you can",
-            "To be prepared",
-            "To develop an idea"
-        ],
-        correctAnswer: "To make up freely" // Based on answer key 5.b
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which one continues from the place where brainstorming resumes and is more systematic technic?",
-        options: [
-            "Control list",
-            "Horizontal Thinking",
-            "Gordon Method",
-            "Map of Thought",
-            "Focus Group Discussion"
-        ],
-        correctAnswer: "Gordon Method" // Based on answer key 6.c
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which one is the term that relates concepts, but hard to understand and explain because it consists of complex symbols?",
-        options: [
-            "Attitude",
-            "Behaviour",
-            "Chaus",
-            "Intuition",
-            "Perspective"
-        ],
-        correctAnswer: "Behaviour" // Based on answer key 7.b
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which are NOT the features of hot-teams?",
-        options: [
-            "It consists of different characters",
-            "They need to have targets",
-            "They should be in solidarity.",
-            "They should know the thoughts of each other.",
-            "None of them."
-        ],
-        correctAnswer: "They should know the thoughts of each other." // Based on answer key 8.d
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which one below is NOT the process of creativity?",
-        options: [
-            "Preparation",
-            "To put in Incubation",
-            "To expose",
-            "To accept",
-            "To discuss a problem"
-        ],
-        correctAnswer: "To discuss a problem" // Based on answer key 9.e
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which one is the creativity technic, related to one product and that puts the important factors of this product into two dimensional chart to reveal the creativity ?",
-        options: [
-            "Control list",
-            "Matris method",
-            "Gordon method",
-            "Map of thoughts",
-            "Focus Group Discussion"
-        ],
-        correctAnswer: "Matris method" // Based on answer key 10.b
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which term describes implementation of new ideas produced by creativity?",
-        options: [
-            "Design",
-            "Innovation",
-            "Production",
-            "Intiution",
-            "System"
-        ],
-        correctAnswer: "Innovation" // Based on answer key 11.b
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which innovation type has the highest dependency to market?",
-        options: [
-            "Technology based innovation",
-            "Information based innovation",
-            "Organization based innovation",
-            "System based innovation",
-            "Individual based innovation"
-        ],
-        correctAnswer: "Information based innovation" // Based on answer key 12.b
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which of the following does NOT take place in innovation principles?",
-        options: [
-            "Big startups",
-            "Being a product of work not intelligence",
-            "Reward and admiration",
-            "Comprehensive and open communication",
-            "Perceiving, questioning and listening"
-        ],
-        correctAnswer: "Big startups" // Based on answer key 13.a
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which of the following term has a road map attribute for realizing establishments decisions?",
-        options: [
-            "List",
-            "Directive",
-            "Regulation",
-            "Guide book",
-            "Business plan"
-        ],
-        correctAnswer: "Business plan" // Based on answer key 14.e
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which of the following takes place in innovation types?",
-        options: [
-            "Structural innovations in consumers",
-            "Structural innovations in market",
-            "Organizational innovations",
-            "Intuitive innovations",
-            "Conceptual innovations"
-        ],
-        correctAnswer: "Organizational innovations" // Based on answer key 15.c
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which of the following does NOT take place in primary group innovation sources?",
-        options: [
-            "Unexpected evolvements",
-            "Inconsistency",
-            "Processing needs",
-            "Perception changes",
-            "Changes in sector and market structures"
-        ],
-        correctAnswer: "Perception changes" // Based on answer key 16.d
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which of the following point does NOT insist on productivity?",
-        options: [
-            "Improving product quality",
-            "Gaining additional properties for product",
-            "Increasing productivity on production",
-            "Reaching high automation levels",
-            "Increasing products market share"
-        ],
-        correctAnswer: "Increasing products market share" // Based on answer key 17.e
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which of the following does NOT take place in interactive innovation processes?",
-        options: [
-            "Creative idea",
-            "Usage of technology",
-            "Picking proper idea",
-            "Turning idea into product and service",
-            "Serving product"
-        ],
-        correctAnswer: "Creative idea" // Based on answer key 18.a
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which of the following does NOT take place in industry regions properties?",
-        options: [
-            "Unwillingness in venture capital usage",
-            "Innovation develops region",
-            "Being close to economical and cultural regions",
-            "Being a harbor or commercial center",
-            "Free academical and continuing education"
-        ],
-        correctAnswer: "Unwillingness in venture capital usage" // Based on answer key 19.a
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which of the following does NOT take place in basic elements of innovation culture?",
-        options: [
-            "Stored information",
-            "Inter-people knowledge",
-            "External environments meeting needs",
-            "Activity emerging creativity",
-            "Instability between needs and possibilities"
-        ],
-        correctAnswer: "Instability between needs and possibilities" // Based on answer key 20.e
-    },
-
-    // Questions from Sayfa 101-103 (Week 2)
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which of the following innovation types ideas is limited to organizations idea producing?",
-        options: [
-            "Operational innovation",
-            "Devastating innovation",
-            "Close innovation",
-            "Business model innovation",
-            "Reverse innovation"
-        ],
-        correctAnswer: "Close innovation" // Based on answer key 1.c
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "In which following phase creativity is used in innovation?",
-        options: [
-            "Managing ideas",
-            "Idea gathering",
-            "Picking potentially succesful ideas",
-            "Implementation",
-            "Budgetting"
-        ],
-        correctAnswer: "Picking potentially succesful ideas" // Based on answer key 2.c
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which of the innovation type cooperates outer establishment companies or individuals and organizations to gather innovation sources and powers?",
-        options: [
-            "Radical innovation",
-            "Operational innovation",
-            "Open innovation",
-            "Business model innovation",
-            "Close innovation"
-        ],
-        correctAnswer: "Open innovation" // Based on answer key 3.c
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which of the following answer describes finding a new solution to a problem and having commercial success from it?",
-        options: [
-            "Production",
-            "Innovation",
-            "Creativity",
-            "Invention",
-            "Marketing"
-        ],
-        correctAnswer: "Innovation" // Based on answer key 4.b
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "In order to realise innovation which of the following property is NOT needed?",
-        options: [
-            "Originality",
-            "Having definable value",
-            "Can be commercialized",
-            "Different",
-            "Should be brought out by imitating"
-        ],
-        correctAnswer: "Can be commercialized" // Based on answer key 5.c
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which of the following definition is wrong about innovation term?",
-        options: [
-            "In order to provide permanent success innovation should be sustainable",
-            "Innovation term meets consumers needs and solves their problems",
-            "For innovation creativity is not needed",
-            "Innovation starts with curiosity and intuition",
-            "Innovation includes discovery, invention, research and development"
-        ],
-        correctAnswer: "For innovation creativity is not needed" // Based on answer key 6.c
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which of the following is NOT a difficulty of innovation?",
-        options: [
-            "Finding a good idea",
-            "Making mistake",
-            "Calculating cost",
-            "Correct timing",
-            "Catching customer"
-        ],
-        correctAnswer: "Making mistake" // Based on answer key 7.b
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which of the following is NOT wrongly known fact about innovation?",
-        options: [
-            "Innovation and research and development are same things",
-            "Innovation only provides social and economical benefits",
-            "Innovation requires long time",
-            "Only goal of innovation is profit",
-            "Only large establishments can do innovation"
-        ],
-        correctAnswer: "Innovation requires long time" // Based on answer key 8.c
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which of the following definition describes the difference between innovation and research and development?",
-        options: [
-            "Research and development can not be reclaimed as a part of innovation",
-            "Every finding of research and development turns into innovation",
-            "Research and development may not take place in every innovation",
-            "Innovation includes everybody in establishment, however research and development only consists of its own department",
-            "Research and development is a process that includes innovation"
-        ],
-        correctAnswer: "Innovation includes everybody in establishment, however research and development only consists of its own department" // Based on answer key 9.d
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which of the following correctly lists innovation processes?",
-        options: [
-            "Managing ideas-gathering ideas-picking ideas with potential success-implementing",
-            "Gathering ideas-managing ideas-picking ideas with potential success-implementing",
-            "Picking ideas with potential success-implementing-managing ideas-gathering ideas",
-            "Gathering ideas-implementing-picking ideas with potential success-managing ideas",
-            "Gathering ideas-picking ideas with potential success-managing ideas and implementing"
-        ],
-        correctAnswer: "Gathering ideas-managing ideas-picking ideas with potential success-implementing" // Based on answer key 10.b
-    },
-
-    // Questions from Sayfa 126-128 (Week 2)
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which of the following term is called ‘business doing type with proven success’?",
-        options: [
-            "Business idea",
-            "Customer value statement",
-            "Business model",
-            "Entrepreunership processes",
-            "Innovative entrepreunership"
-        ],
-        correctAnswer: "Business model" // Based on answer key 1.c
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which of the following does NOT take place in business ideas key sources?",
-        options: [
-            "Products",
-            "Facilities",
-            "Equipments",
-            "Administrative process",
-            "Brands"
-        ],
-        correctAnswer: "Administrative process" // Based on answer key 2.d
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which of the process below turns business idea into business?",
-        options: [
-            "Entrepreunership processes",
-            "Administrative processes",
-            "Operational processes",
-            "Financial processes",
-            "Analysis processes"
-        ],
-        correctAnswer: "Entrepreunership processes" // Based on answer key 3.a
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which of the following technique is NOT needed by managers to search and find business ideas?",
-        options: [
-            "GZFT analysis",
-            "Foresight and road maps",
-            "Scenario analysis",
-            "Process analysis",
-            "Budget analysis"
-        ],
-        correctAnswer: "Budget analysis" // Based on answer key 4.e
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which of the following research is NOT used in feasibility works?",
-        options: [
-            "Market researches",
-            "Technological researches",
-            "Financial researches",
-            "Juridical researches",
-            "Commercial researches"
-        ],
-        correctAnswer: "Commercial researches" // Based on answer key 5.e
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which of the following property is NOT used to distinguish succesful business idea from ordinary business idea?",
-        options: [
-            "Provides benefit to customer",
-            "Brings rival advantage",
-            "Provides acquisition to share holders and establishment",
-            "Presented by establishment",
-            "Easy to produce"
-        ],
-        correctAnswer: "Presented by establishment" // Based on answer key 6.d
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which of the following describes \"ideas which are decided to be introduced according to entrepreuners skills, knowledge and ability levels and foresighted as succesful\"?",
-        options: [
-            "Business idea",
-            "Plan",
-            "Program",
-            "Thought",
-            "Move"
-        ],
-        correctAnswer: "Business idea" // Based on answer key 7.a
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which of the following is NOT needed while searching to find a business plan?",
-        options: [
-            "Using personal skills",
-            "Being broad-minded",
-            "Synthesizing the ideas by brain storming",
-            "Doing research",
-            "Not to share ideas"
-        ],
-        correctAnswer: "Not to share ideas" // Based on answer key 8.e
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which of the following method is used for defining a projects economical potential and practicability by researching technical, financial and economical datas?",
-        options: [
-            "Business plan",
-            "Project",
-            "Business idea",
-            "Feasibility research",
-            "Implementation"
-        ],
-        correctAnswer: "Feasibility research" // Based on answer key 9.d
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which of the following shows the most correct process for developing a new business or project?",
-        options: [
-            "Starting business- pre-feasibility- feasibility- business plan",
-            "Business plan- feasibility- pre-feasibility",
-            "Business or project idea- pre-feasibility- feasibility- business plan",
-            "Business or project idea- business plan- pre-feasibility- feasibility",
-            "Business or project idea- starting business"
-        ],
-        correctAnswer: "Business or project idea- pre-feasibility- feasibility- business plan" // Based on answer key 10.c
-    },
-
-    // Questions from Sayfa 143-148 (Week 2)
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which one below taken into consideration for defining finance need of a business firm?",
-        options: [
-            "Total resources (equity capital)",
-            "Total of short and long term debts",
-            "Term structure of the debts",
-            "Total current assets",
-            "Total fixed and current assets"
-        ],
-        correctAnswer: "Total fixed and current assets" // Based on answer key 1.e
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which business progress phase is the hardest for entrepreneur?",
-        options: [
-            "Beginning phase",
-            "Growing phase",
-            "Maturity phase",
-            "Decline phase",
-            "Fall phase"
-        ],
-        correctAnswer: "Beginning phase" // Based on answer key 2.a
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which one below is NOT one of the finance resources for the benefit of entrepreneur in the beginning phase?",
-        options: [
-            "Personal resources",
-            "Merchant banks",
-            "Investment banks",
-            "Supplier's credits",
-            "Friends and relatives"
-        ],
-        correctAnswer: "Investment banks" // Based on answer key 3.c
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "In terms of the business firm, in which business progress phase, innovations increase, rivalry rises and profits start to increase?",
-        options: [
-            "Beginning",
-            "Growing",
-            "Maturity",
-            "Decline",
-            "Fall"
-        ],
-        correctAnswer: "Growing" // Based on answer key 4.b
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which factor below does NOT increase the importance of financial planning period?",
-        options: [
-            "Manifestation of the target and aim",
-            "Defining the risks taken",
-            "Defining cash inflow and outflow",
-            "Estimating funds needed",
-            "Evaluating the previous period results"
-        ],
-        correctAnswer: "Evaluating the previous period results" // Based on answer key 5.e
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which strategy below is NOT aimed at decreasing the financial risks to minimum level?",
-        options: [
-            "Shorten the due date of the debts",
-            "Becoming indebt from the fixed interest rate",
-            "Protected from the risks of Exchange rate",
-            "Creating new credit opprtunities",
-            "Lowering loan/ equity capital mainstay below 1."
-        ],
-        correctAnswer: "Shorten the due date of the debts" // Based on answer key 6.a
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which one below is the table that a business firm will attain operating and non operating profit in the future term and endure the budget of the margin for gaining profit ?",
-        options: [
-            "Proforma balance sheet",
-            "Proforma income table",
-            "Cash budget",
-            "Equity Exchange table",
-            "Fund flow table"
-        ],
-        correctAnswer: "Proforma income table" // Based on answer key 7.b
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which factor below does NOT increase the need of working capital?",
-        options: [
-            "Capacity",
-            "Work load",
-            "Liquidity risk",
-            "Credit Worth",
-            "Revaluation"
-        ],
-        correctAnswer: "Revaluation" // Based on answer key 8.e
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which one below is NOT brunches of work fund?",
-        options: [
-            "Cash",
-            "Debt owed",
-            "Stock",
-            "Cash equivalents",
-            "Fixed assets"
-        ],
-        correctAnswer: "Fixed assets" // Based on answer key 9.e
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which one is not a disadvantage of funds provided for family and friends?",
-        options: [
-            "Interrupting management",
-            "Feeling of ownage",
-            "Interrupting workers",
-            "Guiding operations",
-            "Ending operations"
-        ],
-        correctAnswer: "Ending operations" // Based on answer key 10.e
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which one below is wrong about the working plan?",
-        options: [
-            "Working plan is a document including the details of a firm thought to be set up or existing",
-            "Working plan does not show the future of the firm, but the existing position of it.",
-            "In the working plan all the elements of the firm should be defined.",
-            "Working plan is the vision reflected written document of the firm thought to be set up.",
-            "Working plan is the helping vehicle for an entrepreneur to move on to investment phase."
-        ],
-        correctAnswer: "Working plan does not show the future of the firm, but the existing position of it." // Based on answer key 11.b
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which of the following below is NOT the benefits of a working plan for an entrepreneur?",
-        options: [
-            "Enduring an entrepreneur to see the firm from critical and objective point of view.",
-            "Giving informations to the funders and financiers about the market potential and planning the protection of the market share.",
-            "Helping the assumption formation of the entrepreneur for the success of the firm.",
-            "For the evaluation of the aims, setting criterias for the comparision of real results and estimations.",
-            "An incomplete working plan carrying out a duty of a working guide for the entrepreneur."
-        ],
-        correctAnswer: "Giving informations to the funders and financiers about the market potential and planning the protection of the market share." // Based on answer key 12.b
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which one below is a guide prepared during the process of setting up a firm and project being implemented?",
-        options: [
-            "Charts of accounts",
-            "Feasibility analysis",
-            "Working plan",
-            "Marketing plan",
-            "Financing plan"
-        ],
-        correctAnswer: "Working plan" // Based on answer key 13.c
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which one below is NOT a benefit of the working plan preperation?",
-        options: [
-            "Working plan provides investor/ entrepreneur the written project of his/her mind.",
-            "It saves time and works for the purpose by directing investor/ entrepreneur's attention.",
-            "It provides conjecture by being based on the future datas.",
-            "It provides the needed researches and planned work done before setting up the firm.",
-            "It is useful for the research of which work to be done."
-        ],
-        correctAnswer: "It is useful for the research of which work to be done." // Based on answer key 14.e
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which one below is NOT a part of working plan?",
-        options: [
-            "Executive summary",
-            "Information about the project/firm to be set up",
-            "Aim and purpose of the project/firm",
-            "Marketing Plan",
-            "Profitability Plan"
-        ],
-        correctAnswer: "Marketing Plan" // Based on answer key 15.d
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Who should prepare the working plan of the firm to be set up?",
-        options: [
-            "Venture capitalist",
-            "Angel investor",
-            "Entrepreneurs",
-            "Financial advisor",
-            "Legal Advisor"
-        ],
-        correctAnswer: "Entrepreneurs" // Based on answer key 16.c
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which one below is NOT the usage purpose of the working plan?",
-        options: [
-            "Communication",
-            "Planning",
-            "Management",
-            "Future prediction",
-            "Past analysis"
-        ],
-        correctAnswer: "Past analysis" // Based on answer key 17.e
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which one below is a mistake done while the preprerations of the working plan?",
-        options: [
-            "The usage of another working plan's assumptions",
-            "Shortening the plan",
-            "Reflecting all the risks in the plan",
-            "Harmonising the future with the plan",
-            "Not placing exeggerations in the plan"
-        ],
-        correctAnswer: "The usage of another working plan's assumptions" // Based on answer key 18.a
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which one below is NOT the mistake done while the preperations of the working plan?",
-        options: [
-            "Putting unrealistic aims in the plan",
-            "Not predicting potential obstacles",
-            "Lack of determination or undertaking",
-            "Segmentation not being done",
-            "Plan being up to date"
-        ],
-        correctAnswer: "Plan being up to date" // Based on answer key 19.e
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which part below is needed to be demanded for reading the whole plan arousing interest for it?",
-        options: [
-            "Marketing plan",
-            "Input/Executive Summary",
-            "Management Plan",
-            "Production plan",
-            "Enclosure"
-        ],
-        correctAnswer: "Input/Executive Summary" // Based on answer key 20.b
-    },
-
-    // Questions from Sayfa 173-175 (Week 2)
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which of the following parameter does not take place in PEST analysis political factors?",
-        options: [
-            "Demographical factors",
-            "Country regime",
-            "Bureaucratic structure",
-            "Political stability",
-            "Civil war"
-        ],
-        correctAnswer: "Bureaucratic structure" // Based on answer key 1.c
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which of the following factor does not specify the competition between entrepreuners who are affecting sectors profitableness in sector analysis extent?",
-        options: [
-            "Differentiation of product or service",
-            "Too much entrepreuners in sector",
-            "Suppliers with insufficient knowledge about products",
-            "Slow growth of industry",
-            "Expensiveness of stable costs and storage"
-        ],
-        correctAnswer: "Suppliers with insufficient knowledge about products" // Based on answer key 2.c
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "When we consider the factors affecting sectors profitableness, which of the following factor describes usage of plastic bottles instead of glass bottles in water packaging?",
-        options: [
-            "Substitude products or services threat",
-            "Purchasers negotiation power",
-            "Suppliers negotiation power",
-            "Competition between current competitors",
-            "Potential competitors threat"
-        ],
-        correctAnswer: "Substitude products or services threat" // Based on answer key 3.a
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which of the following analyse shows establishment and environment relation which help us to understand environmental factors such as establishments inner strength and weaknesses and exterior opportunuties and threats?",
-        options: [
-            "PEST analysis",
-            "SWOT analysis",
-            "Sector analysis",
-            "Demand estimation",
-            "Customer differentiation"
-        ],
-        correctAnswer: "SWOT analysis" // Based on answer key 4.b
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "When we consider marketing terms while preparing business plan, which of the following shows the ratio of entered markets consumers number and ready markets consumers number?",
-        options: [
-            "Consumer ratio",
-            "Establishment ratio",
-            "Input percentage",
-            "Market percentage",
-            "Profit ratio"
-        ],
-        correctAnswer: "Market percentage" // Based on answer key 5.d
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "In order to have a complete market research information, which of the following factor is not used?",
-        options: [
-            "Certainty",
-            "Economy",
-            "Practicableness",
-            "Correct timing",
-            "Understandability"
-        ],
-        correctAnswer: "Correct timing" // Based on answer key 6.d
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which of the following criteria is not a market classification strategy of an establishment?",
-        options: [
-            "Geography",
-            "Demography",
-            "Psychography",
-            "Behavioral",
-            "Biologic"
-        ],
-        correctAnswer: "Biologic" // Based on answer key 7.e
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which of the following pricing strategy is based on researching market demand complete and correct?",
-        options: [
-            "Cost based pricing",
-            "Demand based pricing",
-            "Competition based pricing",
-            "Productivity based pricing",
-            "Positioning based pricing"
-        ],
-        correctAnswer: "Demand based pricing" // Based on answer key 8.b
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "Which of the following pricing strategy is based on legal regulations such as Value Added Tax (KDV) and Special Consumption Tax (ÖTV)?",
-        options: [
-            "Cost based pricing",
-            "Demand based pricing",
-            "Competition based pricing",
-            "Productivity based pricing",
-            "Environmental factors based pricing"
-        ],
-        correctAnswer: "Environmental factors based pricing" // Based on answer key 9.e
-    },
-    {
-        week: 2,
-        courseCode: "GRI403",
-        question: "When we consider PEST analysis used for evaluating environmental factors, which of the following factor describes technology establishments such as Google can not operate in China?",
-        options: [
-            "Political factors",
-            "Economical factors",
-            "Social factors",
-            "Technological factors",
-            "Cultural factors"
-        ],
-        correctAnswer: "Political factors" // Based on answer key 10.a
-    },
-    // Chapter 6 Questions (Week 3)
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following parameter does not take place in PEST analysis political factors?",
-        options: [
-            "Demographical factors",
-            "Country regime",
-            "Bureaucratic structure",
-            "Political stability",
-            "Civil war"
-        ],
-        correctAnswer: "Bureaucratic structure"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following factor does not specify the competition between entrepreuners who are affecting sectors profitableness in sector analysis extent?",
-        options: [
-            "Differentiation of product or service",
-            "Too much entrepreuners in sector",
-            "Suppliers with insufficient knowledge about products",
-            "Slow growth of industry",
-            "Expensiveness of stable costs and storage"
-        ],
-        correctAnswer: "Suppliers with insufficient knowledge about products"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "When we consider the factors affecting sectors profitableness, which of the following factor describes usage of plastic bottles instead of glass bottles in water packaging?",
-        options: [
-            "Substitude products or services threat",
-            "Purchasers negotiation power",
-            "Suppliers negotiation power",
-            "Competition between current competitors",
-            "Potential competitors threat"
-        ],
-        correctAnswer: "Substitude products or services threat"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following analyse shows establishment and environment relation which help us to understand environmental factors such as establishments inner strength and weaknesses and exterior opportunuties and threats?",
-        options: [
-            "PEST analysis",
-            "SWOT analysis",
-            "Sector analysis",
-            "Demand estimation",
-            "Customer differentiation"
-        ],
-        correctAnswer: "SWOT analysis"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "When we consider marketing terms while preparing business plan, which of the following shows the ratio of entered markets consumers number and ready markets consumers number?",
-        options: [
-            "Consumer ratio",
-            "Establishment ratio",
-            "Input percentage",
-            "Market percentage",
-            "Profit ratio"
-        ],
-        correctAnswer: "Market percentage" // Inferred from answer key 5.d
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "In order to have a complete market research information, which of the following factor is not used?",
-        options: [
-            "Certainty",
-            "Economy",
-            "Practicableness",
-            "Correct timing",
-            "Understandability"
-        ],
-        correctAnswer: "Correct timing"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following criteria is not a market classification strategy of an establishment?",
-        options: [
-            "Geography",
-            "Demography",
-            "Psychography",
-            "Behavioral",
-            "Biologic"
-        ],
-        correctAnswer: "Biologic"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following pricing strategy is based on researching market demand complete and correct?",
-        options: [
-            "Cost based pricing",
-            "Demand based pricing",
-            "Competition based pricing",
-            "Productivity based pricing",
-            "Positioning based pricing"
-        ],
-        correctAnswer: "Demand based pricing"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following pricing strategy is based on legal regulations such as Value Added Tax (KDV) and Special Consumption Tax (ÖTV)?",
-        options: [
-            "Cost based pricing",
-            "Demand based pricing",
-            "Competition based pricing",
-            "Productivity based pricing",
-            "Environmental factors based pricing"
-        ],
-        correctAnswer: "Environmental factors based pricing" // Inferred from answer key 9.e
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "When we consider PEST analysis used for evaluating environmental factors, which of the following factor describes technology establishments such as Google can not operate in China?",
-        options: [
-            "Political factors",
-            "Economical factors",
-            "Social factors",
-            "Technological factors",
-            "Cultural factors"
-        ],
-        correctAnswer: "Political factors"
-    },
-
-    // Chapter 7 Questions (Week 3)
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following document includes an establishments marketing goals and activity plans step by step in a written form?",
-        options: [
-            "Monthly plan",
-            "Management plan",
-            "Marketing plan",
-            "Financial plan",
-            "Opportunity analysis plan"
-        ],
-        correctAnswer: "Marketing plan"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following is not one of the property of marketing plan?",
-        options: [
-            "Competitors strong and weak sides analysis",
-            "Flexibility",
-            "Includes performance measurements",
-            "Based on real informations",
-            "Short and simple"
-        ],
-        correctAnswer: "Competitors strong and weak sides analysis"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following is not a step of marketing plan?",
-        options: [
-            "Situation analysis",
-            "Implementation and control",
-            "Defining opportunuties and threats",
-            "Preparing plan simple and understandable",
-            "Defining marketing strategies and tactics"
-        ],
-        correctAnswer: "Preparing plan simple and understandable"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following is not a parameter forming macro environment?",
-        options: [
-            "Demographical environment",
-            "Legal environment",
-            "Social and cultural environment",
-            "Political and juridical environment",
-            "Strategical environment"
-        ],
-        correctAnswer: "Strategical environment"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following method classifies market according to country, region, city and province?",
-        options: [
-            "Demographical classification",
-            "Behavioral classification",
-            "Tactical classification",
-            "Geographical classification",
-            "Strategical classification"
-        ],
-        correctAnswer: "Geographical classification"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following describes establishments future planned activities and results to reach?",
-        options: [
-            "Goal",
-            "Strategy",
-            "Tactic",
-            "Market",
-            "Opportunity"
-        ],
-        correctAnswer: "Goal"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following strategy describes an establishment trying to reach lowest production and distribution costs?",
-        options: [
-            "Niche market strategy",
-            "Cost leadership strategy",
-            "Differentiation strategy",
-            "Focussing strategy",
-            "Followers strategy"
-        ],
-        correctAnswer: "Cost leadership strategy"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following is a product or services value in market?",
-        options: [
-            "Product",
-            "Brand",
-            "Price",
-            "Distribution",
-            "Promotion"
-        ],
-        correctAnswer: "Price"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following describes serving and selling product without using mediators by producer?",
-        options: [
-            "Intense distribution",
-            "Selector distribution",
-            "Special distribution",
-            "Indirect distribution",
-            "Direct distribution"
-        ],
-        correctAnswer: "Direct distribution"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following works are used for increasing sales directly in a short term?",
-        options: [
-            "Advertisement",
-            "Sales promotion",
-            "Public relations",
-            "Personal sale",
-            "Distribution"
-        ],
-        correctAnswer: "Sales promotion"
-    },
-
-    // Chapter 8 Questions (Week 3)
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following is not a production system input?",
-        options: [
-            "Raw material",
-            "Information",
-            "Customer",
-            "Capital",
-            "Entrepreunership"
-        ],
-        correctAnswer: "Customer"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "In which of the following only unique product is produced according to customers requests?",
-        options: [
-            "Project type production",
-            "Continuous production",
-            "Assembly type production",
-            "Flow type production",
-            "Mass production"
-        ],
-        correctAnswer: "Project type production"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following does not take place in production plans extent?",
-        options: [
-            "Defining production rate",
-            "Defining production priorities",
-            "Defining production amount to be produced",
-            "Defining product to be produced",
-            "Defining product to be produced price"
-        ],
-        correctAnswer: "Defining product to be produced price"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following is defined by process flow schema?",
-        options: [
-            "Storage where inputs go",
-            "Inputs process orders",
-            "List of product parts",
-            "Placing of machines",
-            "Machines capacity list"
-        ],
-        correctAnswer: "Inputs process orders"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following is not a production planning activity?",
-        options: [
-            "Defining production plans term of involvement",
-            "Defining stock level",
-            "Making demand estimations",
-            "Defining certain orders",
-            "Choosing supplier"
-        ],
-        correctAnswer: "Choosing supplier"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following shows when and in which amount whole materials to be sold or produced will be supplied?",
-        options: [
-            "Capacity planning",
-            "Material need planning",
-            "Capacity need planning",
-            "Main production tabulation",
-            "Main production planning"
-        ],
-        correctAnswer: "Main production tabulation"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following inputs are outputs of main production tabulation?",
-        options: [
-            "Capacity need planning",
-            "Stock control",
-            "Material need planning",
-            "Capacity planning",
-            "Main production planning"
-        ],
-        correctAnswer: "Material need planning"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following is not an aim of material need planning?",
-        options: [
-            "Keeping stock level low",
-            "Appointing employees on correct works",
-            "Contributing work flows system",
-            "Helping deliveries",
-            "Minimizing production setbacks"
-        ],
-        correctAnswer: "Appointing employees on correct works"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following defines machine-equipment and required work power amount to implement material plan in a short planning term?",
-        options: [
-            "Capacity need planning",
-            "Source need planning",
-            "Rough cutting source planning",
-            "Stock control",
-            "Material need planning"
-        ],
-        correctAnswer: "Capacity need planning"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following decision is most difficult to bring back?",
-        options: [
-            "Supplier selection",
-            "Machine selection",
-            "Employee selection",
-            "Establishment place selection",
-            "Raw material selection"
-        ],
-        correctAnswer: "Establishment place selection"
-    },
-
-    // Chapter 9 Questions (Week 3)
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following is incorrect related to management plan?",
-        options: [
-            "Management plan is concerned with how to create organizational structure",
-            "Management plan is concerned with how to create product and services",
-            "It should define establishments juridical structure",
-            "Authority and responsibility relations should be defined on plan",
-            "A good management plan proves that entrepreuner understands factors affecting organizational effectiveness"
-        ],
-        correctAnswer: "Management plan is concerned with how to create product and services"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following information is not needed for preparing management plan?",
-        options: [
-            "Establishments site of establishment",
-            "Establishments juridical structure",
-            "Establishments organizational structure",
-            "Abilities requiered for positions in establishment",
-            "Standarts which calculate and evaluate working performance"
-        ],
-        correctAnswer: "Establishments site of establishment"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following partnersip is responsible with whole the products without any limitation as collective partners?",
-        options: [
-            "Commandite",
-            "Commanditer",
-            "Merchant",
-            "Corporative",
-            "Limited partnership"
-        ],
-        correctAnswer: "Commandite" // Assuming this refers to the collective partnership type itself, not a specific partner role.
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following is share holder partnership?",
-        options: [
-            "Collective partnerships",
-            "Commandite partnerships",
-            "Limited partnership",
-            "Ordinary partnership",
-            "Individual partnership"
-        ],
-        correctAnswer: "Limited partnership" // Often involves shareholders, especially public limited companies.
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following is not a basic step of preparing management plan?",
-        options: [
-            "Management plan summary",
-            "Situational review",
-            "Establishments juridical structure",
-            "Evaluating outer environment",
-            "Management philosophy"
-        ],
-        correctAnswer: "Management philosophy"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following is not considered as a basic element of organizational structure?",
-        options: [
-            "Work division",
-            "Matrix structure",
-            "Audit field",
-            "Classification",
-            "Authority"
-        ],
-        correctAnswer: "Matrix structure" // Matrix is a *type* of structure, not a basic element like work division or authority.
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following classification gathers works and duties according to their qualification?",
-        options: [
-            "According to product base",
-            "According to geographical base",
-            "According to functions",
-            "According to time base",
-            "According to customer base"
-        ],
-        correctAnswer: "According to functions"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following defines employee amount a manager can direct?",
-        options: [
-            "Audit field", // This seems incorrect based on context, likely Span of Control intended
-            "Flexibility",
-            "Authority-responsibility balance",
-            "Classification",
-            "Expertation" // Span of Control is the correct term, Audit field is the closest highlighted option.
-        ],
-        correctAnswer: "Audit field" // Selecting highlighted answer despite potential inaccuracy.
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following question should be answered when an entrepreuner decides organizational structure?",
-        options: [
-            "How working performance will be evaluated?",
-            "Which equipments and materials employees can use?",
-            "How to employ qualified work power?",
-            "How employees will be protected against environmental changes?",
-            "How many sublevel employees can be directed by each manager?" // Relates to Span of Control
-        ],
-        correctAnswer: "How many sublevel employees can be directed by each manager?"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following is not related to defining main positions which should be filled in future in management plan?",
-        options: [
-            "Every positions duties, responsibilites and authorities level",
-            "Statements about perquisite and promotion opportunuties",
-            "Every positions authority and responsibilites harmony with organizational structure",
-            "Every position according to business title",
-            "Providing qualified employees to establishment method"
-        ],
-        correctAnswer: "Statements about perquisite and promotion opportunuties"
-    },
-
-    // Chapter 10 Questions (Week 3)
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following is not a question banks or lending companies are looking for in business plan?",
-        options: [
-            "Will you pay your loan back?",
-            "Why do you need this money for?",
-            "How much loan you want?",
-            "Are you strong enough to pay the interest?",
-            "If needed, what types of assurances you can provide?"
-        ],
-        correctAnswer: "Will you pay your loan back?" // This is implied, but lenders ask the others more directly. Highlighted answer selected.
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "While making sales budget estimations in the beginning of financial estimation process, for the first year which periods are used for sales estimation?",
-        options: [
-            "Weekly",
-            "Three months",
-            "Six months",
-            "Yearly",
-            "Monthly"
-        ],
-        correctAnswer: "Monthly"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "While budgeting estimated expense and costs, which of the following expenses are reviewed?",
-        options: [
-            "Beginning and activity expenses",
-            "Beginning and finishing expenses",
-            "Short and long term expenses",
-            "Activity and raw material expenses",
-            "Stable and changeable expenses"
-        ],
-        correctAnswer: "Beginning and activity expenses"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following is not a type of activity expenses?",
-        options: [
-            "Salary and wages",
-            "Day offs and licenses",
-            "Rents",
-            "Mortgage debts",
-            "Financial rents"
-        ],
-        correctAnswer: "Day offs and licenses"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following is not a typical main type of income statement?",
-        options: [
-            "Incomes",
-            "Expenses",
-            "Debts",
-            "Income tax to be paid",
-            "Pure profit"
-        ],
-        correctAnswer: "Debts" // Debts are typically on the balance sheet, not income statement.
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following is not an inner or outer establishment factor affecting cash flows directly?",
-        options: [
-            "Delays in raw material supply",
-            "Deficient raw material",
-            "Deficient product",
-            "Suppliers price decrease",
-            "Suppliers date shortening"
-        ],
-        correctAnswer: "Suppliers price decrease" // Price decrease *helps* cash flow, others hurt it.
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following par production amount in a product which have total stable expense of 5000.- TL, unit changeable expense 25.- TL and sales price 50.- TL?",
-        options: [
-            "500",
-            "450",
-            "400",
-            "300",
-            "200" // Break-even = Fixed Costs / (Sales Price per Unit - Variable Cost per Unit) = 5000 / (50 - 25) = 5000 / 25 = 200
-        ],
-        correctAnswer: "200"
-    },
-
-    // Chapter 11 Questions (Week 3)
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following is correct about risk definition?",
-        options: [
-            "It involves actualized event",
-            "It is sparing source for actualized loss",
-            "Happens everytime",
-            "It is about past",
-            "It is based on possibility of actualization"
-        ],
-        correctAnswer: "It is based on possibility of actualization"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following risk or risks we take if we are going to take the payment of our sold house in future in foreing currency?",
-        options: [
-            "Credit risk",
-            "Operation risk",
-            "Currency and credit risk",
-            "Reputation risk",
-            "Credit and operation risk"
-        ],
-        correctAnswer: "Currency and credit risk" // Primarily currency risk, but credit risk (counterparty default) also exists.
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following alternative is more preferable if we presume the risk type is same?",
-        options: [
-            "Low encountering rate, low loss amount",
-            "High encountering rate, low loss amount",
-            "Low encountering rate, high loss amount",
-            "High encountering rate, high loss amount",
-            "Encountering rate unknown, high loss amount"
-        ],
-        correctAnswer: "Low encountering rate, low loss amount"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following loss risk is from unsuccesful business processes, people and systems or outer events?",
-        options: [
-            "Operational",
-            "Credit",
-            "Market",
-            "Interest rate",
-            "Liquidity"
-        ],
-        correctAnswer: "Operational"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following risk type is realized if we have large amount of receivable debt however we do not have enough money for our daily needs?",
-        options: [
-            "Operational",
-            "Credit",
-            "Market",
-            "Interest rate",
-            "Liquidity"
-        ],
-        correctAnswer: "Liquidity"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following is an element affecting success in risk management?",
-        options: [
-            "Size of establishment",
-            "University graduated employees",
-            "Establishment being in a centeral area",
-            "Being supported by top management",
-            "Establishment having high endorsement"
-        ],
-        correctAnswer: "Being supported by top management"
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following strategy can not be used in risk management?",
-        options: [
-            "Ignoring risk",
-            "Avoiding risk",
-            "Transferring risk",
-            "Decreasing risks effects",
-            "Decreasing risks possibility"
-        ],
-        correctAnswer: "Ignoring risk" // Ignoring is generally not a valid *strategy*.
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following risk type can be numerically countable?",
-        options: [
-            "Credit risk",
-            "Reputation risk",
-            "Juridical risk",
-            "Country risk",
-            "Active-passive risk"
-        ],
-        correctAnswer: "Credit risk" // Credit risk often involves quantifiable models (PD, LGD, EAD).
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following risk or risks we take if we are going to take our sold product or services payment in future in foreign currency?",
-        options: [
-            "Credit risk",
-            "Operational risk",
-            "Currency or credit risk",
-            "Reputation risk",
-            "Credit and operational risk"
-        ],
-        correctAnswer: "Currency or credit risk" // Similar to Q2, involves both currency fluctuation and payment default risk.
-    },
-    {
-        week: 3,
-        courseCode: "GRI403",
-        question: "Which of the following two analysis type creates simulation analysis?",
-        options: [
-            "SWOT- possibility",
-            "Possibility- qualitative",
-            "Qualitative- quantitative",
-            "Sensibility- possibility", // Sensibility likely means Sensitivity Analysis
-            "SWOT- qualitative"
-        ],
-        correctAnswer: "Sensibility- possibility" // Sensitivity and Probability/Possibility analyses are often used in simulations.
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "______ is accepted as a strong expression of transforming human intelligence, ability, creativity and imagination into a product or service.",
-        "options": [
-            "all of them",
-            "projection",
-            "None of them is correct",
-            "research",
-            "creativity"
-        ],
-        "correctAnswer": "projection"
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "The features of Entrepreneurs are:",
-        "options": [
-            "Leadership",
-            "None of them is correct",
-            "determination",
-            "devotion and creativity",
-            "All of them are correct"
-        ],
-        "correctAnswer": "All of them are correct"
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "As if SUZUKI automobiles company sales are increasing continuously will consider in ______ stage of product life cycle.",
-        "options": [
-            "Decline Stage",
-            "None of them are correct",
-            "Maturity Stage",
-            "Beginning Stage",
-            "Growing Stage"
-        ],
-        "correctAnswer": "Growing Stage"
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "Creativity and inventions are carried out in ______ but not all of the inventions can be turned into innovation.",
-        "options": [
-            "human resource management",
-            "social studies",
-            "None of them is correct",
-            "marketing",
-            "research and development"
-        ],
-        "correctAnswer": "research and development"
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "Blue Ocean Strategy is implemented when innovative companies stay strong by differentiating from each other instead of ______",
-        "options": [
-            "All of them are correct",
-            "None of them are correct",
-            "resembling",
-            "fighting",
-            "bonding"
-        ],
-        "correctAnswer": "resembling"
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "Main components of entrepreneurial thinking ______",
-        "options": [
-            "Competitive Thinking",
-            "All of them are correct ",
-            "Taking Risks",
-            "Being Inventive and Creative",
-            "None of them is correct"
-        ],
-        "correctAnswer": "All of them are correct "
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "Decline stage is when research & development and promotion expenses get lower, price competitions continue and as a result sales and profit ____.",
-        "options": [
-            "Remain constant",
-            "None of them",
-            "Decrease ",
-            "Increase",
-            "All of them are correct"
-        ],
-        "correctAnswer": "Decrease "
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "______ is supportive to an entrepreneur to decide which business idea to take:",
-        "options": [
-            "business idea",
-            "Shareholders",
-            "Feasibility",
-            "None of them is correct",
-            "Family"
-        ],
-        "correctAnswer": "Feasibility"
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "The most important reward of being an entrepreneur is ______",
-        "options": [
-            "to gain fame.",
-            "None of them is correct",
-            "all of them are correct",
-            "to create value ",
-            "to buy a mansion"
-        ],
-        "correctAnswer": "to create value "
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "______ appear as entrepreneurship structures which make innovations and inventions.",
-        "options": [
-            "None of them is correct",
-            "Social Entrepreneurship",
-            "All of them are correct",
-            "Internal Entrepreneurship",
-            "Techno-entrepreneurship "
-        ],
-        "correctAnswer": "Techno-entrepreneurship "
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "Unemployment and disagreement with management are type of ______",
-        "options": [
-            "None of them",
-            "riveting factors",
-            "compeller factors ",
-            "revenge factors",
-            "all of them"
-        ],
-        "correctAnswer": "compeller factors "
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "A Floppy Disk is considered in ______ stage of product life cycle.",
-        "options": [
-            "Growing Stage",
-            "Decline Stage ",
-            "Beginning Stage",
-            "Maturity Stage",
-            "None of them is correct"
-        ],
-        "correctAnswer": "Decline Stage "
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "If the ABC company is trying to reduce their product cost and increase product quality is the example of ______",
-        "options": [
-            "All of them are correct",
-            "closed innovation",
-            "Open Innovation",
-            "Unlimited innovation",
-            "Operational innovation "
-        ],
-        "correctAnswer": "Operational innovation "
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "In______the establishments finish product development phase and are in need of trading productions and sales activities.",
-        "options": [
-            "None of them is correct",
-            "Business idea investments",
-            "First stage investment (early stage investment)",
-            "Enlargement Investments",
-            "support Investments"
-        ],
-        "correctAnswer": "First stage investment (early stage investment)"
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "Being independent and self-richness are type of ______",
-        "options": [
-            "compeller factors",
-            "Gender Factors",
-            "riveting factors",
-            "all of them",
-            "none of them"
-        ],
-        "correctAnswer": "riveting factors"
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "A______ innovation process takes place exclusively within the company.",
-        "options": [
-            "Open",
-            "None of them is correct",
-            "Operational",
-            "Limited",
-            "Closed"
-        ],
-        "correctAnswer": "Closed"
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "Which of the followings is wrong about Protection of Intellectual and Industrial Property Rights which effects entrepreneurial climate?",
-        "options": [
-            "It is an incorporeal right that provides the right of production and sale.",
-            "These rights are preserved for the right owner against third parties.",
-            "These rights can be transferred someone else.",
-            "Entrepreneur activities develop rapidly in the countries lack of patent legislation and application.",
-            "Patent legislation and application has a place in protection of these rights."
-        ],
-        "correctAnswer": "Entrepreneur activities develop rapidly in the countries lack of patent legislation and application."
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "Which of the following is not one of the sources of finance for entrepreneurs?",
-        "options": [
-            "Capital markets.",
-            "Fixed exchange rate. ",
-            "Family members.",
-            "Banks.",
-            "Acquaintances."
-        ],
-        "correctAnswer": "Fixed exchange rate. "
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "Which of the following is the most important way of support that an entrepreneur expects from design?",
-        "options": [
-            "Unsufficient product.",
-            "Innovative product. ",
-            "Too much expensive products",
-            "Unrealistic product.",
-            "Too much high investment cost."
-        ],
-        "correctAnswer": "Innovative product. "
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "Which one of the following is a feature of an entrepreneurship?",
-        "options": [
-            "Being conservative",
-            "Not undertaking a risk",
-            "Apathetic insensible",
-            "Picking out the opportunities ",
-            "Not being able to see problems"
-        ],
-        "correctAnswer": "Picking out the opportunities "
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "What is the name of ideas which provides value to the consumer, profits to the entrepreneur, benefits to the society and is able to turn product and service?",
-        "options": [
-            "Business expense",
-            "Business Control in wrong way",
-            "Uneffective distribution",
-            "Unsufficient plan",
-            "Business idea "
-        ],
-        "correctAnswer": "Business idea "
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "Which one of the following is not among the general medium components?",
-        "options": [
-            "Natural environment",
-            "Political/legal environment",
-            "Economic environment",
-            "Sociocultural environment",
-            "Labour environment"
-        ],
-        "correctAnswer": "Labour environment"
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "Which of the following is the basic structure of thought which dominated the business world along with the globalization phenomenon?",
-        "options": [
-            "Innovative manufacturing",
-            "Cost efficiency",
-            "Protectionism",
-            "Competitive market",
-            "Productivity of labor"
-        ],
-        "correctAnswer": "Competitive market"
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "Which one of the following is the stage that administrative activities that are necessary for profitability and efficiency are carried out within the process of business establishment?",
-        "options": [
-            "Business development ",
-            "Pre assessment",
-            "Feasibility research",
-            "Thought of starting a business",
-            "Business plan"
-        ],
-        "correctAnswer": "Business development "
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "Which of the following is the first step that takes part in the entrepreneurial process related to gathering of enterprise factors?",
-        "options": [
-            "Finding of the required resources in wrong way",
-            "Developing of ineffective business plan",
-            "Defining and utilizing of opportunities",
-            "Management of business in not sufficient way",
-            "Preparing of wrong management plan"
-        ],
-        "correctAnswer": "Defining and utilizing of opportunities"
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "Which reason of starting business for entrepreneurs is related to the thought of being their own boss?",
-        "options": [
-            "The desire for working independently",
-            "Lacking of opportunity",
-            "Heritage or transfer",
-            "Social prestige",
-            "The desire for earning money"
-        ],
-        "correctAnswer": "The desire for working independently"
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "Which one of the below is primary supporting program of the KOSGEB-Technology Development Centre(TEKMER). which is operating in the ground floor of G and H blocks of the university campus. In supporting the entrepreneurs that have business idea and thinking about founding a business?",
-        "options": [
-            "General Supporting Program.",
-            "R&D, Innovations and Industrial Applying Supporting Program.",
-            "SME Project Support Program.",
-            "Thematic Project Support Program.",
-            "Loan interest support."
-        ],
-        "correctAnswer": "R&D, Innovations and Industrial Applying Supporting Program."
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "Which of the following includes act and attitudes in organizational creativity?",
-        "options": [
-            "Unrealistic Difference",
-            "Not positive Thought",
-            "Forming concept in uncertain way",
-            "Mistake and risk",
-            "Challenger"
-        ],
-        "correctAnswer": "Challenger"
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "Which of the following is the innovation stage where creativity is used?",
-        "options": [
-            "Managing ideas.",
-            "Collecting ideas.",
-            "Choosing ideas that have the potential to be successful.",
-            "Budgeting.",
-            "Execution."
-        ],
-        "correctAnswer": "Collecting ideas."
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "Which of the following is not one of the projects that is supported by TTGV (Technology Development Foundation of Turkey)?",
-        "options": [
-            "Environmental projects.",
-            "Risk Sharing Supports.",
-            "Initial Capital Supports.",
-            "Business Development Support.",
-            "Commercialization Support Project."
-        ],
-        "correctAnswer": "Environmental projects."
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "Which of the following business plan sections contains information about customer markets?",
-        "options": [
-            "Management plan",
-            "Financial plan",
-            "Demand structure and market research",
-            "Introduction/Manager summary",
-            "Definition of the entrepreneur and the business"
-        ],
-        "correctAnswer": "Demand structure and market research"
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "For whom the value should be created according to the principle \"innovation should create value\"?",
-        "options": [
-            "For the closed friends",
-            "For the class fellow",
-            "For the neighbour",
-            "For the family",
-            "For the customers."
-        ],
-        "correctAnswer": "For the customers."
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "Which of the following is the name of the analysis that is done by an organization to make self-assessment systematically by using the information gathered to understand and manage the environment in which it operates?",
-        "options": [
-            "Variance analysis.",
-            "SWOT analysis.",
-            "Compatibility analysis.",
-            "Performance analysis.",
-            "Attention analysis."
-        ],
-        "correctAnswer": "SWOT analysis."
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "Which one of the following is a feature of an entrepreneurs' \"encouragement\"?",
-        "options": [
-            "Setting not rational goals",
-            "Behaving abnormal",
-            "Expressing his/her personal support in wrong way",
-            "Proving his/her self-excitement",
-            "Influencing and understanding of emotions in wrong way"
-        ],
-        "correctAnswer": "Proving his/her self-excitement"
-    },
-    {
-        "week": 5,
-        "courseCode": "GRI403",
-        "question": "Which one of the following is not a personal characteristic of an entrepreneur?",
-        "options": [
-            "Responsible",
-            "Creative",
-            "Focused on success",
-            "Unable to bear risk ",
-            "Patient"
-        ],
-        "correctAnswer": "Unable to bear risk "
-    },
+        // Chapter 6: Environmental Factors & Market Analysis (Total: 32 Questions)
+        {
+            "week": 6,
+            "courseCode": "GRI403",
+            "question": "What does competition-based pricing involve?",
+            "options": [
+                "Determining price based on environmental factors",
+                "Setting prices according to production costs",
+                "Basing prices on competitors' prices, often ignoring the establishment's own costs",
+                "Adjusting prices based on customer demand",
+                "None of them is correct"
+            ],
+            "correctAnswer": "Basing prices on competitors' prices, often ignoring the establishment's own costs"
+        },
+        {
+            "week": 6,
+            "courseCode": "GRI403",
+            "question": "What is foresight in the business context?",
+            "options": [
+                "Historical analysis",
+                "Market share analysis",
+                "Current market conditions",
+                "Predicting future events",
+                "None of them is correct"
+            ],
+            "correctAnswer": "Predicting future events"
+        },
+        {
+            "week": 6,
+            "courseCode": "GRI403",
+            "question": "What is the purpose of dividing the market into geographic classifications in marketing plans?",
+            "options": [
+                "To define target markets based on regions",
+                "To analyze cultural changes",
+                "To focus on direct distribution strategies",
+                "To evaluate demographic criteria",
+                "All of them are correct"
+            ],
+            "correctAnswer": "To define target markets based on regions"
+        },
+        {
+            "week": 6,
+            "courseCode": "GRI403",
+            "question": "What does PEST Analysis stand for in the context of business plans and market analysis?",
+            "options": [
+                "None of them is correct",
+                "Political, Environmental, Social, Technological",
+                "Public, Economic, Strategic, Technological",
+                "Political, Economical, Social, Technological",
+                "Personal, Economic, Social, Technological"
+            ],
+            "correctAnswer": "Political, Economical, Social, Technological"
+        },
+        {
+            "week": 6,
+            "courseCode": "GRI403",
+            "question": "What are the four main criteria used for market classification?",
+            "options": [
+                "Sector, Region, Climate, Population",
+                "Geographic, Demographic, Psychographic, Behavioral",
+                "Political, Economic, Societal, Technological",
+                "Cultural, Economic, Social, Environmental",
+                "None of them is correct"
+            ],
+            "correctAnswer": "Geographic, Demographic, Psychographic, Behavioral"
+        },
+        {
+            "week": 6,
+            "courseCode": "GRI403",
+            "question": "What is the primary purpose of market research phases like gathering primary data sources?",
+            "options": [
+                "Identify competitors' prices",
+                "None of them is correct",
+                "Gather information directly from the market",
+                "Evaluate environmental factors",
+                "Analyze political factors"
+            ],
+            "correctAnswer": "Gather information directly from the market"
+        },
+        {
+            "week": 6,
+            "courseCode": "GRI403",
+            "question": "What does the opportunity represent in marketing terms?",
+            "options": [
+                "A situation where market needs are poorly served",
+                "Lower distribution costs",
+                "Lower production costs",
+                "All of them are correct",
+                "Intense effort to widen the general market"
+            ],
+            "correctAnswer": "A situation where market needs are poorly served"
+        },
+        {
+            "week": 6,
+            "courseCode": "GRI403",
+            "question": "What does SWOT analysis help identify in the context of environmental and establishment relations?",
+            "options": [
+                "Strengths, Weaknesses, Opportunities, Threats",
+                "Sector potential",
+                "Market share",
+                "Market competition",
+                "None of them is correct"
+            ],
+            "correctAnswer": "Strengths, Weaknesses, Opportunities, Threats"
+        },
+        {
+            "week": 6,
+            "courseCode": "GRI403",
+            "question": "What is an example of a behavioral classification in market segmentation?",
+            "options": [
+                "Climate",
+                "Age",
+                "Social class, personal properties, and consumer behaviors",
+                "All of them are correct",
+                "Population density"
+            ],
+            "correctAnswer": "Social class, personal properties, and consumer behaviors"
+        },
+        {
+            "week": 6,
+            "courseCode": "GRI403",
+            "question": "Which of the following is an example of a behavioral criteria in market classification?",
+            "options": [
+                "Age",
+                "Population density",
+                "None of them is correct",
+                "Purchasing habits",
+                "Climate"
+            ],
+            "correctAnswer": "Purchasing habits"
+        },
+        {
+            "week": 6,
+            "courseCode": "GRI403",
+            "question": "Which of the following parameter does not take place in PEST analysis political factors?",
+            "options": [
+                "Demographical factors",
+                "Country regime",
+                "Bureaucratic structure",
+                "Political stability",
+                "Civil war"
+            ],
+            "correctAnswer": "Demographical factors"
+        },
+        {
+            "week": 6,
+            "courseCode": "GRI403",
+            "question": "Which of the following factor does not specify the competition between entrepreneurs who are affecting sectors profitableness in sector analysis extent?",
+            "options": [
+                "Differentiation of product or service",
+                "Too much entrepreneurs in sector",
+                "Suppliers with insufficient knowledge about products",
+                "Slow growth of industry",
+                "Expensiveness of stable costs and storage"
+            ],
+            "correctAnswer": "Suppliers with insufficient knowledge about products"
+        },
+        {
+            "week": 6,
+            "courseCode": "GRI403",
+            "question": "When we consider the factors affecting sectors profitableness, which of the following factor describes usage of plastic bottles instead of glass bottles in water packaging?",
+            "options": [
+                "Substitute products or services threat",
+                "Purchasers negotiation power",
+                "Suppliers negotiation power",
+                "Competition between current competitors",
+                "Potential competitors threat"
+            ],
+            "correctAnswer": "Substitute products or services threat"
+        },
+        {
+            "week": 6,
+            "courseCode": "GRI403",
+            "question": "Which of the following analyse shows establishment and environment relation which help us to understand environmental factors such as establishments inner strength and weaknesses and exterior opportunities and threats?",
+            "options": [
+                "PEST analysis",
+                "SWOT analysis",
+                "Sector analysis",
+                "Demand estimation",
+                "Customer differentiation"
+            ],
+            "correctAnswer": "SWOT analysis"
+        },
+        {
+            "week": 6,
+            "courseCode": "GRI403",
+            "question": "Which of the following criteria is not a market classification strategy of an establishment?",
+            "options": [
+                "Geography",
+                "Demography",
+                "Psychography",
+                "Behavioral",
+                "Biologic"
+            ],
+            "correctAnswer": "Biologic"
+        },
+        {
+            "week": 6,
+            "courseCode": "GRI403",
+            "question": "Which of the following pricing strategy is based on researching market demand completely and correct?",
+            "options": [
+                "Cost based pricing",
+                "Demand based pricing",
+                "Competition based pricing",
+                "Productivity based pricing",
+                "Positioning based pricing"
+            ],
+            "correctAnswer": "Demand based pricing"
+        },
+        {
+            "week": 6,
+            "courseCode": "GRI403",
+            "question": "Which of the following pricing strategy is based on legal regulations such as Value Added Tax (KDV) and Special Consumption Tax (ÖTV)?",
+            "options": [
+                "Cost based pricing",
+                "Demand based pricing",
+                "Competition based pricing",
+                "Productivity based pricing",
+                "Environmental factors based pricing"
+            ],
+            "correctAnswer": "Environmental factors based pricing"
+        },
+        {
+            "week": 6,
+            "courseCode": "GRI403",
+            "question": "When we consider PEST analysis used for evaluating environmental factors, which of the following factor describes technology establishments such as Google can not operate in China?",
+            "options": [
+                "Political factors",
+                "Economical factors",
+                "Social factors",
+                "Technological factors",
+                "Cultural factors"
+            ],
+            "correctAnswer": "Political factors"
+        },
+        {
+            "week": 6,
+            "courseCode": "GRI403",
+            "question": "When a company like a furniture manufacturer establishes its factory near a large city to reduce shipping costs to its main customer base, it is primarily making a location decision based on which factor?",
+            "options": [
+                "Proximity to raw materials",
+                "Bargaining power of suppliers",
+                "Government incentives",
+                "Being a market-based establishment",
+                "Technological factors"
+            ],
+            "correctAnswer": "Being a market-based establishment"
+        },
+        {
+            "week": 6,
+            "courseCode": "GRI403",
+            "question": "In Porter's Five Forces model, which of the following conditions would give buyers (customers) high bargaining power?",
+            "options": [
+                "The product is highly differentiated and unique.",
+                "Buyers purchase in small, individual quantities.",
+                "Switching to a competitor's product is difficult and costly for the buyer.",
+                "The establishment is the only supplier of the product.",
+                "Buyers are aware of supplier product properties and can easily compare them."
+            ],
+            "correctAnswer": "Buyers are aware of supplier product properties and can easily compare them."
+        },
+        {
+            "week": 6,
+            "courseCode": "GRI403",
+            "question": "A company that manufactures breakfast cereal finds that a growing number of consumers are skipping breakfast for health reasons. In a PEST analysis, this trend would be classified under which factor?",
+            "options": [
+                "Political",
+                "Economical",
+                "Social",
+                "Technological",
+                "Juridical"
+            ],
+            "correctAnswer": "Social"
+        },
+        {
+            "week": 6,
+            "courseCode": "GRI403",
+            "question": "Which of the following is NOT a factor that increases the intensity of competition within a sector?",
+            "options": [
+                "Too many establishments in the sector.",
+                "Slow industry improvement.",
+                "Products or services being highly distinct and unique.",
+                "High fixed costs and stocking costs.",
+                "Frequent strategy changes by different establishments."
+            ],
+            "correctAnswer": "Products or services being highly distinct and unique."
+        },
+        {
+            "week": 6,
+            "courseCode": "GRI403",
+            "question": "The three-phase process an establishment uses to choose and appeal to a market is correctly ordered as:",
+            "options": [
+                "Targeting, Positioning, Classification",
+                "Positioning, Classification, Targeting",
+                "Classification (Segmentation), Targeting, Positioning",
+                "Targeting, Classification, Positioning",
+                "Classification, Positioning, Analysis"
+            ],
+            "correctAnswer": "Classification (Segmentation), Targeting, Positioning"
+        },
+        {
+            "week": 6,
+            "courseCode": "GRI403",
+            "question": "An entrepreneur who sells specialized mining equipment to other companies operates in which type of market?",
+            "options": [
+                "A consumer market",
+                "A resale market",
+                "A government market",
+                "An industrial market",
+                "A niche market"
+            ],
+            "correctAnswer": "An industrial market"
+        },
+        {
+            "week": 6,
+            "courseCode": "GRI403",
+            "question": "In sales forecasting, relying on the opinions of a panel of executives and experienced salespersons is an example of which method?",
+            "options": [
+                "A qualitative method",
+                "A quantitative method",
+                "A time-series analysis method",
+                "A causal method",
+                "A secondary data method"
+            ],
+            "correctAnswer": "A qualitative method"
+        },
+        {
+            "week": 6,
+            "courseCode": "GRI403",
+            "question": "Within a country, a group of people with shared value systems based on common life experiences, such as a specific religious or regional group, is known as a:",
+            "options": [
+                "Social class",
+                "Sub-culture",
+                "Demographic segment",
+                "Psychographic profile",
+                "Generational cohort"
+            ],
+            "correctAnswer": "Sub-culture"
+        },
+        {
+            "week": 6,
+            "courseCode": "GRI403",
+            "question": "In a SWOT analysis, which statement is true about a 'Threat'?",
+            "options": [
+                "It is an internal factor that the company can control.",
+                "It represents a positive opportunity for the establishment.",
+                "It is an internal disadvantage, such as a lack of funding.",
+                "It is an external, uncontrollable factor that could harm the establishment.",
+                "It is a weakness that has not yet been addressed."
+            ],
+            "correctAnswer": "It is an external, uncontrollable factor that could harm the establishment."
+        },
+        {
+            "week": 6,
+            "courseCode": "GRI403",
+            "question": "Segmenting a market based on variables like lifestyle, personality traits, and values is known as:",
+            "options": [
+                "Demographic segmentation",
+                "Behavioral segmentation",
+                "Geographic segmentation",
+                "Psychographic segmentation",
+                "Use-based segmentation"
+            ],
+            "correctAnswer": "Psychographic segmentation"
+        },
+        // Chapter 7: Marketing Plan (Total: 28 Questions)
+        {
+            "week": 7,
+            "courseCode": "GRI403",
+            "question": "What does situation analysis in a marketing plan focus on?",
+            "options": [
+                "Product development strategies",
+                "Where are we?",
+                "All of them are correct",
+                "Future market trends",
+                "Competitor analysis"
+            ],
+            "correctAnswer": "Where are we?"
+        },
+        {
+            "week": 7,
+            "courseCode": "GRI403",
+            "question": "How is demographical environment analyzed in marketing plans?",
+            "options": [
+                "Analyzing population size, age, gender, race, etc.",
+                "By assessing global demographics",
+                "By analyzing competitors' populations",
+                "By evaluating the market's financial structure",
+                "All of them are correct"
+            ],
+            "correctAnswer": "Analyzing population size, age, gender, race, etc."
+        },
+        {
+            "week": 7,
+            "courseCode": "GRI403",
+            "question": "Which factor is NOT part of the changeable macro environment affecting establishments?",
+            "options": [
+                "Demographic environment",
+                "All of them are correct",
+                "Economical environment",
+                "Product popularity",
+                "Juridical and political environment"
+            ],
+            "correctAnswer": "Product popularity"
+        },
+        {
+            "week": 7,
+            "courseCode": "GRI403",
+            "question": "What is a benefit of a well-prepared marketing plan for an entrepreneur?",
+            "options": [
+                "Foresight of opportunities and threats",
+                "Increased competition",
+                "All of them are correct",
+                "Higher production costs",
+                "Reduction in marketing goals"
+            ],
+            "correctAnswer": "Foresight of opportunities and threats"
+        },
+        {
+            "week": 7,
+            "courseCode": "GRI403",
+            "question": "What is the primary purpose of a marketing plan?",
+            "options": [
+                "All of them are correct",
+                "Analyzing competitors strategies",
+                "Outlining marketing aims and planned activities",
+                "Defining corporate aims",
+                "Documenting daily operations"
+            ],
+            "correctAnswer": "Outlining marketing aims and planned activities"
+        },
+        {
+            "week": 7,
+            "courseCode": "GRI403",
+            "question": "What fundamental questions does a marketing plan aim to answer?",
+            "options": [
+                "Where are we? Where do we want to go? How can we reach the aims?",
+                "All of them are correct",
+                "Why do we need a marketing plan? What are the current trends? How much should we invest?",
+                "Who are our competitors? What are the market trends? When should we launch new products?",
+                "How much profit do we want to make? Who are our target customers? Where should we advertise?"
+            ],
+            "correctAnswer": "Where are we? Where do we want to go? How can we reach the aims?"
+        },
+        {
+            "week": 7,
+            "courseCode": "GRI403",
+            "question": "Which of the following document includes an establishments marketing goals and activity plans step by step in a written form?",
+            "options": [
+                "Monthly plan",
+                "Management plan",
+                "Marketing plan",
+                "Financial plan",
+                "Opportunity analysis plan"
+            ],
+            "correctAnswer": "Marketing plan"
+        },
+        {
+            "week": 7,
+            "courseCode": "GRI403",
+            "question": "Which of the following is not one of the property of marketing plan?",
+            "options": [
+                "Competitors strong and weak sides analysis",
+                "Flexibility",
+                "Includes performance measurements",
+                "Based on real informations",
+                "Short and simple"
+            ],
+            "correctAnswer": "Competitors strong and weak sides analysis"
+        },
+        {
+            "week": 7,
+            "courseCode": "GRI403",
+            "question": "Which of the following is not a step of marketing plan?",
+            "options": [
+                "Situation analysis",
+                "Implementation and control",
+                "Defining opportunities and threats",
+                "Preparing plan simple and understandable",
+                "Defining marketing strategies and tactics"
+            ],
+            "correctAnswer": "Preparing plan simple and understandable"
+        },
+        {
+            "week": 7,
+            "courseCode": "GRI403",
+            "question": "Which of the following is not a parameter forming macro environment?",
+            "options": [
+                "Demographical environment",
+                "Legal environment",
+                "Social and cultural environment",
+                "Political and juridical environment",
+                "Strategical environment"
+            ],
+            "correctAnswer": "Strategical environment"
+        },
+        {
+            "week": 7,
+            "courseCode": "GRI403",
+            "question": "Which of the following method classifies market according to country, region, city and province?",
+            "options": [
+                "Demographical classification",
+                "Behavioral classification",
+                "Tactical classification",
+                "Geographical classification",
+                "Strategical classification"
+            ],
+            "correctAnswer": "Geographical classification"
+        },
+        {
+            "week": 7,
+            "courseCode": "GRI403",
+            "question": "Which of the following describes establishments future planned activities and results to reach?",
+            "options": [
+                "Goal",
+                "Strategy",
+                "Tactic",
+                "Market",
+                "Opportunity"
+            ],
+            "correctAnswer": "Goal"
+        },
+        {
+            "week": 7,
+            "courseCode": "GRI403",
+            "question": "Which of the following strategy describes an establishment trying to reach lowest production and distribution costs?",
+            "options": [
+                "Niche market strategy",
+                "Cost leadership strategy",
+                "Differentiation strategy",
+                "Focussing strategy",
+                "Followers strategy"
+            ],
+            "correctAnswer": "Cost leadership strategy"
+        },
+        {
+            "week": 7,
+            "courseCode": "GRI403",
+            "question": "Which of the following is a product or services value in market?",
+            "options": [
+                "Product",
+                "Brand",
+                "Price",
+                "Distribution",
+                "Promotion"
+            ],
+            "correctAnswer": "Price"
+        },
+        {
+            "week": 7,
+            "courseCode": "GRI403",
+            "question": "Which of the following describes serving and selling product without using mediators by producer?",
+            "options": [
+                "Intense distribution",
+                "Selector distribution",
+                "Special distribution",
+                "Indirect distribution",
+                "Direct distribution"
+            ],
+            "correctAnswer": "Direct distribution"
+        },
+        {
+            "week": 7,
+            "courseCode": "GRI403",
+            "question": "Which of the following works are used for increasing sales directly in a short term?",
+            "options": [
+                "Advertisement",
+                "Sales promotion",
+                "Public relations",
+                "Personal sale",
+                "Distribution"
+            ],
+            "correctAnswer": "Sales promotion"
+        },
+        {
+            "week": 7,
+            "courseCode": "GRI403",
+            "question": "A company launches a new smartphone at a very low price with the goal of quickly capturing a large market share. This is an example of which pricing tactic?",
+            "options": [
+                "High pricing",
+                "Psychological pricing",
+                "Penetration pricing",
+                "Same-level pricing",
+                "Discounted pricing"
+            ],
+            "correctAnswer": "Penetration pricing"
+        },
+        {
+            "week": 7,
+            "courseCode": "GRI403",
+            "question": "According to the market position strategies, an establishment that chooses not to attack the market leader and instead focuses on imitating its products and marketing mix is known as a:",
+            "options": [
+                "Market Challenger",
+                "Market Niche",
+                "Market Follower",
+                "Market Leader",
+                "Market Pioneer"
+            ],
+            "correctAnswer": "Market Follower"
+        },
+        {
+            "week": 7,
+            "courseCode": "GRI403",
+            "question": "In the promotion mix, activities designed to build good relations with the public by obtaining favorable publicity and handling unfavorable rumors are part of:",
+            "options": [
+                "Advertisement",
+                "Personal Sale",
+                "Sales Promotion",
+                "Public Relations (PR)",
+                "Direct Marketing"
+            ],
+            "correctAnswer": "Public Relations (PR)"
+        },
+        {
+            "week": 7,
+            "courseCode": "GRI403",
+            "question": "A product's sales are growing rapidly, profits are at their highest, and the company is focused on maximizing its market share. This product is in which stage of the Product Life Cycle?",
+            "options": [
+                "Introduction",
+                "Growth",
+                "Maturity",
+                "Decline",
+                "Development"
+            ],
+            "correctAnswer": "Growth"
+        },
+        {
+            "week": 7,
+            "courseCode": "GRI403",
+            "question": "A brand of soft drinks is sold in as many retail outlets as possible, including supermarkets, convenience stores, and vending machines. This is an example of which distribution intensity strategy?",
+            "options": [
+                "Selective distribution",
+                "Exclusive distribution",
+                "Intensive distribution",
+                "Direct distribution",
+                "Franchising"
+            ],
+            "correctAnswer": "Intensive distribution"
+        },
+        {
+            "week": 7,
+            "courseCode": "GRI403",
+            "question": "Which of the following is NOT a property of an active and effective marketing plan?",
+            "options": [
+                "It should be based on correct assumptions and real information.",
+                "It should contain a strategy to reach goals.",
+                "It should be flexible and adaptable.",
+                "It must be a long, highly detailed, and rigid document.",
+                "It should benefit from the establishment's current resources."
+            ],
+            "correctAnswer": "It must be a long, highly detailed, and rigid document."
+        },
+        {
+            "week": 7,
+            "courseCode": "GRI403",
+            "question": "A well-known sportswear company launching a new line of energy drinks under its existing brand name is an example of which tactic?",
+            "options": [
+                "Mutual branding",
+                "Brand widening (Brand Extension)",
+                "New branding",
+                "Re-packaging",
+                "Private branding"
+            ],
+            "correctAnswer": "Brand widening (Brand Extension)"
+        },
+        {
+            "week": 7,
+            "courseCode": "GRI403",
+            "question": "The two primary functions of product packaging are:",
+            "options": [
+                "Lowering production costs and increasing sales.",
+                "Protecting the product and serving as a marketing tool.",
+                "Meeting legal requirements and simplifying distribution.",
+                "Attracting new customers and retaining old ones.",
+                "Informing consumers and reducing waste."
+            ],
+            "correctAnswer": "Protecting the product and serving as a marketing tool."
+        },
+        {
+            "week": 7,
+            "courseCode": "GRI403",
+            "question": "An insurance agent meeting with a potential client to explain policy options and persuade them to purchase is an example of:",
+            "options": [
+                "Public Relations",
+                "Advertisement",
+                "Personal Sale",
+                "Sales Promotion",
+                "Indirect Marketing"
+            ],
+            "correctAnswer": "Personal Sale"
+        },
+        {
+            "week": 7,
+            "courseCode": "GRI403",
+            "question": "A company that directly attacks the market leader with aggressive advertising campaigns and price cuts is employing which strategy?",
+            "options": [
+                "Market Leader Strategy",
+                "Market Challenger Strategy",
+                "Market Follower Strategy",
+                "Market Niche Strategy",
+                "Defensive Strategy"
+            ],
+            "correctAnswer": "Market Challenger Strategy"
+        },
+        // Chapter 8: Production Plan (Total: 20 Questions)
+        {
+            "week": 8,
+            "courseCode": "GRI403",
+            "question": "Which of the following is not a production system input?",
+            "options": [
+                "Raw material",
+                "Information",
+                "Customer",
+                "Capital",
+                "Entrepreneurship"
+            ],
+            "correctAnswer": "Customer"
+        },
+        {
+            "week": 8,
+            "courseCode": "GRI403",
+            "question": "In which of the following only unique product is produced according to customers requests?",
+            "options": [
+                "Project type production",
+                "Continuous production",
+                "Assembly type production",
+                "Flow type production",
+                "Mass production"
+            ],
+            "correctAnswer": "Project type production"
+        },
+        {
+            "week": 8,
+            "courseCode": "GRI403",
+            "question": "Which of the following does not take place in production plans extent?",
+            "options": [
+                "Defining production rate",
+                "Defining production priorities",
+                "Defining production amount to be produced",
+                "Defining product to be produced",
+                "Defining product to be produced price"
+            ],
+            "correctAnswer": "Defining product to be produced price"
+        },
+        {
+            "week": 8,
+            "courseCode": "GRI403",
+            "question": "Which of the following is defined by process flow schema?",
+            "options": [
+                "Storage where inputs go",
+                "Inputs process orders",
+                "List of product parts",
+                "Placing of machines",
+                "Machines capacity list"
+            ],
+            "correctAnswer": "Inputs process orders"
+        },
+        {
+            "week": 8,
+            "courseCode": "GRI403",
+            "question": "Which of the following is not a production planning activity?",
+            "options": [
+                "Defining production plans term of involvement",
+                "Defining stock level",
+                "Making demand estimations",
+                "Defining certain orders",
+                "Choosing supplier"
+            ],
+            "correctAnswer": "Choosing supplier"
+        },
+        {
+            "week": 8,
+            "courseCode": "GRI403",
+            "question": "Which of the following shows when and in which amount whole materials to be sold or produced will be supplied?",
+            "options": [
+                "Capacity planning",
+                "Material need planning",
+                "Capacity need planning",
+                "Main production tabulation",
+                "Main production planning"
+            ],
+            "correctAnswer": "Main production tabulation"
+        },
+        {
+            "week": 8,
+            "courseCode": "GRI403",
+            "question": "Which of the following inputs are outputs of main production tabulation?",
+            "options": [
+                "Capacity need planning",
+                "Stock control",
+                "Material need planning",
+                "Capacity planning",
+                "Main production planning"
+            ],
+            "correctAnswer": "Material need planning"
+        },
+        {
+            "week": 8,
+            "courseCode": "GRI403",
+            "question": "Which of the following is not an aim of material need planning?",
+            "options": [
+                "Keeping stock level low",
+                "Appointing employees on correct works",
+                "Contributing work flows system",
+                "Helping deliveries",
+                "Minimizing production setbacks"
+            ],
+            "correctAnswer": "Appointing employees on correct works"
+        },
+        {
+            "week": 8,
+            "courseCode": "GRI403",
+            "question": "Which of the following defines machine-equipment and required work power amount to implement material plan in a short planning term?",
+            "options": [
+                "Capacity need planning",
+                "Source need planning",
+                "Rough cutting source planning",
+                "Stock control",
+                "Material need planning"
+            ],
+            "correctAnswer": "Capacity need planning"
+        },
+        {
+            "week": 8,
+            "courseCode": "GRI403",
+            "question": "Which of the following decision is most difficult to bring back?",
+            "options": [
+                "Supplier selection",
+                "Machine selection",
+                "Employee selection",
+                "Establishment place selection",
+                "Raw material selection"
+            ],
+            "correctAnswer": "Establishment place selection"
+        },
+        {
+            "week": 8,
+            "courseCode": "GRI403",
+            "question": "What is the primary disadvantage of using a 'Stable Production Rate' strategy?",
+            "options": [
+                "It causes frequent changes in the workforce.",
+                "It is difficult to plan for.",
+                "It results in low employee morale.",
+                "It can lead to high stock-keeping and inventory costs.",
+                "It cannot meet sudden increases in demand."
+            ],
+            "correctAnswer": "It can lead to high stock-keeping and inventory costs."
+        },
+        {
+            "week": 8,
+            "courseCode": "GRI403",
+            "question": "A custom furniture workshop that builds unique, high-quality pieces one at a time based on specific client orders is an example of:",
+            "options": [
+                "Intermittent Production (Atelier/Party-type)",
+                "Continuous Production",
+                "Mass Production",
+                "Assembly to Order",
+                "Project Type Production"
+            ],
+            "correctAnswer": "Intermittent Production (Atelier/Party-type)"
+        },
+        {
+            "week": 8,
+            "courseCode": "GRI403",
+            "question": "The process of taking raw wood and transforming it into a finished table primarily creates which type of value?",
+            "options": [
+                "Time Value",
+                "Place Value",
+                "Shape Value",
+                "Ownership Value",
+                "Cost Value"
+            ],
+            "correctAnswer": "Shape Value"
+        },
+        {
+            "week": 8,
+            "courseCode": "GRI403",
+            "question": "The production strategy that aims to perfectly match production levels with demand fluctuations by using overtime, temporary workers, and contract manufacturing is the:",
+            "options": [
+                "Following Demand Strategy",
+                "Stable Production Rate Strategy",
+                "Mix Strategy",
+                "Level Production Strategy",
+                "Production to Stock Strategy"
+            ],
+            "correctAnswer": "Following Demand Strategy"
+        },
+        {
+            "week": 8,
+            "courseCode": "GRI403",
+            "question": "Which of the following is NOT one of the four main types of value created in a production system?",
+            "options": [
+                "Shape Value",
+                "Place Value",
+                "Time Value",
+                "Ownership Value",
+                "Market Value"
+            ],
+            "correctAnswer": "Market Value"
+        },
+        {
+            "week": 8,
+            "courseCode": "GRI403",
+            "question": "An oil refinery that operates 24/7 to produce large volumes of standardized gasoline is a classic example of which production system?",
+            "options": [
+                "Intermittent Production",
+                "Continuous Production",
+                "Project Type Production",
+                "Job Shop Production",
+                "Production to Order"
+            ],
+            "correctAnswer": "Continuous Production"
+        },
+        {
+            "week": 8,
+            "courseCode": "GRI403",
+            "question": "In capacity planning, the phase where a company verifies if the main production plan is feasible with its existing capacity is known as:",
+            "options": [
+                "Source Need Planning",
+                "Rough Cutting Capacity Planning",
+                "Capacity Need Planning",
+                "Detailed Capacity Planning",
+                "Final Capacity Assessment"
+            ],
+            "correctAnswer": "Rough Cutting Capacity Planning"
+        },
+        {
+            "week": 8,
+            "courseCode": "GRI403",
+            "question": "The main advantage of the 'Following Demand' strategy is:",
+            "options": [
+                "High employee morale and stability.",
+                "Simplicity of production scheduling.",
+                "Low inventory and stock-keeping costs.",
+                "Predictable use of machinery.",
+                "High production efficiency."
+            ],
+            "correctAnswer": "Low inventory and stock-keeping costs."
+        },
+        {
+            "week": 8,
+            "courseCode": "GRI403",
+            "question": "The final and most specific decision in choosing a location for a new factory is:",
+            "options": [
+                "Choosing a general region (e.g., a country).",
+                "Choosing a specific city or shoreline.",
+                "Choosing the final field/site for the facility.",
+                "Choosing a transportation method.",
+                "Choosing a supplier in the region."
+            ],
+            "correctAnswer": "Choosing the final field/site for the facility."
+        },
+        {
+            "week": 8,
+            "courseCode": "GRI403",
+            "question": "A company that stocks all the necessary components for its computers but only assembles the final product after a customer places an order online is using which system?",
+            "options": [
+                "Production to Stock",
+                "Production to Order",
+                "Assembly to Order",
+                "Continuous Production",
+                "Project Type Production"
+            ],
+            "correctAnswer": "Assembly to Order"
+        },
+        // Chapter 9: Management Plan (Total: 25 Questions)
+        {
+            "week": 9,
+            "courseCode": "GRI403",
+            "question": "According to the textbook information, what is the minimum capital required to establish a joint stock company?",
+            "options": [
+                "10,000 Turkish Lira",
+                "25,000 Turkish Lira",
+                "50,000 Turkish Lira",
+                "100,000 Turkish Lira",
+                "There is no minimum requirement."
+            ],
+            "correctAnswer": "50,000 Turkish Lira"
+        },
+        {
+            "week": 9,
+            "courseCode": "GRI403",
+            "question": "Who is authorized to grant a business license within the means-quality border in Turkey?",
+            "options": [
+                "The central government",
+                "The provincial governorship",
+                "The local chamber of commerce",
+                "The metropolitan municipality",
+                "The ministry of trade"
+            ],
+            "correctAnswer": "The metropolitan municipality"
+        },
+        {
+            "week": 9,
+            "courseCode": "GRI403",
+            "question": "Why is work specialization important in a company?",
+            "options": [
+                "To ensure every employee can perform every task",
+                "To increase organization efficiency and enhance performance",
+                "To reduce the need for management oversight",
+                "To simplify the company's legal structure",
+                "To lower the company's tax burden"
+            ],
+            "correctAnswer": "To increase organization efficiency and enhance performance"
+        },
+        {
+            "week": 9,
+            "courseCode": "GRI403",
+            "question": "Which of the following is not considered one of the basic pillars of management?",
+            "options": [
+                "Planning",
+                "Organizing",
+                "Leading",
+                "Controlling",
+                "Saving"
+            ],
+            "correctAnswer": "Saving"
+        },
+        {
+            "week": 9,
+            "courseCode": "GRI403",
+            "question": "What is a sole proprietorship?",
+            "options": [
+                "A company owned by shareholders with limited liability",
+                "A business owned and operated by two or more individuals who share profits",
+                "A company type characterized by a single person who owns and operates the business",
+                "A legal entity created by a government to provide public services",
+                "A non-profit organization focused on social causes"
+            ],
+            "correctAnswer": "A company type characterized by a single person who owns and operates the business"
+        },
+        {
+            "week": 9,
+            "courseCode": "GRI403",
+            "question": "What is a partnership?",
+            "options": [
+                "A company where ownership is represented by shares",
+                "A business operated by a single individual with unlimited liability",
+                "A company type where two or more individuals share ownership and operate the business together",
+                "A temporary business venture for a single project",
+                "A government-owned enterprise"
+            ],
+            "correctAnswer": "A company type where two or more individuals share ownership and operate the business together"
+        },
+        {
+            "week": 9,
+            "courseCode": "GRI403",
+            "question": "What is a stock corporation?",
+            "options": [
+                "An entity where ownership is represented by shares, and shares are issued to the shareholders",
+                "A business where all partners have unlimited liability",
+                "A company owned and managed by a single person",
+                "A business structure that is not legally separate from its owners",
+                "An informal agreement between two business people"
+            ],
+            "correctAnswer": "An entity where ownership is represented by shares, and shares are issued to the shareholders"
+        },
+        {
+            "week": 9,
+            "courseCode": "GRI403",
+            "question": "Which of the following is incorrect related to management plan?",
+            "options": [
+                "Management plan is concerned with how to create organizational structure",
+                "Management plan is concerned with how to create product and services",
+                "It should define establishments juridical structure",
+                "Authority and responsibility relations should be defined on plan",
+                "A good management plan proves that entrepreneur understands factors affecting organizational effectiveness"
+            ],
+            "correctAnswer": "Management plan is concerned with how to create product and services"
+        },
+        {
+            "week": 9,
+            "courseCode": "GRI403",
+            "question": "Which of the following information is not needed for preparing management plan?",
+            "options": [
+                "Establishments site of establishment",
+                "Establishments juridical structure",
+                "Establishments organizational structure",
+                "Abilities required for positions in establishment",
+                "Standards which calculate and evaluate working performance"
+            ],
+            "correctAnswer": "Establishments site of establishment"
+        },
+        {
+            "week": 9,
+            "courseCode": "GRI403",
+            "question": "Which of the following partnership is responsible with whole the products without any limitation as collective partners?",
+            "options": [
+                "Commandite",
+                "Commanditer",
+                "Merchant",
+                "Corporative",
+                "Limited partnership"
+            ],
+            "correctAnswer": "Commandite"
+        },
+        {
+            "week": 9,
+            "courseCode": "GRI403",
+            "question": "Which of the following is share holder partnership?",
+            "options": [
+                "Collective partnerships",
+                "Commandite partnerships",
+                "Limited partnership",
+                "Ordinary partnership",
+                "Individual partnership"
+            ],
+            "correctAnswer": "Limited partnership"
+        },
+        {
+            "week": 9,
+            "courseCode": "GRI403",
+            "question": "Which of the following is not a basic step of preparing management plan?",
+            "options": [
+                "Management plan summary",
+                "Situational review",
+                "Establishments juridical structure",
+                "Evaluating outer environment",
+                "Management philosophy"
+            ],
+            "correctAnswer": "Management philosophy"
+        },
+        {
+            "week": 9,
+            "courseCode": "GRI403",
+            "question": "Which of the following is not considered as a basic element of organizational structure?",
+            "options": [
+                "Work division",
+                "Matrix structure",
+                "Audit field",
+                "Classification",
+                "Authority"
+            ],
+            "correctAnswer": "Matrix structure"
+        },
+        {
+            "week": 9,
+            "courseCode": "GRI403",
+            "question": "Which of the following classification gathers works and duties according to their qualification?",
+            "options": [
+                "According to product base",
+                "According to geographical base",
+                "According to functions",
+                "According to time base",
+                "According to customer base"
+            ],
+            "correctAnswer": "According to functions"
+        },
+        {
+            "week": 9,
+            "courseCode": "GRI403",
+            "question": "Which of the following defines employee amount a manager can direct?",
+            "options": [
+                "Audit field (Span of Control)",
+                "Flexibility",
+                "Authority-responsibility balance",
+                "Classification",
+                "Expertation"
+            ],
+            "correctAnswer": "Audit field (Span of Control)"
+        },
+        {
+            "week": 9,
+            "courseCode": "GRI403",
+            "question": "Which of the following question should be answered when an entrepreneur decides organizational structure?",
+            "options": [
+                "How working performance will be evaluated?",
+                "Which equipments and materials employees can use?",
+                "How to employ qualified work power?",
+                "How employees will be protected against environmental changes?",
+                "How many sublevel employees can be directed by each manager?"
+            ],
+            "correctAnswer": "How many sublevel employees can be directed by each manager?"
+        },
+        {
+            "week": 9,
+            "courseCode": "GRI403",
+            "question": "Which of the following is not related to defining main positions which should be filled in future in management plan?",
+            "options": [
+                "Every positions duties, responsibilities and authorities level",
+                "Statements about perquisite and promotion opportunities",
+                "Every positions authority and responsibilities harmony with organizational structure",
+                "Every position according to business title",
+                "Providing qualified employees to establishment method"
+            ],
+            "correctAnswer": "Statements about perquisite and promotion opportunities"
+        },
+        {
+            "week": 9,
+            "courseCode": "GRI403",
+            "question": "The underlying culture, values, and beliefs that guide how an establishment's leaders motivate employees and build trust with stakeholders is defined as its:",
+            "options": [
+                "Organizational Structure",
+                "Juridical Structure",
+                "Management Philosophy",
+                "Work Plan",
+                "Commander-Staff Authority"
+            ],
+            "correctAnswer": "Management Philosophy"
+        },
+        {
+            "week": 9,
+            "courseCode": "GRI403",
+            "question": "An organizational structure where departments are created based on the different products or product lines the company offers is known as:",
+            "options": [
+                "Segmentation according to functions",
+                "Segmentation according to client base",
+                "Segmentation according to product base",
+                "Segmentation according to geographical base",
+                "Matrix structure"
+            ],
+            "correctAnswer": "Segmentation according to product base"
+        },
+        {
+            "week": 9,
+            "courseCode": "GRI403",
+            "question": "Which legal structure is generally NOT recommended for new entrepreneurs due to the unlimited personal liability of all partners?",
+            "options": [
+                "Collective Partnership",
+                "Limited Partnership (Ltd. Şti.)",
+                "Joint-Stock Company (A.Ş.)",
+                "Cooperative",
+                "Sole Proprietorship with real income tax"
+            ],
+            "correctAnswer": "Collective Partnership"
+        },
+        {
+            "week": 9,
+            "courseCode": "GRI403",
+            "question": "A business that provides services like restaurants, grocers, or coffee shops must obtain which type of work permit/license?",
+            "options": [
+                "Non-Sanitary Establishment License",
+                "Sanitary Establishment License",
+                "Industrial Zone Permit",
+                "First Class Non-Sanitary License",
+                "Special Provincial License"
+            ],
+            "correctAnswer": "Sanitary Establishment License"
+        },
+        // Chapter 10: Finance Plan (Total: 17 Questions)
+        {
+            "week": 10,
+            "courseCode": "GRI403",
+            "question": "What is the critical role of a work plan in seeking funding from investors or banks?",
+            "options": [
+                "Detailing the company's past failures",
+                "Demonstrating the potential of the project",
+                "Listing all employees and their salaries",
+                "Providing a complex legal history",
+                "Focusing only on the marketing strategy"
+            ],
+            "correctAnswer": "Demonstrating the potential of the project"
+        },
+        {
+            "week": 10,
+            "courseCode": "GRI403",
+            "question": "What is the purpose of break-even analysis in financial planning?",
+            "options": [
+                "To calculate the maximum possible profit",
+                "To determine the company's market share",
+                "To find the point where total revenue equals total costs",
+                "To analyze the cash flow from financing activities",
+                "To decide on the company's legal structure"
+            ],
+            "correctAnswer": "To find the point where total revenue equals total costs"
+        },
+        {
+            "week": 10,
+            "courseCode": "GRI403",
+            "question": "What makes financial plans different from accounting?",
+            "options": [
+                "Financial plans use more complex mathematics",
+                "Accounting is illegal without a financial plan",
+                "Financial plans focus on past events, while accounting focuses on the future",
+                "Financial plans emphasize future outcomes, while accounting records past transactions",
+                "There is no difference between them"
+            ],
+            "correctAnswer": "Financial plans emphasize future outcomes, while accounting records past transactions"
+        },
+        {
+            "week": 10,
+            "courseCode": "GRI403",
+            "question": "Which of the following is not a question banks or lending companies are looking for in business plan?",
+            "options": [
+                "Will you pay your loan back?",
+                "Why do you need this money for?",
+                "How much loan you want?",
+                "Are you strong enough to pay the interest?",
+                "If needed, what types of assurances you can provide?"
+            ],
+            "correctAnswer": "Will you pay your loan back?"
+        },
+        {
+            "week": 10,
+            "courseCode": "GRI403",
+            "question": "While making sales budget estimations in the beginning of financial estimation process, for the first year which periods are used for sales estimation?",
+            "options": [
+                "Weekly",
+                "Three months",
+                "Six months",
+                "Yearly",
+                "Monthly"
+            ],
+            "correctAnswer": "Monthly"
+        },
+        {
+            "week": 10,
+            "courseCode": "GRI403",
+            "question": "While budgeting estimated expense and costs, which of the following expenses are reviewed?",
+            "options": [
+                "Beginning and activity expenses",
+                "Beginning and finishing expenses",
+                "Short and long term expenses",
+                "Activity and raw material expenses",
+                "Stable and changeable expenses"
+            ],
+            "correctAnswer": "Beginning and activity expenses"
+        },
+        {
+            "week": 10,
+            "courseCode": "GRI403",
+            "question": "Which of the following is not a type of activity expenses?",
+            "options": [
+                "Salary and wages",
+                "Day offs and licenses",
+                "Rents",
+                "Mortgage debts",
+                "Financial rents"
+            ],
+            "correctAnswer": "Day offs and licenses"
+        },
+        {
+            "week": 10,
+            "courseCode": "GRI403",
+            "question": "Which of the following is not a typical main type of income statement?",
+            "options": [
+                "Incomes",
+                "Expenses",
+                "Debts",
+                "Income tax to be paid",
+                "Pure profit"
+            ],
+            "correctAnswer": "Debts"
+        },
+        {
+            "week": 10,
+            "courseCode": "GRI403",
+            "question": "Which of the following is not an inner or outer establishment factor affecting cash flows directly?",
+            "options": [
+                "Delays in raw material supply",
+                "Deficient raw material",
+                "Deficient product",
+                "Suppliers price decrease",
+                "Suppliers date shortening"
+            ],
+            "correctAnswer": "Suppliers price decrease"
+        },
+        {
+            "week": 10,
+            "courseCode": "GRI403",
+            "question": "Which of the following par production amount in a product which have total stable expense of 5000.- TL, unit changeable expense 25.- TL and sales price 50.- TL?",
+            "options": [
+                "500",
+                "450",
+                "400",
+                "300",
+                "200"
+            ],
+            "correctAnswer": "200"
+        },
+        {
+            "week": 10,
+            "courseCode": "GRI403",
+            "question": "The key difference between a Proforma Income Table and an Estimated Cash Flow Table is that:",
+            "options": [
+                "The income table is for the past, while the cash flow table is for the future.",
+                "The income table includes taxes, while the cash flow table does not.",
+                "The income table records revenue when earned, while the cash flow table records cash only when it is actually received or paid.",
+                "The cash flow table is for investors, while the income table is for banks.",
+                "The income table shows assets, while the cash flow table shows profits."
+            ],
+            "correctAnswer": "The income table records revenue when earned, while the cash flow table records cash only when it is actually received or paid."
+        },
+        {
+            "week": 10,
+            "courseCode": "GRI403",
+            "question": "In a break-even analysis, costs that do not change regardless of the production volume, such as rent and administrative salaries, are known as:",
+            "options": [
+                "Variable Costs",
+                "Fixed Costs",
+                "Total Costs",
+                "Marginal Costs",
+                "Beginning Expenses"
+            ],
+            "correctAnswer": "Fixed Costs"
+        },
+        {
+            "week": 10,
+            "courseCode": "GRI403",
+            "question": "A financial plan that shows how projections would change if a key assumption (e.g., sales volume) were to decrease by 10% is called:",
+            "options": [
+                "A Break-Even Analysis",
+                "A Susceptibility (Sensitivity) Analysis",
+                "A Proforma Balance Sheet",
+                "A Cash Flow Analysis",
+                "A Risk Analysis"
+            ],
+            "correctAnswer": "A Susceptibility (Sensitivity) Analysis"
+        },
+        {
+            "week": 10,
+            "courseCode": "GRI403",
+            "question": "Which financial statement provides a snapshot of an establishment's assets, liabilities, and equity at a single point in time?",
+            "options": [
+                "Proforma Income Table",
+                "Estimated Cash Flow Table",
+                "Proforma Balance Sheet",
+                "Break-Even Analysis Chart",
+                "Annual Report"
+            ],
+            "correctAnswer": "Proforma Balance Sheet"
+        },
+        {
+            "week": 10,
+            "courseCode": "GRI403",
+            "question": "Why might a business show a net profit on its income statement but still face a cash shortage?",
+            "options": [
+                "The company paid too much in taxes.",
+                "The interest rate on its loans is too high.",
+                "Its fixed costs are greater than its variable costs.",
+                "Its customers have not yet paid their bills (high accounts receivable).",
+                "It has no debt."
+            ],
+            "correctAnswer": "Its customers have not yet paid their bills (high accounts receivable)."
+        },
+        // Chapter 11: Risk Analysis (Total: 32 Questions)
+        {
+            "week": 11,
+            "courseCode": "GRI403",
+            "question": "Why is risk management important for a company?",
+            "options": [
+                "To eliminate all possible risks completely",
+                "To satisfy government regulations only",
+                "To improve perception about risk and manage it effectively",
+                "To guarantee a certain level of profit",
+                "To increase the company's insurance premiums"
+            ],
+            "correctAnswer": "To improve perception about risk and manage it effectively"
+        },
+        {
+            "week": 11,
+            "courseCode": "GRI403",
+            "question": "What is operational risk in risk management?",
+            "options": [
+                "Risk of loss due to changes in market prices",
+                "Risk of monetary loss caused by internal and external events like system failures or human error",
+                "Risk that a borrower will not repay a loan",
+                "Risk of being unable to meet short-term financial demands",
+                "Risk related to a country's political instability"
+            ],
+            "correctAnswer": "Risk of monetary loss caused by internal and external events like system failures or human error"
+        },
+        {
+            "week": 11,
+            "courseCode": "GRI403",
+            "question": "How is risk defined in risk management?",
+            "options": [
+                "A certain negative event that has already occurred",
+                "A guaranteed loss for the company",
+                "As possible chances or threats in the future",
+                "A historical record of company failures",
+                "A daily operational problem"
+            ],
+            "correctAnswer": "As possible chances or threats in the future"
+        },
+        {
+            "week": 11,
+            "courseCode": "GRI403",
+            "question": "What is liquidity risk in risk management?",
+            "options": [
+                "Risk of loss due to technological changes",
+                "Risk that a competitor will take market share",
+                "Risk of damage to the company's reputation",
+                "Risk of being unable to pay on time due to cash shortage",
+                "Risk of being sued for legal reasons"
+            ],
+            "correctAnswer": "Risk of being unable to pay on time due to cash shortage"
+        },
+        {
+            "week": 11,
+            "courseCode": "GRI403",
+            "question": "Is qualitative or quantitative risk analysis more different from the other?",
+            "options": [
+                "Quantitative is more different because it uses opinions.",
+                "Qualitative is more different because it involves subjective evaluation, not just numerical data.",
+                "They are identical in their approach.",
+                "Quantitative is only used for financial risks.",
+                "Qualitative is always faster and cheaper."
+            ],
+            "correctAnswer": "Qualitative is more different because it involves subjective evaluation, not just numerical data."
+        },
+        {
+            "week": 11,
+            "courseCode": "GRI403",
+            "question": "Which of the following is correct about risk definition?",
+            "options": [
+                "It involves actualized event",
+                "It is sparing source for actualized loss",
+                "Happens everytime",
+                "It is about past",
+                "It is based on possibility of actualization"
+            ],
+            "correctAnswer": "It is based on possibility of actualization"
+        },
+        {
+            "week": 11,
+            "courseCode": "GRI403",
+            "question": "Which of the following risk or risks we take if we are going to take the payment of our sold house in future in foreign currency?",
+            "options": [
+                "Credit risk",
+                "Operation risk",
+                "Currency and credit risk",
+                "Reputation risk",
+                "Credit and operation risk"
+            ],
+            "correctAnswer": "Currency and credit risk"
+        },
+        {
+            "week": 11,
+            "courseCode": "GRI403",
+            "question": "Which of the following alternative is more preferable if we presume the risk type is same?",
+            "options": [
+                "Low encountering rate, low loss amount",
+                "High encountering rate, low loss amount",
+                "Low encountering rate, high loss amount",
+                "High encountering rate, high loss amount",
+                "Encountering rate unknown, high loss amount"
+            ],
+            "correctAnswer": "Low encountering rate, low loss amount"
+        },
+        {
+            "week": 11,
+            "courseCode": "GRI403",
+            "question": "Which of the following loss risk is from unsuccessful business processes, people and systems or outer events?",
+            "options": [
+                "Operational",
+                "Credit",
+                "Market",
+                "Interest rate",
+                "Liquidity"
+            ],
+            "correctAnswer": "Operational"
+        },
+        {
+            "week": 11,
+            "courseCode": "GRI403",
+            "question": "Which of the following risk type is realized if we have large amount of receivable debt however we do not have enough money for our daily needs?",
+            "options": [
+                "Operational",
+                "Credit",
+                "Market",
+                "Interest rate",
+                "Liquidity"
+            ],
+            "correctAnswer": "Liquidity"
+        },
+        {
+            "week": 11,
+            "courseCode": "GRI403",
+            "question": "Which of the following is an element affecting success in risk management?",
+            "options": [
+                "Size of establishment",
+                "University graduated employees",
+                "Establishment being in a central area",
+                "Being supported by top management",
+                "Establishment having high endorsement"
+            ],
+            "correctAnswer": "Being supported by top management"
+        },
+        {
+            "week": 11,
+            "courseCode": "GRI403",
+            "question": "Which of the following strategy can not be used in risk management?",
+            "options": [
+                "Ignoring risk",
+                "Avoiding risk",
+                "Transferring risk",
+                "Decreasing risks effects",
+                "Decreasing risks possibility"
+            ],
+            "correctAnswer": "Ignoring risk"
+        },
+        {
+            "week": 11,
+            "courseCode": "GRI403",
+            "question": "Which of the following risk type can be numerically countable?",
+            "options": [
+                "Credit risk",
+                "Reputation risk",
+                "Juridical risk",
+                "Country risk",
+                "Active-passive risk"
+            ],
+            "correctAnswer": "Credit risk"
+        },
+        {
+            "week": 11,
+            "courseCode": "GRI403",
+            "question": "Which of the following two analysis type creates simulation analysis?",
+            "options": [
+                "SWOT- possibility",
+                "Possibility- qualitative",
+                "Qualitative- quantitative",
+                "Sensibility- possibility",
+                "SWOT- qualitative"
+            ],
+            "correctAnswer": "Sensibility- possibility"
+        },
+        {
+            "week": 11,
+            "courseCode": "GRI403",
+            "question": "A company in the United States has a major customer in a politically unstable country who may be unable to pay due to a sudden war or trade embargo. This is an example of:",
+            "options": [
+                "Liquidity Risk",
+                "Operational Risk",
+                "Country Risk",
+                "Market Risk",
+                "Legal Risk"
+            ],
+            "correctAnswer": "Country Risk"
+        },
+        {
+            "week": 11,
+            "courseCode": "GRI403",
+            "question": "The strategy of purchasing insurance to protect against potential fire damage at a factory is an example of which risk management approach?",
+            "options": [
+                "Avoiding risk",
+                "Transferring risk",
+                "Bearing risk",
+                "Lowering risk's effects",
+                "Ignoring risk"
+            ],
+            "correctAnswer": "Transferring risk"
+        },
+        {
+            "week": 11,
+            "courseCode": "GRI403",
+            "question": "A company's IT system fails due to an employee's error, causing a significant loss of sales data and a halt in operations. This is an example of:",
+            "options": [
+                "Market Risk",
+                "Credit Risk",
+                "Legal Risk",
+                "Operational Risk",
+                "Reputation Risk"
+            ],
+            "correctAnswer": "Operational Risk"
+        },
+        {
+            "week": 11,
+            "courseCode": "GRI403",
+            "question": "A popular celebrity makes negative public comments about a company's products, causing a sharp drop in sales and damaging the brand's image. The company is facing:",
+            "options": [
+                "Reputation Risk",
+                "Liquidity Risk",
+                "Legal Risk",
+                "Country Risk",
+                "Operational Risk"
+            ],
+            "correctAnswer": "Reputation Risk"
+        },
+        {
+            "week": 11,
+            "courseCode": "GRI403",
+            "question": "A risk analysis method that involves creating best-case, worst-case, and baseline scenarios to evaluate a project's potential outcomes is known as:",
+            "options": [
+                "Simulation Analysis",
+                "Scenario Analysis",
+                "Susceptibility Analysis",
+                "SWOT Analysis",
+                "Effect Analysis"
+            ],
+            "correctAnswer": "Scenario Analysis"
+        },
+        {
+            "week": 11,
+            "courseCode": "GRI403",
+            "question": "The first and most crucial step in successful risk management is:",
+            "options": [
+                "Buying insurance for all possible losses.",
+                "Creating a large contingency fund.",
+                "Identifying and defining the potential risks.",
+                "Choosing a risk management strategy.",
+                "Transferring all risks to a third party."
+            ],
+            "correctAnswer": "Identifying and defining the potential risks."
+        },
+        {
+            "week": 11,
+            "courseCode": "GRI403",
+            "question": "The amount of risk an establishment is willing to accept in pursuit of its objectives is known as its:",
+            "options": [
+                "Risk measurement",
+                "Risk analysis",
+                "Risk appetite",
+                "Risk strategy",
+                "Risk transfer"
+            ],
+            "correctAnswer": "Risk appetite"
+        },
 
     // Parallel Programming questions
 
