@@ -2,2800 +2,2801 @@
 // IMPORTANT: Added 'courseCode' to all questions.
 const allQuestions = [
     // --- Week 1: COM496 ---
-    {
-        week: 1, // Definition of CIA Triad
-        courseCode: "COM496",
-        question: "What does the CIA Triad in information security represent?",
-        options: ["Confidentiality, Integrity, Accessibility", "Confidentiality, Integrity, Availability", "Confidentiality, Integrity, Authentication", "Control, Integrity, Availability"],
-        correctAnswer: "Confidentiality, Integrity, Availability"
-    },
-    {
-        week: 1, // Definition of Asset
-        courseCode: "COM496",
-        question: "Which term refers to valuable information resources that need to be protected against attacks, such as a national ID number database or credit card database?",
-        options: ["Asset", "Vulnerability", "Threat", "Exploit"],
-        correctAnswer: "Asset"
-    },
-    {
-        week: 1, // Definition of White Hat Hacker
-        courseCode: "COM496",
-        question: "Which of the following refers to a professional who is authorized to identify and fix security vulnerabilities in systems to prevent malicious attacks?",
-        options: ["Black Hat Hacker", "White Hat Hacker", "Script Kiddie", "Cyber Criminal"],
-        correctAnswer: "White Hat Hacker"
-    },
-    {
-        week: 1, // Critical Infrastructure concept (Introductory Scope)
-        courseCode: "COM496",
-        question: "Which of the following is NOT considered critical infrastructure?",
-        options: ["Electrical power grid", "Water supply system", "Social media platform", "Communication network"],
-        correctAnswer: "Social media platform"
-    },
-    {
-        week: 1, // Basic definition of DDoS (Overview)
-        courseCode: "COM496",
-        question: "Which of the following best describes a DDoS (Distributed Denial of Service) attack?",
-        options: ["A type of attack where a single computer sends massive traffic to overwhelm a server, causing it to crash.", "A type of attack where multiple computers send a large volume of traffic to a server, overwhelming it and making it unavailable to legitimate users.", "An attack that focuses on stealing sensitive information from a user’s device.", "A type of phishing attack where attackers impersonate a trusted entity to steal login credentials."],
-        correctAnswer: "A type of attack where multiple computers send a large volume of traffic to a server, overwhelming it and making it unavailable to legitimate users."
-    },
-    {
-        week: 1, // Basic definition of Ransomware (Overview)
-        courseCode: "COM496",
-        question: "Which of the following best describes a ransomware attack?",
-        options: ["An attack where hackers steal sensitive data and demand money in exchange for not releasing it to the public.", "An attack where malicious software locks or encrypts the victim’s files, and the attacker demands a ransom to restore access.", "An attack that targets network infrastructure to cause a denial of service.", "An attack that impersonates a trusted entity to steal login credentials."],
-        correctAnswer: "An attack where malicious software locks or encrypts the victim’s files, and the attacker demands a ransom to restore access."
-    },
-    {
-        week: 1, // Basic definition of MitM (Overview)
-        courseCode: "COM496",
-        question: "Which of the following best describes a Man-in-the-Middle (MitM) attack?",
-        options: ["An attack where a hacker intercepts and alters communication between two parties without their knowledge.", "An attack where a hacker impersonates a trusted entity to steal sensitive information.", "An attack where multiple computers overwhelm a server to make it unavailable to users.", "An attack where a hacker installs malware to monitor user activities on a device."],
-        correctAnswer: "An attack where a hacker intercepts and alters communication between two parties without their knowledge."
-    },
-    {
-        week: 1, // Definition of Digital Forensics (Career mentioned)
-        courseCode: "COM496",
-        question: "Which of the following best describes Digital Forensics?",
-        options: ["A process of gathering and analyzing physical evidence to solve crimes.", "A method used to recover deleted files from digital devices for personal use.", "A field of study that involves collecting, analyzing, and preserving digital evidence for legal investigations.", "A technique to encrypt sensitive data for secure communication."],
-        correctAnswer: "A field of study that involves collecting, analyzing, and preserving digital evidence for legal investigations."
-    },
-    {
-        week: 1, // Digital Forensics process (Relates to career)
-        courseCode: "COM496",
-        question: "Which of the following is the correct order of steps in the Digital Forensics process?",
-        options: ["Collection → Analysis → Preservation → Reporting", "Preservation → Collection → Analysis → Reporting", "Collection → Preservation → Reporting → Analysis", "Reporting → Collection → Analysis → Preservation"],
-        correctAnswer: "Preservation → Collection → Analysis → Reporting"
-    },
-    {
-        week: 1, // Definition of Personal Data
-        courseCode: "COM496",
-        question: "Which of the following best describes \"personal data\"?",
-        options: ["Data that is used only for marketing purposes.", "Any information that relates to an identified or identifiable individual.", "Information that is publicly available on social media.", "Data collected only for scientific research purposes."],
-        correctAnswer: "Any information that relates to an identified or identifiable individual."
-    },
-    {
-        week: 1, // Sensitive Personal Data concept
-        courseCode: "COM496",
-        question: "Which of the following is considered sensitive personal data under data protection laws (e.g., GDPR)?",
-        options: ["Name and address", "Email address", "Racial or ethnic origin", "Date of birth"],
-        correctAnswer: "Racial or ethnic origin"
-    },
-    {
-        week: 1, // Lawful processing of Personal Data
-        courseCode: "COM496",
-        question: "Which of the following actions is required to ensure personal data is processed lawfully?",
-        options: ["The data must always be kept in the cloud.", "The data must be processed with the consent of the data subject or based on legal grounds.", "The data must be shared with any third party without restrictions.", "The data must be deleted after one month."],
-        correctAnswer: "The data must be processed with the consent of the data subject or based on legal grounds."
-    },
-    {
-        week: 1, // Definition of Authenticity
-        courseCode: "COM496",
-        question: "Which of the following best describes authenticity in the context of information security?",
-        options: ["Ensuring that the data is not altered or tampered with during transmission.", "Verifying the identity of the sender or the origin of the data to confirm its legitimacy.", "Ensuring that only authorized users can access the data.", "Preventing the data from being destroyed or lost."],
-        correctAnswer: "Verifying the identity of the sender or the origin of the data to confirm its legitimacy."
-    },
-    {
-        week: 1, // Definition of Authentication
-        courseCode: "COM496",
-        question: "Which of the following processes is used to verify the identity of a user or system before granting access to resources?",
-        options: ["Authorization", "Encryption", "Authentication", "Integrity Verification"],
-        correctAnswer: "Authentication"
-    },
-    {
-        week: 1, // Definition of Availability (CIA Triad)
-        courseCode: "COM496",
-        question: "Which of the following refers to ensuring that data and services are accessible and usable when needed?",
-        options: ["Integrity", "Confidentiality", "Availability", "Authentication"],
-        correctAnswer: "Availability"
-    },
-    {
-        week: 1, // Definition of Vulnerability
-        courseCode: "COM496",
-        question: "Which of the following refers to a weakness in a system that can be exploited by attackers to gain unauthorized access or cause harm?",
-        options: ["Threat", "Risk", "Vulnerability", "Mitigation"],
-        correctAnswer: "Vulnerability"
-    },
-    {
-        week: 1, // Definition of Threat
-        courseCode: "COM496",
-        question: "What term describes a potential danger that can exploit vulnerabilities in a computer system or network to cause harm, such as viruses, hackers, malware, or phishing attacks?",
-        options: ["Vulnerability", "Cybersecurity Threat", "Risk Assessment", "Data Breach"],
-        correctAnswer: "Cybersecurity Threat"
-    },
-    {
-        week: 2, // Importance of understanding threats (Focus of Week 2)
-        courseCode: "COM496",
-        question: "Why is it important to understand cybersecurity threats?",
-        options: ["To create more complex user interfaces", "To effectively protect systems and data from potential attacks", "To increase internet speed", "To reduce software development time"],
-        correctAnswer: "To effectively protect systems and data from potential attacks"
-    },
-    {
-        week: 2, // Benefit of identifying threats (Focus of Week 2)
-        courseCode: "COM496",
-        question: "What is one key benefit of identifying cybersecurity threats in advance?",
-        options: ["It eliminates the need for antivirus software", "It allows for proactive defense measures to prevent damage", "It guarantees that no cyberattacks will ever occur", "It speeds up software installation"],
-        correctAnswer: "It allows for proactive defense measures to prevent damage"
-    },
-    {
-        week: 2, // Understanding threats helps organizations (Focus of Week 2)
-        courseCode: "COM496",
-        question: "Understanding cybersecurity threats helps organizations to:",
-        options: ["Build user-friendly websites", "Avoid legal responsibilities", "Develop better defense strategies and incident response plans", "Replace hardware more frequently"],
-        correctAnswer: "Develop better defense strategies and incident response plans"
-    },
-    {
-        week: 2, // Phishing as common threat (Detailed in Week 2)
-        courseCode: "COM496",
-        question: "Which of the following is considered a common cybersecurity threat?",
-        options: ["Cloud storage", "Firewall", "Phishing", "Software updates"],
-        correctAnswer: "Phishing"
-    },
-    {
-        week: 2, // Encryption is defense, not threat (Covered Week 3, but identifying threats is Week 2)
-        courseCode: "COM496",
-        question: "Which of the following is NOT a common cybersecurity threat?",
-        options: ["Malware", "Ransomware", "Encryption", "Denial of Service (DoS) attacks"],
-        correctAnswer: "Encryption"
-    },
-    {
-        week: 2, // Lists common threats (Focus of Week 2)
-        courseCode: "COM496",
-        question: "Which of the following best lists common cybersecurity threats?",
-        options: ["Firewall, antivirus, VPN", "Malware, phishing, ransomware", "Authentication, authorization, auditing", "Backup, restore, replication"],
-        correctAnswer: "Malware, phishing, ransomware"
-    },
-    {
-        week: 2, // Good practice - Updates, passwords (General Prevention)
-        courseCode: "COM496",
-        question: "Which of the following is a good practice to protect against cyber threats?",
-        options: ["Using the same password for all accounts", "Ignoring software updates", "Regularly updating software and using strong, unique passwords", "Sharing company credentials via email"],
-        correctAnswer: "Regularly updating software and using strong, unique passwords"
-    },
-    {
-        week: 2, // Reducing risk - Training (General Prevention)
-        courseCode: "COM496",
-        question: "How can companies reduce the risk of cyber attacks?",
-        options: ["Disabling firewalls to improve internet speed", "Training employees on cybersecurity awareness and safe practices", "Allowing unrestricted access to all internal systems", "Only using antivirus software without any monitoring"],
-        correctAnswer: "Training employees on cybersecurity awareness and safe practices"
-    },
-    {
-        week: 2, // Org measure - MFA (General Prevention)
-        courseCode: "COM496",
-        question: "Which of the following is an effective organizational measure to protect against cyber threats?",
-        options: ["Storing sensitive data in plain text", "Implementing multi-factor authentication (MFA) for all users", "Allowing any device to connect to the corporate network", "Avoiding security audits to save costs"],
-        correctAnswer: "Implementing multi-factor authentication (MFA) for all users"
-    },
-    {
-        week: 2, // Types of malware (Detailed in Week 2)
-        courseCode: "COM496",
-        question: "Which of the following are common types of malware?",
-        options: ["Worms, Trojans, Ransomware, Spyware", "Firewalls, Antivirus, Backups, VPN", "HTTP, HTTPS, FTP, TCP", "Authentication, Authorization, Accounting"],
-        correctAnswer: "Worms, Trojans, Ransomware, Spyware"
-    },
-    {
-        week: 2, // Phishing vs Spear Phishing (Defined in Week 2)
-        courseCode: "COM496",
-        question: "What is the main difference between phishing and spear phishing?",
-        options: ["Phishing is a targeted attack, while spear phishing is random.", "Phishing attacks are always conducted via phone, spear phishing uses websites.", "Phishing is a broad attack sent to many people, while spear phishing targets a specific individual or organization.", "There is no difference; both terms mean the same thing."],
-        correctAnswer: "Phishing is a broad attack sent to many people, while spear phishing targets a specific individual or organization."
-    },
-    {
-        week: 2, // Phishing example analysis (Detailed in Week 2)
-        courseCode: "COM496",
-        question: "You receive an email that looks like it’s from your bank, saying:\n“Urgent: We detected suspicious activity on your account. Please click the link below to verify your login details immediately.”\nThe sender’s email looks slightly off, like security@b4nk.com.\nWhat is the best explanation for this email?",
-        options: ["It is a legitimate security alert from the bank.", "It is a phishing attempt trying to steal your login credentials.", "It is a promotional offer from the bank.", "It is a system-generated error message."],
-        correctAnswer: "It is a phishing attempt trying to steal your login credentials."
-    },
-    {
-        week: 2, // Virus mechanism (Detailed in Week 2)
-        courseCode: "COM496",
-        question: "How does a computer virus typically work?",
-        options: ["It creates secure backups of the system.", "It improves the performance of your computer.", "It attaches itself to legitimate programs or files and spreads when they are executed.", "It protects your system from unauthorized access."],
-        correctAnswer: "It attaches itself to legitimate programs or files and spreads when they are executed."
-    },
-    {
-        week: 2, // ILOVEYOU virus (Fits Virus discussion)
-        courseCode: "COM496",
-        question: "Which of the following famous computer viruses spread via email and exploited social engineering by disguising itself as a love letter?",
-        options: ["MyDoom", "ILOVEYOU", "WannaCry", "Conficker"],
-        correctAnswer: "ILOVEYOU"
-    },
-    {
-        week: 2, // Virus vs Worm vs Trojan comparison (Detailed in Week 2)
-        courseCode: "COM496",
-        question: "Which of the following correctly describes the key differences between viruses, worms, and trojans?",
-        options: ["Viruses spread through email attachments, worms self-replicate and spread on their own, and trojans disguise themselves as legitimate programs to trick users.", "Viruses only affect hardware, worms do not spread, and trojans infect only mobile devices.", "Worms require human interaction to spread, viruses are self-replicating, and trojans provide security for systems.", "Trojans are harmless, viruses are always detected by antivirus software, and worms only target servers."],
-        correctAnswer: "Viruses spread through email attachments, worms self-replicate and spread on their own, and trojans disguise themselves as legitimate programs to trick users."
-    },
-    {
-        week: 2, // Ransomware mechanism (Detailed in Week 2)
-        courseCode: "COM496",
-        question: "How does ransomware typically work?",
-        options: ["It encrypts the victim's files and demands a ransom payment to decrypt them.", "It steals sensitive data and sells it to third parties without any user interaction.", "It sends spam emails to the victim's contacts.", "It installs software to increase the system's processing speed."],
-        correctAnswer: "It encrypts the victim's files and demands a ransom payment to decrypt them."
-    },
-    {
-        week: 2, // GitHub DDoS (Fits DDoS discussion/examples)
-        courseCode: "COM496",
-        question: "In 2018, GitHub experienced a massive DDoS attack that reached a peak of 1.35 terabits per second. What made this attack particularly notable?",
-        options: ["It used a new type of malware that affected GitHub's source code.", "It was the first attack to utilize the Memcached vulnerability, amplifying the traffic sent to the target.", "The attack targeted GitHub’s cloud storage service, shutting it down for several days.", "It was carried out by a group of hackers claiming political motives."],
-        correctAnswer: "It was the first attack to utilize the Memcached vulnerability, amplifying the traffic sent to the target."
-    },
-    {
-        week: 2, // State-sponsored attack purpose (Detailed in Week 2)
-        courseCode: "COM496",
-        question: "What is the purpose of state-sponsored cyber attacks?",
-        options: ["To test new software on a global scale", "To gain political, economic, or military advantage over other nations", "To entertain hackers working for the government", "To assist companies with cybersecurity awareness"],
-        correctAnswer: "To gain political, economic, or military advantage over other nations"
-    },
-    {
-        week: 2, // Hacker motivations (Revisited in Week 2)
-        courseCode: "COM496",
-        question: "What are common motivations for hackers?",
-        options: ["Financial gain, political agendas, personal challenge, or revenge", "Always helping companies improve their systems", "Learning how to use computers", "Only spreading harmless jokes"],
-        correctAnswer: "Financial gain, political agendas, personal challenge, or revenge"
-    },
-    {
-        week: 2, // Stuxnet example (State-sponsored, fits Week 2)
-        courseCode: "COM496",
-        question: "Which of the following is a well-known example of a state-sponsored cyber attack?",
-        options: ["ILOVEYOU virus", "Stuxnet", "WannaCry", "Melissa virus"],
-        correctAnswer: "Stuxnet"
-    },
-    {
-        week: 2, // Strong password characteristic (General Prevention)
-        courseCode: "COM496",
-        question: "Which of the following is a characteristic of a strong password?",
-        options: ["It contains your birthdate and name", "It’s short and easy to remember, like “1234”", "It includes a mix of upper- and lowercase letters, numbers, and special characters", "It is the same for all your accounts"],
-        correctAnswer: "It includes a mix of upper- and lowercase letters, numbers, and special characters"
-    },
-    {
-        week: 2, // MFA example (General Prevention)
-        courseCode: "COM496",
-        question: "Which of the following is an example of multi-factor authentication (MFA)?",
-        options: ["Logging in with just a username and password", "Using a password and a fingerprint", "Typing your email address only", "Clicking \"remember me\" on a website"],
-        correctAnswer: "Using a password and a fingerprint"
-    },
-    {
-        week: 5, // Biometric authentication (OS Authentication Method)
-        courseCode: "COM496",
-        question: "Which of the following best describes biometric authentication?",
-        options: ["Using an email code to log in", "Using your face or fingerprint to verify your identity", "Logging in from a trusted device", "Choosing a strong password"],
-        correctAnswer: "Using your face or fingerprint to verify your identity"
-    },
-    {
-        week: 2, // Software updates importance (General Prevention)
-        courseCode: "COM496",
-        question: "Why are regular software updates important for cybersecurity?",
-        options: ["They slow down the computer to prevent overuse", "They fix bugs and patch security vulnerabilities that hackers could exploit", "They help you reset your password more often", "They delete old files automatically"],
-        correctAnswer: "They fix bugs and patch security vulnerabilities that hackers could exploit"
-    },
-    {
-        week: 2, // Firewall purpose (General Prevention)
-        courseCode: "COM496",
-        question: "What is the main purpose of a firewall in cybersecurity?",
-        options: ["To store user passwords", "To scan the hard drive for viruses", "To monitor and control incoming and outgoing network traffic", "To speed up your internet connection"],
-        correctAnswer: "To monitor and control incoming and outgoing network traffic"
-    },
-    {
-        week: 5, // Packet-filtering firewall type (Detailed Firewall Types)
-        courseCode: "COM496",
-        question: "Which type of firewall filters traffic based on predefined rules?",
-        options: ["Antivirus software", "Packet-filtering firewall", "Malware detector", "Encryption tool"],
-        correctAnswer: "Packet-filtering firewall"
-    },
-    {
-        week: 5, // Firewall action (Firewall Behavior)
-        courseCode: "COM496",
-        question: "What happens when a firewall detects unauthorized access?",
-        options: ["It boosts the internet speed", "It automatically updates the operating system", "It blocks or restricts the suspicious traffic", "It sends spam to the attacker"],
-        correctAnswer: "It blocks or restricts the suspicious traffic"
-    },
-    {
-        week: 5, // Firewall types (Detailed Firewall Types)
-        courseCode: "COM496",
-        question: "Which of the following are valid types of firewalls?",
-        options: ["Network-based, Host-based, and Next-Generation", "Hardware, Software, and Password firewalls", "LAN, WAN, and VPN firewalls", "Antivirus, Proxy, and Backup firewalls"],
-        correctAnswer: "Network-based, Host-based, and Next-Generation"
-    },
-    {
-        week: 3, // Earliest cryptography - Caesar (Classical Crypto)
-        courseCode: "COM496",
-        question: "Which of the following is one of the earliest known examples of cryptography in history?",
-        options: ["RSA encryption", "The Caesar cipher used in ancient Rome", "Blockchain technology", "Quantum cryptography"],
-        correctAnswer: "The Caesar cipher used in ancient Rome"
-    },
-    {
-        week: 3, // Caesar cipher creator (Classical Crypto)
-        courseCode: "COM496",
-        question: "Who is credited with creating the first known cipher, the Caesar cipher?",
-        options: ["Julius Caesar", "Leonardo da Vinci", "Alan Turing", "Augustus Caesar"],
-        correctAnswer: "Julius Caesar"
-    },
-    {
-        week: 3, // WWII crypto - Enigma (Crypto History Context)
-        courseCode: "COM496",
-        question: "Which cryptographic method was widely used in World War II to encode military messages?",
-        options: ["RSA encryption", "Enigma machine", "Vigenère cipher", "DES encryption"],
-        correctAnswer: "Enigma machine"
-    },
-    {
-        week: 3, // NOT a type of crypto (Crypto Types)
-        courseCode: "COM496",
-        question: "Which of the following is NOT a type of cryptography?",
-        options: ["Symmetric cryptography", "Asymmetric cryptography", "Hash functions", "Quantum cryptography"],
-        correctAnswer: "Hash functions"
-    },
-    {
-        week: 3, // Common types of crypto (Crypto Types)
-        courseCode: "COM496",
-        question: "Which of the following are common types of cryptography used for securing data?",
-        options: ["Symmetric cryptography, Asymmetric cryptography, and Hash functions", "Data encryption and decryption", "Compression and decompression algorithms", "Key management and backup solutions"],
-        correctAnswer: "Symmetric cryptography, Asymmetric cryptography, and Hash functions"
-    },
-    {
-        week: 3, // Symmetric vs Asymmetric difference (Core Crypto Concepts)
-        courseCode: "COM496",
-        question: "Which of the following best describes the difference between Symmetric and Asymmetric cryptography?",
-        options: ["Symmetric cryptography uses a single key for both encryption and decryption, while Asymmetric uses two different keys.", "Symmetric cryptography uses a private key, while Asymmetric uses a public key.", "Symmetric cryptography is used for hashing, while Asymmetric cryptography is for encryption.", "Symmetric cryptography is faster than Asymmetric cryptography because it uses two keys."],
-        correctAnswer: "Symmetric cryptography uses a single key for both encryption and decryption, while Asymmetric uses two different keys."
-    },
-    {
-        week: 3, // Asymmetric key feature (Asymmetric Crypto)
-        courseCode: "COM496",
-        question: "Which of the following is a key feature of asymmetric cryptography?",
-        options: ["It uses the same key for both encryption and decryption", "It uses a pair of keys: a public key for encryption and a private key for decryption", "It only uses a single key for encryption, but the decryption is handled by a different method", "It is used only for hash functions and digital signatures"],
-        correctAnswer: "It uses a pair of keys: a public key for encryption and a private key for decryption"
-    },
-    {
-        week: 3, // Public-key algorithm - RSA (Asymmetric Crypto)
-        courseCode: "COM496",
-        question: "Which cryptographic algorithm is commonly used in public-key encryption?",
-        options: ["AES (Advanced Encryption Standard)", "RSA (Rivest-Shamir-Adleman)", "SHA-256", "DES (Data Encryption Standard)"],
-        correctAnswer: "RSA (Rivest-Shamir-Adleman)"
-    },
-    {
-        week: 3, // Hash function purpose (Crypto Concepts)
-        courseCode: "COM496",
-        question: "What is the main purpose of a hash function in cryptography?",
-        options: ["To encrypt and decrypt data using a secret key", "To create a fixed-size output (hash value) from input data of any size", "To generate a unique private key for encryption", "To provide the ability to transmit data securely over the internet"],
-        correctAnswer: "To create a fixed-size output (hash value) from input data of any size"
-    },
-    {
-        week: 3, // Real-world crypto app - PKI (Crypto Applications)
-        courseCode: "COM496",
-        question: "Which of the following is a real-world application of cryptography in securing online transactions?",
-        options: ["VPN (Virtual Private Network)", "Bitcoin mining", "Public-key infrastructure (PKI)", "HTML5 encryption"],
-        correctAnswer: "Public-key infrastructure (PKI)"
-    },
-    {
-        week: 3, // Real-world tech - HTTPS (Crypto Applications)
-        courseCode: "COM496",
-        question: "Which real-world technology uses cryptographic algorithms to ensure secure communication over the internet?",
-        options: ["HTTP", "HTTPS", "FTP", "SMTP"],
-        correctAnswer: "HTTPS"
-    },
-    {
-        week: 3, // Password security - Hashing (Crypto Applications)
-        courseCode: "COM496",
-        question: "Which of the following cryptographic techniques is commonly used to secure passwords in online systems?",
-        options: ["RSA encryption", "Digital signatures", "Hashing algorithms", "Symmetric key encryption"],
-        correctAnswer: "Hashing algorithms"
-    },
-    {
-        week: 3, // App with E2EE - WhatsApp (Crypto Applications)
-        courseCode: "COM496",
-        question: "Which of the following apps uses end-to-end encryption to secure messages between users?",
-        options: ["Facebook Messenger", "WhatsApp", "Snapchat", "Twitter"],
-        correctAnswer: "WhatsApp"
-    },
-    {
-        week: 3, // SSL/TLS purpose (Crypto Applications)
-        courseCode: "COM496",
-        question: "What is the primary purpose of SSL/TLS in cybersecurity?",
-        options: ["To encrypt and secure communications over a network", "To manage user authentication through biometric data", "To prevent unauthorized access to a database", "To detect and prevent phishing attacks"],
-        correctAnswer: "To encrypt and secure communications over a network"
-    },
-    {
-        week: 3, // SSL vs TLS difference (Crypto Applications)
-        courseCode: "COM496",
-        question: "Which of the following is a key difference between SSL and TLS?",
-        options: ["TLS is the newer, more secure version of SSL", "SSL is used for email encryption, while TLS is used for web traffic", "SSL requires symmetric encryption, while TLS requires asymmetric encryption", "There is no difference between SSL and TLS; they are the same"],
-        correctAnswer: "TLS is the newer, more secure version of SSL"
-    },
-    {
-        week: 4, // HTTPS port (Networking Protocols)
-        courseCode: "COM496",
-        question: "Which port is commonly used for HTTPS traffic secured by SSL/TLS?",
-        options: ["Port 80", "Port 443", "Port 21", "Port 8080"],
-        correctAnswer: "Port 443"
-    },
-    {
-        week: 3, // Caesar cipher example (Classical Crypto)
-        courseCode: "COM496",
-        question: "In the Caesar cipher, if the shift value is 3, what would be the ciphered version of the word \"HELLO\"?",
-        options: ["KHOOR", "EBIIL", "GDKKN", "JLNNP"],
-        correctAnswer: "KHOOR"
-    },
-    {
-        week: 3, // Vigenère cipher example (Classical Crypto)
-        courseCode: "COM496",
-        question: "If the keyword for the Vigenère cipher is \"KEY\" and the plaintext is \"HELLO\", what is the resulting ciphertext?",
-        options: ["LEBBS", "KHOOR", "RIJVS", "YFYYF"],
-        correctAnswer: "RIJVS"
-    },
-    {
-        week: 3, // Simple substitution decryption (Classical Crypto)
-        courseCode: "COM496",
-        question: "Given the ciphertext \"Wklv lv d whvw phvvdjh\" encrypted using a simple substitution cipher, where each letter has been replaced by another letter a fixed number of positions down the alphabet, what is the plaintext?",
-        options: ["This is a simple message", "This is a test message", "We are testing encryption", "Encryption works perfectly"],
-        correctAnswer: "This is a test message"
-    },
-    {
-        week: 3, // DES/3DES/AES differences (Symmetric Crypto)
-        courseCode: "COM496",
-        question: "Which of the following correctly describes the differences between DES, 3DES, and AES encryption algorithms?",
-        options: ["DES is considered more secure than AES, while 3DES is the fastest of the three.", "AES is a block cipher with variable key lengths (128, 192, 256 bits) and is considered the most secure among the three. 3DES is a stronger version of DES, using three rounds of encryption with 56-bit keys, making it slower than AES.", "DES and 3DES use the same key size, but AES uses a longer key size and is less secure.", "3DES is no longer used due to its weakness, while AES and DES are still widely used in modern cryptography."],
-        correctAnswer: "AES is a block cipher with variable key lengths (128, 192, 256 bits) and is considered the most secure among the three. 3DES is a stronger version of DES, using three rounds of encryption with 56-bit keys, making it slower than AES."
-    },
-    {
-        week: 3, // Block vs Stream ciphers (Symmetric Crypto)
-        courseCode: "COM496",
-        question: "Which of the following correctly describes the differences between block ciphers and stream ciphers?",
-        options: ["Block ciphers encrypt data in fixed-size blocks, while stream ciphers encrypt data one bit or byte at a time. Block ciphers are generally faster than stream ciphers.", "Block ciphers are used for encryption of small data, whereas stream ciphers are used for larger datasets.", "Stream ciphers work with plaintext in fixed-size blocks, while block ciphers encrypt one bit at a time.", "Block ciphers require much less computational power compared to stream ciphers, making them more efficient for large-scale encryption."],
-        correctAnswer: "Block ciphers encrypt data in fixed-size blocks, while stream ciphers encrypt data one bit or byte at a time. Block ciphers are generally faster than stream ciphers."
-    },
-    {
-        week: 3, // RSA encryption model (Asymmetric Crypto)
-        courseCode: "COM496",
-        question: "How does the RSA encryption model work?",
-        options: ["RSA uses the same key for both encryption and decryption, making it a symmetric encryption algorithm.", "In RSA, encryption is performed using the public key, and decryption is performed using the private key.", "RSA only works with large symmetric keys, and encryption and decryption are done using the same key.", "In RSA, encryption is done with the private key, and decryption is done with the public key."],
-        correctAnswer: "In RSA, encryption is performed using the public key, and decryption is performed using the private key."
-    },
-    {
-        week: 3, // RSA vs ECC differences (Asymmetric Crypto)
-        courseCode: "COM496",
-        question: "Which of the following correctly describes the differences between RSA and ECC?",
-        options: ["RSA is based on the difficulty of factoring large prime numbers, while ECC is based on the difficulty of solving problems related to elliptic curves.", "RSA requires smaller keys for the same level of security as ECC, making ECC more computationally efficient.", "RSA is faster than ECC in terms of encryption and decryption, especially for larger key sizes.", "ECC is considered less secure than RSA and is not used in modern cryptographic protocols."],
-        correctAnswer: "RSA is based on the difficulty of factoring large prime numbers, while ECC is based on the difficulty of solving problems related to elliptic curves."
-    },
-    {
-        week: 3, // TLS/SSL works (Crypto Applications)
-        courseCode: "COM496",
-        question: "How does TLS/SSL (Transport Layer Security / Secure Sockets Layer) work?",
-        options: ["TLS/SSL ensures security by encrypting the entire data connection and verifying the identity of the server using a symmetric key.", "TLS/SSL uses asymmetric encryption for the initial handshake to securely exchange keys and then switches to symmetric encryption for data transfer.", "TLS/SSL only encrypts data during transmission and does not provide any server authentication.", "TLS/SSL relies on a single shared secret key to encrypt and decrypt the communication between the client and the server."],
-        correctAnswer: "TLS/SSL uses asymmetric encryption for the initial handshake to securely exchange keys and then switches to symmetric encryption for data transfer."
-    },
-    {
-        week: 3, // Quantum cryptography (Future Crypto)
-        courseCode: "COM496",
-        question: "What is quantum cryptography?",
-        options: ["Quantum cryptography uses classical encryption algorithms enhanced by quantum mechanics to improve security.", "Quantum cryptography uses principles of quantum mechanics to secure data by leveraging the quantum key distribution (QKD) method, which ensures that any eavesdropping can be detected.", "Quantum cryptography is based on the idea that it uses the encryption keys to break encryption algorithms, allowing faster and easier data decryption.", "Quantum cryptography is only useful for secure communication over long distances and is not applicable to modern internet communication."],
-        correctAnswer: "Quantum cryptography uses principles of quantum mechanics to secure data by leveraging the quantum key distribution (QKD) method, which ensures that any eavesdropping can be detected."
-    },
-    {
-        week: 4, // Threats/Vulns/Attacks relationship (Network Security Intro)
-        courseCode: "COM496",
-        question: "Which of the following correctly defines the relationship between threats, vulnerabilities, and attacks in cybersecurity?",
-        options: ["A threat refers to any weakness in a system, a vulnerability is an event that occurs due to the exploitation of that weakness, and an attack is the process of defending the system.", "A threat is a potential cause of harm to a system, a vulnerability is a weakness that could be exploited by a threat, and an attack is the action taken to exploit that vulnerability.", "A threat is any action or event that causes an attack, a vulnerability is a specific type of threat, and an attack is any weakness in the system.", "A vulnerability is a malicious actor attempting to break into a system, a threat is a defensive measure, and an attack is an automatic response by the system."],
-        correctAnswer: "A threat is a potential cause of harm to a system, a vulnerability is a weakness that could be exploited by a threat, and an attack is the action taken to exploit that vulnerability."
-    },
-    {
-        week: 4, // Types of vulnerabilities (Network Security Intro)
-        courseCode: "COM496",
-        question: "Which of the following are types of vulnerabilities in cybersecurity?",
-        options: ["Software vulnerabilities, human vulnerabilities, and hardware vulnerabilities", "SQL injection, buffer overflow, and phishing attacks", "Weak encryption, outdated software, and firewall misconfigurations", "Trojan horse, worm, and virus"],
-        correctAnswer: "Weak encryption, outdated software, and firewall misconfigurations"
-    },
-    {
-        week: 4, // Passive vs Active attacks difference (Network Attacks)
-        courseCode: "COM496",
-        question: "Which of the following describes the difference between passive attacks and active attacks in network security?",
-        options: ["Passive attacks involve unauthorized access to a system with the goal of stealing data without altering it, while active attacks actively alter or disrupt the system, such as by injecting malicious code.", "Passive attacks are always detected by security systems, while active attacks cannot be detected by monitoring tools.", "Active attacks only occur in wireless networks, while passive attacks happen only in wired networks.", "Active attacks involve stealing data, while passive attacks involve attacking the network physically."],
-        correctAnswer: "Passive attacks involve unauthorized access to a system with the goal of stealing data without altering it, while active attacks actively alter or disrupt the system, such as by injecting malicious code."
-    },
-    {
-        week: 4, // Passive attacks examples (Network Attacks)
-        courseCode: "COM496",
-        question: "Which of the following is true about passive attacks in network security, and what are some examples?",
-        options: ["Passive attacks involve stealing or altering data, but they do not disrupt the operation of the network or system. Examples include eavesdropping, traffic analysis, and packet sniffing.", "Passive attacks always alter data in transit, such as by modifying packets, but they are not detected by monitoring systems. Examples include DoS attacks, man-in-the-middle attacks, and session hijacking.", "Passive attacks involve disrupting the network, causing a system to crash. Examples include DDoS, data injection, and brute-force attacks.", "Passive attacks are never detected by monitoring systems, and they typically involve physical damage to hardware. Examples include physical device theft, cable tapping, and data corruption."],
-        correctAnswer: "Passive attacks involve stealing or altering data, but they do not disrupt the operation of the network or system. Examples include eavesdropping, traffic analysis, and packet sniffing."
-    },
-    {
-        week: 4, // Active attacks examples (Network Attacks)
-        courseCode: "COM496",
-        question: "Which of the following describes active attacks in network security, and what are some examples?",
-        options: ["Active attacks aim to interfere with network operations, such as by modifying data, injecting malicious content, or disrupting service. Examples include man-in-the-middle attacks, Denial of Service (DoS), and data modification.", "Active attacks involve listening in on communications without altering the data, examples include packet sniffing, traffic analysis, and eavesdropping.", "Active attacks only involve physical access to network devices, examples include hardware tampering, device theft, and wire tapping.", "Active attacks are always non-destructive and do not affect the network’s performance. Examples include brute force attacks, password cracking, and keylogging."],
-        correctAnswer: "Active attacks aim to interfere with network operations, such as by modifying data, injecting malicious content, or disrupting service. Examples include man-in-the-middle attacks, Denial of Service (DoS), and data modification."
-    },
-    {
-        week: 4, // Passive attack mechanism (Network Attacks)
-        courseCode: "COM496",
-        question: "How does a passive attack work in network security?",
-        options: ["A passive attack involves altering or disrupting the flow of data, usually to damage or deny service to a network.", "A passive attack involves monitoring or intercepting data without modifying it, typically to gather sensitive information without the victim's knowledge.", "A passive attack involves injecting malware into the system, which then disrupts operations.", "A passive attack involves brute-force cracking passwords and gaining unauthorized access to systems."],
-        correctAnswer: "A passive attack involves monitoring or intercepting data without modifying it, typically to gather sensitive information without the victim's knowledge."
-    },
-    {
-        week: 4, // Passive attack purpose (Network Attacks)
-        courseCode: "COM496",
-        question: "What is the main purpose of a passive attack in network security?",
-        options: ["To disrupt the operation of a network or system by modifying or deleting data.", "To gather sensitive information without altering or interfering with the data, often for future use in other attacks.", "To inject malicious code into a network and steal or destroy data.", "To bypass encryption and decrypt data transmitted over a network."],
-        correctAnswer: "To gather sensitive information without altering or interfering with the data, often for future use in other attacks."
-    },
-    {
-        week: 4, // Protect from passive attacks (Network Attack Defense)
-        courseCode: "COM496",
-        question: "How can we protect ourselves from passive attacks in network security?",
-        options: ["By using strong encryption to ensure that intercepted data is unreadable.", "By allowing open communication on insecure channels without any security measures.", "By avoiding the use of firewalls to prevent any data from being filtered.", "By using physical security measures only and ignoring network-level protection."],
-        correctAnswer: "By using strong encryption to ensure that intercepted data is unreadable."
-    },
-    {
-        week: 4, // Active attacks mechanism (Network Attacks)
-        courseCode: "COM496",
-        question: "How do active attacks work in network security?",
-        options: ["Active attacks involve modifying data or disrupting services to harm the target system or network, such as Denial of Service (DoS) or man-in-the-middle attacks.", "Active attacks involve monitoring data without altering it, such as packet sniffing or eavesdropping.", "Active attacks only involve physical tampering with network devices, such as device theft or hardware manipulation.", "Active attacks are primarily used for data encryption and securing network traffic, like SSL/TLS encryption."],
-        correctAnswer: "Active attacks involve modifying data or disrupting services to harm the target system or network, such as Denial of Service (DoS) or man-in-the-middle attacks."
-    },
-    {
-        week: 4, // ARP poisoning (Network Layer Attack)
-        courseCode: "COM496",
-        question: "What is ARP poisoning in network security?",
-        options: ["A technique where an attacker sends fake ARP messages to associate their MAC address with the IP address of another device, allowing them to intercept, modify, or block network traffic.", "A method used to encrypt network traffic between devices to protect it from eavesdropping.", "A process where an attacker gains unauthorized access to a system by exploiting weak passwords.", "A form of denial of service (DoS) attack where an attacker floods the network with excessive traffic, causing devices to disconnect."],
-        correctAnswer: "A technique where an attacker sends fake ARP messages to associate their MAC address with the IP address of another device, allowing them to intercept, modify, or block network traffic."
-    },
-    {
-        week: 4, // DNS Spoofing mechanism (Network Layer Attack)
-        courseCode: "COM496",
-        question: "How does DNS Spoofing work, step by step?",
-        options: ["The attacker sends fake DNS responses with malicious IP addresses to a vulnerable DNS server, causing the server to cache incorrect records and redirect users to fake websites.", "The attacker intercepts encrypted DNS traffic between the client and server, decrypts it, and alters the DNS records to redirect users to a fake website.", "The attacker uses brute-force methods to guess DNS server credentials, gaining control of the server to modify DNS records and redirect traffic.", "The attacker uses a Distributed Denial of Service (DDoS) attack to overwhelm the DNS server, preventing legitimate requests from being processed."],
-        correctAnswer: "The attacker sends fake DNS responses with malicious IP addresses to a vulnerable DNS server, causing the server to cache incorrect records and redirect users to fake websites."
-    },
-    {
-        week: 5, // IDS purpose (Network Defense Tools)
-        courseCode: "COM496",
-        question: "What is the main purpose of an Intrusion Detection System (IDS) in network security?",
-        options: ["To prevent unauthorized access by actively blocking suspicious traffic in real-time.", "To detect and alert administrators about potential threats or unauthorized activities on the network.", "To encrypt network traffic to ensure data privacy and security.", "To scan network traffic for malware and viruses."],
-        correctAnswer: "To detect and alert administrators about potential threats or unauthorized activities on the network."
-    },
-    {
-        week: 5, // IDS types (Network Defense Tools)
-        courseCode: "COM496",
-        question: "Which of the following are the two main types of Intrusion Detection Systems (IDS)?",
-        options: ["Signature-based IDS and Behavior-based IDS", "Network-based IDS and Host-based IDS", "Active IDS and Passive IDS", "Software-based IDS and Hardware-based IDS"],
-        correctAnswer: "Network-based IDS and Host-based IDS"
-    },
-    {
-        week: 5, // Signature-based IDS mechanism (Network Defense Tools)
-        courseCode: "COM496",
-        question: "How does a Signature-based Intrusion Detection System (IDS) work?",
-        options: ["It detects threats by analyzing network traffic patterns and comparing them to known attack signatures.", "It uses machine learning algorithms to detect new and unknown threats in real-time.", "It analyzes user behavior and identifies deviations from normal activities.", "It monitors physical security devices like cameras and locks to detect unauthorized access."],
-        correctAnswer: "It detects threats by analyzing network traffic patterns and comparing them to known attack signatures."
-    },
-    {
-        week: 5, // Host-based IDS description (Network Defense Tools)
-        courseCode: "COM496",
-        question: "Which of the following best describes a Host-based IDS (HIDS)?",
-        options: ["An IDS that monitors traffic across an entire network.", "An IDS that is installed on a specific host or device and monitors activities on that host for signs of intrusion.", "An IDS that monitors email communications for phishing attempts.", "An IDS that specifically detects vulnerabilities in web applications."],
-        correctAnswer: "An IDS that is installed on a specific host or device and monitors activities on that host for signs of intrusion."
-    },
-    {
-        week: 5, // IPS vs IDS response difference (Network Defense Tools)
-        courseCode: "COM496",
-        question: "What makes Intrusion Prevention Systems (IPS) different from Intrusion Detection Systems (IDS) in terms of real-time response?",
-        options: ["IPS systems only detect and alert, while IDS systems block traffic.", "IPS actively takes action to block malicious traffic as it occurs, while IDS simply alerts administrators without blocking anything.", "Both IPS and IDS provide real-time protection, but IPS requires manual intervention to take action.", "IPS only works in the background and does not impact real-time operations."],
-        correctAnswer: "IPS actively takes action to block malicious traffic as it occurs, while IDS simply alerts administrators without blocking anything."
-    },
-    {
-        week: 5, // IPS primary action (Network Defense Tools)
-        courseCode: "COM496",
-        question: "Which of the following is a primary preventive action of an Intrusion Prevention System (IPS)?",
-        options: ["Logging suspicious activity for future analysis.", "Encrypting communication between the attacker and the target system.", "Blocking malicious traffic based on defined rules or signatures.", "Analyzing system logs for vulnerabilities."],
-        correctAnswer: "Blocking malicious traffic based on defined rules or signatures."
-    },
-    {
-        week: 5, // False positive IPS concept (Network Defense Tools)
-        courseCode: "COM496",
-        question: "What is a false positive in the context of an Intrusion Prevention System (IPS)?",
-        options: ["An instance where the IPS fails to detect a real attack.", "An instance where the IPS mistakenly identifies legitimate traffic as malicious, blocking it.", "An instance where the IPS successfully blocks an attack without raising an alert.", "An instance where the IPS encrypts network traffic for security."],
-        correctAnswer: "An instance where the IPS mistakenly identifies legitimate traffic as malicious, blocking it."
-    },
-    {
-        week: 5, // Signature-based IPS mechanism (Network Defense Tools)
-        courseCode: "COM496",
-        question: "How does a Signature-based Intrusion Prevention System (IPS) detect threats?",
-        options: ["By analyzing the behavior of network traffic and identifying patterns that deviate from the norm.", "By comparing incoming traffic to a database of known attack signatures to identify threats.", "By preventing attacks based on the IP addresses involved in the traffic.", "By applying machine learning techniques to detect unknown threats in real-time."],
-        correctAnswer: "By comparing incoming traffic to a database of known attack signatures to identify threats."
-    },
-    {
-        week: 5, // Network-based IPS role (Network Defense Tools)
-        courseCode: "COM496",
-        question: "What is the role of a Network-based IPS?",
-        options: ["It is installed on individual devices to monitor and block attacks targeting that device.", "It monitors network traffic for malicious activity and blocks attacks in real-time, typically at the network perimeter.", "It only works on wireless networks to prevent unauthorized access.", "It analyzes encrypted traffic to prevent data breaches."],
-        correctAnswer: "It monitors network traffic for malicious activity and blocks attacks in real-time, typically at the network perimeter."
-    },
-    {
-        week: 5, // IPS main function (Network Defense Tools)
-        courseCode: "COM496",
-        question: "What is the main function of an Intrusion Prevention System (IPS)?",
-        options: ["To detect and log security threats without taking any action.", "To actively block or prevent malicious activity in real-time, stopping attacks before they affect the network.", "To provide network encryption to ensure data privacy.", "To monitor traffic and detect abnormal behavior but without blocking or preventing attacks."],
-        correctAnswer: "To actively block or prevent malicious activity in real-time, stopping attacks before they affect the network."
-    },
-    {
-        week: 5, // IPS vs IDS difference (Network Defense Tools)
-        courseCode: "COM496",
-        question: "What is the primary difference between Intrusion Prevention Systems (IPS) and Intrusion Detection Systems (IDS)?",
-        options: ["IPS detects and logs threats, while IDS actively blocks malicious traffic.", "IPS actively prevents attacks in real-time, while IDS only detects and alerts administrators about potential threats.", "IDS works on the application layer, while IPS works on the network layer.", "There is no significant difference between IPS and IDS."],
-        correctAnswer: "IPS actively prevents attacks in real-time, while IDS only detects and alerts administrators about potential threats."
-    },
-    {
-        week: 5, // Wireshark purpose (Network Tools)
-        courseCode: "COM496",
-        question: "What is the main purpose of Wireshark?",
-        options: ["To detect and prevent network attacks in real-time.", "To capture and analyze network traffic in order to troubleshoot network issues.", "To encrypt network traffic for enhanced security.", "To provide network-based intrusion detection and prevention."],
-        correctAnswer: "To capture and analyze network traffic in order to troubleshoot network issues."
-    },
-    {
-        week: 5, // Wireshark use case (Network Tools)
-        courseCode: "COM496",
-        question: "Which of the following is a typical use case for Wireshark?",
-        options: ["Encrypting network traffic to ensure data privacy.", "Monitoring network traffic to detect malicious activity.", "Capturing and analyzing packet-level data to diagnose network issues.", "Blocking unwanted network traffic based on predefined rules."],
-        correctAnswer: "Capturing and analyzing packet-level data to diagnose network issues."
-    },
-    {
-        week: 5, // Wireshark data capture (Network Tools)
-        courseCode: "COM496",
-        question: "What type of data can Wireshark capture and analyze?",
-        options: ["Only HTTP and HTTPS traffic.", "Only traffic related to social media platforms.", "All types of network traffic, including HTTP, TCP, UDP, DNS, and more.", "Only encrypted traffic."],
-        correctAnswer: "All types of network traffic, including HTTP, TCP, UDP, DNS, and more."
-    },
-    {
-        week: 5, // Wireshark analysis capabilities (Network Tools)
-        courseCode: "COM496",
-        question: "Which of the following can you do with Wireshark once you have captured network traffic?",
-        options: ["View detailed information about the captured packets, such as source and destination IP addresses, protocol types, and packet contents.", "Automatically block suspicious packets.", "Encrypt the captured packets to enhance network security.", "Modify packets in real-time for testing purposes."],
-        correctAnswer: "View detailed information about the captured packets, such as source and destination IP addresses, protocol types, and packet contents."
-    },
-    {
-        week: 5, // Wireshark capture protocol (Network Tools)
-        courseCode: "COM496",
-        question: "Which protocol does Wireshark commonly use to capture network packets?",
-        options: ["FTP", "HTTP", "pcap (Packet Capture)", "DNS"],
-        correctAnswer: "pcap (Packet Capture)"
-    },
-    {
-        week: 5, // Snort purpose (Network Tools - NIDS/IPS)
-        courseCode: "COM496",
-        question: "What is Snort primarily used for?",
-        options: ["A tool for encrypting network traffic.", "A network intrusion detection and prevention system (IDS/IPS).", "A malware detection system.", "A firewall configuration tool."],
-        correctAnswer: "A network intrusion detection and prevention system (IDS/IPS)."
-    },
-    {
-        week: 5, // Snort protocol analysis (Network Tools)
-        courseCode: "COM496",
-        question: "Which network protocols can Snort analyze for potential attacks?",
-        options: ["Only HTTP and HTTPS.", "Only TCP/IP traffic.", "All network protocols, including TCP, UDP, ICMP, and more.", "Only DNS traffic."],
-        correctAnswer: "All network protocols, including TCP, UDP, ICMP, and more."
-    },
-    {
-        week: 5, // Snort logging (Network Tools)
-        courseCode: "COM496",
-        question: "How does Snort handle network traffic and log the results?",
-        options: ["Snort analyzes network traffic and saves the results in PCAP format.", "Snort analyzes network traffic and saves the results in alert files in ASCII format.", "Snort only collects traffic data without analyzing it.", "Snort does not log any data but merely alerts the user in real-time."],
-        correctAnswer: "Snort analyzes network traffic and saves the results in alert files in ASCII format."
-    },
+
+        {
+            "week": 1,
+            "courseCode": "COM496",
+            "question": "What does the \"Confidentiality\" aspect of the CIA Triad focus on?",
+            "options": ["Ensuring systems are always operational", "Preventing unauthorized access to data", "Allowing public access to networks", "Detecting network attacks", "Making backups of critical files"],
+            "correctAnswer": "Preventing unauthorized access to data"
+        },
+        {
+            "week": 4,
+            "courseCode": "COM496",
+            "question": "Which of the following is a passive attack?",
+            "options": ["Ransomware", "Man-in-the-Middle attack", "Session hijacking", "Traffic analysis", "DNS spoofing"],
+            "correctAnswer": "Traffic analysis"
+        },
+        {
+            "week": 2,
+            "courseCode": "COM496",
+            "question": "What is the main goal of a DDoS attack?",
+            "options": ["Steal credentials", "Encrypt files", "Gain remote access", "Take down a system or service", "Alter configuration settings"],
+            "correctAnswer": "Take down a system or service"
+        },
+        {
+            "week": 4,
+            "courseCode": "COM496",
+            "question": "Which of the following best defines a vulnerability?",
+            "options": ["An action taken to harm a system", "An unauthorized access", "A weakness that can be exploited", "A malicious software", "A failed login attempt"],
+            "correctAnswer": "A weakness that can be exploited"
+        },
+        {
+            "week": 4,
+            "courseCode": "COM496",
+            "question": "Which security measure helps protect against Man-in-the-Middle attacks?",
+            "options": ["Open Wi-Fi networks", "Weak encryption", "VPN usage", "Unpatched software", "Default passwords"],
+            "correctAnswer": "VPN usage"
+        },
+        {
+            "week": 2,
+            "courseCode": "COM496",
+            "question": "Which of the following is NOT a method of phishing?",
+            "options": ["Email Phishing", "Vishing", "Smishing", "Sniffing", "Spear Phishing"],
+            "correctAnswer": "Sniffing"
+        },
+        {
+            "week": 4,
+            "courseCode": "COM496",
+            "question": "What does ARP Poisoning do?",
+            "options": ["Encrypts your files", "Logs your keystrokes", "Maps MAC addresses incorrectly", "Sends spam emails", "Blocks internet access"],
+            "correctAnswer": "Maps MAC addresses incorrectly"
+        },
+        {
+            "week": 2,
+            "courseCode": "COM496",
+            "question": "A worm is different from a virus because it:",
+            "options": ["Requires user interaction to spread", "Targets only email systems", "Replicates itself without user action", "Disguises as legitimate software", "Does not harm the host system"],
+            "correctAnswer": "Replicates itself without user action"
+        },
+        {
+            "week": 4,
+            "courseCode": "COM496",
+            "question": "Which of the following attacks involves manipulating DNS records?",
+            "options": ["ARP Poisoning", "SQL Injection", "DNS Spoofing", "Buffer Overflow", "Brute Force Attack"],
+            "correctAnswer": "DNS Spoofing"
+        },
+        {
+            "week": 1,
+            "courseCode": "COM496",
+            "question": "What is the primary goal of \"Availability\" in the CIA triad?",
+            "options": ["Preventing unauthorized access", "Keeping data unchanged", "Ensuring system uptime and access", "Encrypting sensitive files", "Blocking unknown IPs"],
+            "correctAnswer": "Ensuring system uptime and access"
+        },
+        {
+            "week": 2,
+            "courseCode": "COM496",
+            "question": "Which of the following tools helps prevent spyware?",
+            "options": ["VPN", "Keylogger", "Anti-spyware software", "Wireshark", "Port scanner"],
+            "correctAnswer": "Anti-spyware software"
+        },
+        {
+            "week": 2,
+            "courseCode": "COM496",
+            "question": "A Trojan is:",
+            "options": ["A self-replicating malware", "Legitimate software with hidden malicious code", "Used in passive attacks only", "Only active during boot time", "A hardware-level threat"],
+            "correctAnswer": "Legitimate software with hidden malicious code"
+        },
+        {
+            "week": 2,
+            "courseCode": "COM496",
+            "question": "What is the most effective way to protect against phishing attacks?",
+            "options": ["Using older versions of browsers", "Avoiding all email communication", "User awareness training", "Turning off antivirus software", "Disabling firewalls"],
+            "correctAnswer": "User awareness training"
+        },
+        {
+            "week": 2,
+            "courseCode": "COM496",
+            "question": "What kind of attack is SYN flooding?",
+            "options": ["Passive attack", "ARP spoofing", "Phishing", "DoS attack", "Malware infection"],
+            "correctAnswer": "DoS attack"
+        },
+        {
+            "week": 2,
+            "courseCode": "COM496",
+            "question": "Which of the following would most likely be used in a Spear Phishing attack?",
+            "options": ["Random spam to all users", "Targeted email with personal information", "Encrypted messages", "Automated password guessing", "DNS redirection"],
+            "correctAnswer": "Targeted email with personal information"
+        },
+        {
+            "week": 3,
+            "courseCode": "COM496",
+            "question": "Which of the following helps ensure data integrity?",
+            "options": ["Encryption", "Firewalls", "Checksums and digital signatures", "VPNs", "DNSSEC"],
+            "correctAnswer": "Checksums and digital signatures"
+        },
+        {
+            "week": 2,
+            "courseCode": "COM496",
+            "question": "Which type of malware is designed to secretly collect user information?",
+            "options": ["Worm", "Ransomware", "Trojan", "Spyware", "Rootkit"],
+            "correctAnswer": "Spyware"
+        },
+        {
+            "week": 4,
+            "courseCode": "COM496",
+            "question": "What is the purpose of DNSSEC?",
+            "options": ["Encrypt web traffic", "Filter spam emails", "Authenticate DNS responses", "Monitor system logs", "Increase browsing speed"],
+            "correctAnswer": "Authenticate DNS responses"
+        },
+        {
+            "week": 4,
+            "courseCode": "COM496",
+            "question": "Which of the following is a common DDoS mitigation technique?",
+            "options": ["Weak password enforcement", "Traffic filtering", "Using public Wi-Fi", "Disabling firewalls", "Ignoring suspicious traffic"],
+            "correctAnswer": "Traffic filtering"
+        },
+        {
+            "week": 4,
+            "courseCode": "COM496",
+            "question": "Which of the following would be considered an active attack?",
+            "options": ["Network sniffing", "Reading encrypted emails", "Modifying transmitted data", "Analyzing packet headers", "Observing login attempts"],
+            "correctAnswer": "Modifying transmitted data"
+        },
+        {
+            "week": 6,
+            "courseCode": "COM496",
+            "question": "What is the primary purpose of operating system (OS) security?",
+            "options": ["Increasing GUI performance", "Supporting gaming applications", "Protecting system resources and data", "Compressing system files", "Updating application software"],
+            "correctAnswer": "Protecting system resources and data"
+        },
+        {
+            "week": 1,
+            "courseCode": "COM496",
+            "question": "Which of the following is not part of the CIA triad?",
+            "options": ["Confidentiality", "Integrity", "Availability", "Accountability", "All are part of the CIA triad"],
+            "correctAnswer": "Accountability"
+        },
+        {
+            "week": 6,
+            "courseCode": "COM496",
+            "question": "Why is the operating system considered the foundation of system security?",
+            "options": ["It controls the system's graphical user interface", "It provides entertainment software", "It manages low-level hardware and all access control", "It improves battery life", "It boosts internet speed"],
+            "correctAnswer": "It manages low-level hardware and all access control"
+        },
+        {
+            "week": 6,
+            "courseCode": "COM496",
+            "question": "Which component is responsible for verifying user identity?",
+            "options": ["File system", "Authorization", "Authentication", "Kernel", "Scheduler"],
+            "correctAnswer": "Authentication"
+        },
+        {
+            "week": 6,
+            "courseCode": "COM496",
+            "question": "What does Role-Based Access Control (RBAC) assign permissions based on?",
+            "options": ["File extensions", "User names", "User roles", "Process IDs", "IP addresses"],
+            "correctAnswer": "User roles"
+        },
+        {
+            "week": 6,
+            "courseCode": "COM496",
+            "question": "What is privilege separation?",
+            "options": ["Assigning all users the same access level", "Running all processes with root privileges", "Running processes with the least required privileges", "Allowing shared admin passwords", "Preventing file execution"],
+            "correctAnswer": "Running processes with the least required privileges"
+        },
+        {
+            "week": 6,
+            "courseCode": "COM496",
+            "question": "In Linux, which file is often misconfigured and can lead to privilege escalation?",
+            "options": ["/etc/fstab", "/etc/hosts", "/etc/passwd", "/etc/sudoers", "/etc/group"],
+            "correctAnswer": "/etc/sudoers"
+        },
+        {
+            "week": 6,
+            "courseCode": "COM496",
+            "question": "What is the main security purpose of file permissions in an OS?",
+            "options": ["Compress files", "Speed up access", "Restrict unauthorized access", "Encrypt files", "Enable faster booting"],
+            "correctAnswer": "Restrict unauthorized access"
+        },
+        {
+            "week": 6,
+            "courseCode": "COM496",
+            "question": "What distinguishes Access Control Lists (ACLs) from traditional Unix file permissions?",
+            "options": ["ACLs are less secure", "ACLs allow more fine-grained access control", "ACLs only work on FAT32", "ACLs are not compatible with Windows", "ACLs require admin login"],
+            "correctAnswer": "ACLs allow more fine-grained access control"
+        },
+        {
+            "week": 6,
+            "courseCode": "COM496",
+            "question": "Which of the following is a file encryption method used by Linux?",
+            "options": ["BitLocker", "LUKS", "EFS", "TPM", "NTFS"],
+            "correctAnswer": "LUKS"
+        },
+        {
+            "week": 6,
+            "courseCode": "COM496",
+            "question": "What does \"sandboxing\" refer to in OS security?",
+            "options": ["Cleaning up logs", "Blocking all user access", "Isolating applications to limit damage", "Encrypting file systems", "Deleting temporary files"],
+            "correctAnswer": "Isolating applications to limit damage"
+        },
+        {
+            "week": 6,
+            "courseCode": "COM496",
+            "question": "Which kernel security tool in Linux allows filtering of system calls?",
+            "options": ["journalctl", "SELinux", "seccomp", "sudo", "auditd"],
+            "correctAnswer": "seccomp"
+        },
+        {
+            "week": 6,
+            "courseCode": "COM496",
+            "question": "What is the main threat of a kernel-level rootkit?",
+            "options": ["Spamming emails", "Slowing down boot time", "Gaining undetected high-level control over the OS", "Encrypting user documents", "Opening too many browser tabs"],
+            "correctAnswer": "Gaining undetected high-level control over the OS"
+        },
+        {
+            "week": 6,
+            "courseCode": "COM496",
+            "question": "What is KASLR designed to do?",
+            "options": ["Prevent password reuse", "Randomize memory addresses to prevent exploits", "Encrypt hard disks", "Monitor disk usage", "Stop bootloader manipulation"],
+            "correctAnswer": "Randomize memory addresses to prevent exploits"
+        },
+        {
+            "week": 6,
+            "courseCode": "COM496",
+            "question": "What is the role of Secure Boot in OS security?",
+            "options": ["Enables fast startup", "Prevents unsigned code from executing at boot", "Reduces RAM usage", "Encrypts user folders", "Disables USB ports"],
+            "correctAnswer": "Prevents unsigned code from executing at boot"
+        },
+        {
+            "week": 6,
+            "courseCode": "COM496",
+            "question": "What does TPM stand for in system security?",
+            "options": ["Trusted Peripheral Manager", "Temporary Partition Management", "Trusted Platform Module", "Terminal Process Monitor", "Test Protection Method"],
+            "correctAnswer": "Trusted Platform Module"
+        },
+        {
+            "week": 6,
+            "courseCode": "COM496",
+            "question": "Which attack was one of the first to exploit OS kernel vulnerabilities via USB?",
+            "options": ["WannaCry", "Zeus", "Stuxnet", "NotPetya", "Flame"],
+            "correctAnswer": "Stuxnet"
+        },
+        {
+            "week": 6,
+            "courseCode": "COM496",
+            "question": "Which OS feature helps protect against buffer overflow attacks?",
+            "options": ["File ACLs", "Kernel modules", "DEP (Data Execution Prevention)", "Shell scripting", "DNSSEC"],
+            "correctAnswer": "DEP (Data Execution Prevention)"
+        },
+        {
+            "week": 6,
+            "courseCode": "COM496",
+            "question": "What is the main goal of control-flow integrity (CFI)?",
+            "options": ["Encrypt all logs", "Ensure the program executes as intended", "Monitor open ports", "Allow user tracking", "Limit file size"],
+            "correctAnswer": "Ensure the program executes as intended"
+        },
+        {
+            "week": 6,
+            "courseCode": "COM496",
+            "question": "Which of the following tools is used in Linux for audit logging?",
+            "options": ["Event Viewer", "sysmon", "auditd", "netcat", "bash"],
+            "correctAnswer": "auditd"
+        },
+        {
+            "week": 4,
+            "courseCode": "COM496",
+            "question": "What is the typical structure of a modern web application?",
+            "options": ["Single-layer with no database", "Browser -> DNS -> Server only", "Client -> Server -> Database", "API -> DNS -> IoT", "UI -> GPU -> CPU"],
+            "correctAnswer": "Client -> Server -> Database"
+        },
+        {
+            "week": 2,
+            "courseCode": "COM496",
+            "question": "Which of the following is not part of the OWASP Top 10 (2021)?",
+            "options": ["Injection", "Broken Access Control", "Insecure Design", "Weak Network Signal", "Security Logging & Monitoring Failures"],
+            "correctAnswer": "Weak Network Signal"
+        },
+        {
+            "week": 2,
+            "courseCode": "COM496",
+            "question": "What makes SQL Injection dangerous?",
+            "options": ["It modifies CSS files", "It can allow attackers to execute arbitrary SQL commands", "It only affects the login screen", "It helps optimize database queries", "It slows down the server"],
+            "correctAnswer": "It can allow attackers to execute arbitrary SQL commands"
+        },
+        {
+            "week": 2,
+            "courseCode": "COM496",
+            "question": "What is a common example of a SQL Injection attack?",
+            "options": ["alert('XSS')", "../../etc/passwd", "' OR '1'='1", "<script>console.log</script>", "curl -X POST"],
+            "correctAnswer": "' OR '1'='1"
+        },
+        {
+            "week": 2,
+            "courseCode": "COM496",
+            "question": "What technique can prevent SQL Injection attacks?",
+            "options": ["Disabling cookies", "Using GET requests", "Prepared statements (parameterized queries)", "Encrypting CSS files", "Increasing server timeout"],
+            "correctAnswer": "Prepared statements (parameterized queries)"
+        },
+        {
+            "week": 2,
+            "courseCode": "COM496",
+            "question": "What is a common sign of a successful login bypass via SQLi?",
+            "options": ["404 Error", "Admin panel access without credentials", "CSS not loading", "Image download starts", "Server shutdown"],
+            "correctAnswer": "Admin panel access without credentials"
+        },
+        {
+            "week": 2,
+            "courseCode": "COM496",
+            "question": "What does XSS stand for?",
+            "options": ["Cross Site Structure", "Extra Secure Session", "Cross Site Scripting", "XML Secure Syntax", "Execute Secure String"],
+            "correctAnswer": "Cross Site Scripting"
+        },
+        {
+            "week": 2,
+            "courseCode": "COM496",
+            "question": "Which type of XSS is stored in a database and served to multiple users?",
+            "options": ["Reflected", "Stored", "DOM-based", "Inline", "Remote"],
+            "correctAnswer": "Stored"
+        },
+        {
+            "week": 2,
+            "courseCode": "COM496",
+            "question": "What is the primary risk of XSS attacks?",
+            "options": ["Data deletion", "Server crash", "Stealing user session data or cookies", "Changing font size", "Uploading files"],
+            "correctAnswer": "Stealing user session data or cookies"
+        },
+        {
+            "week": 2,
+            "courseCode": "COM496",
+            "question": "What is a good defense mechanism against XSS?",
+            "options": ["Input compression", "Token-based authentication", "Output encoding and Content Security Policy (CSP)", "Using a VPN", "Rate limiting"],
+            "correctAnswer": "Output encoding and Content Security Policy (CSP)"
+        },
+        {
+            "week": 2,
+            "courseCode": "COM496",
+            "question": "What is the purpose of CSRF attacks?",
+            "options": ["To flood the network", "To steal the admin password", "To trick a logged-in user into performing unwanted actions", "To encrypt user files", "To modify HTTP headers"],
+            "correctAnswer": "To trick a logged-in user into performing unwanted actions"
+        },
+        {
+            "week": 2,
+            "courseCode": "COM496",
+            "question": "Which of the following is a proper CSRF prevention method?",
+            "options": ["CAPTCHA", "JSON parsing", "CSRF token in forms", "File hashing", "URL redirection"],
+            "correctAnswer": "CSRF token in forms"
+        },
+        {
+            "week": 2,
+            "courseCode": "COM496",
+            "question": "What's a key difference between CSRF and XSS?",
+            "options": ["XSS targets servers; CSRF targets clients", "CSRF requires no code injection", "XSS can't steal cookies", "CSRF is a server misconfiguration", "Both are unrelated to authentication"],
+            "correctAnswer": "CSRF requires no code injection"
+        },
+        {
+            "week": 2,
+            "courseCode": "COM496",
+            "question": "What risk is associated with allowing unrestricted file uploads?",
+            "options": ["CSS overwrite", "SQL injection", "Remote code execution", "Cookie deletion", "Password reuse"],
+            "correctAnswer": "Remote code execution"
+        },
+        {
+            "week": 2,
+            "courseCode": "COM496",
+            "question": "How can command injection vulnerabilities be exploited?",
+            "options": ["By using <iframe> tags", "By changing DNS records", "By passing malicious input to system calls", "By using HTTPS", "By brute-force login"],
+            "correctAnswer": "By passing malicious input to system calls"
+        },
+        {
+            "week": 2,
+            "courseCode": "COM496",
+            "question": "Which of the following is a common payload in command injection?",
+            "options": ["<script>alert(1)</script>", "' OR '1'='1", "; rm -rf /", "csrf_token=123", "window.location.href"],
+            "correctAnswer": "; rm -rf /"
+        },
+        {
+            "week": 2,
+            "courseCode": "COM496",
+            "question": "What principle helps avoid many coding-related vulnerabilities?",
+            "options": ["Use only GET requests", "Obfuscate all HTML", "Input validation and output encoding", "Use large font size", "Run as root"],
+            "correctAnswer": "Input validation and output encoding"
+        },
+        {
+            "week": 2,
+            "courseCode": "COM496",
+            "question": "What are OWASP Secure Coding Guidelines designed to do?",
+            "options": ["Speed up JavaScript performance", "Protect server room access", "Prevent common coding errors that lead to security flaws", "Encrypt URLs", "Hide source code"],
+            "correctAnswer": "Prevent common coding errors that lead to security flaws"
+        },
+        {
+            "week": 4,
+            "courseCode": "COM496",
+            "question": "Which tool is commonly used to detect vulnerabilities in web applications?",
+            "options": ["Wireshark", "Metasploit", "OWASP ZAP", "Excel", "WinRAR"],
+            "correctAnswer": "OWASP ZAP"
+        },
+        {
+            "week": 2,
+            "courseCode": "COM496",
+            "question": "What is DVWA mainly used for?",
+            "options": ["Database replication", "Virtual server hosting", "Practicing web application security testing", "Monitoring HTTP traffic", "Encrypting file systems"],
+            "correctAnswer": "Practicing web application security testing"
+        },
+        {
+            "week": 4,
+            "courseCode": "COM496",
+            "question": "What is the main function of a firewall?",
+            "options": ["Encrypt data for secure communication", "Monitor and control network traffic based on rules", "Analyze software bugs in applications", "Scan for physical hardware vulnerabilities", "Log keyboard inputs"],
+            "correctAnswer": "Monitor and control network traffic based on rules"
+        },
+        {
+            "week": 4,
+            "courseCode": "COM496",
+            "question": "Which of the following is an example of endpoint protection?",
+            "options": ["Intrusion Prevention System (IPS)", "NAT Gateway", "Antivirus on a workstation", "Load balancer", "DNS resolver"],
+            "correctAnswer": "Antivirus on a workstation"
+        },
+        {
+            "week": 4,
+            "courseCode": "COM496",
+            "question": "What type of firewall monitors the state of active connections?",
+            "options": ["Packet Filtering Firewall", "Proxy Firewall", "Stateful Inspection Firewall", "NGFW", "DNS Firewall"],
+            "correctAnswer": "Stateful Inspection Firewall"
+        },
+        {
+            "week": 4,
+            "courseCode": "COM496",
+            "question": "In IDS, which technique compares network activity to known attack patterns?",
+            "options": ["AI-based detection", "Behavior modeling", "Signature-based detection", "Zero-Trust filtering", "Deep learning"],
+            "correctAnswer": "Signature-based detection"
+        },
+        {
+            "week": 2,
+            "courseCode": "COM496",
+            "question": "Which attack floods a network with traffic to make services unavailable?",
+            "options": ["SQL Injection", "ARP Spoofing", "XSS", "DDoS", "Clickjacking"],
+            "correctAnswer": "DDoS"
+        },
+        {
+            "week": 4,
+            "courseCode": "COM496",
+            "question": "What protocol is considered obsolete due to weak encryption?",
+            "options": ["WireGuard", "L2TP/IPSec", "OpenVPN", "PPTP", "TLS 1.3"],
+            "correctAnswer": "PPTP"
+        },
+        {
+            "week": 4,
+            "courseCode": "COM496",
+            "question": "Which of the following best describes a Zero Trust security model?",
+            "options": ["All internal users are trusted by default", "Trust only internal IP addresses", "Trust external traffic with proper headers", "Never trust, always verify", "Trust after one-time authentication"],
+            "correctAnswer": "Never trust, always verify"
+        },
+        {
+            "week": 2,
+            "courseCode": "COM496",
+            "question": "Which example is a real-world breach involving third-party vendor access?",
+            "options": ["Yahoo 2014", "Target 2013", "Dyn DNS Attack", "Colonial Pipeline", "SolarWinds"],
+            "correctAnswer": "Target 2013"
+        },
+        {
+            "week": 4,
+            "courseCode": "COM496",
+            "question": "What is the role of VPN tunneling protocols?",
+            "options": ["Track user activity", "Open ports for remote access", "Create encrypted channels for traffic", "Block access to unsafe URLs", "Install antivirus remotely"],
+            "correctAnswer": "Create encrypted channels for traffic"
+        },
+        {
+            "week": 4,
+            "courseCode": "COM496",
+            "question": "Which type of IDS is installed on individual hosts?",
+            "options": ["NIDS", "DLP", "IPS", "HIDS", "NGFW"],
+            "correctAnswer": "HIDS"
+        },
+        {
+            "week": 4,
+            "courseCode": "COM496",
+            "question": "Which firewall type can perform deep packet inspection (DPI)?",
+            "options": ["Packet Filtering", "Stateful Inspection", "Next-Generation Firewall", "DNS Firewall", "Reverse Proxy"],
+            "correctAnswer": "Next-Generation Firewall"
+        },
+        {
+            "week": 4,
+            "courseCode": "COM496",
+            "question": "What is a primary advantage of a proxy firewall?",
+            "options": ["Automatically blocks all HTTP traffic", "Offers user anonymity and content filtering", "Increases internal LAN speed", "Encrypts packets using VPN", "Requires no configuration"],
+            "correctAnswer": "Offers user anonymity and content filtering"
+        },
+        {
+            "week": 4,
+            "courseCode": "COM496",
+            "question": "Which VPN protocol is open-source and supports strong encryption?",
+            "options": ["L2TP", "PPTP", "WireGuard", "IPSec", "OpenVPN"],
+            "correctAnswer": "OpenVPN"
+        },
+        {
+            "week": 4,
+            "courseCode": "COM496",
+            "question": "What is the purpose of segmentation in network security?",
+            "options": ["Improve file compression", "Reduce CPU temperature", "Limit attacker movement within a network", "Block outgoing email", "Increase DNS resolution speed"],
+            "correctAnswer": "Limit attacker movement within a network"
+        },
+        {
+            "week": 4,
+            "courseCode": "COM496",
+            "question": "What is one key difference between IDS and IPS?",
+            "options": ["IDS actively blocks threats", "IPS can only log events", "IDS detects; IPS detects and blocks", "IDS operates inline", "IPS cannot detect new threats"],
+            "correctAnswer": "IDS detects; IPS detects and blocks"
+        },
+        {
+            "week": 3,
+            "courseCode": "COM496",
+            "question": "Which encryption algorithm is used by OpenVPN for high security?",
+            "options": ["DES", "AES-256", "MD5", "RC4", "Base64"],
+            "correctAnswer": "AES-256"
+        },
+        {
+            "week": 4,
+            "courseCode": "COM496",
+            "question": "What real-time action can an IPS take?",
+            "options": ["Generate monthly audit reports", "Modify configuration files", "Block malicious packets immediately", "Send firewall logs to the admin", "Encrypt backup files"],
+            "correctAnswer": "Block malicious packets immediately"
+        },
+        {
+            "week": 4,
+            "courseCode": "COM496",
+            "question": "Which of the following is a layer of defense focusing on device-level protection?",
+            "options": ["DNS Security", "Access Control", "Endpoint Protection", "SIEM Integration", "IDS Sensor"],
+            "correctAnswer": "Endpoint Protection"
+        },
+        {
+            "week": 2,
+            "courseCode": "COM496",
+            "question": "What is the core principle of MFA (Multi-Factor Authentication)?",
+            "options": ["Trust once, verify later", "Only ask for a password", "Require multiple forms of identity verification", "Use a single shared key for all users", "Encrypt browser cookies"],
+            "correctAnswer": "Require multiple forms of identity verification"
+        },
+        {
+            "week": 4,
+            "courseCode": "COM496",
+            "question": "What tool can be used to analyze network traffic for learning or threat detection?",
+            "options": ["WordPress", "GitHub", "Wireshark", "Adobe Acrobat", "Oracle"],
+            "correctAnswer": "Wireshark"
+        },
+        {
+            "week": 1,
+            "courseCode": "COM496",
+            "question": "What is the primary goal of penetration testing?",
+            "options": ["To permanently disable a target system", "To develop new malware", "To test password strength only", "To find and exploit security weaknesses", "To train system users"],
+            "correctAnswer": "To find and exploit security weaknesses"
+        },
+        {
+            "week": 1,
+            "courseCode": "COM496",
+            "question": "Which of the following best describes a Black-box penetration test?",
+            "options": ["The tester has full knowledge of the system", "The tester has partial knowledge", "The tester has no prior knowledge of the system", "The test is conducted internally", "The test is only for physical security"],
+            "correctAnswer": "The tester has no prior knowledge of the system"
+        },
+        {
+            "week": 1,
+            "courseCode": "COM496",
+            "question": "Which tool is commonly used for passive information gathering?",
+            "options": ["Burp Suite", "Nessus", "Nmap", "Shodan", "Nikto"],
+            "correctAnswer": "Shodan"
+        },
+        {
+            "week": 1,
+            "courseCode": "COM496",
+            "question": "What is the final stage of the Penetration Testing Execution Standard (PTES)?",
+            "options": ["Intelligence Gathering", "Exploitation", "Post-Exploitation", "Reporting", "Threat Modeling"],
+            "correctAnswer": "Reporting"
+        },
+        {
+            "week": 1,
+            "courseCode": "COM496",
+            "question": "What is the main difference between vulnerability scanning and penetration testing?",
+            "options": ["Scanning includes exploiting vulnerabilities", "Pentesting is fully automated", "Scanning focuses on social engineering", "Pentesting involves exploitation attempts", "Scanning takes longer than pentesting"],
+            "correctAnswer": "Pentesting involves exploitation attempts"
+        },
+        {
+            "week": 2,
+            "courseCode": "COM496",
+            "question": "Which of the following is an example of a command injection vulnerability?",
+            "options": ["<script>alert('XSS')</script>", "' OR 1-1--", "; rm -rf /", "admin@example.com", "192.168.1.1:80"],
+            "correctAnswer": "; rm -rf /"
+        },
+        {
+            "week": 1,
+            "courseCode": "COM496",
+            "question": "What is the role of ethical hackers in cybersecurity?",
+            "options": ["Developing zero-day exploits for black markets", "Breaking into systems for fame", "Testing systems legally to find vulnerabilities", "Selling user data for analysis", "Avoiding detection in network traffic"],
+            "correctAnswer": "Testing systems legally to find vulnerabilities"
+        },
+        {
+            "week": 4,
+            "courseCode": "COM496",
+            "question": "Which of the following tools is best suited for web vulnerability scanning?",
+            "options": ["OpenVAS", "Metasploit", "Burp Suite", "Shodan", "Whois"],
+            "correctAnswer": "Burp Suite"
+        },
+        {
+            "week": 1,
+            "courseCode": "COM496",
+            "question": "In a grey-box test, the penetration tester has:",
+            "options": ["No information at all", "Administrator access", "Full source code access", "Limited internal knowledge", "External user credentials"],
+            "correctAnswer": "Limited internal knowledge"
+        },
+        {
+            "week": 1,
+            "courseCode": "COM496",
+            "question": "Which legal document is crucial before beginning any penetration test?",
+            "options": ["Rootkit agreement", "Terms of privacy", "Code of conduct", "Non-disclosure agreement (NDA)", "Rules of engagement"],
+            "correctAnswer": "Rules of engagement"
+        },
+        {
+            "week": 4,
+            "courseCode": "COM496",
+            "question": "Which tool is typically used to identify open ports on a target?",
+            "options": ["Metasploit", "NSLookup", "Nessus", "Nmap", "Burp Suite"],
+            "correctAnswer": "Nmap"
+        },
+        {
+            "week": 1,
+            "courseCode": "COM496",
+            "question": "What technique is used to move from one compromised machine to another?",
+            "options": ["Enumeration", "Pivoting", "Fuzzing", "Spoofing", "Sniffing"],
+            "correctAnswer": "Pivoting"
+        },
+        {
+            "week": 2,
+            "courseCode": "COM496",
+            "question": "Which attack manipulates SQL queries through user input?",
+            "options": ["Cross-Site Request Forgery (CSRF)", "Command Injection", "SQL Injection", "Cross-Site Scripting (XSS)", "Brute Force"],
+            "correctAnswer": "SQL Injection"
+        },
+        {
+            "week": 1,
+            "courseCode": "COM496",
+            "question": "What is the main purpose of post-exploitation?",
+            "options": ["Scan other networks", "Bypass login forms", "Escalate local privileges", "Steal credentials", "Maintain access or gather information"],
+            "correctAnswer": "Maintain access or gather information"
+        },
+        {
+            "week": 1,
+            "courseCode": "COM496",
+            "question": "Which of the following is considered an internal penetration test?",
+            "options": ["Social engineering of remote employees", "Phishing from a third-party domain", "Attacking the organization from the internet", "Testing network access from within the company", "DNS poisoning from outside the firewall"],
+            "correctAnswer": "Testing network access from within the company"
+        },
+        {
+            "week": 4,
+            "courseCode": "COM496",
+            "question": "Which protocol-related vulnerability is typically found in wireless penetration testing?",
+            "options": ["SMB enumeration", "WPA2 handshake cracking", "SQL injection", "SNMP community string brute force", "LDAP injection"],
+            "correctAnswer": "WPA2 handshake cracking"
+        },
+        {
+            "week": 6,
+            "courseCode": "COM496",
+            "question": "What is a common technique for privilege escalation in Windows?",
+            "options": ["Setuid binary abuse", "sudo misconfiguration", "Unquoted service path", "SSH key harvesting", "Crontab injection"],
+            "correctAnswer": "Unquoted service path"
+        },
+        {
+            "week": 1,
+            "courseCode": "COM496",
+            "question": "Which tool allows link analysis and visualization for social engineering?",
+            "options": ["Nessus", "Nikto", "Recon-ng", "Maltego", "John the Ripper"],
+            "correctAnswer": "Maltego"
+        },
+        {
+            "week": 1,
+            "courseCode": "COM496",
+            "question": "What should NOT be included in a professional pentest report?",
+            "options": ["Executive summary", "Risk ratings", "Exploitation logs", "Personal opinions and assumptions", "Proof of concept"],
+            "correctAnswer": "Personal opinions and assumptions"
+        },
+        {
+            "week": 1,
+            "courseCode": "COM496",
+            "question": "What is the purpose of threat modeling in the pentesting lifecycle?",
+            "options": ["To simulate malware", "To assign tasks to testers", "To understand assets and attack surfaces", "To write reports", "To test user awareness"],
+            "correctAnswer": "To understand assets and attack surfaces"
+        },
 
 
     // --- Entrepreneurship (GRI403) ---
     // --- Week 1: GRI403 ---
 
-    
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which one below is NOT the common characteristic of a successful entrepreneur?",
-            "options": [
-                "A successful entrepreneur is a person who runs the risk of acceptable ones.",
-                "A successful entrepreneur is determined.",
-                "A successful entrepreneur is creative.",
-                "A successful entrepreneur is a person who applies the decisions of the proprietor (employer), finely.",
-                "A successful entrepreneur is the one who uses his/her imagination (vision)."
-            ],
-            "correctAnswer": "A successful entrepreneur is a person who applies the decisions of the proprietor (employer), finely."
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which one below is NOT a kind of entrepreneurship?",
-            "options": [
-                "Intrapreneurship",
-                "Women entrepreneurship",
-                "Public entrepreneurship",
-                "Private enterprise system",
-                "Men entrepreneurship"
-            ],
-            "correctAnswer": "Men entrepreneurship"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which one below is NOT one of the basic concepts of entrepreneurship?",
-            "options": [
-                "Creativity",
-                "Ordinariness/Mediocrity",
-                "Innovativeness",
-                "Risk-taking",
-                "Opportunity"
-            ],
-            "correctAnswer": "Ordinariness/Mediocrity"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "______ is defined as an occurance of an unwanted and probable damage or loss situation. Which one below complete the sentence?",
-            "options": [
-                "Risk",
-                "Threat",
-                "Uncertainty",
-                "Enterpreneur",
-                "Enterprise/Attempt"
-            ],
-            "correctAnswer": "Risk"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "______ balances the needs and potentials coherently by correct detection of the society needs. Which one below complete the sentence?",
-            "options": [
-                "Total quality management",
-                "Lean management",
-                "Entrepreneurship",
-                "Management",
-                "None"
-            ],
-            "correctAnswer": "Entrepreneurship"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which one below is one of the factors of production?",
-            "options": [
-                "Manager",
-                "Entrepreneur",
-                "Business Administrator",
-                "Initiative",
-                "Business Firm"
-            ],
-            "correctAnswer": "Entrepreneur"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which one below is an operation of a new idea, an invention or an existing product putting on the market in a profitable way?",
-            "options": [
-                "Making investment",
-                "Opportunity Entrepreneurship",
-                "Creative Entrepreneurship",
-                "Initiative Entrepreneurship",
-                "Establishing a new firm"
-            ],
-            "correctAnswer": "Creative Entrepreneurship"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which one does NOT agree with entrepreneurship?",
-            "options": [
-                "Establishing a new firm",
-                "Procuring capital",
-                "Innovation and Creativity",
-                "Making Oppurtunity",
-                "Bound to the old"
-            ],
-            "correctAnswer": "Bound to the old"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which one is NOT the features of an entrepreneur?",
-            "options": [
-                "Not taking risk",
-                "Being conservative",
-                "Cannot seeing problems",
-                "Being insensible",
-                "Seeing opportunities"
-            ],
-            "correctAnswer": "Seeing opportunities"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which one is NOT an element of entrepreneurship?",
-            "options": [
-                "Being disapproved",
-                "Giving effort",
-                "Creating value",
-                "Earning proceeds",
-                "Contribution for public."
-            ],
-            "correctAnswer": "Being disapproved"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which one is NOT the factors for materializing creativity?",
-            "options": [
-                "Motivation",
-                "Attitude",
-                "Behaviour",
-                "Environment",
-                "Oppressiveness"
-            ],
-            "correctAnswer": "Oppressiveness"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which one is NOT the behaviours and attitudes that occur in individual creativity?",
-            "options": [
-                "Creativity",
-                "Encouragement",
-                "Mistake and risk",
-                "Opinion / Thought",
-                "Making concept"
-            ],
-            "correctAnswer": "Mistake and risk"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which one is the behaviours and attitudes of organisational creativity?",
-            "options": [
-                "Challenge",
-                "Encouragement",
-                "Mistake and risk",
-                "Thought/opinion",
-                "Making concept"
-            ],
-            "correctAnswer": "Making concept"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "What is the name of the thoughts that can turn into a product and service, provide value to the customer, profit to the entrepreneur?",
-            "options": [
-                "Creativity",
-                "Work opinion",
-                "Innovation",
-                "Newness",
-                "Entrepreneurship"
-            ],
-            "correctAnswer": "Work opinion"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "While brainstorming, what is the rule that does NOT put a bound to imaginations and thoughts?",
-            "options": [
-                "To criticise",
-                "To make up freely",
-                "To think as much as you can",
-                "To be prepared",
-                "To develop an idea"
-            ],
-            "correctAnswer": "To make up freely"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which one continues from the place where brainstorming resumes and is more systematic technic?",
-            "options": [
-                "Control list",
-                "Horizontal Thinking",
-                "Gordon Method",
-                "Map of Thought",
-                "Focus Group Discussion"
-            ],
-            "correctAnswer": "Gordon Method"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which one is the term that relates concepts, but hard to understand and explain because it consists of complex symbols?",
-            "options": [
-                "Attitude",
-                "Behaviour",
-                "Chaus",
-                "Intuition",
-                "Perspective"
-            ],
-            "correctAnswer": "Behaviour"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which are NOT the features of hot-teams?",
-            "options": [
-                "It consists of different characters",
-                "They need to have targets",
-                "They should be in solidarity.",
-                "They should know the thoughts of each other.",
-                "None of them."
-            ],
-            "correctAnswer": "They should know the thoughts of each other."
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which one below is NOT the process of creativity?",
-            "options": [
-                "Preparation",
-                "To put in Incubation",
-                "To expose",
-                "To accept",
-                "To discuss a problem"
-            ],
-            "correctAnswer": "To discuss a problem"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which one is the creativity technic, related to one product and that puts the important factors of this product into two dimensional chart to reveal the creativity?",
-            "options": [
-                "Control list",
-                "Matris method",
-                "Gordon method",
-                "Map of thoughts",
-                "Focus Group Discussion"
-            ],
-            "correctAnswer": "Matris method"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which term describes implementation of new ideas produced by creativity?",
-            "options": [
-                "Design",
-                "Innovation",
-                "Production",
-                "Intiution",
-                "System"
-            ],
-            "correctAnswer": "Innovation"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which innovation type has the highest dependency to market?",
-            "options": [
-                "Technology based innovation",
-                "Information based innovation",
-                "Organization based innovation",
-                "System based innovation",
-                "Individual based innovation"
-            ],
-            "correctAnswer": "Information based innovation"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which of the following does NOT take place in innovation principles?",
-            "options": [
-                "Big startups",
-                "Being a product of work not intelligence",
-                "Reward and admiration",
-                "Comprehensive and open communication",
-                "Perceiving, questioning and listening"
-            ],
-            "correctAnswer": "Big startups"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which of the following term has a road map attribute for realizing establishments decisions?",
-            "options": [
-                "List",
-                "Directive",
-                "Regulation",
-                "Guide book",
-                "Business plan"
-            ],
-            "correctAnswer": "Business plan"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which of the following takes place in innovation types?",
-            "options": [
-                "Structural innovations in consumers",
-                "Structural innovations in market",
-                "Organizational innovations",
-                "Intuitive innovations",
-                "Conceptual innovations"
-            ],
-            "correctAnswer": "Organizational innovations"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which of the following does NOT take place in primary group innovation sources?",
-            "options": [
-                "Unexpected evolvements",
-                "Inconsistency",
-                "Processing needs",
-                "Perception changes",
-                "Changes in sector and market structures"
-            ],
-            "correctAnswer": "Perception changes"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which of the following point does NOT insist on productivity?",
-            "options": [
-                "Improving product quality",
-                "Gaining additional properties for product",
-                "Increasing productivity on production",
-                "Reaching high automation levels",
-                "Increasing products market share"
-            ],
-            "correctAnswer": "Increasing products market share"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which of the following does NOT take place in interactive innovation processes?",
-            "options": [
-                "Creative idea",
-                "Usage of technology",
-                "Picking proper idea",
-                "Turning idea into product and service",
-                "Serving product"
-            ],
-            "correctAnswer": "Creative idea"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which of the following does NOT take place in industry regions properties?",
-            "options": [
-                "Unwillingness in venture capital usage",
-                "Innovation develops region",
-                "Being close to economical and cultural regions",
-                "Being a harbor or commercial center",
-                "Free academical and continuing education"
-            ],
-            "correctAnswer": "Unwillingness in venture capital usage"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which of the following does NOT take place in basic elements of innovation culture?",
-            "options": [
-                "Stored information",
-                "Inter-people knowledge",
-                "External environments meeting needs",
-                "Activity emerging creativity",
-                "Instability between needs and possibilities"
-            ],
-            "correctAnswer": "Instability between needs and possibilities"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which of the following innovation types ideas is limited to organizations idea producing?",
-            "options": [
-                "Operational innovation",
-                "Devastating innovation",
-                "Close innovation",
-                "Business model innovation",
-                "Reverse innovation"
-            ],
-            "correctAnswer": "Close innovation"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "In which following phase creativity is used in innovation?",
-            "options": [
-                "Managing ideas",
-                "Idea gathering",
-                "Picking potentially succesful ideas",
-                "Implementation",
-                "Budgetting"
-            ],
-            "correctAnswer": "Picking potentially succesful ideas"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which of the innovation type cooperates outer establishment companies or individuals and organizations to gather innovation sources and powers?",
-            "options": [
-                "Radical innovation",
-                "Operational innovation",
-                "Open innovation",
-                "Business model innovation",
-                "Close innovation"
-            ],
-            "correctAnswer": "Open innovation"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which of the following answer describes finding a new solution to a problem and having commercial success from it?",
-            "options": [
-                "Production",
-                "Innovation",
-                "Creativity",
-                "Invention",
-                "Marketing"
-            ],
-            "correctAnswer": "Innovation"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "In order to realise innovation which of the following property is NOT needed?",
-            "options": [
-                "Originality",
-                "Having definable value",
-                "Can be commercialized",
-                "Different",
-                "Should be brought out by imitating"
-            ],
-            "correctAnswer": "Should be brought out by imitating"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which of the following definition is wrong about innovation term?",
-            "options": [
-                "In order to provide permanent success innovation should be sustainable",
-                "Innovation term meets consumers needs and solves their problems",
-                "For innovation creativity is not needed",
-                "Innovation starts with curiosity and intuition",
-                "Innovation includes discovery, invention, research and development"
-            ],
-            "correctAnswer": "For innovation creativity is not needed"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which of the following is NOT a difficulty of innovation?",
-            "options": [
-                "Finding a good idea",
-                "Making mistake",
-                "Calculating cost",
-                "Correct timing",
-                "Catching customer"
-            ],
-            "correctAnswer": "Making mistake"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which of the following is NOT wrongly known fact about innovation?",
-            "options": [
-                "Innovation and research and development are same things",
-                "Innovation only provides social and economical benefits",
-                "Innovation requires long time",
-                "Only goal of innovation is profit",
-                "Only large establishments can do innovation"
-            ],
-            "correctAnswer": "Innovation requires long time"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which of the following definition describes the difference between innovation and research and development?",
-            "options": [
-                "Research and development can not be reclaimed as a part of innovation",
-                "Every finding of research and development turns into innovation",
-                "Research and development may not take place in every innovation",
-                "Innovation includes everybody in establishment, however research and development only consists of its own department",
-                "Research and development is a process that includes innovation"
-            ],
-            "correctAnswer": "Innovation includes everybody in establishment, however research and development only consists of its own department"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which of the following correctly lists innovation processes?",
-            "options": [
-                "Managing ideas-gathering ideas-picking ideas with potential success-implementing",
-                "Gathering ideas-managing ideas-picking ideas with potential success-implementing",
-                "Picking ideas with potential success-implementing-managing ideas-gathering ideas",
-                "Gathering ideas-implementing-picking ideas with potential success-managing ideas",
-                "Gathering ideas-picking ideas with potential success-managing ideas and implementing"
-            ],
-            "correctAnswer": "Gathering ideas-managing ideas-picking ideas with potential success-implementing"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which of the following term is called ‘business doing type with proven success’?",
-            "options": [
-                "Business idea",
-                "Customer value statement",
-                "Business model",
-                "Entrepreunership processes",
-                "Innovative entrepreunership"
-            ],
-            "correctAnswer": "Business model"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which of the following does NOT take place in business ideas key sources?",
-            "options": [
-                "Products",
-                "Facilities",
-                "Equipments",
-                "Administrative process",
-                "Brands"
-            ],
-            "correctAnswer": "Administrative process"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which of the process below turns business idea into business?",
-            "options": [
-                "Entrepreunership processes",
-                "Administrative processes",
-                "Operational processes",
-                "Financial processes",
-                "Analysis processes"
-            ],
-            "correctAnswer": "Entrepreunership processes"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which of the following technique is NOT needed by managers to search and find business ideas?",
-            "options": [
-                "GZFT analysis",
-                "Foresight and road maps",
-                "Scenario analysis",
-                "Process analysis",
-                "Budget analysis"
-            ],
-            "correctAnswer": "Budget analysis"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which of the following research is NOT used in feasibility works?",
-            "options": [
-                "Market researches",
-                "Technological researches",
-                "Financial researches",
-                "Juridical researches",
-                "Commercial researches"
-            ],
-            "correctAnswer": "Commercial researches"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which of the following property is NOT used to distinguish succesful business idea from ordinary business idea?",
-            "options": [
-                "Provides benefit to customer",
-                "Brings rival advantage",
-                "Provides acquisition to share holders and establishment",
-                "Presented by establishment",
-                "Easy to produce"
-            ],
-            "correctAnswer": "Presented by establishment"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which of the following describes 'ideas which are decided to be introduced according to entrepreuners skills, knowledge and ability levels and foresighted as succesful'?",
-            "options": [
-                "Business idea",
-                "Plan",
-                "Program",
-                "Thought",
-                "Move"
-            ],
-            "correctAnswer": "Business idea"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which of the following is NOT needed while searching to find a business plan?",
-            "options": [
-                "Using personal skills",
-                "Being broad-minded",
-                "Synthesizing the ideas by brain storming",
-                "Doing research",
-                "Not to share ideas"
-            ],
-            "correctAnswer": "Not to share ideas"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which of the following method is used for defining a projects economical potential and practicability by researching technical, financial and economical datas?",
-            "options": [
-                "Business plan",
-                "Project",
-                "Business idea",
-                "Feasibility research",
-                "Implementation"
-            ],
-            "correctAnswer": "Feasibility research"
-        },
-        {
-            "week": "1-5",
-            "courseCode": "GRI403",
-            "question": "Which of the following shows the most correct process for developing a new business or project?",
-            "options": [
-                "Starting business- pre-feasibility- feasibility- business plan",
-                "Business plan- feasibility- pre-feasibility",
-                "Business or project idea- pre-feasibility- feasibility- business plan",
-                "Business or project idea- business plan- pre-feasibility- feasibility",
-                "Business or project idea- starting business"
-            ],
-            "correctAnswer": "Business or project idea- pre-feasibility- feasibility- business plan"
-        },
-        {
-            "week": 6,
-            "courseCode": "GRI403",
-            "question": "What does competition-based pricing involve?",
-            "options": [
-                "Determining price based on environmental factors",
-                "Setting prices according to production costs",
-                "Ignoring costs and following market demands",
-                "Adjusting prices based on customer demand",
-                "None of them is correct"
-            ],
-            "correctAnswer": "Ignoring costs and following market demands"
-        },
-        {
-            "week": 6,
-            "courseCode": "GRI403",
-            "question": "What is foresight in the business context?",
-            "options": [
-                "Historical analysis",
-                "Market share analysis",
-                "Current market conditions",
-                "Predicting future events",
-                "None of them is correct"
-            ],
-            "correctAnswer": "Predicting future events"
-        },
-        {
-            "week": 6,
-            "courseCode": "GRI403",
-            "question": "What does PEST Analysis stand for in the context of business plans and market analysis?",
-            "options": [
-                "None of them is correct",
-                "Political, Environmental, Social, Technological",
-                "Public, Economic, Strategic, Technological",
-                "Political, Economical, Social, Technological",
-                "Personal, Economic, Social, Technological"
-            ],
-            "correctAnswer": "Political, Economical, Social, Technological"
-        },
-        {
-            "week": 6,
-            "courseCode": "GRI403",
-            "question": "What are the four main criteria used for market classification?",
-            "options": [
-                "Sector, Region, Climate, Population",
-                "Geographic, Demographic, Psychographic, Behavioral",
-                "Political, Economic, Societal, Technological",
-                "Cultural, Economic, Social, Environmental",
-                "None of them is correct"
-            ],
-            "correctAnswer": "Geographic, Demographic, Psychographic, Behavioral"
-        },
-        {
-            "week": 6,
-            "courseCode": "GRI403",
-            "question": "What is the primary purpose of market research phases like gathering primary data sources?",
-            "options": [
-                "Identify competitors' prices",
-                "None of them is correct",
-                "Gather information directly from the market",
-                "Evaluate environmental factors",
-                "Analyze political factors"
-            ],
-            "correctAnswer": "Gather information directly from the market"
-        },
-        {
-            "week": 6,
-            "courseCode": "GRI403",
-            "question": "What does SWOT analysis help identify in the context of environmental and establishment relations?",
-            "options": [
-                "Strengths, Weaknesses, Opportunities, Threats",
-                "Sector potential",
-                "Market share",
-                "Market competition",
-                "None of them is correct"
-            ],
-            "correctAnswer": "Strengths, Weaknesses, Opportunities, Threats"
-        },
-        {
-            "week": 6,
-            "courseCode": "GRI403",
-            "question": "Which of the following is an example of a behavioral criteria in market classification?",
-            "options": [
-                "Age",
-                "Population density",
-                "None of them is correct",
-                "Purchasing habits",
-                "Climate"
-            ],
-            "correctAnswer": "Purchasing habits"
-        },
-        {
-            "week": 6,
-            "courseCode": "GRI403",
-            "question": "Which of the following parameter does not take place in PEST analysis political factors?",
-            "options": [
-                "Demographical factors",
-                "Country regime",
-                "Bureaucratic structure",
-                "Political stability",
-                "Civil war"
-            ],
-            "correctAnswer": "Bureaucratic structure"
-        },
-        {
-            "week": 6,
-            "courseCode": "GRI403",
-            "question": "Which of the following factor does not specify the competition between entrepreuners who are affecting sectors profitableness in sector analysis extent?",
-            "options": [
-                "Differentiation of product or service",
-                "Too much entrepreuners in sector",
-                "Suppliers with insufficient knowledge about products",
-                "Slow growth of industry",
-                "Expensiveness of stable costs and storage"
-            ],
-            "correctAnswer": "Suppliers with insufficient knowledge about products"
-        },
-        {
-            "week": 6,
-            "courseCode": "GRI403",
-            "question": "Which of the following pricing strategy is based on legal regulations such as Value Added Tax (KDV) and Special Consumption Tax (ÖTV)?",
-            "options": [
-                "Cost based pricing",
-                "Demand based pricing",
-                "Competition based pricing",
-                "Productivity based pricing",
-                "Environmental factors based pricing"
-            ],
-            "correctAnswer": "Environmental factors based pricing"
-        },
-        {
-            "week": 6,
-            "courseCode": "GRI403",
-            "question": "When we consider PEST analysis used for evaluating environmental factors, which of the following factor describes technology establishments such as Google can not operate in China?",
-            "options": [
-                "Political factors",
-                "Economical factors",
-                "Social factors",
-                "Technological factors",
-                "Cultural factors"
-            ],
-            "correctAnswer": "Political factors"
-        },
-        {
-            "week": 6,
-            "courseCode": "GRI403",
-            "question": "Which of the following analyse shows establishment and environment relation which help us to understand environmental factors such as establishments inner strength and weaknesses and exterior opportunuties and threats?",
-            "options": [
-                "PEST analysis",
-                "SWOT analysis",
-                "Sector analysis",
-                "Demand estimation",
-                "Customer differentiation"
-            ],
-            "correctAnswer": "SWOT analysis"
-        },
-        {
-            "week": 6,
-            "courseCode": "GRI403",
-            "question": "When we consider the factors affecting sectors profitableness, which of the following factor describes usage of plastic bottles instead of glass bottles in water packaging?",
-            "options": [
-                "Substitude products or services threat",
-                "Purchasers negotiation power",
-                "Suppliers negotiation power",
-                "Competition between current competitors",
-                "Potential competitors threat"
-            ],
-            "correctAnswer": "Substitude products or services threat"
-        },
-        {
-            "week": 6,
-            "courseCode": "GRI403",
-            "question": "When we consider marketing terms while preparing business plan, which of the following shows the ratio of entered markets consumers number and ready markets consumers number?",
-            "options": [
-                "Consumer ratio",
-                "Establishment ratio",
-                "Input percentage",
-                "Market percentage",
-                "Profit ratio"
-            ],
-            "correctAnswer": "Market percentage"
-        },
-        {
-            "week": 6,
-            "courseCode": "GRI403",
-            "question": "In order to have a complete market research information, which of the following factor is not used?",
-            "options": [
-                "Certainty",
-                "Economy",
-                "Practicableness",
-                "Correct timing",
-                "Understandability"
-            ],
-            "correctAnswer": "Correct timing"
-        },
-        {
-            "week": 6,
-            "courseCode": "GRI403",
-            "question": "Which of the following criteria is not a market classification strategy of an establishment?",
-            "options": [
-                "Geography",
-                "Demography",
-                "Psychography",
-                "Behavioral",
-                "Biologic"
-            ],
-            "correctAnswer": "Biologic"
-        },
-        {
-            "week": 6,
-            "courseCode": "GRI403",
-            "question": "Which of the following pricing strategy is based on researching market demand complete and correct?",
-            "options": [
-                "Cost based pricing",
-                "Demand based pricing",
-                "Competition based pricing",
-                "Productivity based pricing",
-                "Positioning based pricing"
-            ],
-            "correctAnswer": "Demand based pricing"
-        },
-        {
-            "week": 7,
-            "courseCode": "GRI403",
-            "question": "What is the purpose of dividing the market into geographic classifications in marketing plans?",
-            "options": [
-                "To define target markets based on regions",
-                "To analyze cultural changes",
-                "To focus on direct distribution strategies",
-                "To evaluate demographic criteria",
-                "All of them are correct"
-            ],
-            "correctAnswer": "To define target markets based on regions"
-        },
-        {
-            "week": 7,
-            "courseCode": "GRI403",
-            "question": "What does situation analysis in a marketing plan focus on?",
-            "options": [
-                "Product development strategies",
-                "Where are we?",
-                "All of them are correct",
-                "Future market trends",
-                "Competitor analysis"
-            ],
-            "correctAnswer": "Where are we?"
-        },
-        {
-            "week": 7,
-            "courseCode": "GRI403",
-            "question": "How is demographical environment analyzed in marketing plans?",
-            "options": [
-                "Analyzing population size, age, gender, race, etc.",
-                "By assessing global demographics",
-                "By analyzing competitors' populations",
-                "By evaluating the market's financial structure",
-                "All of them are correct"
-            ],
-            "correctAnswer": "Analyzing population size, age, gender, race, etc."
-        },
-        {
-            "week": 7,
-            "courseCode": "GRI403",
-            "question": "What does the opportunity represent in marketing terms?",
-            "options": [
-                "A situation where market needs are poorly served",
-                "Lower distribution costs",
-                "Lower production costs",
-                "All of them are correct",
-                "Intense effort to widen the general market"
-            ],
-            "correctAnswer": "A situation where market needs are poorly served"
-        },
-        {
-            "week": 7,
-            "courseCode": "GRI403",
-            "question": "Which factor is NOT part of the changeable macro environment affecting establishments?",
-            "options": [
-                "Demographic environment",
-                "All of them are correct",
-                "Economical environment",
-                "Product popularity",
-                "Juridical and political environment"
-            ],
-            "correctAnswer": "Product popularity"
-        },
-        {
-            "week": 7,
-            "courseCode": "GRI403",
-            "question": "What is a benefit of a well-prepared marketing plan for an entrepreneur?",
-            "options": [
-                "Foresight of opportunities and threats",
-                "Increased competition",
-                "All of them are correct",
-                "Higher production costs",
-                "Reduction in marketing goals"
-            ],
-            "correctAnswer": "Foresight of opportunities and threats"
-        },
-        {
-            "week": 7,
-            "courseCode": "GRI403",
-            "question": "What is the primary purpose of a marketing plan?",
-            "options": [
-                "All of them are correct",
-                "Analyzing competitors strategies",
-                "Outlining marketing aims and planned activities",
-                "Defining corporate aims",
-                "Documenting daily operations"
-            ],
-            "correctAnswer": "Outlining marketing aims and planned activities"
-        },
-        {
-            "week": 7,
-            "courseCode": "GRI403",
-            "question": "What fundamental questions does a marketing plan aim to answer?",
-            "options": [
-                "Where are we? Where do we want to go? How can we reach the aims?",
-                "All of them are correct",
-                "Why do we need a marketing plan? What are the current trends? How much should we invest?",
-                "Who are our competitors? What are the market trends? When should we launch new products?",
-                "How much profit do we want to make? Who are our target customers? Where should we advertise?"
-            ],
-            "correctAnswer": "Where are we? Where do we want to go? How can we reach the aims?"
-        },
-        {
-            "week": 7,
-            "courseCode": "GRI403",
-            "question": "What is an example of a behavioral classification in market segmentation?",
-            "options": [
-                "Climate",
-                "Age",
-                "Social class, personal properties, and consumer behaviors",
-                "All of them are correct",
-                "Population density"
-            ],
-            "correctAnswer": "Social class, personal properties, and consumer behaviors"
-        },
-        {
-            "week": 7,
-            "courseCode": "GRI403",
-            "question": "Which of the following document includes an establishments marketing goals and activity plans step by step in a written form?",
-            "options": [
-                "Monthly plan",
-                "Management plan",
-                "Marketing plan",
-                "Financial plan",
-                "Opportunity analysis plan"
-            ],
-            "correctAnswer": "Marketing plan"
-        },
-        {
-            "week": 7,
-            "courseCode": "GRI403",
-            "question": "Which of the following is not one of the property of marketing plan?",
-            "options": [
-                "Competitors strong and weak sides analysis",
-                "Flexibility",
-                "Includes performance measurements",
-                "Based on real informations",
-                "Short and simple"
-            ],
-            "correctAnswer": "Competitors strong and weak sides analysis"
-        },
-        {
-            "week": 7,
-            "courseCode": "GRI403",
-            "question": "Which of the following is not a step of marketing plan?",
-            "options": [
-                "Situation analysis",
-                "Implementation and control",
-                "Defining opportunuties and threats",
-                "Preparing plan simple and understandable",
-                "Defining marketing strategies and tactics"
-            ],
-            "correctAnswer": "Preparing plan simple and understandable"
-        },
-        {
-            "week": 7,
-            "courseCode": "GRI403",
-            "question": "Which of the following is not a parameter forming macro environment?",
-            "options": [
-                "Demographical environment",
-                "Legal environment",
-                "Social and cultural environment",
-                "Political and juridical environment",
-                "Strategical environment"
-            ],
-            "correctAnswer": "Strategical environment"
-        },
-        {
-            "week": 7,
-            "courseCode": "GRI403",
-            "question": "Which of the following method classifies market according to country, region, city and province?",
-            "options": [
-                "Demographical classification",
-                "Behavioral classification",
-                "Tactical classification",
-                "Geographical classification",
-                "Strategical classification"
-            ],
-            "correctAnswer": "Geographical classification"
-        },
-        {
-            "week": 7,
-            "courseCode": "GRI403",
-            "question": "Which of the following describes establishments future planned activities and results to reach?",
-            "options": [
-                "Goal",
-                "Strategy",
-                "Tactic",
-                "Market",
-                "Opportunity"
-            ],
-            "correctAnswer": "Goal"
-        },
-        {
-            "week": 7,
-            "courseCode": "GRI403",
-            "question": "Which of the following strategy describes an establishment trying to reach lowest production and distribution costs?",
-            "options": [
-                "Niche market strategy",
-                "Cost leadership strategy",
-                "Differentiation strategy",
-                "Focussing strategy",
-                "Followers strategy"
-            ],
-            "correctAnswer": "Cost leadership strategy"
-        },
-        {
-            "week": 7,
-            "courseCode": "GRI403",
-            "question": "Which of the following is a product or services value in market?",
-            "options": [
-                "Product",
-                "Brand",
-                "Price",
-                "Distribution",
-                "Promotion"
-            ],
-            "correctAnswer": "Price"
-        },
-        {
-            "week": 7,
-            "courseCode": "GRI403",
-            "question": "Which of the following describes serving and selling product without using mediators by producer?",
-            "options": [
-                "Intense distribution",
-                "Selector distribution",
-                "Special distribution",
-                "Indirect distribution",
-                "Direct distribution"
-            ],
-            "correctAnswer": "Direct distribution"
-        },
-        {
-            "week": 7,
-            "courseCode": "GRI403",
-            "question": "Which of the following works are used for increasing sales directly in a short term?",
-            "options": [
-                "Advertisement",
-                "Sales promotion",
-                "Public relations",
-                "Personal sale",
-                "Distribution"
-            ],
-            "correctAnswer": "Sales promotion"
-        },
-        {
-            "week": 8,
-            "courseCode": "GRI403",
-            "question": "Which of the following is not a production system input?",
-            "options": [
-                "Raw material",
-                "Information",
-                "Customer",
-                "Capital",
-                "Entrepreunership"
-            ],
-            "correctAnswer": "Customer"
-        },
-        {
-            "week": 8,
-            "courseCode": "GRI403",
-            "question": "In which of the following only unique product is produced according to customers requests?",
-            "options": [
-                "Project type production",
-                "Continuous production",
-                "Assembly type production",
-                "Flow type production",
-                "Mass production"
-            ],
-            "correctAnswer": "Project type production"
-        },
-        {
-            "week": 8,
-            "courseCode": "GRI403",
-            "question": "Which of the following does not take place in production plans extent?",
-            "options": [
-                "Defining production rate",
-                "Defining production priorities",
-                "Defining production amount to be produced",
-                "Defining product to be produced",
-                "Defining product to be produced price"
-            ],
-            "correctAnswer": "Defining product to be produced price"
-        },
-        {
-            "week": 8,
-            "courseCode": "GRI403",
-            "question": "Which of the following is defined by process flow schema?",
-            "options": [
-                "Storage where inputs go",
-                "Inputs process orders",
-                "List of product parts",
-                "Placing of machines",
-                "Machines capacity list"
-            ],
-            "correctAnswer": "Inputs process orders"
-        },
-        {
-            "week": 8,
-            "courseCode": "GRI403",
-            "question": "Which of the following is not a production planning activity?",
-            "options": [
-                "Defining production plans term of involvement",
-                "Defining stock level",
-                "Making demand estimations",
-                "Defining certain orders",
-                "Choosing supplier"
-            ],
-            "correctAnswer": "Choosing supplier"
-        },
-        {
-            "week": 8,
-            "courseCode": "GRI403",
-            "question": "Which of the following shows when and in which amount whole materials to be sold or produced will be supplied?",
-            "options": [
-                "Capacity planning",
-                "Material need planning",
-                "Capacity need planning",
-                "Main production tabulation",
-                "Main production planning"
-            ],
-            "correctAnswer": "Main production tabulation"
-        },
-        {
-            "week": 8,
-            "courseCode": "GRI403",
-            "question": "Which of the following inputs are outputs of main production tabulation?",
-            "options": [
-                "Capacity need planning",
-                "Stock control",
-                "Material need planning",
-                "Capacity planning",
-                "Main production planning"
-            ],
-            "correctAnswer": "Material need planning"
-        },
-        {
-            "week": 8,
-            "courseCode": "GRI403",
-            "question": "Which of the following is not an aim of material need planning?",
-            "options": [
-                "Keeping stock level low",
-                "Appointing employees on correct works",
-                "Contributing work flows system",
-                "Helping deliveries",
-                "Minimizing production setbacks"
-            ],
-            "correctAnswer": "Appointing employees on correct works"
-        },
-        {
-            "week": 8,
-            "courseCode": "GRI403",
-            "question": "Which of the following defines machine-equipment and required work power amount to implement material plan in a short planning term?",
-            "options": [
-                "Capacity need planning",
-                "Source need planning",
-                "Rough cutting source planning",
-                "Stock control",
-                "Material need planning"
-            ],
-            "correctAnswer": "Capacity need planning"
-        },
-        {
-            "week": 8,
-            "courseCode": "GRI403",
-            "question": "Which of the following decision is most difficult to bring back?",
-            "options": [
-                "Supplier selection",
-                "Machine selection",
-                "Employee selection",
-                "Establishment place selection",
-                "Raw material selection"
-            ],
-            "correctAnswer": "Establishment place selection"
-        },
-        {
-            "week": 9,
-            "courseCode": "GRI403",
-            "question": "What are the options for financial protection in organizations, companies, businesses, and all of them are correct?",
-            "options": [
-                "Focusing solely on production plans",
-                "Ignoring the management team's experience",
-                "A family-focused management plan",
-                "Minimizing marketing efforts"
-            ],
-            "correctAnswer": "A family-focused management plan"
-        },
-        {
-            "week": 9,
-            "courseCode": "GRI403",
-            "question": "Who is authorized to grant a business license within the metropolitan means-quality border in Turkey?",
-            "options": [
-                "The District Municipality",
-                "The Provincial Administration",
-                "The Metropolitan Municipality",
-                "The Chamber of Commerce"
-            ],
-            "correctAnswer": "The Metropolitan Municipality"
-        },
-        {
-            "week": 9,
-            "courseCode": "GRI403",
-            "question": "Why is work specialization important in a company?",
-            "options": [
-                "To increase employee salaries",
-                "To simplify the company's legal structure",
-                "To increase organization efficiency or enhance organization performance",
-                "To reduce the need for a marketing plan"
-            ],
-            "correctAnswer": "To increase organization efficiency or enhance organization performance"
-        },
-        {
-            "week": 9,
-            "courseCode": "GRI403",
-            "question": "What is segmentation according to function in marketing?",
-            "options": [
-                "Grouping customers by geographic location",
-                "Dividing tasks based on job titles or qualifications",
-                "Segmenting the market based on product type",
-                "Creating different pricing strategies for different segments"
-            ],
-            "correctAnswer": "Dividing tasks based on job titles or qualifications"
-        },
-        {
-            "week": 9,
-            "courseCode": "GRI403",
-            "question": "Which of the following is not considered one of the basic pillars of management?",
-            "options": [
-                "Planning",
-                "Organizing",
-                "Leading",
-                "Controlling",
-                "Saving"
-            ],
-            "correctAnswer": "Saving"
-        },
-        {
-            "week": 9,
-            "courseCode": "GRI403",
-            "question": "What is a sole proprietorship?",
-            "options": [
-                "A company owned by shareholders",
-                "A company type where two or more individuals share ownership",
-                "A company type characterized by a single person who owns and operates the business",
-                "A government-owned entity"
-            ],
-            "correctAnswer": "A company type characterized by a single person who owns and operates the business"
-        },
-        {
-            "week": 9,
-            "courseCode": "GRI403",
-            "question": "What is a partnership?",
-            "options": [
-                "A company type where two or more individuals share ownership and operate the business together",
-                "A business owned and operated by one person",
-                "An entity where ownership is represented by shares",
-                "A non-profit organization"
-            ],
-            "correctAnswer": "A company type where two or more individuals share ownership and operate the business together"
-        },
-        {
-            "week": 9,
-            "courseCode": "GRI403",
-            "question": "What is a stock corporation?",
-            "options": [
-                "A business with unlimited liability for its owners",
-                "An entity where ownership is represented by shares, and shares are issued to the shareholders",
-                "A company operated by a single individual",
-                "A temporary business venture"
-            ],
-            "correctAnswer": "An entity where ownership is represented by shares, and shares are issued to the shareholders"
-        },
-        {
-            "week": 9,
-            "courseCode": "GRI403",
-            "question": "Which of the following is incorrect related to management plan?",
-            "options": [
-                "Management plan is concerned with how to create organizational structure",
-                "Management plan is concerned with how to create product and services",
-                "It should define establishments juridical structure",
-                "Authority and responsibility relations should be defined on plan",
-                "A good management plan proves that entrepreuner understands factors affecting organizational effectiveness"
-            ],
-            "correctAnswer": "Management plan is concerned with how to create product and services"
-        },
-        {
-            "week": 9,
-            "courseCode": "GRI403",
-            "question": "Which of the following information is not needed for preparing management plan?",
-            "options": [
-                "Establishments site of establishment",
-                "Establishments juridical structure",
-                "Establishments organizational structure",
-                "Abilities requiered for positions in establishment",
-                "Standarts which calculate and evaluate working performance"
-            ],
-            "correctAnswer": "Establishments site of establishment"
-        },
-        {
-            "week": 9,
-            "courseCode": "GRI403",
-            "question": "Which of the following partnersip is responsible with whole the products without any limitation as collective partners?",
-            "options": [
-                "Commandite",
-                "Commanditer",
-                "Merchant",
-                "Corporative",
-                "Limited partnership"
-            ],
-            "correctAnswer": "Commandite"
-        },
-        {
-            "week": 9,
-            "courseCode": "GRI403",
-            "question": "Which of the following is share holder partnership?",
-            "options": [
-                "Collective partnerships",
-                "Commandite partnerships",
-                "Limited partnership",
-                "Ordinary partnership",
-                "Individual partnership"
-            ],
-            "correctAnswer": "Limited partnership"
-        },
-        {
-            "week": 9,
-            "courseCode": "GRI403",
-            "question": "Which of the following is not a basic step of preparing management plan?",
-            "options": [
-                "Management plan summary",
-                "Situational review",
-                "Establishments juridical structure",
-                "Evaluating outer environment",
-                "Management philosophy"
-            ],
-            "correctAnswer": "Management philosophy"
-        },
-        {
-            "week": 9,
-            "courseCode": "GRI403",
-            "question": "Which of the following is not considered as a basic element of organizational structure?",
-            "options": [
-                "Work division",
-                "Matrix structure",
-                "Audit field",
-                "Classification",
-                "Authority"
-            ],
-            "correctAnswer": "Matrix structure"
-        },
-        {
-            "week": 9,
-            "courseCode": "GRI403",
-            "question": "Which of the following classification gathers works and duties according to their qualification?",
-            "options": [
-                "According to product base",
-                "According to geographical base",
-                "According to functions",
-                "According to time base",
-                "According to customer base"
-            ],
-            "correctAnswer": "According to functions"
-        },
-        {
-            "week": 9,
-            "courseCode": "GRI403",
-            "question": "Which of the following defines employee amount a manager can direct?",
-            "options": [
-                "Audit field",
-                "Flexibility",
-                "Authority-responsibility balance",
-                "Classification",
-                "Expertation"
-            ],
-            "correctAnswer": "Audit field"
-        },
-        {
-            "week": 9,
-            "courseCode": "GRI403",
-            "question": "Which of the following question should be answered when an entrepreuner decides organizational structure?",
-            "options": [
-                "How working performance will be evaluated?",
-                "Which equipments and materials employees can use?",
-                "How to employ qualified work power?",
-                "How employees will be protected against environmental changes?",
-                "How many sublevel employees can be directed by each manager?"
-            ],
-            "correctAnswer": "How many sublevel employees can be directed by each manager?"
-        },
-        {
-            "week": 9,
-            "courseCode": "GRI403",
-            "question": "Which of the following is not related to defining main positions which should be filled in future in management plan?",
-            "options": [
-                "Every positions duties, responsibilites and authorities level",
-                "Statements about perquisite and promotion opportunuties",
-                "Every positions authority and responsibilites harmony with organizational structure",
-                "Every position according to business title",
-                "Providing qualified employees to establishment method"
-            ],
-            "correctAnswer": "Statements about perquisite and promotion opportunuties"
-        },
-        {
-            "week": 9,
-            "courseCode": "GRI403",
-            "question": "Which one below is wrong about the working plan?",
-            "options": [
-                "Working plan is a document including the details of a firm thought to be set up or existing",
-                "Working plan does not show the future of the firm, but the existing position of it.",
-                "In the working plan all the elements of the firm should be defined.",
-                "Working plan is the vision reflected written document of the firm thought to be set up.",
-                "Working plan is the helping vehicle for an entrepreneur to move on to investment phase."
-            ],
-            "correctAnswer": "Working plan does not show the future of the firm, but the existing position of it."
-        },
-        {
-            "week": 9,
-            "courseCode": "GRI403",
-            "question": "Which of the following below is NOT the benefits of a working plan for an entrepreneur?",
-            "options": [
-                "Enduring an entrepreneur to see the firm from critical and objective point of view.",
-                "Giving informations to the funders and financiers about the market potential and planning the protection of the market share.",
-                "Helping the assumption formation of the entrepreneur for the success of the firm.",
-                "For the evaluation of the aims, setting criterias for the comparision of real results and estimations.",
-                "An incomplete working plan carrying out a duty of a working guide for the entrepreneur."
-            ],
-            "correctAnswer": "Giving informations to the funders and financiers about the market potential and planning the protection of the market share."
-        },
-        {
-            "week": 9,
-            "courseCode": "GRI403",
-            "question": "Which one below is a guide prepared during the process of setting up a firm and project being implemented?",
-            "options": [
-                "Charts of accounts",
-                "Feasibility analysis",
-                "Working plan",
-                "Marketing plan",
-                "Financing plan"
-            ],
-            "correctAnswer": "Working plan"
-        },
-        {
-            "week": 9,
-            "courseCode": "GRI403",
-            "question": "Which one below is NOT a benefit of the working plan preperation?",
-            "options": [
-                "Working plan provides investor/ entrepreneur the written project of his/her mind.",
-                "It saves time and works for the purpose by directing investor/ entrepreneur's attention.",
-                "It provides conjecture by being based on the future datas.",
-                "It provides the needed researches and planned work done before setting up the firm.",
-                "It is useful for the research of which work to be done."
-            ],
-            "correctAnswer": "It is useful for the research of which work to be done."
-        },
-        {
-            "week": 9,
-            "courseCode": "GRI403",
-            "question": "Which one below is NOT a part of working plan?",
-            "options": [
-                "Executive summary",
-                "Information about the project/firm to be set up",
-                "Aim and purpose of the project/firm",
-                "Marketing Plan",
-                "Profitability Plan"
-            ],
-            "correctAnswer": "Marketing Plan"
-        },
-        {
-            "week": 9,
-            "courseCode": "GRI403",
-            "question": "Who should prepare the working plan of the firm to be set up?",
-            "options": [
-                "Venture capitalist",
-                "Angel investor",
-                "Entrepreneurs",
-                "Financial advisor",
-                "Legal Advisor"
-            ],
-            "correctAnswer": "Entrepreneurs"
-        },
-        {
-            "week": 9,
-            "courseCode": "GRI403",
-            "question": "Which one below is NOT the usage purpose of the working plan?",
-            "options": [
-                "Communication",
-                "Planning",
-                "Management",
-                "Future prediction",
-                "Past analysis"
-            ],
-            "correctAnswer": "Past analysis"
-        },
-        {
-            "week": 9,
-            "courseCode": "GRI403",
-            "question": "Which one below is a mistake done while the preprerations of the working plan?",
-            "options": [
-                "The usage of another working plan's assumptions",
-                "Shortening the plan",
-                "Reflecting all the risks in the plan",
-                "Harmonising the future with the plan",
-                "Not placing exeggerations in the plan"
-            ],
-            "correctAnswer": "The usage of another working plan's assumptions"
-        },
-        {
-            "week": 9,
-            "courseCode": "GRI403",
-            "question": "Which one below is NOT the mistake done while the preperations of the working plan?",
-            "options": [
-                "Putting unrealistic aims in the plan",
-                "Not predicting potential obstacles",
-                "Lack of determination or undertaking",
-                "Segmentation not being done",
-                "Plan being up to date"
-            ],
-            "correctAnswer": "Plan being up to date"
-        },
-        {
-            "week": 9,
-            "courseCode": "GRI403",
-            "question": "Which part below is needed to be demanded for reading the whole plan arousing interest for it?",
-            "options": [
-                "Marketing plan",
-                "Input/Executive Summary",
-                "Management Plan",
-                "Production plan",
-                "Enclosure"
-            ],
-            "correctAnswer": "Input/Executive Summary"
-        },
-        {
-            "week": 10,
-            "courseCode": "GRI403",
-            "question": "What is the minimum capital required to establish a joint stock company in Turkey?",
-            "options": [
-                "10,000 TL",
-                "25,000 TL",
-                "50,000 TL",
-                "100,000 TL"
-            ],
-            "correctAnswer": "50,000 TL"
-        },
-        {
-            "week": 10,
-            "courseCode": "GRI403",
-            "question": "What is the critical role of a work plan in seeking funding from investors or banks?",
-            "options": [
-                "Outlining the company's history",
-                "Demonstrating the potential of the project and its profitability",
-                "Listing all employees and their salaries",
-                "Providing a detailed accounting of past expenses"
-            ],
-            "correctAnswer": "Demonstrating the potential of the project and its profitability"
-        },
-        {
-            "week": 10,
-            "courseCode": "GRI403",
-            "question": "What is the purpose of break-even analysis in financial planning?",
-            "options": [
-                "To calculate the company's total assets",
-                "To forecast sales for the next five years",
-                "To observe the relation between cost, activity volume, and profit",
-                "To determine the company's market share"
-            ],
-            "correctAnswer": "To observe the relation between cost, activity volume, and profit"
-        },
-        {
-            "week": 10,
-            "courseCode": "GRI403",
-            "question": "What makes financial plans different from accounting?",
-            "options": [
-                "Financial plans use more complex formulas",
-                "Accounting is only for large corporations",
-                "Financial plans have an emphasis on future outcomes, while accounting focuses on the past",
-                "There is no difference"
-            ],
-            "correctAnswer": "Financial plans have an emphasis on future outcomes, while accounting focuses on the past"
-        },
-        {
-            "week": 10,
-            "courseCode": "GRI403",
-            "question": "Which financial aspect does the term 'Starbucks spreadsheet' likely refer to in a business context?",
-            "options": [
-                "Cost management",
-                "Debt financing",
-                "Revenue generation and sales forecasting",
-                "Asset allocation"
-            ],
-            "correctAnswer": "Revenue generation and sales forecasting"
-        },
-        {
-            "week": 10,
-            "courseCode": "GRI403",
-            "question": "How does Tesla's financial plan contribute to its intellectual success?",
-            "options": [
-                "By minimizing all research and development costs",
-                "Through strategic cost management and investment in innovation",
-                "By paying the highest salaries in the industry",
-                "By avoiding all forms of debt"
-            ],
-            "correctAnswer": "Through strategic cost management and investment in innovation"
-        },
-        {
-            "week": 10,
-            "courseCode": "GRI403",
-            "question": "Which one below taken into consideration for defining finance need of a business firm?",
-            "options": [
-                "Total resources (equity capital)",
-                "Total of short and long term debts",
-                "Term structure of the debts",
-                "Total current assets",
-                "Total fixed and current assets"
-            ],
-            "correctAnswer": "Total fixed and current assets"
-        },
-        {
-            "week": 10,
-            "courseCode": "GRI403",
-            "question": "Which business progress phase is the hardest for entrepreneur?",
-            "options": [
-                "Beginning phase",
-                "Growing phase",
-                "Maturity phase",
-                "Decline phase",
-                "Fall phase"
-            ],
-            "correctAnswer": "Beginning phase"
-        },
-        {
-            "week": 10,
-            "courseCode": "GRI403",
-            "question": "Which one below is NOT one of the finance resources for the benefit of entrepreneur in the beginning phase?",
-            "options": [
-                "Personal resources",
-                "Merchant banks",
-                "Investment banks",
-                "Supplier's credits",
-                "Friends and relatives"
-            ],
-            "correctAnswer": "Investment banks"
-        },
-        {
-            "week": 10,
-            "courseCode": "GRI403",
-            "question": "In terms of the business firm, in which business progress phase, innovations increase, rivalry rises and profits start to increase?",
-            "options": [
-                "Beginning",
-                "Growing",
-                "Maturity",
-                "Decline",
-                "Fall"
-            ],
-            "correctAnswer": "Growing"
-        },
-        {
-            "week": 10,
-            "courseCode": "GRI403",
-            "question": "Which factor below does NOT increase the importance of financial planning period?",
-            "options": [
-                "Manifestation of the target and aim",
-                "Defining the risks taken",
-                "Defining cash inflow and outflow",
-                "Estimating funds needed",
-                "Evaluating the previous period results"
-            ],
-            "correctAnswer": "Evaluating the previous period results"
-        },
-        {
-            "week": 10,
-            "courseCode": "GRI403",
-            "question": "Which strategy below is NOT aimed at decreasing the financial risks to minimum level?",
-            "options": [
-                "Shorten the due date of the debts",
-                "Becoming indebt from the fixed interest rate",
-                "Protected from the risks of Exchange rate",
-                "Creating new credit opprtunities",
-                "Lowering loan/ equity capital mainstay below 1."
-            ],
-            "correctAnswer": "Shorten the due date of the debts"
-        },
-        {
-            "week": 10,
-            "courseCode": "GRI403",
-            "question": "Which one below is the table that a business firm will attain operating and non operating profit in the future term and endure the budget of the margin for gaining profit ?",
-            "options": [
-                "Proforma balance sheet",
-                "Proforma income table",
-                "Cass budget",
-                "Equity Exchange table",
-                "Fund flow table"
-            ],
-            "correctAnswer": "Proforma income table"
-        },
-        {
-            "week": 10,
-            "courseCode": "GRI403",
-            "question": "Which factor below does NOT increase the need of working capital?",
-            "options": [
-                "Capacity",
-                "Work load",
-                "Liquidity risk",
-                "Credit Worth",
-                "Revaluation"
-            ],
-            "correctAnswer": "Revaluation"
-        },
-        {
-            "week": 10,
-            "courseCode": "GRI403",
-            "question": "Which one below is NOT brunches of work fund?",
-            "options": [
-                "Cash",
-                "Debt owed",
-                "Stock",
-                "Cash equivalents",
-                "Fixed assets"
-            ],
-            "correctAnswer": "Fixed assets"
-        },
-        {
-            "week": 10,
-            "courseCode": "GRI403",
-            "question": "Which one is not a disadvantage of funds provided for family and friends?",
-            "options": [
-                "Interrupting management",
-                "Feeling of ownage",
-                "Interrupting workers",
-                "Guiding operations",
-                "Ending operations"
-            ],
-            "correctAnswer": "Ending operations"
-        },
-        {
-            "week": 10,
-            "courseCode": "GRI403",
-            "question": "Which of the following is not a question banks or lending companies are looking for in business plan?",
-            "options": [
-                "Will you pay your loan back?",
-                "Why do you need this money for?",
-                "How much loan you want?",
-                "Are you strong enough to pay the interest?",
-                "If needed, what types of assurances you can provide?"
-            ],
-            "correctAnswer": "Will you pay your loan back?"
-        },
-        {
-            "week": 10,
-            "courseCode": "GRI403",
-            "question": "While making sales budget estimations in the beginning of financial estimation process, for the first year which periods are used for sales estimation?",
-            "options": [
-                "Weekly",
-                "Three months",
-                "Six months",
-                "Yearly",
-                "Monthly"
-            ],
-            "correctAnswer": "Monthly"
-        },
-        {
-            "week": 10,
-            "courseCode": "GRI403",
-            "question": "While budgeting estimated expense and costs, which of the following expenses are reviewed?",
-            "options": [
-                "Beginning and activity expenses",
-                "Beginning and finishing expenses",
-                "Short and long term expenses",
-                "Activity and raw material expenses",
-                "Stable and changeable expenses"
-            ],
-            "correctAnswer": "Beginning and activity expenses"
-        },
-        {
-            "week": 10,
-            "courseCode": "GRI403",
-            "question": "Which of the following is not a type of activity expenses?",
-            "options": [
-                "Salary and wages",
-                "Day offs and licenses",
-                "Rents",
-                "Mortgage debts",
-                "Financial rents"
-            ],
-            "correctAnswer": "Day offs and licenses"
-        },
-        {
-            "week": 10,
-            "courseCode": "GRI403",
-            "question": "Which of the following is not a typical main type of income statement?",
-            "options": [
-                "Incomes",
-                "Expenses",
-                "Debts",
-                "Income tax to be paid",
-                "Pure profit"
-            ],
-            "correctAnswer": "Debts"
-        },
-        {
-            "week": 10,
-            "courseCode": "GRI403",
-            "question": "Which of the following is not an inner or outer establishment factor affecting cash flows directly?",
-            "options": [
-                "Delays in raw material supply",
-                "Deficient raw material",
-                "Deficient product",
-                "Suppliers price decrease",
-                "Suppliers date shortening"
-            ],
-            "correctAnswer": "Suppliers price decrease"
-        },
-        {
-            "week": 10,
-            "courseCode": "GRI403",
-            "question": "Which of the following par production amount in a product which have total stable expense of 5000.- TL, unit changeable expense 25.- TL and sales price 50.- TL?",
-            "options": [
-                "500",
-                "450",
-                "400",
-                "300",
-                "200"
-            ],
-            "correctAnswer": "200"
-        },
-        {
-            "week": 11,
-            "courseCode": "GRI403",
-            "question": "Why is risk management important for a company?",
-            "options": [
-                "To eliminate all possible risks completely",
-                "To improve perception about risk and develop policies for solutions",
-                "To satisfy government regulations only",
-                "To increase the company's debt load"
-            ],
-            "correctAnswer": "To improve perception about risk and develop policies for solutions"
-        },
-        {
-            "week": 11,
-            "courseCode": "GRI403",
-            "question": "What is operational risk in risk management?",
-            "options": [
-                "Risk of a debtor defaulting on a loan",
-                "Risk of loss from failed internal processes, people, systems, or external events",
-                "Risk of negative market price movements",
-                "Risk of being unable to meet short-term financial obligations"
-            ],
-            "correctAnswer": "Risk of loss from failed internal processes, people, systems, or external events"
-        },
-        {
-            "week": 11,
-            "courseCode": "GRI403",
-            "question": "How is risk defined in risk management?",
-            "options": [
-                "A certain negative event that has already happened",
-                "A guarantee of future profit",
-                "As possible chances or threats in the future that could lead to monetary loss",
-                "An analysis of past company failures"
-            ],
-            "correctAnswer": "As possible chances or threats in the future that could lead to monetary loss"
-        },
-        {
-            "week": 11,
-            "courseCode": "GRI403",
-            "question": "What is liquidity risk in risk management?",
-            "options": [
-                "The risk of a company's reputation being damaged",
-                "The risk of being unable to pay on time due to a shortage of cash",
-                "The risk of a foreign country's political instability",
-                "The risk of a key supplier going out of business"
-            ],
-            "correctAnswer": "The risk of being unable to pay on time due to a shortage of cash"
-        },
-        {
-            "week": 11,
-            "courseCode": "GRI403",
-            "question": "Is qualitative or quantitative risk analysis more different from the other?",
-            "options": [
-                "Quantitative, because it uses complex math",
-                "Qualitative, because it involves subjective evaluation and revelation, while quantitative involves numerical analysis of past events",
-                "They are the same, just with different names",
-                "Neither, as both focus exclusively on financial data"
-            ],
-            "correctAnswer": "Qualitative, because it involves subjective evaluation and revelation, while quantitative involves numerical analysis of past events"
-        },
-        {
-            "week": 11,
-            "courseCode": "GRI403",
-            "question": "Which of the following is correct about risk definition?",
-            "options": [
-                "It involves actualized event",
-                "It is sparing source for actualized loss",
-                "Happens everytime",
-                "It is about past",
-                "It is based on possibility of actualization"
-            ],
-            "correctAnswer": "It is based on possibility of actualization"
-        },
-        {
-            "week": 11,
-            "courseCode": "GRI403",
-            "question": "Which of the following risk or risks we take if we are going to take the payment of our sold house in future in foreing currency?",
-            "options": [
-                "Credit risk",
-                "Operation risk",
-                "Currency and credit risk",
-                "Reputation risk",
-                "Credit and operation risk"
-            ],
-            "correctAnswer": "Currency and credit risk"
-        },
-        {
-            "week": 11,
-            "courseCode": "GRI403",
-            "question": "Which of the following alternative is more preferable if we presume the risk type is same?",
-            "options": [
-                "Low encountering rate, low loss amount",
-                "High encountering rate, low loss amount",
-                "Low encountering rate, high loss amount",
-                "High encountering rate, high loss amount",
-                "Encountering rate unknown, high loss amount"
-            ],
-            "correctAnswer": "Low encountering rate, low loss amount"
-        },
-        {
-            "week": 11,
-            "courseCode": "GRI403",
-            "question": "Which of the following loss risk is from unsuccesful business processes, people and systems or outer events?",
-            "options": [
-                "Operational",
-                "Credit",
-                "Market",
-                "Interest rate",
-                "Liquidity"
-            ],
-            "correctAnswer": "Operational"
-        },
-        {
-            "week": 11,
-            "courseCode": "GRI403",
-            "question": "Which of the following risk type is realized if we have large amount of receivable debt however we do not have enough money for our daily needs?",
-            "options": [
-                "Operational",
-                "Credit",
-                "Market",
-                "Interest rate",
-                "Liquidity"
-            ],
-            "correctAnswer": "Liquidity"
-        },
-        {
-            "week": 11,
-            "courseCode": "GRI403",
-            "question": "Which of the following is an element affecting success in risk management?",
-            "options": [
-                "Size of establishment",
-                "University graduated employees",
-                "Establishment being in a centeral area",
-                "Being supported by top management",
-                "Establishment having high endorsement"
-            ],
-            "correctAnswer": "Being supported by top management"
-        },
-        {
-            "week": 11,
-            "courseCode": "GRI403",
-            "question": "Which of the following strategy can not be used in risk management?",
-            "options": [
-                "Ignoring risk",
-                "Avoiding risk",
-                "Transferring risk",
-                "Decreasing risks effects",
-                "Decreasing risks possibility"
-            ],
-            "correctAnswer": "Ignoring risk"
-        },
-        {
-            "week": 11,
-            "courseCode": "GRI403",
-            "question": "Which of the following risk type can be numerically countable?",
-            "options": [
-                "Credit risk",
-                "Reputation risk",
-                "Juridical risk",
-                "Country risk",
-                "Active-passive risk"
-            ],
-            "correctAnswer": "Credit risk"
-        },
-        {
-            "week": 11,
-            "courseCode": "GRI403",
-            "question": "Which of the following risk or risks we take if we are going to take our sold product or services payment in future in foreign currency?",
-            "options": [
-                "Credit risk",
-                "Operational risk",
-                "Currency or credit risk",
-                "Reputation risk",
-                "Credit and operational risk"
-            ],
-            "correctAnswer": "Currency or credit risk"
-        },
-        {
-            "week": 11,
-            "courseCode": "GRI403",
-            "question": "Which of the following two analysis type creates simulation analysis?",
-            "options": [
-                "SWOT- possibility",
-                "Possibility- qualitative",
-                "Qualitative- quantitative",
-                "Sensibility- possibility",
-                "SWOT- qualitative"
-            ],
-            "correctAnswer": "Sensibility- possibility"
-        },
+
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which one below is NOT the common characteristic of a successful entrepreneur?",
+        "options": [
+            "A successful entrepreneur is a person who runs the risk of acceptable ones.",
+            "A successful entrepreneur is determined.",
+            "A successful entrepreneur is creative.",
+            "A successful entrepreneur is a person who applies the decisions of the proprietor (employer), finely.",
+            "A successful entrepreneur is the one who uses his/her imagination (vision)."
+        ],
+        "correctAnswer": "A successful entrepreneur is a person who applies the decisions of the proprietor (employer), finely."
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which one below is NOT a kind of entrepreneurship?",
+        "options": [
+            "Intrapreneurship",
+            "Women entrepreneurship",
+            "Public entrepreneurship",
+            "Private enterprise system",
+            "Men entrepreneurship"
+        ],
+        "correctAnswer": "Men entrepreneurship"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which one below is NOT one of the basic concepts of entrepreneurship?",
+        "options": [
+            "Creativity",
+            "Ordinariness/Mediocrity",
+            "Innovativeness",
+            "Risk-taking",
+            "Opportunity"
+        ],
+        "correctAnswer": "Ordinariness/Mediocrity"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "______ is defined as an occurance of an unwanted and probable damage or loss situation. Which one below complete the sentence?",
+        "options": [
+            "Risk",
+            "Threat",
+            "Uncertainty",
+            "Enterpreneur",
+            "Enterprise/Attempt"
+        ],
+        "correctAnswer": "Risk"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "______ balances the needs and potentials coherently by correct detection of the society needs. Which one below complete the sentence?",
+        "options": [
+            "Total quality management",
+            "Lean management",
+            "Entrepreneurship",
+            "Management",
+            "None"
+        ],
+        "correctAnswer": "Entrepreneurship"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which one below is one of the factors of production?",
+        "options": [
+            "Manager",
+            "Entrepreneur",
+            "Business Administrator",
+            "Initiative",
+            "Business Firm"
+        ],
+        "correctAnswer": "Entrepreneur"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which one below is an operation of a new idea, an invention or an existing product putting on the market in a profitable way?",
+        "options": [
+            "Making investment",
+            "Opportunity Entrepreneurship",
+            "Creative Entrepreneurship",
+            "Initiative Entrepreneurship",
+            "Establishing a new firm"
+        ],
+        "correctAnswer": "Creative Entrepreneurship"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which one does NOT agree with entrepreneurship?",
+        "options": [
+            "Establishing a new firm",
+            "Procuring capital",
+            "Innovation and Creativity",
+            "Making Oppurtunity",
+            "Bound to the old"
+        ],
+        "correctAnswer": "Bound to the old"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which one is NOT the features of an entrepreneur?",
+        "options": [
+            "Not taking risk",
+            "Being conservative",
+            "Cannot seeing problems",
+            "Being insensible",
+            "Seeing opportunities"
+        ],
+        "correctAnswer": "Seeing opportunities"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which one is NOT an element of entrepreneurship?",
+        "options": [
+            "Being disapproved",
+            "Giving effort",
+            "Creating value",
+            "Earning proceeds",
+            "Contribution for public."
+        ],
+        "correctAnswer": "Being disapproved"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which one is NOT the factors for materializing creativity?",
+        "options": [
+            "Motivation",
+            "Attitude",
+            "Behaviour",
+            "Environment",
+            "Oppressiveness"
+        ],
+        "correctAnswer": "Oppressiveness"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which one is NOT the behaviours and attitudes that occur in individual creativity?",
+        "options": [
+            "Creativity",
+            "Encouragement",
+            "Mistake and risk",
+            "Opinion / Thought",
+            "Making concept"
+        ],
+        "correctAnswer": "Mistake and risk"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which one is the behaviours and attitudes of organisational creativity?",
+        "options": [
+            "Challenge",
+            "Encouragement",
+            "Mistake and risk",
+            "Thought/opinion",
+            "Making concept"
+        ],
+        "correctAnswer": "Making concept"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "What is the name of the thoughts that can turn into a product and service, provide value to the customer, profit to the entrepreneur?",
+        "options": [
+            "Creativity",
+            "Work opinion",
+            "Innovation",
+            "Newness",
+            "Entrepreneurship"
+        ],
+        "correctAnswer": "Work opinion"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "While brainstorming, what is the rule that does NOT put a bound to imaginations and thoughts?",
+        "options": [
+            "To criticise",
+            "To make up freely",
+            "To think as much as you can",
+            "To be prepared",
+            "To develop an idea"
+        ],
+        "correctAnswer": "To make up freely"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which one continues from the place where brainstorming resumes and is more systematic technic?",
+        "options": [
+            "Control list",
+            "Horizontal Thinking",
+            "Gordon Method",
+            "Map of Thought",
+            "Focus Group Discussion"
+        ],
+        "correctAnswer": "Gordon Method"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which one is the term that relates concepts, but hard to understand and explain because it consists of complex symbols?",
+        "options": [
+            "Attitude",
+            "Behaviour",
+            "Chaus",
+            "Intuition",
+            "Perspective"
+        ],
+        "correctAnswer": "Behaviour"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which are NOT the features of hot-teams?",
+        "options": [
+            "It consists of different characters",
+            "They need to have targets",
+            "They should be in solidarity.",
+            "They should know the thoughts of each other.",
+            "None of them."
+        ],
+        "correctAnswer": "They should know the thoughts of each other."
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which one below is NOT the process of creativity?",
+        "options": [
+            "Preparation",
+            "To put in Incubation",
+            "To expose",
+            "To accept",
+            "To discuss a problem"
+        ],
+        "correctAnswer": "To discuss a problem"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which one is the creativity technic, related to one product and that puts the important factors of this product into two dimensional chart to reveal the creativity?",
+        "options": [
+            "Control list",
+            "Matris method",
+            "Gordon method",
+            "Map of thoughts",
+            "Focus Group Discussion"
+        ],
+        "correctAnswer": "Matris method"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which term describes implementation of new ideas produced by creativity?",
+        "options": [
+            "Design",
+            "Innovation",
+            "Production",
+            "Intiution",
+            "System"
+        ],
+        "correctAnswer": "Innovation"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which innovation type has the highest dependency to market?",
+        "options": [
+            "Technology based innovation",
+            "Information based innovation",
+            "Organization based innovation",
+            "System based innovation",
+            "Individual based innovation"
+        ],
+        "correctAnswer": "Information based innovation"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which of the following does NOT take place in innovation principles?",
+        "options": [
+            "Big startups",
+            "Being a product of work not intelligence",
+            "Reward and admiration",
+            "Comprehensive and open communication",
+            "Perceiving, questioning and listening"
+        ],
+        "correctAnswer": "Big startups"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which of the following term has a road map attribute for realizing establishments decisions?",
+        "options": [
+            "List",
+            "Directive",
+            "Regulation",
+            "Guide book",
+            "Business plan"
+        ],
+        "correctAnswer": "Business plan"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which of the following takes place in innovation types?",
+        "options": [
+            "Structural innovations in consumers",
+            "Structural innovations in market",
+            "Organizational innovations",
+            "Intuitive innovations",
+            "Conceptual innovations"
+        ],
+        "correctAnswer": "Organizational innovations"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which of the following does NOT take place in primary group innovation sources?",
+        "options": [
+            "Unexpected evolvements",
+            "Inconsistency",
+            "Processing needs",
+            "Perception changes",
+            "Changes in sector and market structures"
+        ],
+        "correctAnswer": "Perception changes"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which of the following point does NOT insist on productivity?",
+        "options": [
+            "Improving product quality",
+            "Gaining additional properties for product",
+            "Increasing productivity on production",
+            "Reaching high automation levels",
+            "Increasing products market share"
+        ],
+        "correctAnswer": "Increasing products market share"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which of the following does NOT take place in interactive innovation processes?",
+        "options": [
+            "Creative idea",
+            "Usage of technology",
+            "Picking proper idea",
+            "Turning idea into product and service",
+            "Serving product"
+        ],
+        "correctAnswer": "Creative idea"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which of the following does NOT take place in industry regions properties?",
+        "options": [
+            "Unwillingness in venture capital usage",
+            "Innovation develops region",
+            "Being close to economical and cultural regions",
+            "Being a harbor or commercial center",
+            "Free academical and continuing education"
+        ],
+        "correctAnswer": "Unwillingness in venture capital usage"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which of the following does NOT take place in basic elements of innovation culture?",
+        "options": [
+            "Stored information",
+            "Inter-people knowledge",
+            "External environments meeting needs",
+            "Activity emerging creativity",
+            "Instability between needs and possibilities"
+        ],
+        "correctAnswer": "Instability between needs and possibilities"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which of the following innovation types ideas is limited to organizations idea producing?",
+        "options": [
+            "Operational innovation",
+            "Devastating innovation",
+            "Close innovation",
+            "Business model innovation",
+            "Reverse innovation"
+        ],
+        "correctAnswer": "Close innovation"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "In which following phase creativity is used in innovation?",
+        "options": [
+            "Managing ideas",
+            "Idea gathering",
+            "Picking potentially succesful ideas",
+            "Implementation",
+            "Budgetting"
+        ],
+        "correctAnswer": "Picking potentially succesful ideas"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which of the innovation type cooperates outer establishment companies or individuals and organizations to gather innovation sources and powers?",
+        "options": [
+            "Radical innovation",
+            "Operational innovation",
+            "Open innovation",
+            "Business model innovation",
+            "Close innovation"
+        ],
+        "correctAnswer": "Open innovation"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which of the following answer describes finding a new solution to a problem and having commercial success from it?",
+        "options": [
+            "Production",
+            "Innovation",
+            "Creativity",
+            "Invention",
+            "Marketing"
+        ],
+        "correctAnswer": "Innovation"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "In order to realise innovation which of the following property is NOT needed?",
+        "options": [
+            "Originality",
+            "Having definable value",
+            "Can be commercialized",
+            "Different",
+            "Should be brought out by imitating"
+        ],
+        "correctAnswer": "Should be brought out by imitating"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which of the following definition is wrong about innovation term?",
+        "options": [
+            "In order to provide permanent success innovation should be sustainable",
+            "Innovation term meets consumers needs and solves their problems",
+            "For innovation creativity is not needed",
+            "Innovation starts with curiosity and intuition",
+            "Innovation includes discovery, invention, research and development"
+        ],
+        "correctAnswer": "For innovation creativity is not needed"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which of the following is NOT a difficulty of innovation?",
+        "options": [
+            "Finding a good idea",
+            "Making mistake",
+            "Calculating cost",
+            "Correct timing",
+            "Catching customer"
+        ],
+        "correctAnswer": "Making mistake"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which of the following is NOT wrongly known fact about innovation?",
+        "options": [
+            "Innovation and research and development are same things",
+            "Innovation only provides social and economical benefits",
+            "Innovation requires long time",
+            "Only goal of innovation is profit",
+            "Only large establishments can do innovation"
+        ],
+        "correctAnswer": "Innovation requires long time"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which of the following definition describes the difference between innovation and research and development?",
+        "options": [
+            "Research and development can not be reclaimed as a part of innovation",
+            "Every finding of research and development turns into innovation",
+            "Research and development may not take place in every innovation",
+            "Innovation includes everybody in establishment, however research and development only consists of its own department",
+            "Research and development is a process that includes innovation"
+        ],
+        "correctAnswer": "Innovation includes everybody in establishment, however research and development only consists of its own department"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which of the following correctly lists innovation processes?",
+        "options": [
+            "Managing ideas-gathering ideas-picking ideas with potential success-implementing",
+            "Gathering ideas-managing ideas-picking ideas with potential success-implementing",
+            "Picking ideas with potential success-implementing-managing ideas-gathering ideas",
+            "Gathering ideas-implementing-picking ideas with potential success-managing ideas",
+            "Gathering ideas-picking ideas with potential success-managing ideas and implementing"
+        ],
+        "correctAnswer": "Gathering ideas-managing ideas-picking ideas with potential success-implementing"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which of the following term is called ‘business doing type with proven success’?",
+        "options": [
+            "Business idea",
+            "Customer value statement",
+            "Business model",
+            "Entrepreunership processes",
+            "Innovative entrepreunership"
+        ],
+        "correctAnswer": "Business model"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which of the following does NOT take place in business ideas key sources?",
+        "options": [
+            "Products",
+            "Facilities",
+            "Equipments",
+            "Administrative process",
+            "Brands"
+        ],
+        "correctAnswer": "Administrative process"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which of the process below turns business idea into business?",
+        "options": [
+            "Entrepreunership processes",
+            "Administrative processes",
+            "Operational processes",
+            "Financial processes",
+            "Analysis processes"
+        ],
+        "correctAnswer": "Entrepreunership processes"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which of the following technique is NOT needed by managers to search and find business ideas?",
+        "options": [
+            "GZFT analysis",
+            "Foresight and road maps",
+            "Scenario analysis",
+            "Process analysis",
+            "Budget analysis"
+        ],
+        "correctAnswer": "Budget analysis"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which of the following research is NOT used in feasibility works?",
+        "options": [
+            "Market researches",
+            "Technological researches",
+            "Financial researches",
+            "Juridical researches",
+            "Commercial researches"
+        ],
+        "correctAnswer": "Commercial researches"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which of the following property is NOT used to distinguish succesful business idea from ordinary business idea?",
+        "options": [
+            "Provides benefit to customer",
+            "Brings rival advantage",
+            "Provides acquisition to share holders and establishment",
+            "Presented by establishment",
+            "Easy to produce"
+        ],
+        "correctAnswer": "Presented by establishment"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which of the following describes 'ideas which are decided to be introduced according to entrepreuners skills, knowledge and ability levels and foresighted as succesful'?",
+        "options": [
+            "Business idea",
+            "Plan",
+            "Program",
+            "Thought",
+            "Move"
+        ],
+        "correctAnswer": "Business idea"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which of the following is NOT needed while searching to find a business plan?",
+        "options": [
+            "Using personal skills",
+            "Being broad-minded",
+            "Synthesizing the ideas by brain storming",
+            "Doing research",
+            "Not to share ideas"
+        ],
+        "correctAnswer": "Not to share ideas"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which of the following method is used for defining a projects economical potential and practicability by researching technical, financial and economical datas?",
+        "options": [
+            "Business plan",
+            "Project",
+            "Business idea",
+            "Feasibility research",
+            "Implementation"
+        ],
+        "correctAnswer": "Feasibility research"
+    },
+    {
+        "week": "1-5",
+        "courseCode": "GRI403",
+        "question": "Which of the following shows the most correct process for developing a new business or project?",
+        "options": [
+            "Starting business- pre-feasibility- feasibility- business plan",
+            "Business plan- feasibility- pre-feasibility",
+            "Business or project idea- pre-feasibility- feasibility- business plan",
+            "Business or project idea- business plan- pre-feasibility- feasibility",
+            "Business or project idea- starting business"
+        ],
+        "correctAnswer": "Business or project idea- pre-feasibility- feasibility- business plan"
+    },
+    {
+        "week": 6,
+        "courseCode": "GRI403",
+        "question": "What does competition-based pricing involve?",
+        "options": [
+            "Determining price based on environmental factors",
+            "Setting prices according to production costs",
+            "Ignoring costs and following market demands",
+            "Adjusting prices based on customer demand",
+            "None of them is correct"
+        ],
+        "correctAnswer": "Ignoring costs and following market demands"
+    },
+    {
+        "week": 6,
+        "courseCode": "GRI403",
+        "question": "What is foresight in the business context?",
+        "options": [
+            "Historical analysis",
+            "Market share analysis",
+            "Current market conditions",
+            "Predicting future events",
+            "None of them is correct"
+        ],
+        "correctAnswer": "Predicting future events"
+    },
+    {
+        "week": 6,
+        "courseCode": "GRI403",
+        "question": "What does PEST Analysis stand for in the context of business plans and market analysis?",
+        "options": [
+            "None of them is correct",
+            "Political, Environmental, Social, Technological",
+            "Public, Economic, Strategic, Technological",
+            "Political, Economical, Social, Technological",
+            "Personal, Economic, Social, Technological"
+        ],
+        "correctAnswer": "Political, Economical, Social, Technological"
+    },
+    {
+        "week": 6,
+        "courseCode": "GRI403",
+        "question": "What are the four main criteria used for market classification?",
+        "options": [
+            "Sector, Region, Climate, Population",
+            "Geographic, Demographic, Psychographic, Behavioral",
+            "Political, Economic, Societal, Technological",
+            "Cultural, Economic, Social, Environmental",
+            "None of them is correct"
+        ],
+        "correctAnswer": "Geographic, Demographic, Psychographic, Behavioral"
+    },
+    {
+        "week": 6,
+        "courseCode": "GRI403",
+        "question": "What is the primary purpose of market research phases like gathering primary data sources?",
+        "options": [
+            "Identify competitors' prices",
+            "None of them is correct",
+            "Gather information directly from the market",
+            "Evaluate environmental factors",
+            "Analyze political factors"
+        ],
+        "correctAnswer": "Gather information directly from the market"
+    },
+    {
+        "week": 6,
+        "courseCode": "GRI403",
+        "question": "What does SWOT analysis help identify in the context of environmental and establishment relations?",
+        "options": [
+            "Strengths, Weaknesses, Opportunities, Threats",
+            "Sector potential",
+            "Market share",
+            "Market competition",
+            "None of them is correct"
+        ],
+        "correctAnswer": "Strengths, Weaknesses, Opportunities, Threats"
+    },
+    {
+        "week": 6,
+        "courseCode": "GRI403",
+        "question": "Which of the following is an example of a behavioral criteria in market classification?",
+        "options": [
+            "Age",
+            "Population density",
+            "None of them is correct",
+            "Purchasing habits",
+            "Climate"
+        ],
+        "correctAnswer": "Purchasing habits"
+    },
+    {
+        "week": 6,
+        "courseCode": "GRI403",
+        "question": "Which of the following parameter does not take place in PEST analysis political factors?",
+        "options": [
+            "Demographical factors",
+            "Country regime",
+            "Bureaucratic structure",
+            "Political stability",
+            "Civil war"
+        ],
+        "correctAnswer": "Bureaucratic structure"
+    },
+    {
+        "week": 6,
+        "courseCode": "GRI403",
+        "question": "Which of the following factor does not specify the competition between entrepreuners who are affecting sectors profitableness in sector analysis extent?",
+        "options": [
+            "Differentiation of product or service",
+            "Too much entrepreuners in sector",
+            "Suppliers with insufficient knowledge about products",
+            "Slow growth of industry",
+            "Expensiveness of stable costs and storage"
+        ],
+        "correctAnswer": "Suppliers with insufficient knowledge about products"
+    },
+    {
+        "week": 6,
+        "courseCode": "GRI403",
+        "question": "Which of the following pricing strategy is based on legal regulations such as Value Added Tax (KDV) and Special Consumption Tax (ÖTV)?",
+        "options": [
+            "Cost based pricing",
+            "Demand based pricing",
+            "Competition based pricing",
+            "Productivity based pricing",
+            "Environmental factors based pricing"
+        ],
+        "correctAnswer": "Environmental factors based pricing"
+    },
+    {
+        "week": 6,
+        "courseCode": "GRI403",
+        "question": "When we consider PEST analysis used for evaluating environmental factors, which of the following factor describes technology establishments such as Google can not operate in China?",
+        "options": [
+            "Political factors",
+            "Economical factors",
+            "Social factors",
+            "Technological factors",
+            "Cultural factors"
+        ],
+        "correctAnswer": "Political factors"
+    },
+    {
+        "week": 6,
+        "courseCode": "GRI403",
+        "question": "Which of the following analyse shows establishment and environment relation which help us to understand environmental factors such as establishments inner strength and weaknesses and exterior opportunuties and threats?",
+        "options": [
+            "PEST analysis",
+            "SWOT analysis",
+            "Sector analysis",
+            "Demand estimation",
+            "Customer differentiation"
+        ],
+        "correctAnswer": "SWOT analysis"
+    },
+    {
+        "week": 6,
+        "courseCode": "GRI403",
+        "question": "When we consider the factors affecting sectors profitableness, which of the following factor describes usage of plastic bottles instead of glass bottles in water packaging?",
+        "options": [
+            "Substitude products or services threat",
+            "Purchasers negotiation power",
+            "Suppliers negotiation power",
+            "Competition between current competitors",
+            "Potential competitors threat"
+        ],
+        "correctAnswer": "Substitude products or services threat"
+    },
+    {
+        "week": 6,
+        "courseCode": "GRI403",
+        "question": "When we consider marketing terms while preparing business plan, which of the following shows the ratio of entered markets consumers number and ready markets consumers number?",
+        "options": [
+            "Consumer ratio",
+            "Establishment ratio",
+            "Input percentage",
+            "Market percentage",
+            "Profit ratio"
+        ],
+        "correctAnswer": "Market percentage"
+    },
+    {
+        "week": 6,
+        "courseCode": "GRI403",
+        "question": "In order to have a complete market research information, which of the following factor is not used?",
+        "options": [
+            "Certainty",
+            "Economy",
+            "Practicableness",
+            "Correct timing",
+            "Understandability"
+        ],
+        "correctAnswer": "Correct timing"
+    },
+    {
+        "week": 6,
+        "courseCode": "GRI403",
+        "question": "Which of the following criteria is not a market classification strategy of an establishment?",
+        "options": [
+            "Geography",
+            "Demography",
+            "Psychography",
+            "Behavioral",
+            "Biologic"
+        ],
+        "correctAnswer": "Biologic"
+    },
+    {
+        "week": 6,
+        "courseCode": "GRI403",
+        "question": "Which of the following pricing strategy is based on researching market demand complete and correct?",
+        "options": [
+            "Cost based pricing",
+            "Demand based pricing",
+            "Competition based pricing",
+            "Productivity based pricing",
+            "Positioning based pricing"
+        ],
+        "correctAnswer": "Demand based pricing"
+    },
+    {
+        "week": 7,
+        "courseCode": "GRI403",
+        "question": "What is the purpose of dividing the market into geographic classifications in marketing plans?",
+        "options": [
+            "To define target markets based on regions",
+            "To analyze cultural changes",
+            "To focus on direct distribution strategies",
+            "To evaluate demographic criteria",
+            "All of them are correct"
+        ],
+        "correctAnswer": "To define target markets based on regions"
+    },
+    {
+        "week": 7,
+        "courseCode": "GRI403",
+        "question": "What does situation analysis in a marketing plan focus on?",
+        "options": [
+            "Product development strategies",
+            "Where are we?",
+            "All of them are correct",
+            "Future market trends",
+            "Competitor analysis"
+        ],
+        "correctAnswer": "Where are we?"
+    },
+    {
+        "week": 7,
+        "courseCode": "GRI403",
+        "question": "How is demographical environment analyzed in marketing plans?",
+        "options": [
+            "Analyzing population size, age, gender, race, etc.",
+            "By assessing global demographics",
+            "By analyzing competitors' populations",
+            "By evaluating the market's financial structure",
+            "All of them are correct"
+        ],
+        "correctAnswer": "Analyzing population size, age, gender, race, etc."
+    },
+    {
+        "week": 7,
+        "courseCode": "GRI403",
+        "question": "What does the opportunity represent in marketing terms?",
+        "options": [
+            "A situation where market needs are poorly served",
+            "Lower distribution costs",
+            "Lower production costs",
+            "All of them are correct",
+            "Intense effort to widen the general market"
+        ],
+        "correctAnswer": "A situation where market needs are poorly served"
+    },
+    {
+        "week": 7,
+        "courseCode": "GRI403",
+        "question": "Which factor is NOT part of the changeable macro environment affecting establishments?",
+        "options": [
+            "Demographic environment",
+            "All of them are correct",
+            "Economical environment",
+            "Product popularity",
+            "Juridical and political environment"
+        ],
+        "correctAnswer": "Product popularity"
+    },
+    {
+        "week": 7,
+        "courseCode": "GRI403",
+        "question": "What is a benefit of a well-prepared marketing plan for an entrepreneur?",
+        "options": [
+            "Foresight of opportunities and threats",
+            "Increased competition",
+            "All of them are correct",
+            "Higher production costs",
+            "Reduction in marketing goals"
+        ],
+        "correctAnswer": "Foresight of opportunities and threats"
+    },
+    {
+        "week": 7,
+        "courseCode": "GRI403",
+        "question": "What is the primary purpose of a marketing plan?",
+        "options": [
+            "All of them are correct",
+            "Analyzing competitors strategies",
+            "Outlining marketing aims and planned activities",
+            "Defining corporate aims",
+            "Documenting daily operations"
+        ],
+        "correctAnswer": "Outlining marketing aims and planned activities"
+    },
+    {
+        "week": 7,
+        "courseCode": "GRI403",
+        "question": "What fundamental questions does a marketing plan aim to answer?",
+        "options": [
+            "Where are we? Where do we want to go? How can we reach the aims?",
+            "All of them are correct",
+            "Why do we need a marketing plan? What are the current trends? How much should we invest?",
+            "Who are our competitors? What are the market trends? When should we launch new products?",
+            "How much profit do we want to make? Who are our target customers? Where should we advertise?"
+        ],
+        "correctAnswer": "Where are we? Where do we want to go? How can we reach the aims?"
+    },
+    {
+        "week": 7,
+        "courseCode": "GRI403",
+        "question": "What is an example of a behavioral classification in market segmentation?",
+        "options": [
+            "Climate",
+            "Age",
+            "Social class, personal properties, and consumer behaviors",
+            "All of them are correct",
+            "Population density"
+        ],
+        "correctAnswer": "Social class, personal properties, and consumer behaviors"
+    },
+    {
+        "week": 7,
+        "courseCode": "GRI403",
+        "question": "Which of the following document includes an establishments marketing goals and activity plans step by step in a written form?",
+        "options": [
+            "Monthly plan",
+            "Management plan",
+            "Marketing plan",
+            "Financial plan",
+            "Opportunity analysis plan"
+        ],
+        "correctAnswer": "Marketing plan"
+    },
+    {
+        "week": 7,
+        "courseCode": "GRI403",
+        "question": "Which of the following is not one of the property of marketing plan?",
+        "options": [
+            "Competitors strong and weak sides analysis",
+            "Flexibility",
+            "Includes performance measurements",
+            "Based on real informations",
+            "Short and simple"
+        ],
+        "correctAnswer": "Competitors strong and weak sides analysis"
+    },
+    {
+        "week": 7,
+        "courseCode": "GRI403",
+        "question": "Which of the following is not a step of marketing plan?",
+        "options": [
+            "Situation analysis",
+            "Implementation and control",
+            "Defining opportunuties and threats",
+            "Preparing plan simple and understandable",
+            "Defining marketing strategies and tactics"
+        ],
+        "correctAnswer": "Preparing plan simple and understandable"
+    },
+    {
+        "week": 7,
+        "courseCode": "GRI403",
+        "question": "Which of the following is not a parameter forming macro environment?",
+        "options": [
+            "Demographical environment",
+            "Legal environment",
+            "Social and cultural environment",
+            "Political and juridical environment",
+            "Strategical environment"
+        ],
+        "correctAnswer": "Strategical environment"
+    },
+    {
+        "week": 7,
+        "courseCode": "GRI403",
+        "question": "Which of the following method classifies market according to country, region, city and province?",
+        "options": [
+            "Demographical classification",
+            "Behavioral classification",
+            "Tactical classification",
+            "Geographical classification",
+            "Strategical classification"
+        ],
+        "correctAnswer": "Geographical classification"
+    },
+    {
+        "week": 7,
+        "courseCode": "GRI403",
+        "question": "Which of the following describes establishments future planned activities and results to reach?",
+        "options": [
+            "Goal",
+            "Strategy",
+            "Tactic",
+            "Market",
+            "Opportunity"
+        ],
+        "correctAnswer": "Goal"
+    },
+    {
+        "week": 7,
+        "courseCode": "GRI403",
+        "question": "Which of the following strategy describes an establishment trying to reach lowest production and distribution costs?",
+        "options": [
+            "Niche market strategy",
+            "Cost leadership strategy",
+            "Differentiation strategy",
+            "Focussing strategy",
+            "Followers strategy"
+        ],
+        "correctAnswer": "Cost leadership strategy"
+    },
+    {
+        "week": 7,
+        "courseCode": "GRI403",
+        "question": "Which of the following is a product or services value in market?",
+        "options": [
+            "Product",
+            "Brand",
+            "Price",
+            "Distribution",
+            "Promotion"
+        ],
+        "correctAnswer": "Price"
+    },
+    {
+        "week": 7,
+        "courseCode": "GRI403",
+        "question": "Which of the following describes serving and selling product without using mediators by producer?",
+        "options": [
+            "Intense distribution",
+            "Selector distribution",
+            "Special distribution",
+            "Indirect distribution",
+            "Direct distribution"
+        ],
+        "correctAnswer": "Direct distribution"
+    },
+    {
+        "week": 7,
+        "courseCode": "GRI403",
+        "question": "Which of the following works are used for increasing sales directly in a short term?",
+        "options": [
+            "Advertisement",
+            "Sales promotion",
+            "Public relations",
+            "Personal sale",
+            "Distribution"
+        ],
+        "correctAnswer": "Sales promotion"
+    },
+    {
+        "week": 8,
+        "courseCode": "GRI403",
+        "question": "Which of the following is not a production system input?",
+        "options": [
+            "Raw material",
+            "Information",
+            "Customer",
+            "Capital",
+            "Entrepreunership"
+        ],
+        "correctAnswer": "Customer"
+    },
+    {
+        "week": 8,
+        "courseCode": "GRI403",
+        "question": "In which of the following only unique product is produced according to customers requests?",
+        "options": [
+            "Project type production",
+            "Continuous production",
+            "Assembly type production",
+            "Flow type production",
+            "Mass production"
+        ],
+        "correctAnswer": "Project type production"
+    },
+    {
+        "week": 8,
+        "courseCode": "GRI403",
+        "question": "Which of the following does not take place in production plans extent?",
+        "options": [
+            "Defining production rate",
+            "Defining production priorities",
+            "Defining production amount to be produced",
+            "Defining product to be produced",
+            "Defining product to be produced price"
+        ],
+        "correctAnswer": "Defining product to be produced price"
+    },
+    {
+        "week": 8,
+        "courseCode": "GRI403",
+        "question": "Which of the following is defined by process flow schema?",
+        "options": [
+            "Storage where inputs go",
+            "Inputs process orders",
+            "List of product parts",
+            "Placing of machines",
+            "Machines capacity list"
+        ],
+        "correctAnswer": "Inputs process orders"
+    },
+    {
+        "week": 8,
+        "courseCode": "GRI403",
+        "question": "Which of the following is not a production planning activity?",
+        "options": [
+            "Defining production plans term of involvement",
+            "Defining stock level",
+            "Making demand estimations",
+            "Defining certain orders",
+            "Choosing supplier"
+        ],
+        "correctAnswer": "Choosing supplier"
+    },
+    {
+        "week": 8,
+        "courseCode": "GRI403",
+        "question": "Which of the following shows when and in which amount whole materials to be sold or produced will be supplied?",
+        "options": [
+            "Capacity planning",
+            "Material need planning",
+            "Capacity need planning",
+            "Main production tabulation",
+            "Main production planning"
+        ],
+        "correctAnswer": "Main production tabulation"
+    },
+    {
+        "week": 8,
+        "courseCode": "GRI403",
+        "question": "Which of the following inputs are outputs of main production tabulation?",
+        "options": [
+            "Capacity need planning",
+            "Stock control",
+            "Material need planning",
+            "Capacity planning",
+            "Main production planning"
+        ],
+        "correctAnswer": "Material need planning"
+    },
+    {
+        "week": 8,
+        "courseCode": "GRI403",
+        "question": "Which of the following is not an aim of material need planning?",
+        "options": [
+            "Keeping stock level low",
+            "Appointing employees on correct works",
+            "Contributing work flows system",
+            "Helping deliveries",
+            "Minimizing production setbacks"
+        ],
+        "correctAnswer": "Appointing employees on correct works"
+    },
+    {
+        "week": 8,
+        "courseCode": "GRI403",
+        "question": "Which of the following defines machine-equipment and required work power amount to implement material plan in a short planning term?",
+        "options": [
+            "Capacity need planning",
+            "Source need planning",
+            "Rough cutting source planning",
+            "Stock control",
+            "Material need planning"
+        ],
+        "correctAnswer": "Capacity need planning"
+    },
+    {
+        "week": 8,
+        "courseCode": "GRI403",
+        "question": "Which of the following decision is most difficult to bring back?",
+        "options": [
+            "Supplier selection",
+            "Machine selection",
+            "Employee selection",
+            "Establishment place selection",
+            "Raw material selection"
+        ],
+        "correctAnswer": "Establishment place selection"
+    },
+    {
+        "week": 9,
+        "courseCode": "GRI403",
+        "question": "What are the options for financial protection in organizations, companies, businesses, and all of them are correct?",
+        "options": [
+            "Focusing solely on production plans",
+            "Ignoring the management team's experience",
+            "A family-focused management plan",
+            "Minimizing marketing efforts"
+        ],
+        "correctAnswer": "A family-focused management plan"
+    },
+    {
+        "week": 9,
+        "courseCode": "GRI403",
+        "question": "Who is authorized to grant a business license within the metropolitan means-quality border in Turkey?",
+        "options": [
+            "The District Municipality",
+            "The Provincial Administration",
+            "The Metropolitan Municipality",
+            "The Chamber of Commerce"
+        ],
+        "correctAnswer": "The Metropolitan Municipality"
+    },
+    {
+        "week": 9,
+        "courseCode": "GRI403",
+        "question": "Why is work specialization important in a company?",
+        "options": [
+            "To increase employee salaries",
+            "To simplify the company's legal structure",
+            "To increase organization efficiency or enhance organization performance",
+            "To reduce the need for a marketing plan"
+        ],
+        "correctAnswer": "To increase organization efficiency or enhance organization performance"
+    },
+    {
+        "week": 9,
+        "courseCode": "GRI403",
+        "question": "What is segmentation according to function in marketing?",
+        "options": [
+            "Grouping customers by geographic location",
+            "Dividing tasks based on job titles or qualifications",
+            "Segmenting the market based on product type",
+            "Creating different pricing strategies for different segments"
+        ],
+        "correctAnswer": "Dividing tasks based on job titles or qualifications"
+    },
+    {
+        "week": 9,
+        "courseCode": "GRI403",
+        "question": "Which of the following is not considered one of the basic pillars of management?",
+        "options": [
+            "Planning",
+            "Organizing",
+            "Leading",
+            "Controlling",
+            "Saving"
+        ],
+        "correctAnswer": "Saving"
+    },
+    {
+        "week": 9,
+        "courseCode": "GRI403",
+        "question": "What is a sole proprietorship?",
+        "options": [
+            "A company owned by shareholders",
+            "A company type where two or more individuals share ownership",
+            "A company type characterized by a single person who owns and operates the business",
+            "A government-owned entity"
+        ],
+        "correctAnswer": "A company type characterized by a single person who owns and operates the business"
+    },
+    {
+        "week": 9,
+        "courseCode": "GRI403",
+        "question": "What is a partnership?",
+        "options": [
+            "A company type where two or more individuals share ownership and operate the business together",
+            "A business owned and operated by one person",
+            "An entity where ownership is represented by shares",
+            "A non-profit organization"
+        ],
+        "correctAnswer": "A company type where two or more individuals share ownership and operate the business together"
+    },
+    {
+        "week": 9,
+        "courseCode": "GRI403",
+        "question": "What is a stock corporation?",
+        "options": [
+            "A business with unlimited liability for its owners",
+            "An entity where ownership is represented by shares, and shares are issued to the shareholders",
+            "A company operated by a single individual",
+            "A temporary business venture"
+        ],
+        "correctAnswer": "An entity where ownership is represented by shares, and shares are issued to the shareholders"
+    },
+    {
+        "week": 9,
+        "courseCode": "GRI403",
+        "question": "Which of the following is incorrect related to management plan?",
+        "options": [
+            "Management plan is concerned with how to create organizational structure",
+            "Management plan is concerned with how to create product and services",
+            "It should define establishments juridical structure",
+            "Authority and responsibility relations should be defined on plan",
+            "A good management plan proves that entrepreuner understands factors affecting organizational effectiveness"
+        ],
+        "correctAnswer": "Management plan is concerned with how to create product and services"
+    },
+    {
+        "week": 9,
+        "courseCode": "GRI403",
+        "question": "Which of the following information is not needed for preparing management plan?",
+        "options": [
+            "Establishments site of establishment",
+            "Establishments juridical structure",
+            "Establishments organizational structure",
+            "Abilities requiered for positions in establishment",
+            "Standarts which calculate and evaluate working performance"
+        ],
+        "correctAnswer": "Establishments site of establishment"
+    },
+    {
+        "week": 9,
+        "courseCode": "GRI403",
+        "question": "Which of the following partnersip is responsible with whole the products without any limitation as collective partners?",
+        "options": [
+            "Commandite",
+            "Commanditer",
+            "Merchant",
+            "Corporative",
+            "Limited partnership"
+        ],
+        "correctAnswer": "Commandite"
+    },
+    {
+        "week": 9,
+        "courseCode": "GRI403",
+        "question": "Which of the following is share holder partnership?",
+        "options": [
+            "Collective partnerships",
+            "Commandite partnerships",
+            "Limited partnership",
+            "Ordinary partnership",
+            "Individual partnership"
+        ],
+        "correctAnswer": "Limited partnership"
+    },
+    {
+        "week": 9,
+        "courseCode": "GRI403",
+        "question": "Which of the following is not a basic step of preparing management plan?",
+        "options": [
+            "Management plan summary",
+            "Situational review",
+            "Establishments juridical structure",
+            "Evaluating outer environment",
+            "Management philosophy"
+        ],
+        "correctAnswer": "Management philosophy"
+    },
+    {
+        "week": 9,
+        "courseCode": "GRI403",
+        "question": "Which of the following is not considered as a basic element of organizational structure?",
+        "options": [
+            "Work division",
+            "Matrix structure",
+            "Audit field",
+            "Classification",
+            "Authority"
+        ],
+        "correctAnswer": "Matrix structure"
+    },
+    {
+        "week": 9,
+        "courseCode": "GRI403",
+        "question": "Which of the following classification gathers works and duties according to their qualification?",
+        "options": [
+            "According to product base",
+            "According to geographical base",
+            "According to functions",
+            "According to time base",
+            "According to customer base"
+        ],
+        "correctAnswer": "According to functions"
+    },
+    {
+        "week": 9,
+        "courseCode": "GRI403",
+        "question": "Which of the following defines employee amount a manager can direct?",
+        "options": [
+            "Audit field",
+            "Flexibility",
+            "Authority-responsibility balance",
+            "Classification",
+            "Expertation"
+        ],
+        "correctAnswer": "Audit field"
+    },
+    {
+        "week": 9,
+        "courseCode": "GRI403",
+        "question": "Which of the following question should be answered when an entrepreuner decides organizational structure?",
+        "options": [
+            "How working performance will be evaluated?",
+            "Which equipments and materials employees can use?",
+            "How to employ qualified work power?",
+            "How employees will be protected against environmental changes?",
+            "How many sublevel employees can be directed by each manager?"
+        ],
+        "correctAnswer": "How many sublevel employees can be directed by each manager?"
+    },
+    {
+        "week": 9,
+        "courseCode": "GRI403",
+        "question": "Which of the following is not related to defining main positions which should be filled in future in management plan?",
+        "options": [
+            "Every positions duties, responsibilites and authorities level",
+            "Statements about perquisite and promotion opportunuties",
+            "Every positions authority and responsibilites harmony with organizational structure",
+            "Every position according to business title",
+            "Providing qualified employees to establishment method"
+        ],
+        "correctAnswer": "Statements about perquisite and promotion opportunuties"
+    },
+    {
+        "week": 9,
+        "courseCode": "GRI403",
+        "question": "Which one below is wrong about the working plan?",
+        "options": [
+            "Working plan is a document including the details of a firm thought to be set up or existing",
+            "Working plan does not show the future of the firm, but the existing position of it.",
+            "In the working plan all the elements of the firm should be defined.",
+            "Working plan is the vision reflected written document of the firm thought to be set up.",
+            "Working plan is the helping vehicle for an entrepreneur to move on to investment phase."
+        ],
+        "correctAnswer": "Working plan does not show the future of the firm, but the existing position of it."
+    },
+    {
+        "week": 9,
+        "courseCode": "GRI403",
+        "question": "Which of the following below is NOT the benefits of a working plan for an entrepreneur?",
+        "options": [
+            "Enduring an entrepreneur to see the firm from critical and objective point of view.",
+            "Giving informations to the funders and financiers about the market potential and planning the protection of the market share.",
+            "Helping the assumption formation of the entrepreneur for the success of the firm.",
+            "For the evaluation of the aims, setting criterias for the comparision of real results and estimations.",
+            "An incomplete working plan carrying out a duty of a working guide for the entrepreneur."
+        ],
+        "correctAnswer": "Giving informations to the funders and financiers about the market potential and planning the protection of the market share."
+    },
+    {
+        "week": 9,
+        "courseCode": "GRI403",
+        "question": "Which one below is a guide prepared during the process of setting up a firm and project being implemented?",
+        "options": [
+            "Charts of accounts",
+            "Feasibility analysis",
+            "Working plan",
+            "Marketing plan",
+            "Financing plan"
+        ],
+        "correctAnswer": "Working plan"
+    },
+    {
+        "week": 9,
+        "courseCode": "GRI403",
+        "question": "Which one below is NOT a benefit of the working plan preperation?",
+        "options": [
+            "Working plan provides investor/ entrepreneur the written project of his/her mind.",
+            "It saves time and works for the purpose by directing investor/ entrepreneur's attention.",
+            "It provides conjecture by being based on the future datas.",
+            "It provides the needed researches and planned work done before setting up the firm.",
+            "It is useful for the research of which work to be done."
+        ],
+        "correctAnswer": "It is useful for the research of which work to be done."
+    },
+    {
+        "week": 9,
+        "courseCode": "GRI403",
+        "question": "Which one below is NOT a part of working plan?",
+        "options": [
+            "Executive summary",
+            "Information about the project/firm to be set up",
+            "Aim and purpose of the project/firm",
+            "Marketing Plan",
+            "Profitability Plan"
+        ],
+        "correctAnswer": "Marketing Plan"
+    },
+    {
+        "week": 9,
+        "courseCode": "GRI403",
+        "question": "Who should prepare the working plan of the firm to be set up?",
+        "options": [
+            "Venture capitalist",
+            "Angel investor",
+            "Entrepreneurs",
+            "Financial advisor",
+            "Legal Advisor"
+        ],
+        "correctAnswer": "Entrepreneurs"
+    },
+    {
+        "week": 9,
+        "courseCode": "GRI403",
+        "question": "Which one below is NOT the usage purpose of the working plan?",
+        "options": [
+            "Communication",
+            "Planning",
+            "Management",
+            "Future prediction",
+            "Past analysis"
+        ],
+        "correctAnswer": "Past analysis"
+    },
+    {
+        "week": 9,
+        "courseCode": "GRI403",
+        "question": "Which one below is a mistake done while the preprerations of the working plan?",
+        "options": [
+            "The usage of another working plan's assumptions",
+            "Shortening the plan",
+            "Reflecting all the risks in the plan",
+            "Harmonising the future with the plan",
+            "Not placing exeggerations in the plan"
+        ],
+        "correctAnswer": "The usage of another working plan's assumptions"
+    },
+    {
+        "week": 9,
+        "courseCode": "GRI403",
+        "question": "Which one below is NOT the mistake done while the preperations of the working plan?",
+        "options": [
+            "Putting unrealistic aims in the plan",
+            "Not predicting potential obstacles",
+            "Lack of determination or undertaking",
+            "Segmentation not being done",
+            "Plan being up to date"
+        ],
+        "correctAnswer": "Plan being up to date"
+    },
+    {
+        "week": 9,
+        "courseCode": "GRI403",
+        "question": "Which part below is needed to be demanded for reading the whole plan arousing interest for it?",
+        "options": [
+            "Marketing plan",
+            "Input/Executive Summary",
+            "Management Plan",
+            "Production plan",
+            "Enclosure"
+        ],
+        "correctAnswer": "Input/Executive Summary"
+    },
+    {
+        "week": 10,
+        "courseCode": "GRI403",
+        "question": "What is the minimum capital required to establish a joint stock company in Turkey?",
+        "options": [
+            "10,000 TL",
+            "25,000 TL",
+            "50,000 TL",
+            "100,000 TL"
+        ],
+        "correctAnswer": "50,000 TL"
+    },
+    {
+        "week": 10,
+        "courseCode": "GRI403",
+        "question": "What is the critical role of a work plan in seeking funding from investors or banks?",
+        "options": [
+            "Outlining the company's history",
+            "Demonstrating the potential of the project and its profitability",
+            "Listing all employees and their salaries",
+            "Providing a detailed accounting of past expenses"
+        ],
+        "correctAnswer": "Demonstrating the potential of the project and its profitability"
+    },
+    {
+        "week": 10,
+        "courseCode": "GRI403",
+        "question": "What is the purpose of break-even analysis in financial planning?",
+        "options": [
+            "To calculate the company's total assets",
+            "To forecast sales for the next five years",
+            "To observe the relation between cost, activity volume, and profit",
+            "To determine the company's market share"
+        ],
+        "correctAnswer": "To observe the relation between cost, activity volume, and profit"
+    },
+    {
+        "week": 10,
+        "courseCode": "GRI403",
+        "question": "What makes financial plans different from accounting?",
+        "options": [
+            "Financial plans use more complex formulas",
+            "Accounting is only for large corporations",
+            "Financial plans have an emphasis on future outcomes, while accounting focuses on the past",
+            "There is no difference"
+        ],
+        "correctAnswer": "Financial plans have an emphasis on future outcomes, while accounting focuses on the past"
+    },
+    {
+        "week": 10,
+        "courseCode": "GRI403",
+        "question": "Which financial aspect does the term 'Starbucks spreadsheet' likely refer to in a business context?",
+        "options": [
+            "Cost management",
+            "Debt financing",
+            "Revenue generation and sales forecasting",
+            "Asset allocation"
+        ],
+        "correctAnswer": "Revenue generation and sales forecasting"
+    },
+    {
+        "week": 10,
+        "courseCode": "GRI403",
+        "question": "How does Tesla's financial plan contribute to its intellectual success?",
+        "options": [
+            "By minimizing all research and development costs",
+            "Through strategic cost management and investment in innovation",
+            "By paying the highest salaries in the industry",
+            "By avoiding all forms of debt"
+        ],
+        "correctAnswer": "Through strategic cost management and investment in innovation"
+    },
+    {
+        "week": 10,
+        "courseCode": "GRI403",
+        "question": "Which one below taken into consideration for defining finance need of a business firm?",
+        "options": [
+            "Total resources (equity capital)",
+            "Total of short and long term debts",
+            "Term structure of the debts",
+            "Total current assets",
+            "Total fixed and current assets"
+        ],
+        "correctAnswer": "Total fixed and current assets"
+    },
+    {
+        "week": 10,
+        "courseCode": "GRI403",
+        "question": "Which business progress phase is the hardest for entrepreneur?",
+        "options": [
+            "Beginning phase",
+            "Growing phase",
+            "Maturity phase",
+            "Decline phase",
+            "Fall phase"
+        ],
+        "correctAnswer": "Beginning phase"
+    },
+    {
+        "week": 10,
+        "courseCode": "GRI403",
+        "question": "Which one below is NOT one of the finance resources for the benefit of entrepreneur in the beginning phase?",
+        "options": [
+            "Personal resources",
+            "Merchant banks",
+            "Investment banks",
+            "Supplier's credits",
+            "Friends and relatives"
+        ],
+        "correctAnswer": "Investment banks"
+    },
+    {
+        "week": 10,
+        "courseCode": "GRI403",
+        "question": "In terms of the business firm, in which business progress phase, innovations increase, rivalry rises and profits start to increase?",
+        "options": [
+            "Beginning",
+            "Growing",
+            "Maturity",
+            "Decline",
+            "Fall"
+        ],
+        "correctAnswer": "Growing"
+    },
+    {
+        "week": 10,
+        "courseCode": "GRI403",
+        "question": "Which factor below does NOT increase the importance of financial planning period?",
+        "options": [
+            "Manifestation of the target and aim",
+            "Defining the risks taken",
+            "Defining cash inflow and outflow",
+            "Estimating funds needed",
+            "Evaluating the previous period results"
+        ],
+        "correctAnswer": "Evaluating the previous period results"
+    },
+    {
+        "week": 10,
+        "courseCode": "GRI403",
+        "question": "Which strategy below is NOT aimed at decreasing the financial risks to minimum level?",
+        "options": [
+            "Shorten the due date of the debts",
+            "Becoming indebt from the fixed interest rate",
+            "Protected from the risks of Exchange rate",
+            "Creating new credit opprtunities",
+            "Lowering loan/ equity capital mainstay below 1."
+        ],
+        "correctAnswer": "Shorten the due date of the debts"
+    },
+    {
+        "week": 10,
+        "courseCode": "GRI403",
+        "question": "Which one below is the table that a business firm will attain operating and non operating profit in the future term and endure the budget of the margin for gaining profit ?",
+        "options": [
+            "Proforma balance sheet",
+            "Proforma income table",
+            "Cass budget",
+            "Equity Exchange table",
+            "Fund flow table"
+        ],
+        "correctAnswer": "Proforma income table"
+    },
+    {
+        "week": 10,
+        "courseCode": "GRI403",
+        "question": "Which factor below does NOT increase the need of working capital?",
+        "options": [
+            "Capacity",
+            "Work load",
+            "Liquidity risk",
+            "Credit Worth",
+            "Revaluation"
+        ],
+        "correctAnswer": "Revaluation"
+    },
+    {
+        "week": 10,
+        "courseCode": "GRI403",
+        "question": "Which one below is NOT brunches of work fund?",
+        "options": [
+            "Cash",
+            "Debt owed",
+            "Stock",
+            "Cash equivalents",
+            "Fixed assets"
+        ],
+        "correctAnswer": "Fixed assets"
+    },
+    {
+        "week": 10,
+        "courseCode": "GRI403",
+        "question": "Which one is not a disadvantage of funds provided for family and friends?",
+        "options": [
+            "Interrupting management",
+            "Feeling of ownage",
+            "Interrupting workers",
+            "Guiding operations",
+            "Ending operations"
+        ],
+        "correctAnswer": "Ending operations"
+    },
+    {
+        "week": 10,
+        "courseCode": "GRI403",
+        "question": "Which of the following is not a question banks or lending companies are looking for in business plan?",
+        "options": [
+            "Will you pay your loan back?",
+            "Why do you need this money for?",
+            "How much loan you want?",
+            "Are you strong enough to pay the interest?",
+            "If needed, what types of assurances you can provide?"
+        ],
+        "correctAnswer": "Will you pay your loan back?"
+    },
+    {
+        "week": 10,
+        "courseCode": "GRI403",
+        "question": "While making sales budget estimations in the beginning of financial estimation process, for the first year which periods are used for sales estimation?",
+        "options": [
+            "Weekly",
+            "Three months",
+            "Six months",
+            "Yearly",
+            "Monthly"
+        ],
+        "correctAnswer": "Monthly"
+    },
+    {
+        "week": 10,
+        "courseCode": "GRI403",
+        "question": "While budgeting estimated expense and costs, which of the following expenses are reviewed?",
+        "options": [
+            "Beginning and activity expenses",
+            "Beginning and finishing expenses",
+            "Short and long term expenses",
+            "Activity and raw material expenses",
+            "Stable and changeable expenses"
+        ],
+        "correctAnswer": "Beginning and activity expenses"
+    },
+    {
+        "week": 10,
+        "courseCode": "GRI403",
+        "question": "Which of the following is not a type of activity expenses?",
+        "options": [
+            "Salary and wages",
+            "Day offs and licenses",
+            "Rents",
+            "Mortgage debts",
+            "Financial rents"
+        ],
+        "correctAnswer": "Day offs and licenses"
+    },
+    {
+        "week": 10,
+        "courseCode": "GRI403",
+        "question": "Which of the following is not a typical main type of income statement?",
+        "options": [
+            "Incomes",
+            "Expenses",
+            "Debts",
+            "Income tax to be paid",
+            "Pure profit"
+        ],
+        "correctAnswer": "Debts"
+    },
+    {
+        "week": 10,
+        "courseCode": "GRI403",
+        "question": "Which of the following is not an inner or outer establishment factor affecting cash flows directly?",
+        "options": [
+            "Delays in raw material supply",
+            "Deficient raw material",
+            "Deficient product",
+            "Suppliers price decrease",
+            "Suppliers date shortening"
+        ],
+        "correctAnswer": "Suppliers price decrease"
+    },
+    {
+        "week": 10,
+        "courseCode": "GRI403",
+        "question": "Which of the following par production amount in a product which have total stable expense of 5000.- TL, unit changeable expense 25.- TL and sales price 50.- TL?",
+        "options": [
+            "500",
+            "450",
+            "400",
+            "300",
+            "200"
+        ],
+        "correctAnswer": "200"
+    },
+    {
+        "week": 11,
+        "courseCode": "GRI403",
+        "question": "Why is risk management important for a company?",
+        "options": [
+            "To eliminate all possible risks completely",
+            "To improve perception about risk and develop policies for solutions",
+            "To satisfy government regulations only",
+            "To increase the company's debt load"
+        ],
+        "correctAnswer": "To improve perception about risk and develop policies for solutions"
+    },
+    {
+        "week": 11,
+        "courseCode": "GRI403",
+        "question": "What is operational risk in risk management?",
+        "options": [
+            "Risk of a debtor defaulting on a loan",
+            "Risk of loss from failed internal processes, people, systems, or external events",
+            "Risk of negative market price movements",
+            "Risk of being unable to meet short-term financial obligations"
+        ],
+        "correctAnswer": "Risk of loss from failed internal processes, people, systems, or external events"
+    },
+    {
+        "week": 11,
+        "courseCode": "GRI403",
+        "question": "How is risk defined in risk management?",
+        "options": [
+            "A certain negative event that has already happened",
+            "A guarantee of future profit",
+            "As possible chances or threats in the future that could lead to monetary loss",
+            "An analysis of past company failures"
+        ],
+        "correctAnswer": "As possible chances or threats in the future that could lead to monetary loss"
+    },
+    {
+        "week": 11,
+        "courseCode": "GRI403",
+        "question": "What is liquidity risk in risk management?",
+        "options": [
+            "The risk of a company's reputation being damaged",
+            "The risk of being unable to pay on time due to a shortage of cash",
+            "The risk of a foreign country's political instability",
+            "The risk of a key supplier going out of business"
+        ],
+        "correctAnswer": "The risk of being unable to pay on time due to a shortage of cash"
+    },
+    {
+        "week": 11,
+        "courseCode": "GRI403",
+        "question": "Is qualitative or quantitative risk analysis more different from the other?",
+        "options": [
+            "Quantitative, because it uses complex math",
+            "Qualitative, because it involves subjective evaluation and revelation, while quantitative involves numerical analysis of past events",
+            "They are the same, just with different names",
+            "Neither, as both focus exclusively on financial data"
+        ],
+        "correctAnswer": "Qualitative, because it involves subjective evaluation and revelation, while quantitative involves numerical analysis of past events"
+    },
+    {
+        "week": 11,
+        "courseCode": "GRI403",
+        "question": "Which of the following is correct about risk definition?",
+        "options": [
+            "It involves actualized event",
+            "It is sparing source for actualized loss",
+            "Happens everytime",
+            "It is about past",
+            "It is based on possibility of actualization"
+        ],
+        "correctAnswer": "It is based on possibility of actualization"
+    },
+    {
+        "week": 11,
+        "courseCode": "GRI403",
+        "question": "Which of the following risk or risks we take if we are going to take the payment of our sold house in future in foreing currency?",
+        "options": [
+            "Credit risk",
+            "Operation risk",
+            "Currency and credit risk",
+            "Reputation risk",
+            "Credit and operation risk"
+        ],
+        "correctAnswer": "Currency and credit risk"
+    },
+    {
+        "week": 11,
+        "courseCode": "GRI403",
+        "question": "Which of the following alternative is more preferable if we presume the risk type is same?",
+        "options": [
+            "Low encountering rate, low loss amount",
+            "High encountering rate, low loss amount",
+            "Low encountering rate, high loss amount",
+            "High encountering rate, high loss amount",
+            "Encountering rate unknown, high loss amount"
+        ],
+        "correctAnswer": "Low encountering rate, low loss amount"
+    },
+    {
+        "week": 11,
+        "courseCode": "GRI403",
+        "question": "Which of the following loss risk is from unsuccesful business processes, people and systems or outer events?",
+        "options": [
+            "Operational",
+            "Credit",
+            "Market",
+            "Interest rate",
+            "Liquidity"
+        ],
+        "correctAnswer": "Operational"
+    },
+    {
+        "week": 11,
+        "courseCode": "GRI403",
+        "question": "Which of the following risk type is realized if we have large amount of receivable debt however we do not have enough money for our daily needs?",
+        "options": [
+            "Operational",
+            "Credit",
+            "Market",
+            "Interest rate",
+            "Liquidity"
+        ],
+        "correctAnswer": "Liquidity"
+    },
+    {
+        "week": 11,
+        "courseCode": "GRI403",
+        "question": "Which of the following is an element affecting success in risk management?",
+        "options": [
+            "Size of establishment",
+            "University graduated employees",
+            "Establishment being in a centeral area",
+            "Being supported by top management",
+            "Establishment having high endorsement"
+        ],
+        "correctAnswer": "Being supported by top management"
+    },
+    {
+        "week": 11,
+        "courseCode": "GRI403",
+        "question": "Which of the following strategy can not be used in risk management?",
+        "options": [
+            "Ignoring risk",
+            "Avoiding risk",
+            "Transferring risk",
+            "Decreasing risks effects",
+            "Decreasing risks possibility"
+        ],
+        "correctAnswer": "Ignoring risk"
+    },
+    {
+        "week": 11,
+        "courseCode": "GRI403",
+        "question": "Which of the following risk type can be numerically countable?",
+        "options": [
+            "Credit risk",
+            "Reputation risk",
+            "Juridical risk",
+            "Country risk",
+            "Active-passive risk"
+        ],
+        "correctAnswer": "Credit risk"
+    },
+    {
+        "week": 11,
+        "courseCode": "GRI403",
+        "question": "Which of the following risk or risks we take if we are going to take our sold product or services payment in future in foreign currency?",
+        "options": [
+            "Credit risk",
+            "Operational risk",
+            "Currency or credit risk",
+            "Reputation risk",
+            "Credit and operational risk"
+        ],
+        "correctAnswer": "Currency or credit risk"
+    },
+    {
+        "week": 11,
+        "courseCode": "GRI403",
+        "question": "Which of the following two analysis type creates simulation analysis?",
+        "options": [
+            "SWOT- possibility",
+            "Possibility- qualitative",
+            "Qualitative- quantitative",
+            "Sensibility- possibility",
+            "SWOT- qualitative"
+        ],
+        "correctAnswer": "Sensibility- possibility"
+    },
 
     // Parallel Programming questions
 
